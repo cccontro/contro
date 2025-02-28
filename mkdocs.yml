@@ -1,0 +1,83 @@
+site_name: Contro
+site_url: https://w3id.org/contro
+site_description: A Controversy-Oriented Model of Dialectical Perspectives
+site_author: Francesca Massarenti, Alberto Ciarrocca
+repo_url: https://github.com/cccontro/contro
+repo_name: cccontro/contro
+
+nav:
+  - Overview: index.md
+  - Context: context.md
+  - Background: background.md
+  - Model: model.md
+  - Elements: elements.md
+  - Examples: examples.md
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - toc.integrate
+    - toc.follow
+    - navigation.footer
+    - content.code.copy
+  palette:
+    # Automatic
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: custom/auto-mode
+        name: Switch to light mode
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: custom/light-mode
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: custom/dark-mode
+        name: Switch to system preference
+
+  favicon: images/interrobang.svg
+  icon:
+    repo: fontawesome/brands/github
+    search: octicons/search-24
+    close: bootstrap/x
+    menu: bootstrap/list
+    previous: bootstrap/arrow-left-short
+    next: bootstrap/arrow-right-short
+  font:
+    text: Source Sans 3
+    code: Source Code Pro
+
+plugins:
+  - search
+
+markdown_extensions:
+  - md_in_html
+  - toc:
+      title: In this section
+      permalink: ‽
+      permalink_title: Anchor
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+
+extra_css:
+  - css/extra.css
+  - https://fonts.googleapis.com/css?family=Source+Serif+4:226,300i,400,400i,700,700i&display=fallback
+
+extra_javascript:
+  - js/extra.js
