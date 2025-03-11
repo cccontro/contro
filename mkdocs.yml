@@ -7,7 +7,7 @@ repo_name: cccontro/contro
 
 nav:
   - Overview: index.md
-  - Context: context.md
+  - Scenario: scenario.md
   - Background: background.md
   - Model: model.md
   - Elements: elements.md
@@ -78,6 +78,9 @@ markdown_extensions:
 extra_css:
   - css/extra.css
   - https://fonts.googleapis.com/css?family=Source+Serif+4:226,300i,400,400i,700,700i&display=fallback
+  - https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap
 
 extra_javascript:
   - js/extra.js
+  - path: js/tables.mjs
+    type: module

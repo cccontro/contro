@@ -4104,7 +4104,7 @@ hide:
 
 <section class="hero">
   <h2 style ="font-weight: 300; font-style: italic; margin: 0;">A <span style ="font-weight: 700; text-transform: uppercase;">Contro</span>versy-Oriented Model of Dialectical Perspectives</h2>
-  <a id="argue" class="md-button" href="#how-to-distill-an-opinion" aria-hidden="true" role="presentation" data-search-exclude>Let's argue</a>
+  <div id="argue" class="md-button" aria-hidden="true" role="presentation" onclick='document.getElementById("overview").scrollIntoView({ block: "center", behavior: "smooth"}); document.getElementById("how-to-distill-an-opinion").focus({ preventScroll: true, focusVisible: false })' data-search-exclude>Let's argue</div>
 </section>
 
 <section id="overview" markdown>
@@ -4127,9 +4127,7 @@ hide:
     scroll-snap-type: y mandatory;
     height: 100vh;
     width: 100vw;
-    scroll-behavior: smooth;
-}
-
+  }
 
   section {
     height: calc(100vh - var(--header-height));
@@ -4159,31 +4157,33 @@ hide:
   }
 
   .calligram {
-  font-size:21px;
-  fill: currentColor;
-}
+    font-size:21px;
+    fill: currentColor;
+  }
 
-#hero-bg {
-  display: flex;
-  justify-content: center;
-  gap: var(--head-gap);
-  position: absolute;
-  top: var(--header-height);
-  left: 50%;
-  width: max(100vh, 100vw);
-  height: calc(100vh - var(--header-height));
-  padding: 1em 0;
-  transform: translate(-50%, 0);
-  z-index: -1;
-}
+  #hero-bg {
+    display: flex;
+    justify-content: center;
+    gap: var(--head-gap);
+    position: absolute;
+    top: var(--header-height);
+    left: 50%;
+    width: max(100vh, 100vw);
+    height: calc(100vh - var(--header-height));
+    padding: 1em 0;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    contain: strict;
+  }
 
-footer {
-  scroll-snap-align: end;
-}
+  footer {
+    scroll-snap-align: end;
+  }
 
 @media (max-width: 1220px) {
-  .md-main {
-    position: relative;
+
+  .md-content {
+    contain: paint;
   }
 
   #hero-bg {
