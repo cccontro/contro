@@ -16,7 +16,7 @@
       
       
       
-        <link rel="next" href="context/">
+        <link rel="next" href="scenario/">
       
       
       <link rel="icon" href="images/interrobang.svg">
@@ -53,6 +53,8 @@
       <link rel="stylesheet" href="css/extra.css">
     
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+4:226,300i,400,400i,700,700i&display=fallback">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -234,7 +236,7 @@
     
   
   
-    <li class="md-tabs__item md-tabs__item--active">
+    <li class="md-tabs__item md-tabs__item--active" name="Overview">
       <a href="." class="md-tabs__link">
         
   
@@ -251,13 +253,13 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="context/" class="md-tabs__link">
+    <li class="md-tabs__item" name="Scenario">
+      <a href="scenario/" class="md-tabs__link">
         
   
     
   
-  Context
+  Scenario
 
       </a>
     </li>
@@ -268,7 +270,7 @@
   
   
   
-    <li class="md-tabs__item">
+    <li class="md-tabs__item" name="Background">
       <a href="background/" class="md-tabs__link">
         
   
@@ -285,7 +287,7 @@
   
   
   
-    <li class="md-tabs__item">
+    <li class="md-tabs__item" name="Model">
       <a href="model/" class="md-tabs__link">
         
   
@@ -302,7 +304,7 @@
   
   
   
-    <li class="md-tabs__item">
+    <li class="md-tabs__item" name="Elements">
       <a href="elements/" class="md-tabs__link">
         
   
@@ -319,7 +321,7 @@
   
   
   
-    <li class="md-tabs__item">
+    <li class="md-tabs__item" name="Examples">
       <a href="examples/" class="md-tabs__link">
         
   
@@ -467,11 +469,11 @@
   
   
     <li class="md-nav__item">
-      <a href="context/" class="md-nav__link">
+      <a href="scenario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Context
+    Scenario
     
   </span>
   
@@ -4687,7 +4689,7 @@
 
 <section class="hero">
   <h2 style ="font-weight: 300; font-style: italic; margin: 0;">A <span style ="font-weight: 700; text-transform: uppercase;">Contro</span>versy-Oriented Model of Dialectical Perspectives</h2>
-  <a id="argue" class="md-button" href="#how-to-distill-an-opinion" aria-hidden="true" role="presentation" data-search-exclude>Let's argue</a>
+  <div id="argue" class="md-button" aria-hidden="true" role="presentation" onclick='document.getElementById("overview").scrollIntoView({ block: "center", behavior: "smooth"}); document.getElementById("how-to-distill-an-opinion").focus({ preventScroll: true, focusVisible: false })' data-search-exclude>Let's argue</div>
 </section>
 
 <section id="overview">
@@ -4703,9 +4705,7 @@
     scroll-snap-type: y mandatory;
     height: 100vh;
     width: 100vw;
-    scroll-behavior: smooth;
-}
-
+  }
 
   section {
     height: calc(100vh - var(--header-height));
@@ -4735,31 +4735,33 @@
   }
 
   .calligram {
-  font-size:21px;
-  fill: currentColor;
-}
+    font-size:21px;
+    fill: currentColor;
+  }
 
-#hero-bg {
-  display: flex;
-  justify-content: center;
-  gap: var(--head-gap);
-  position: absolute;
-  top: var(--header-height);
-  left: 50%;
-  width: max(100vh, 100vw);
-  height: calc(100vh - var(--header-height));
-  padding: 1em 0;
-  transform: translate(-50%, 0);
-  z-index: -1;
-}
+  #hero-bg {
+    display: flex;
+    justify-content: center;
+    gap: var(--head-gap);
+    position: absolute;
+    top: var(--header-height);
+    left: 50%;
+    width: max(100vh, 100vw);
+    height: calc(100vh - var(--header-height));
+    padding: 1em 0;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    contain: strict;
+  }
 
-footer {
-  scroll-snap-align: end;
-}
+  footer {
+    scroll-snap-align: end;
+  }
 
 @media (max-width: 1220px) {
-  .md-main {
-    position: relative;
+
+  .md-content {
+    contain: paint;
   }
 
   #hero-bg {
@@ -4814,13 +4816,13 @@ footer {
         
         
           
-          <a href="context/" class="md-footer__link md-footer__link--next" aria-label="Next: Context">
+          <a href="scenario/" class="md-footer__link md-footer__link--next" aria-label="Next: Scenario">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Context
+                Scenario
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4862,6 +4864,8 @@ footer {
       <script src="assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="js/extra.js"></script>
+      
+        <script src="js/tables.mjs" type="module"></script>
       
     
   </body>

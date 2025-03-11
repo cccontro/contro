@@ -56,6 +56,8 @@
     
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+4:226,300i,400,400i,700,700i&display=fallback">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -80,6 +82,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#limitations-of-owl-dl" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -229,7 +236,7 @@
   
   
   
-    <li class="md-tabs__item">
+    <li class="md-tabs__item" name="Overview">
       <a href=".." class="md-tabs__link">
         
   
@@ -246,13 +253,13 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../context/" class="md-tabs__link">
+    <li class="md-tabs__item" name="Scenario">
+      <a href="../scenario/" class="md-tabs__link">
         
   
     
   
-  Context
+  Scenario
 
       </a>
     </li>
@@ -263,7 +270,7 @@
   
   
   
-    <li class="md-tabs__item">
+    <li class="md-tabs__item" name="Background">
       <a href="../background/" class="md-tabs__link">
         
   
@@ -282,7 +289,7 @@
     
   
   
-    <li class="md-tabs__item md-tabs__item--active">
+    <li class="md-tabs__item md-tabs__item--active" name="Model">
       <a href="./" class="md-tabs__link">
         
   
@@ -299,7 +306,7 @@
   
   
   
-    <li class="md-tabs__item">
+    <li class="md-tabs__item" name="Elements">
       <a href="../elements/" class="md-tabs__link">
         
   
@@ -316,7 +323,7 @@
   
   
   
-    <li class="md-tabs__item">
+    <li class="md-tabs__item" name="Examples">
       <a href="../examples/" class="md-tabs__link">
         
   
@@ -410,11 +417,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../context/" class="md-nav__link">
+      <a href="../scenario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Context
+    Scenario
     
   </span>
   
@@ -459,6 +466,18 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Model
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -469,6 +488,43 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In this section">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this section
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-of-owl-dl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations of OWL DL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adapting-pespectivation-framework-to-argumentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adapting pespectivation framework to argumentation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -537,7 +593,15 @@
 
   <h1>Model</h1>
 
-
+<h2 id="limitations-of-owl-dl">Limitations of OWL DL<a class="headerlink" href="#limitations-of-owl-dl" title="Anchor">‽</a></h2>
+<ul>
+<li>OWA</li>
+<li>Montonic</li>
+</ul>
+<h2 id="adapting-pespectivation-framework-to-argumentation">Adapting pespectivation framework to argumentation<a class="headerlink" href="#adapting-pespectivation-framework-to-argumentation" title="Anchor">‽</a></h2>
+<ul>
+<li>Explicit Lens</li>
+</ul>
 
 
 
@@ -634,6 +698,8 @@
       <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="../js/extra.js"></script>
+      
+        <script src="../js/tables.mjs" type="module"></script>
       
     
   </body>

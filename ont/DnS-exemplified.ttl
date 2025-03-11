@@ -1,0 +1,406 @@
+@prefix : <http://www.ontologydesignpatterns.org/ont/mDnS/DnS-exemplified.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.ontologydesignpatterns.org/ont/mDnS/DnS-exemplified.ttl#> .
+
+<http://www.ontologydesignpatterns.org/ont/mDnS/DnS-exemplified.ttl> rdf:type owl:Ontology ;
+                                                                      rdfs:comment """An ontology exemplifying D&S with a simple case of the CommerceBuy frame.
+The basic D&S ontology includes the following types:
+
+- a(n extensional) situation class S is a setting for some individuals e1...en
+- a(n intensional) description individual D \"defines\" some concept individuals C1...Cn as their components
+- a situation class S is mirrored by a description individual D
+- a situation individual s \"satisfies\" a description individuals D
+- an entity class E is mirrored by a Concept individual C
+- an entity individual e is \"classified by\" a Concept individual C
+
+By launching the reasoner, we can appreciate the automated inferences of situation individuals and entity individuals.""" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer> rdf:type owl:ObjectProperty ;
+                                                                               rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor> ;
+                                                                               rdfs:range <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor> ;
+                                                                                 rdfs:range <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#SaleTime
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#SaleTime> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor> ;
+                                                                                  rdfs:range <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#SaleTime> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller> rdf:type owl:ObjectProperty ;
+                                                                                rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor> ;
+                                                                                rdfs:range <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#defines
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#defines> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#usesConcept> ;
+                                                                                 <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                 <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:30:45Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#dualTo
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#dualTo> rdf:type owl:ObjectProperty ,
+                                                                                         owl:SymmetricProperty ;
+                                                                                rdfs:domain <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept> ;
+                                                                                rdfs:range <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept> ;
+                                                                                <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:31:40Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor> rdf:type owl:ObjectProperty ;
+                                                                                      rdfs:domain <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Situation> ;
+                                                                                      rdfs:range owl:Thing ;
+                                                                                      <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                      <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:39:06Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#partOf
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#partOf> rdf:type owl:ObjectProperty ,
+                                                                                         owl:TransitiveProperty ;
+                                                                                <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:31:09Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#satisfies
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#satisfies> rdf:type owl:ObjectProperty ,
+                                                                                            owl:TransitiveProperty ;
+                                                                                   rdfs:domain <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Situation> ;
+                                                                                   rdfs:range <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Description> ;
+                                                                                   <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                   <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:30:55Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#specializes
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#specializes> rdf:type owl:ObjectProperty ,
+                                                                                              owl:TransitiveProperty ;
+                                                                                     rdfs:domain <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept> ;
+                                                                                     rdfs:range <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept> ;
+                                                                                     <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                     <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:31:05Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#superOrdinatedTo
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#superOrdinatedTo> rdf:type owl:ObjectProperty ,
+                                                                                                   owl:TransitiveProperty ;
+                                                                                          <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                          <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:31:18Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#usesConcept
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#usesConcept> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:domain <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Description> ;
+                                                                                     rdfs:range <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept> ;
+                                                                                     <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                     <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:30:50Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/mDnS/DnS-exemplified.ttl#Broker
+:Broker rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor> ;
+        rdfs:range <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Broker> ;
+        <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+        <http://purl.org/dc/elements/1.1/date> "2024-06-11T12:49:15Z"^^xsd:dateTime .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#AltRegularSale
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#AltRegularSale> rdf:type owl:Class ;
+                                                                                        owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                                     owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor> ;
+                                                                                                                                     owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Broker>
+                                                                                                                                   ]
+                                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                                     owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor> ;
+                                                                                                                                     owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer>
+                                                                                                                                   ]
+                                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                                     owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor> ;
+                                                                                                                                     owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product>
+                                                                                                                                   ]
+                                                                                                                                 ) ;
+                                                                                                              rdf:type owl:Class
+                                                                                                            ] ,
+                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#satisfies> ;
+                                                                                                              owl:hasValue <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#AltRegularSale>
+                                                                                                            ] ;
+                                                                                        rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Situation> ;
+                                                                                        owl:hasKey ( <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer>
+                                                                                                     <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product>
+                                                                                                     :Broker
+                                                                                                   ) .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Broker
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Broker> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept> rdf:type owl:Class ;
+                                                                                 <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                 <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:30:23Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Description
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Description> rdf:type owl:Class ;
+                                                                                     <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                     <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:30:30Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#RegularSale
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#RegularSale> rdf:type owl:Class ;
+                                                                                     owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor> ;
+                                                                                                                                  owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer>
+                                                                                                                                ]
+                                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor> ;
+                                                                                                                                  owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product>
+                                                                                                                                ]
+                                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#isSettingFor> ;
+                                                                                                                                  owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller>
+                                                                                                                                ]
+                                                                                                                              ) ;
+                                                                                                           rdf:type owl:Class
+                                                                                                         ] ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#satisfies> ;
+                                                                                                           owl:hasValue <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#RegularSale>
+                                                                                                         ] ;
+                                                                                     rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Situation> ;
+                                                                                     owl:hasKey ( <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer>
+                                                                                                  <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product>
+                                                                                                  <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#SaleTime>
+                                                                                                  <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller>
+                                                                                                ) .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#SaleTime
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#SaleTime> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Situation
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Situation> rdf:type owl:Class ;
+                                                                                   <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                   <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:30:34Z"^^xsd:dateTime .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#AltRegularSale
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#AltRegularSale> rdf:type owl:NamedIndividual ,
+                                                                                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#defines> ;
+                                                                                                                          owl:hasValue <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Broker>
+                                                                                                                        ]
+                                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#defines> ;
+                                                                                                                          owl:hasValue <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer>
+                                                                                                                        ]
+                                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#defines> ;
+                                                                                                                          owl:hasValue <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product>
+                                                                                                                        ]
+                                                                                                                      ) ;
+                                                                                                   rdf:type owl:Class
+                                                                                                 ] ;
+                                                                                        <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#defines> <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Broker> ,
+                                                                                                                                                                         <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer> ,
+                                                                                                                                                                         <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product> ,
+                                                                                                                                                                         <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller> ;
+                                                                                        <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#usesConcept> <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#SaleTime> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Apple
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Apple> rdf:type owl:NamedIndividual ;
+                                                                               <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                               <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:36:40Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Broker
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Broker> rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer> rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Mustafa
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Mustafa> rdf:type owl:NamedIndividual ;
+                                                                                 <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                 <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:36:43Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product> rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#RegularSale
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#RegularSale> rdf:type owl:NamedIndividual ,
+                                                                                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                       owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#defines> ;
+                                                                                                                       owl:hasValue <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer>
+                                                                                                                     ]
+                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                       owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#defines> ;
+                                                                                                                       owl:hasValue <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product>
+                                                                                                                     ]
+                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                       owl:onProperty <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#defines> ;
+                                                                                                                       owl:hasValue <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller>
+                                                                                                                     ]
+                                                                                                                   ) ;
+                                                                                                rdf:type owl:Class
+                                                                                              ] ;
+                                                                                     <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#defines> <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer> ,
+                                                                                                                                                                      <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product> ,
+                                                                                                                                                                      <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller> ;
+                                                                                     <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#usesConcept> <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#SaleTime> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#SaleTime
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#SaleTime> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Concept> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Salec4598
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Salec4598> rdf:type owl:NamedIndividual ;
+                                                                                   <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer> <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Mustafa> ;
+                                                                                   <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product> <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#iPad> ;
+                                                                                   <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller> <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Apple> ;
+                                                                                   <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                   <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:38:44Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Salec4599
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Salec4599> rdf:type owl:NamedIndividual ;
+                                                                                   <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer> <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Mustafa> ;
+                                                                                   <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product> <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#iPad> ;
+                                                                                   :Broker :Juan ;
+                                                                                   <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                   <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:38:49Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller> rdf:type owl:NamedIndividual ;
+                                                                                <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#dualTo> <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#iPad
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#iPad> rdf:type owl:NamedIndividual ;
+                                                                              <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                              <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:36:47Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/mDnS/DnS-exemplified.ttl#Juan
+:Juan rdf:type owl:NamedIndividual ;
+      <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+      <http://purl.org/dc/elements/1.1/date> "2024-06-11T12:48:48Z"^^xsd:dateTime .
+
+
+###  http://www.ontologydesignpatterns.org/ont/mDnS/DnS-exemplified.ttl#Salec4708
+:Salec4708 rdf:type owl:NamedIndividual ;
+           <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer> <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Mustafa> ;
+           <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product> <http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#iPad> ;
+           :Broker :Juan ;
+           <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+           <http://purl.org/dc/elements/1.1/date> "2024-06-17T19:01:30Z"^^xsd:dateTime .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#AltRegularSale> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                        <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:34:10Z"^^xsd:dateTime ,
+                                                                                                                               "2024-06-11T10:34:20Z"^^xsd:dateTime ,
+                                                                                                                               "2024-06-11T12:34:22Z"^^xsd:dateTime .
+
+
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Broker> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                <http://purl.org/dc/elements/1.1/date> "2024-06-11T12:35:19Z"^^xsd:dateTime ,
+                                                                                                                       "2024-06-11T12:36:49Z"^^xsd:dateTime .
+
+
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Buyer> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                               <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:34:55Z"^^xsd:dateTime ,
+                                                                                                                      "2024-06-11T10:36:23Z"^^xsd:dateTime ,
+                                                                                                                      "2024-06-11T10:41:53Z"^^xsd:dateTime .
+
+
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Product> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                 <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:34:59Z"^^xsd:dateTime ,
+                                                                                                                        "2024-06-11T10:36:26Z"^^xsd:dateTime ,
+                                                                                                                        "2024-06-11T10:41:58Z"^^xsd:dateTime .
+
+
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#RegularSale> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                     <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:34:10Z"^^xsd:dateTime ,
+                                                                                                                            "2024-06-11T10:34:20Z"^^xsd:dateTime .
+
+
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#SaleTime> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                  <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:35:22Z"^^xsd:dateTime ,
+                                                                                                                         "2024-06-11T10:36:30Z"^^xsd:dateTime ,
+                                                                                                                         "2024-06-11T10:42:04Z"^^xsd:dateTime .
+
+
+<http://www.ontologydesignpatterns.org/ont/2024/5/untitled-ontology-377#Seller> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" ;
+                                                                                <http://purl.org/dc/elements/1.1/date> "2024-06-11T10:34:52Z"^^xsd:dateTime ,
+                                                                                                                       "2024-06-11T10:36:18Z"^^xsd:dateTime ,
+                                                                                                                       "2024-06-11T10:41:49Z"^^xsd:dateTime .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

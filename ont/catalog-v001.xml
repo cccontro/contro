@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.ontologydesignpatterns.org/ont/d0.owl" uri="http://www.ontologydesignpatterns.org/ont/d0.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/ont/d0.owl" uri="d0.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" uri="DUL_v40.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" uri="http://www.ontologydesignpatterns.org/ont/dul/DUL_v40.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" uri="DUL_v40.owl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/contro/persp/1.0" uri="persp.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/contro/arg/1.0" uri="arg.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" uri="http://www.ontologydesignpatterns.org/ont/dul/DUL_v40.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" uri="http://www.ontologydesignpatterns.org/ont/dul/DUL_v40.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl" uri="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/framester/schema/1.9" uri="http://150.146.207.114/lode/source?url=http://ontologydesignpatterns.org/ont/framester/framester.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1741453763777" name="http://www.ontologydesignpatterns.org/ont/d0.owl" uri="d0.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1741453763777" name="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" uri="DUL_v40.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1741453763777" name="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl" uri="perspectivisation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1741453763777" name="https://w3id.org/framester/schema/" uri="framester.owl"/>
+    </group>
+</catalog>
