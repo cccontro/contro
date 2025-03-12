@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:arg="https://w3id.org/contro/arg#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Apologia degli Academici di Banchi di Roma contra messer Lodovico Castelvetro</title>
+        <author ref="#caro">Annibal Caro</author>
+        <respStmt>
+          <resp>Author</resp>
+          <persName ref="#caro">Annibal Caro</persName>
+          <persName ref="#castelvetro">Lodovico Castelvetro</persName>
+        </respStmt>
+        <respStmt>
+          <resp>Encoding</resp>
+          <persName>Francesca Massarenti</persName>
+          <persName>Alberto Ciarrocca</persName>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <date when="2025">2025</date>
+        <availability>
+          <p>This is an open access work licensed under a Creative Commons Attribution 4.0 International license.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title type="main">Opere</title>
+          <title type="sub">Annibal Caro</title>
+          <author ref="#caro">Annibal Caro</author>
+          <editor>Stefano Jacomuzzi</editor>
+          <publisher>UTET</publisher>
+          <pubPlace>Torino</pubPlace>
+          <date>1974</date>
+          <biblScope unit="page">91-99, 96, 100-103, 109-121</biblScope>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <p>The encoding focuses on the argumentative structure of the work, reconstructing arguments from statements classified as premises, conclusions or inference rules. This edition includes only selected parts of the text, based on their relevance to argument analysis.</p>
+      <p>Caro's Apologia reproduces with a few alterations some of Castelvetro's writings circulating in manuscript form as antecedents to the controversy. Castelvetro, in an appendix to the Ragione issued in reply to the Apologia, republishes them in corrected form. We have chosen to apply these corrections, reported in apparatus by the editor of the Apologia, in order to restore the text according to the author's will.</p>
+    </encodingDesc>
+      <profileDesc>
+        <particDesc>
+          <listPerson>
+            <person xml:id="caro" sameAs="http://viaf.org/viaf/51714622">
+              <persName>Annibal Caro</persName>
+            </person>
+            <person xml:id="castelvetro" sameAs="http://viaf.org/viaf/22166452">
+              <persName>Lodovico Castelvetro</persName>
+            </person>
+            <person xml:id="petrarca" sameAs="http://viaf.org/viaf/39382430">
+              <persName>Francesco Petrarca</persName>
+            </person>
+            <person xml:id="boccaccio" sameAs="http://viaf.org/viaf/64002165">
+              <persName>Giovanni Boccaccio</persName>
+            </person>
+            <person xml:id="poliziano" sameAs="http://viaf.org/viaf/9867884">
+              <persName>Angelo Poliziano</persName>
+            </person>
+            <person xml:id="st-paul" sameAs="http://viaf.org/viaf/100178828">
+              <persName xml:lang="en">Saint Paul, the Apostle</persName>
+            </person>
+            <person xml:id="anon">
+              <persName>Anonymous</persName>
+              <note>Fictional author; the text is presented as if written by an anonymous figure.</note>
+            </person>
+            <person xml:id="predella">
+              <persName>Predella</persName>
+              <note>Fictional character; the text is presented as if written by the janitor of Accademia di Banchi di Roma.</note>
+            </person>
+          </listPerson>
+        </particDesc>
+      </profileDesc>
+      <catDesc>
+        <listRef xml:id="disputed-words">
+          <desc>The locutions featured in Annibal Caro's Canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.</desc>
+          <ref target="#w1" />
+          <ref target="#w2" />
+          <ref target="#w3" />
+          <ref target="#w4" />
+          <ref target="#w5" />
+          <ref target="#w6" />
+          <ref target="#w7" />
+          <ref target="#w8" />
+          <ref target="#w9" />
+          <ref target="#w10" />
+          <ref target="#w11" />
+          <ref target="#w12" />
+        </listRef>
+      </catDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div n="91-99" resp="#caro">
+        <lg type="canzone">
+          <head>
+            <title type="main">Canzone del Caro</title>
+            <title type="sub">In lode della Casa di Francia</title>
+          </head>
+          <lg type="stanza" n="1">
+            <l>Venite all’ombra de’ gran gigli d’oro,</l>
+            <l>care muse, devote a’ miei giacinti:</l>
+            <l>e d’<term xml:id="w2">ambo</term> insieme avinti</l>
+            <l>tessiam ghirlande a’ nostri idoli, e fregi.</l>
+            <l>E tu, signor, ch’io per mio sole adoro,</l>
+            <l>perché non sian dall’altro sole estinti,</l>
+            <l>del tuo nome dipinti,</l>
+            <l>gli sacra, ond’io lor porga eterni pregi:</l>
+            <l>ché por degna corona a tanti regi</l>
+            <l>per me non oso: e ’ndarno altri m’invita,</l>
+            <l>se l’ardire e l’aita</l>
+            <l>non vien da te. Tu sol m’apri e dispensi</l>
+            <l>Parnaso: e tu mi desta, e tu m’aviva</l>
+            <l>lo stil, la lingua e i sensi,</l>
+            <l>sì ch’altamente ne ragioni e scriva.</l>
+          </lg>
+          <lg type="stanza" n="2">
+            <l>Giace, quasi gran conca, infra due mari</l>
+            <l>e due monti famosi, Alpe e Pirene,</l>
+            <l>parte delle più <term xml:id="w12">amene</term></l>
+            <l>d’Europa, e di quant’anco il sol circonda:</l>
+            <l>di tesori e di popoli e d’altari,</l>
+            <l>ch’al nostro vero nume erge e mantene,</l>
+            <l>di preziose vene,</l>
+            <l>d’arti e d’armi e d’amor madre feconda.</l>
+            <l>Novella Berecintia, a cui gioconda</l>
+            <l><term xml:id="w1">cede</term> l’altra il suo carro e i suoi leoni:</l>
+            <l>e sol par ch’incoroni</l>
+            <l>di tutte le sue torri Italia e lei:</l>
+            <l>e dica: — Ite, miei Galli, or Galli interi,</l>
+            <l>gli indi e i persi e i caldei</l>
+            <l>vincete, e fate un sol di tanti imperi. —</l>
+          </lg>
+          <lg type="stanza" n="3">
+            <l>Di questa madre generosa e chiara,</l>
+            <l>madre <term xml:id="w4">ancor essa</term> di celesti eroi,</l>
+            <l>regnano oggi fra noi</l>
+            <l>d’altri Giovi altri figli ed altre suore;</l>
+            <l>e vie più degni ancor d’incenso e d’ara,</l>
+            <l>che non fûr già, vecchio Saturno, i tuoi.</l>
+            <l>Ma ciascun gli onor suoi</l>
+            <l>ripon nell’umiltate e nel timore</l>
+            <l>del maggior Dio. Mirate al vincitore</l>
+            <l>d’Augusto invitto, al glorioso Errico,</l>
+            <l>come, di Cristo amico,</l>
+            <l>con la pietà, con l’onestà, con l’armi,</l>
+            <l>col sollevar gli oppressi e punir gli empi,</l>
+            <l>non coi bronzi o coi marmi,</l>
+            <l>si va sacrando i <term xml:id="w3">simulacri</term> e i tempi.</l>
+          </lg>
+          <lg type="stanza" n="4">
+            <l>Mirate, come placido e severo</l>
+            <l>è di se stesso a sé legge e corona.</l>
+            <l>Vedete Iri e Bellona,</l>
+            <l>come dietro gli vanno, e Temi avanti</l>
+            <l>com’ha la ragion seco, e ’l senno e ’l vero:</l>
+            <l>bella schiera che mai non l’abbandona.</l>
+            <l>Udite come tuona</l>
+            <l>sopra de’ licaoni e de’ giganti.</l>
+            <l>Guardate quanti n’ha già domi, e quanti</l>
+            <l>ne percuote e n’accenna; e con che possa</l>
+            <l>scuote d’Olimpo e d’Ossa</l>
+            <l>gli svelti monti, e ’ncontro al ciel imposti.</l>
+            <l>Oh qual fia poi, spento Tifeo l’audace</l>
+            <l>e i folgori deposti!</l>
+            <l>quanta il mondo n’avrà letizia e pace!</l>
+          </lg>
+          <lg type="stanza" n="5">
+            <l>La sua gran Giuno in tanta altezza umìle,</l>
+            <l>gode dell’amor suo, lieta e sicura;</l>
+            <l>e non è sdegno o cura</l>
+            <l>che ’l cor le punga, o di Calisto o d’Io.</l>
+            <l><term xml:id="w5">Suo merto e tuo valor</term>, donna gentile,</l>
+            <l>di nome e d’alma <term xml:id="w6">inviolata</term> e pura.</l>
+            <l>E fu nostra ventura,</l>
+            <l>e providenza del superno Iddio,</l>
+            <l>ch’in sì gran regno, a sì gran re t’unio,</l>
+            <l>perché del suo splendore e del tuo seme</l>
+            <l>risorgesse la speme</l>
+            <l>della tua Flora e dell’Italia tutta.</l>
+            <l>Che se mai raggio suo ver’ lei si stende</l>
+            <l>(benché serva e distrutta),</l>
+            <l>ancor salute e libertà n’attende.</l>
+          </lg>
+          <lg type="stanza" n="6">
+            <l>Vera Minerva, e veramente nata</l>
+            <l>di Giove stesso e del suo senno è quella</l>
+            <l>ch’ora è figlia e sorella</l>
+            <l>di regi <term xml:id="w9">illustri</term>, e ne fia madre e sposa.</l>
+            <l>Vergine, che di gloria incoronata,</l>
+            <l>quasi lunge dal sol <term xml:id="w8">propizia</term> stella,</l>
+            <l>ti stai d’amor rubella,</l>
+            <l>per dar più luce a questa notte ombrosa.</l>
+            <l>Viva perla, serena e preziosa,</l>
+            <l>qual ha Febo di te cosa più degna?</l>
+            <l>per te vive, in te regna;</l>
+            <l>col tuo sfavilla il suo bel lume tanto</l>
+            <l>ch’ogni cor arde, e ’l mio ne sente un foco</l>
+            <l>tal, ch’io ne volo e canto</l>
+            <l>infra i tuoi cigni, e son <term xml:id="w7">tarpato</term> e roco.</l>
+          </lg>
+          <lg type="stanza" n="7">
+            <l>Evvi ancor Cintia, e v’era Endimione:</l>
+            <l>coppia che sì felice oggi sarebbe,</l>
+            <l>se ’l fior che per lei crebbe,</l>
+            <l>oimè non l’era (e ’n su l’aprirsi) anciso!</l>
+            <l>Ma che, se legge a morte amore impone?</l>
+            <l>se spento, ha quel che (più vivendo) avrebbe?</l>
+            <l>se ’l morir non rincrebbe,</l>
+            <l>per viver sempre, e non da lei diviso?</l>
+            <l>Quante poi, dolci il core e liete il viso,</l>
+            <l>v’hanno Ciprigne e dive altre simìli?</l>
+            <l>quanti forti e gentili,</l>
+            <l>che si fan, bene oprando, al ciel la via?</l>
+            <l>e se pur non son dèi, qual altra gente</l>
+            <l>è che più degna sia</l>
+            <l>o di clava o di tirso o di tridente?</l>
+          </lg>
+          <lg type="congedo">
+            <l>Canzon, se la virtù, se i chiari <term xml:id="w10">gesti</term></l>
+            <l>ne fan celesti, del ciel degne sono</l>
+            <l>l’alme di ch’io ragiono.</l>
+            <l>Tu lor queste di fiori umìli offerte</l>
+            <l>porgi in mia vece, e di’: — Se non son elle</l>
+            <l>d’oro e di gemme <term xml:id="w11">inserte</term>,</l>
+            <l>son di voi stessi, e saran poi di stelle.</l>
+          </lg>
+        </lg>
+      </div>
+      <div n="96" resp="#castelvetro">
+        <head>
+          <title type="main">Parere del Castelvetro</title>
+          <title type="sub">Sopra la canzone precedente</title>
+        </head>
+        <div n="1">
+          <head>I</head>
+          <p corresp="#cv-s4">Il <persName ref="#petrarca">Petrarca</persName> non userebbe:</p>
+          <list type="gloss">
+            <label><quote corresp="#w1">Cede</quote></label>
+            <item/>
+            
+            <label><quote corresp="#w2">Ambo</quote></label>
+            <item>Parlando di due femmine senza compagnia di sostantivo, come sarebbe «ambe le braccia».</item>
+            
+            <label><quote corresp="#w3">Simulacri</quote></label>
+            <item/>
+            
+            <label><quote corresp="#w4">Ancor essa</quote></label>
+            <item><note>È modo di parlar plebeo.</note></item>
+            
+            <label><quote corresp="#w5">Suo merto e tuo valor</quote></label>
+            <item><note>È nuovo senza «per».</note></item>
+            
+            <label><quote corresp="#w6">Inviolata</quote></label>
+            <item/>
+            
+            <label><quote corresp="#w7">Tarpato</quote></label>
+            <item/>
+            
+            <label><quote corresp="#w8">Propizia</quote></label>
+            <item/>
+            
+            <label><quote corresp="#w9">Illustri</quote></label>
+            <item><note>Usato in rima dal <persName ref="#petrarca">Petrarca</persName>.</note></item>
+            
+            <label><quote corresp="#w10">Gesti</quote></label>
+            <item/>
+            
+            <label><quote corresp="#w11">Inserte</quote></label>
+            <item/>
+            
+            <label><quote corresp="#w12">Amene</quote></label>
+            <item/>
+          </list>
+        </div>
+      </div>
+      <div n="100-103" who="#anon" resp="#castelvetro">
+        <head>
+          <title>Dichiarazione d'alcune cose dell'antiscritto Parere</title>
+        </head>
+        <gap reason="editorial" />
+        <p>A lui adunque fu scritto da Roma, da colui che voleva intendere il suo parere, di questa canzone: che essa quivi da molti non solamente era stimata bella, ma tale ancora che il <persName ref="#petrarca">Petrarca</persName>, se a’ suoi dì gli fosse stata pòrta cagione simile da farla, non l’avrebbe fatta altrimente. A che riguardando egli, il quale avea parere molto diverso da quello di quei lodatori romani così animosi; rispose che <seg corresp="#cv-s4"> il <persName ref="#petrarca">Petrarca</persName> non avrebbe usata niuna delle cose notate da lui nella canzone del <persName ref="#caro">Caro</persName></seg>. Le quali altri dee provare che il <persName ref="#petrarca">Petrarca</persName> avrebbe usate, se vuol provare l’ignoranza a dosso all’opponente. Ma perché ce ne sono alcune scritte strettamente, non facendo di bisogno a scriverle d’altra forma al domandante, intendente ogni stretto parlare, e può per aventura la loro strettezza far parere ad alcuno puerile e vano quello che in effetto non è, sarà bene ch’io, il quale sono consapevole della ’ntenzione dell’opponente, rallarghi queste cotali, e con altre parole le dechiari.</p>
+
+        <p>Primieramente adunque volle dire l’opponente che il <persName ref="#petrarca">Petrarca</persName> non userebbe <quote corresp="#w1">cede</quote>, <quote corresp="#w6">inviolata</quote>, <quote corresp="#w8">propizia</quote>, <quote corresp="#w10">gesti</quote>, <quote corresp="#w11">inserte</quote>, <quote corresp="#w12">amene</quote>, <quote corresp="#w3">simulacri</quote>, <quote corresp="#w9">illustri</quote>, fuor di rima: non perché egli avesse queste parole per non mai udite; <seg corresp="#cv-s2">conciofossecosaché al suo tempo fossero state usate forse tutte, ma senza dubbio la maggior parte, dagli scrittori</seg>; ma per altra cagione, sia qual si voglia, <seg corresp="#cv-s1">che lo mosse a lasciarle da parte</seg>. Né parimente <quote corresp="#w2">ambo</quote>, parlandosi di due femine, senza compagnia di sostantivo, manifesta e non sotto ’ntesa. Né <quote corresp="#w4">ancor essa</quote>, veggendo noi che l’uso nobile della lingua non riceve «esso» e «essa» con compagnia di sostantivo manifesto, se non davanti; come, per cagione d’essempio: «Il <persName ref="#petrarca">Petrarca</persName> fa delle rime care, ed esso <persName ref="#caro">Caro</persName> ne fa ancora». Ma non si può dir così: «Il <persName ref="#petrarca">Petrarca</persName> fa delle rime care, ed il <persName ref="#caro">Caro</persName> esso ne fa ancora». E per consequente ancora, non si può dire: «Il <persName ref="#petrarca">Petrarca</persName> fa delle rime care, ed il <persName ref="#caro">Caro</persName> ancora esso ne fa». Né «madre ancor essa».</p>
+
+        <p>Né userebbe <quote corresp="#w5">suo merto e tuo valore</quote>, senza «per»: non trovandosi la perdita di «per», se non davanti a tre nomi, per quanto io mi ricordo aver letto; i quali sono: «tempo», «grazia», «mercé» o «mercede», così: «E di notte tempo, con iscale ed altri ingegni, entrò nella città di Cortona». «Le sue cose, degli iddii grazia, tutte prosperamente passavano». «Ma grazia del Signor mio, io me ne vo pûrgato in cielo». «La mercé di Dio e di questa gentildonna». «Mercé di quel signore». «La buona mercé di Dio, e non la tua». «La Dio mercé»; «la vostra mercé»; «la sua mercé»; «la tua mercede»; «vostra mercé»; «sua mercé»; «tua mercé». Né userebbe <quote corresp="#w7">tarpato</quote>, essendo voce plebea, né mai forse ricevuta da altre scritture che da quelle d’<persName ref="#poliziano">Angelo Poliziano</persName>.</p>
+        <gap reason="editorial" />
+
+        <note type="paraphrase">
+          <list xml:id="cv-a1" type="syllogism" arg:Topic="#disputed-words">
+            <item xml:id="cv-s1" rdf:type="arg:Premise">Petrarch never used certain words.</item>
+            <item xml:id="cv-s2" rdf:type="arg:Premise">Other authors of his time used those words.</item>
+            <item xml:id="cv-s3" rdf:type="arg:Premise" arg:Antecedent="#cv-s1 #cv-s2" arg:Consequent="#cv-s4">The fact that Petrarch left out words used in the literature of his time is a sign that he did not use them deliberately.</item>
+            <item xml:id="cv-s4" rdf:type="arg:Conclusion">Petrarch wouldn't have used those words.</item>
+          </list>
+          <list xml:id="cv-a2" type="syllogism" arg:Topic="#disputed-words">
+            <item corresp="#cv-s4" rdf:type="arg:Premise" />
+            <item xml:id="cv-s5" rdf:type="arg:Premise" arg:Antecedent="#cv-s4" arg:Consequent="#cv-s6">In the context of Petrarchist poetry, authors should not use words that Petrarch himself chose not to use.</item>
+            <item xml:id="cv-s6" rdf:type="arg:Conclusion">Those words should not be used.</item>
+          </list>
+        </note>
+
+      </div>
+
+      <div n="109-121" who="#predella" resp="#caro">
+        <head>
+          <title>Risentimento del Predella</title>
+        </head>
+        <p>
+          <gap reason="editorial" />
+          Ma, per rispondervi capo per capo, secondo il vostro ordine, vegniamo a quel che dite nella vostra censura: <seg corresp="#cv-s4"> che il <persName ref="#petrarca">Petrarca</persName> non userebbe «cede» ed altre voci che seguono</seg>.
+          <gap reason="editorial" />
+          <seg corresp="#cv-s1">Se voi diceste che ’l <persName ref="#petrarca">Petrarca</persName> non l’avesse usate, vi si potrebbe credere, perché siete molto pratico nel vocabolario</seg>. <seg corresp="#cr-s1">Ma, dicendo affermativamente «non l’userebbe», bisogna intender se l’avete di buon loco, e quel che voi ne sapete; se per aventura spacciando, come fate, il nome e ’l senno del <persName ref="#petrarca">Petrarca</persName>, vi fosse entrato il suo spirito in corpo</seg>: ché in questo caso, o quando l’aveste per revelazione, o per qualche altra demostrazione, purché non fosse del vostro cervello, mi contento che sia quel che dite; e il <persName ref="#caro">Caro</persName> terrà di averle male usate, avendo il <persName ref="#petrarca">Petrarca</persName> per principe de’ poeti in questa lingua e per degno di riverenza e d’ammirazione a tutte l’altre. Ma, quando lo diciate e ve l’imaginiate da voi, al vostro detto non sono obligato di credere, e la vostra imaginazione non fa caso. — Neanco a te — direte voi — s’ha da credere. — Sta bene: siamo in questo d’accordo. <seg corresp="#cr-s2">Resta che ci accordiamo a rimettercene (come è necessario) a terzi che ne sappiano più di voi e di me: e per venire a questo, non vi contentarle voi del giudizio, dell’autorità e dell’essempio di quelli che sono i maestri dell’arte dello scrivere, dai quali hanno imparato il <persName ref="#petrarca">Petrarca</persName> e tutti gli altri buoni scrittori</seg>, e che devrebbono aver insegnato ancora a voi di giudicare, se gli aveste letti, o ben letti, o sanamente interpretati?
+          <gap reason="editorial" />
+        </p>
+        <p>
+          <gap reason="editorial" />
+          Ma come è possibile che voi vogliate che un autore, per molto che scriva, possa mettere in opera tutti i vocaboli dell’età sua, che non ne lasci indietro ancora molti di quelli che sono ottimi? Che gli scrittori dopo loro siano privi e di quelli che essi hanno lasciati, e di quelli che non erano ancora a tempo loro? Oltre a ciò, che il <persName ref="#petrarca">Petrarca</persName> abbia tolto agli altri quel c’ha fatto esso medesimo? che una lingua sia tutta in uno autor solo? che un solo la giudichi? un solo la finisca? Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel <persName ref="#petrarca">Petrarca</persName> e nel <persName ref="#boccaccio">Boccaccio</persName> si termini tutta la favella volgare, come negli Evangeli ed in <persName ref="#st-paul">san Paolo</persName> tutta la sacra Scrittura.
+          <gap reason="editorial" />
+          Voglio che la perfezion del dire (ancora che non si dia interamente in atto) sia in fino a ora in questa lingua, spezialmente nel <persName ref="#petrarca">Petrarca</persName> e nel <persName ref="#boccaccio">Boccaccio</persName>: ma non voglio per questo distrugger la natura d’essa lingua, che non possa, come l’altre, crescere e scemare; non voglio togliere in tutto i giudizi degli altri, che son venuti e che verranno dopo loro. Non voglio esser privo della libertà c’hanno avuto essi e tutti gli scrittori in tutte le lingue.
+          <gap reason="editorial" />
+        </p>
+
+        <note type="paraphrase">
+          <list xml:id="cr-a1" type="syllogism" arg:Topic="#disputed-words">
+            <item corresp="#cv-s1" rdf:type="arg:Premise" />
+            <item xml:id="cr-s1" rdf:type="arg:Premise" arg:contradicts="#cv-s3">It is not possible to know whether Petrarch would have used those words merely because he did not happen to use them.</item>
+          </list>
+          <list xml:id="cr-a2" type="syllogism" arg:Topic="#disputed-words">
+            <item corresp="#cv-s1" rdf:type="arg:Premise" />
+            <item corresp="#cv-s2" rdf:type="arg:Premise" />
+            <item xml:id="cr-s2" rdf:type="arg:Premise" arg:Antecedent="#cv-s1 #cv-s2" arg:Consequent="#cr-s3">Although Petrarch did not use those words, the authority of other influential authors in Italian literature legitimizes their use.</item>
+            <item xml:id="cr-s3" rdf:type="arg:Conclusion" arg:contradicts="#cv-s6">Those words can be used.</item>
+          </list>
+        </note>
+
+      </div>
+    </body>
+  </text>
+</TEI>
