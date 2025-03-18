@@ -1,6 +1,9 @@
 ---
 hide:
   - navigation
+description:
+subtitle: About the project
+icon: material/earth
 ---
 
 <div id="hero-bg" aria-hidden="true" role="presentation" data-search-exclude>
