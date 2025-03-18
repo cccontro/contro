@@ -1,0 +1,128 @@
+
+:not(.note, .syllogism li) > [ana="#disputed-words"] {
+  text-decoration: line-through var(--md-secondary-fg-color--transparent) 1.3em;
+  cursor: help;
+}
+
+.syllogism {
+  border: .05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: .8rem;
+  transition: border .25s,box-shadow .25s;
+}
+
+.syllogism:hover {
+  border-color: #0000;
+  box-shadow: var(--md-shadow-z2);
+}
+
+.md-typeset ul li p {
+  margin: 0;
+}
+
+.md-typeset ul {
+  margin: .625em;
+}
+
+.syllogism li {
+  list-style-type: "🅟  ";
+}
+
+.syllogism li:last-child:nth-child(n+3) {
+  list-style-type: "🅒  ";
+}
+
+.note:before {
+  content: "🅟 = Premise\0009\0009🅒 = Conclusion";
+  color: var(--md-default-fg-color--light);
+  font-size: .64rem;
+  margin-left: 1.5rem;
+  white-space: pre;
+  margin-bottom: 0;
+}
+
+.note div:first-child {
+  margin-top: 0.3rem;
+}
+
+.syllogism li p {
+  display: inline-flex;
+}
+
+.persName {
+  --md-typeset-a-color: darkred;
+}
+
+.q {
+  --md-typeset-a-color: darkgreen;
+}
+
+.md-typeset dd {
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3em;
+}
+
+:has(+ .translation) {
+  display: none;
+}
+
+h2 {
+  margin-bottom: 0.2rem !important;
+}
+
+h2 + p {
+  margin-top: 0 !important;
+  font-style: italic;
+}
+
+a {
+  font-weight: 500;
+}
+
+ol[type="1"] > li::marker {
+    content: counter(list-item) "     ";
+    font-size: small;
+    color: var(--md-default-fg-color--lighter);
+}
+
+ol[type="I"] > li::marker {
+    content: counter(list-item, upper-roman) " ";
+    font-size: small;
+    color: var(--md-default-fg-color--lighter);
+}
+
+[dir="ltr"] .md-typeset ol[type="I"] {
+  margin-left: 0;
+}
+
+ol[type="1"] > li {
+  margin-bottom: 0;
+}
+
+[ana*="#cv"], [ana*="#cr"], [ana="#premise"], [ana="#conclusion"], p:has([href*="#cv"]), p:has([href*="#cr"]) {
+  position: relative;
+  background-image: linear-gradient(to right, transparent 50%, var(--md-primary-fg-color--light) 50%);
+  background-origin: 0;
+  background-size: 200% 100%;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  transition: background-position 0.5s ease-out;
+  cursor: pointer;
+  text-decoration: underline dotted gray;
+  text-underline-offset: 5px;
+}
+
+a[href*="#cv"], a[href*="#cr"] {
+  pointer-events: none;
+}
+
+.shown {
+  background-position: -100% 100% !important;
+}
