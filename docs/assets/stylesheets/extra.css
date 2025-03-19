@@ -44,8 +44,10 @@
 }
 
 [data-md-color-scheme="slate"] {
-  --md-secondary-fg-color: rgb(211, 33, 172); /* purple */
-  --md-secondary-fg-color--transparent: rgba(211, 33, 172, 0.21);
+  --md-secondary-fg-color: rgb(148, 0, 116); /* purple */
+  --md-secondary-fg-color-light: rgb(180, 29, 148);
+  --md-secondary-fg-color-light--transparent: rgb(180, 29, 148, 0.21);
+  --md-secondary-fg-color--transparent: rgba(148, 0, 116, 0.21);
   --md-footer-bg-color--dark: rgba(0, 0, 0, 0.32);
   --md-primary-fg-color--light: #0074688f;
 }

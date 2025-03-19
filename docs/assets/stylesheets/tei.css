@@ -1,6 +1,6 @@
 
 :not(.note, .syllogism li) > [ana="#disputed-words"] {
-  text-decoration: line-through var(--md-secondary-fg-color--transparent) 1.3em;
+  text-decoration: line-through var(--md-secondary-fg-color-light--transparent) 1.3em;
   cursor: help;
 }
 
@@ -55,8 +55,8 @@
 }
 
 .q {
-  --md-typeset-a-color: var(--md-secondary-fg-color);
-  --md-accent-fg-color: var(--md-secondary-fg-color);
+  --md-typeset-a-color: var(--md-secondary-fg-color-light);
+  --md-accent-fg-color: var(--md-secondary-fg-color-light);
 }
 
 .q:hover {
