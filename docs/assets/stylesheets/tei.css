@@ -136,3 +136,7 @@ a[href*="#cv"], a[href*="#cr"] {
 .shown {
   background-position: -100% 100% !important;
 }
+
+.tabbed-block {
+  margin-top: 2em;
+}

@@ -14,6 +14,7 @@ nav:
   - Examples: examples.md
 theme:
   name: material
+  language: en
   custom_dir: overrides
   features:
     - navigation.instant
@@ -62,6 +63,10 @@ theme:
 
 plugins:
   - search
+  - exclude-search:
+        exclude:
+          - tei/Apologia-TEI.md
+          - tei/Apologia-TEI-it.md
 
 markdown_extensions:
   - attr_list
@@ -76,6 +81,9 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.critic:
       mode: view
+  - pymdownx.blocks.tab:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
   - toc:
       title: In this section
       permalink: ‽
