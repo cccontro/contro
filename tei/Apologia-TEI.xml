@@ -56,7 +56,7 @@
       </samplingDecl>
       <editorialDecl>
         <correction status="high" method="silent">
-          <p>Caro's Apologia reproduces with a few alterations some of Castelvetro's writings circulating in manuscript form as antecedents to the controversy. Castelvetro, in an appendix to the Ragione issued in reply to the Apologia, republishes them in corrected form. We have chosen to apply these corrections, reported in apparatus by the editor of the Apologia, in order to restore the text according to the author's will.</p>
+          <p>Caro’s Apologia reproduces with a few alterations some of Castelvetro’s writings circulating in manuscript form as antecedents to the controversy. Castelvetro, in an appendix to the Ragione issued in reply to the Apologia, republishes them in corrected form. We have chosen to apply these corrections, reported in apparatus by the editor of the Apologia, in order to restore the text according to the author’s will.</p>
         </correction>
       </editorialDecl>
       <classDecl>
@@ -73,7 +73,7 @@
           <desc>The topics that are subject of the controversy.</desc>
           <category xml:id="disputed-words">
             <catDesc>Disputed word</catDesc>
-            <catDesc>Locution featured in Annibal Caro's canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.</catDesc>
+            <catDesc>Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.</catDesc>
           </category>
         </taxonomy>
       </classDecl>
@@ -117,7 +117,7 @@
         <head>
           <title type="main" xml:lang="it">Canzone del Caro</title>
           <title type="sub" xml:lang="it">in lode della Casa di Francia</title>
-          <title type="main" xml:lang="en">Caro's Canzone</title>
+          <title type="main" xml:lang="en">Caro’s Canzone</title>
           <title type="sub" xml:lang="en">in Praise of the House of France</title>
         </head>
         <lg type="canzone" sameAs="http://viaf.org/viaf/174717093">
@@ -255,7 +255,7 @@
         <head>
           <title type="main" xml:lang="it">Parere del Castelvetro</title>
           <title type="sub" xml:lang="it">sopra la canzone precedente</title>
-          <title type="main" xml:lang="en">Castelvetro's Opinion</title>
+          <title type="main" xml:lang="en">Castelvetro’s Opinion</title>
           <title type="sub" xml:lang="en">On the Previous Canzone</title>
         </head>
         <div n="I" xml:lang="it">
@@ -345,7 +345,7 @@
       </div>
       <div from="100" to="103" resp="#anon">
         <head>
-          <title xml:lang="it">Dichiarazione d'alcune cose dell'antiscritto Parere</title>
+          <title xml:lang="it">Dichiarazione d’alcune cose dell’antiscritto Parere</title>
           <title xml:lang="en">Declaration on Some Aspects of the Preceding Opinion</title>
         </head>
         <div xml:lang="it">
@@ -388,7 +388,7 @@
             <item xml:id="cv-s1" ana="#premise">Petrarch never used certain words.</item>
             <item xml:id="cv-s2" ana="#premise">Other authors of his time used those words.</item>
             <item xml:id="cv-s3" ana="#premise" synch="#cv-s1 #cv-s2" next="#cv-s4">The fact that Petrarch left out words used in the literature of his time is a sign that he did not use them deliberately.</item>
-            <item xml:id="cv-s4" ana="#conclusion">Petrarch wouldn't have used those words.</item>
+            <item xml:id="cv-s4" ana="#conclusion">Petrarch wouldn’t have used those words.</item>
           </list>
           <list xml:id="cv-a2" type="syllogism" ana="#disputed-words">
             <item ana="#premise"><ptr target="#cv-s4" /></item>
@@ -454,9 +454,9 @@
         </div>
 
         <note type="paraphrase">
-          <list xml:id="cr-a2" type="syllogism" ana="#disputed-words">
-            <item ana="#premise"><ptr target="#cv-s4" /></item>
-            <item xml:id="cr-s4" ana="#premise" exclude="#cv-s5">To limit authors' ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture.</item>
+          <list xml:id="cr-a3" type="syllogism" ana="#disputed-words">
+            <item ana="#premise"><ptr target="#cv-s1" /></item>
+            <item xml:id="cr-s4" ana="#premise" exclude="#cv-s5">To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture.</item>
           </list>
         </note>
 

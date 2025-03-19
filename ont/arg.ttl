@@ -63,7 +63,10 @@ dul:satisfies rdf:type owl:ObjectProperty .
 :Author rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf dul:isSettingFor ;
         rdfs:domain dul:Situation ;
-        rdfs:range dul:Agent .
+        rdfs:range dul:Agent ;
+        owl:propertyChainAxiom ( :Author
+                                 :personaOf
+                               ) .
 
 
 ###  https://w3id.org/contro/arg#Conclusion
@@ -131,6 +134,12 @@ dul:satisfies rdf:type owl:ObjectProperty .
                                   [ owl:inverseOf :Premise
                                   ]
                                 ) .
+
+
+###  https://w3id.org/contro/arg#personaOf
+:personaOf rdf:type owl:ObjectProperty ;
+           rdfs:domain dul:Agent ;
+           rdfs:range dul:Agent .
 
 
 ###  https://w3id.org/contro/arg#supportedBy
@@ -445,10 +454,6 @@ persp:Attitude rdf:type owl:Class ;
                         dul:Description .
 
 
-###  https://w3id.org/contro/arg#Opponent1
-:Opponent1 rdf:type owl:NamedIndividual .
-
-
 ###  https://w3id.org/contro/arg#Premise
 :Premise rdf:type owl:NamedIndividual ,
                   dul:Description .
@@ -464,16 +469,17 @@ persp:Attitude rdf:type owl:Class ;
                 dul:Description .
 
 
-###  https://w3id.org/contro/arg#Topic1
-:Topic1 rdf:type owl:NamedIndividual .
+###  https://w3id.org/contro/arg#alias
+:alias rdf:type owl:NamedIndividual ;
+       :personaOf :secret_opponent .
 
 
 ###  https://w3id.org/contro/arg#defeasible_inference
 :defeasible_inference rdf:type owl:NamedIndividual ;
-                      :Author :Opponent1 ;
+                      :Author :alias ;
                       :Conclusion :B ;
                       :Premise :A ;
-                      :Topic :Topic1 ;
+                      :Topic :topic_1 ;
                       persp:Attitude :positive .
 
 
@@ -520,6 +526,14 @@ persp:Attitude rdf:type owl:Class ;
           :Premise :A ,
                    :C ;
           persp:Attitude :negative .
+
+
+###  https://w3id.org/contro/arg#secret_opponent
+:secret_opponent rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/contro/arg#topic_1
+:topic_1 rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/contro/arg#undercut

@@ -51,11 +51,16 @@
 }
 
 .persName {
-  --md-typeset-a-color: darkred;
+  --md-typeset-a-color: rgb(0, 165, 0);
 }
 
 .q {
-  --md-typeset-a-color: darkgreen;
+  --md-typeset-a-color: var(--md-secondary-fg-color);
+  --md-accent-fg-color: var(--md-secondary-fg-color);
+}
+
+.q:hover {
+  color: var(--md-secondary-fg-color) !important;
 }
 
 .md-typeset dd {
@@ -84,6 +89,11 @@ h2 + p {
 
 a {
   font-weight: 500;
+}
+
+li p a {
+  --md-typeset-a-color: var(--md-typeset-color);
+  font-weight: 400;
 }
 
 ol[type="1"] > li::marker {
@@ -125,4 +135,8 @@ a[href*="#cv"], a[href*="#cr"] {
 
 .shown {
   background-position: -100% 100% !important;
+}
+
+.tabbed-block {
+  margin-top: 2em;
 }
