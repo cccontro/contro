@@ -1,0 +1,60 @@
+@use "sass:color";
+
+
+// Light colors
+$light-steel-blue: oklch(80.27% 0.05 245.74); // Primary
+$steel-blue: oklch(58.8% 0.0993 245.74); // Accent
+$raspberry: oklch(54.3% 0.159 8.98); // Secondary
+$off-white: oklch(98.48% 0.0013 106.42); // Background
+
+// Dark colors
+$teal: oklch(50.03% 0.0872 187.43); // Primary
+$turquoise: oklch(71.47% 0.1308 178.71); // Accent
+$purple: oklch(34.42% 0.1493 340.37); // Secondary
+
+
+$light-theme: (
+  primary-fg-color: $light-steel-blue,
+  primary-fg-color--light: color.scale($light-steel-blue, $lightness: +20%, $alpha: -60%, $space: oklch), // Span highlights
+  primary-fg-color--dark: color.scale($steel-blue, $lightness: +20%, $space: oklch), // Used for git repo link in small media
+  typeset-a-color: $steel-blue,
+  accent-fg-color: color.scale($steel-blue, $lightness: +20%, $space: oklch), // Link on hover
+  accent-fg-color--transparent: color.change($light-steel-blue, $alpha: 0.07), // Search bar background on hover
+  secondary-fg-color: $raspberry,
+  secondary-fg-color--hover: color.scale($raspberry, $lightness: +20%, $space: oklch),
+  secondary-fg-color--transparent: color.change($raspberry, $alpha: 0.15),
+  default-bg-color: $off-white,
+  accent-bg-color: $off-white,
+  primary-bg-color: oklch(0% 0 0 / 87%), // Dark overlays
+  primary-bg-color--light: oklch(0% 0 0 / 54%)
+);
+
+$dark-theme: (
+  primary-fg-color: $teal,
+  primary-fg-color--light: color.scale($teal, $lightness: +20%, $alpha: -60%, $space: oklch), // Span highlights
+  primary-fg-color--dark: color.scale($teal, $lightness: -20%, $space: oklch), // Used for git repo link in small media
+  typeset-a-color: $turquoise,
+  accent-fg-color: color.scale($turquoise, $lightness: -10%, $space: oklch), // Link on hover
+  accent-fg-color--transparent: color.change($teal, $alpha: 0.13), // Search bar background on hover
+  secondary-fg-color: $purple,
+  secondary-fg-color--hover: color.scale($purple, $lightness: -10%, $space: oklch),
+  secondary-fg-color--light: color.scale($purple, $lightness: +60%, $chroma: -50%, $space: oklch),
+  secondary-fg-color--light-hover: color.scale($purple, $lightness: +40%, $chroma: -30%, $space: oklch),
+  secondary-fg-color--transparent: color.change($purple, $alpha: 0.2),
+  footer-bg-color--dark: oklch(0% 0 0 / 32%)
+);
+
+// Mixin to apply the themes
+@mixin set-theme($theme) {
+  @each $var, $value in $theme {
+    --md-#{$var}: #{color.to-gamut($value, $space: rgb, $method: local-minde)};
+  }
+}
+
+[data-md-color-scheme="default"] {
+  @include set-theme($light-theme);
+}
+
+[data-md-color-scheme="slate"] {
+  @include set-theme($dark-theme);
+}

@@ -1,7 +1,11 @@
+/* Translation tabs */
+.tabbed-block {
+  margin-top: 2em;
+}
 
-:not(.note, .syllogism li) > [ana="#disputed-words"] {
-  text-decoration: line-through var(--md-secondary-fg-color--transparent) 1.3em;
-  cursor: help;
+/* Notes are rendered inside cards */
+.note div:first-child {
+  margin-top: 0.3rem;
 }
 
 .syllogism {
@@ -17,19 +21,20 @@
   box-shadow: var(--md-shadow-z2);
 }
 
-.md-typeset ul li p {
+/* Argument lists */
+.md-typeset .syllogism ul li p {
   margin: 0;
 }
 
-.md-typeset ul {
+.md-typeset .syllogism ul {
   margin: .625em;
 }
 
-.syllogism li {
+.md-typeset .syllogism ul li {
   list-style-type: "🅟  ";
 }
 
-.syllogism li:last-child:nth-child(n+3) {
+.md-typeset .syllogism ul li:last-child:nth-child(n+3) {
   list-style-type: "🅒  ";
 }
 
@@ -42,80 +47,63 @@
   margin-bottom: 0;
 }
 
-.note div:first-child {
-  margin-top: 0.3rem;
+/* In-text glosses */
+:not(.note) > [ana="#disputed-words"] {
+  text-decoration: line-through var(--md-secondary-fg-color--transparent) 1.3em;
+  cursor: help;
 }
 
-.syllogism li p {
-  display: inline-flex;
-}
-
-.persName {
-  --md-typeset-a-color: rgb(0, 165, 0);
-}
-
-.q {
+/* In-text references */
+[data-md-color-scheme="default"] .q {
   --md-typeset-a-color: var(--md-secondary-fg-color);
-  --md-accent-fg-color: var(--md-secondary-fg-color);
+  --md-accent-fg-color: var(--md-secondary-fg-color--hover);
 }
 
-.q:hover {
-  color: var(--md-secondary-fg-color) !important;
+[data-md-color-scheme="slate"] .q {
+  --md-typeset-a-color: var(--md-secondary-fg-color--light);
+  --md-accent-fg-color: var(--md-secondary-fg-color--light-hover);
 }
 
-.md-typeset dd {
+/* Special layout of TEI titles and lists */
+.md-typeset .tabbed-block dd {
   margin-bottom: 0.5em;
   margin-top: 0;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3em;
+.tabbed-block h2 {
+  margin-bottom: 0.2rem;
 }
 
-:has(+ .translation) {
-  display: none;
-}
-
-h2 {
-  margin-bottom: 0.2rem !important;
-}
-
-h2 + p {
-  margin-top: 0 !important;
+.tabbed-block h2 + p {
+  margin-top: 0;
   font-style: italic;
 }
 
-a {
+.tabbed-block a {
   font-weight: 500;
 }
 
-li p a {
-  --md-typeset-a-color: var(--md-typeset-color);
-  font-weight: 400;
-}
-
-ol[type="1"] > li::marker {
+.tabbed-block ol[type="1"] > li::marker {
     content: counter(list-item) "     ";
     font-size: small;
     color: var(--md-default-fg-color--lighter);
 }
 
-ol[type="I"] > li::marker {
+.tabbed-block ol[type="I"] > li::marker {
     content: counter(list-item, upper-roman) " ";
     font-size: small;
     color: var(--md-default-fg-color--lighter);
 }
 
-[dir="ltr"] .md-typeset ol[type="I"] {
+.tabbed-block ol[type="I"] {
   margin-left: 0;
 }
 
-ol[type="1"] > li {
+.tabbed-block ol[type="1"] > li {
   margin-bottom: 0;
 }
 
+/* Related interpretation passages are dynamically highlighted */
 [ana*="#cv"], [ana*="#cr"], [ana="#premise"], [ana="#conclusion"], p:has([href*="#cv"]), p:has([href*="#cr"]) {
   position: relative;
   background-image: linear-gradient(to right, transparent 50%, var(--md-primary-fg-color--light) 50%);
@@ -129,14 +117,14 @@ ol[type="1"] > li {
   text-underline-offset: 5px;
 }
 
+.syllogism li p {
+  display: inline-flex;
+}
+
 a[href*="#cv"], a[href*="#cr"] {
   pointer-events: none;
 }
 
 .shown {
   background-position: -100% 100% !important;
-}
-
-.tabbed-block {
-  margin-top: 2em;
 }
