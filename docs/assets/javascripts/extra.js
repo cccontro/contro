@@ -23,7 +23,7 @@ function visibilityChange() {
             // Extract all headings (h2, h3, h4, h5, h6) from the hidden tabbed-block
             const headings = Array.from(block.querySelectorAll("h2, h3, h4, h5, h6"))
                 .map(h => h.firstChild.textContent.trim());
-            console.log(headings)
+
             // Find matching navigation items
             document.querySelectorAll(".md-nav__list .md-nav__item span").forEach(span => {
                 if (headings.includes(span.textContent.trim())) {

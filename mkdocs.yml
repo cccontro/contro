@@ -43,8 +43,8 @@ theme:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: custom/dark-mode
         name: Switch to system preference
@@ -67,7 +67,16 @@ plugins:
         exclude:
           - tei/Apologia-TEI.md
           - tei/Apologia-TEI-it.md
-
+          - examples.md#caros-canzone-in-praise-of-the-house-of-france
+          - examples.md#castelvetros-opinion-on-the-previous-canzone
+          - examples.md#declaration-on-some-aspects-of-the-preceding-opinion
+          - examples.md#i
+          - examples.md#predellas-resentment
+          - examples.md#canzone-del-caro-in-lode-della-casa-di-francia
+          - examples.md#parere-del-castelvetro-sopra-la-canzone-precedente
+          - examples.md#i_1
+          - examples.md#dichiarazione-dalcune-cose-dellantiscritto-parere
+          - examples.md#risentimento-del-predella
 markdown_extensions:
   - attr_list
   - def_list
@@ -98,6 +107,7 @@ markdown_extensions:
 
 extra_css:
   - assets/stylesheets/extra.css
+  - assets/stylesheets/palette-extra.css
   - https://fonts.googleapis.com/css?family=Source+Serif+4:226,300i,400,400i,700,700i&display=fallback
   - https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap
 
