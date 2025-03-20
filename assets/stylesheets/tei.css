@@ -47,6 +47,20 @@
   margin-bottom: 0;
 }
 
+/* Quoted premises */
+.md-typeset .syllogism li p a {
+  --md-typeset-a-color: var(--md-default-fg-color--light);
+  font-weight: 400;
+}
+
+.md-typeset .syllogism li p a:before {
+  content: "«";
+}
+
+.md-typeset .syllogism li p a:after {
+  content: "»";
+}
+
 /* In-text glosses */
 :not(.note) > [ana="#disputed-words"] {
   text-decoration: line-through var(--md-secondary-fg-color--transparent) 1.3em;
@@ -62,6 +76,32 @@
 [data-md-color-scheme="slate"] .q {
   --md-typeset-a-color: var(--md-secondary-fg-color--light);
   --md-accent-fg-color: var(--md-secondary-fg-color--light-hover);
+}
+
+/* Related interpretation passages are dynamically highlighted */
+[ana*="#cv"], [ana*="#cr"], [ana="#premise"], [ana="#conclusion"], p:has([href*="#cv"]), p:has([href*="#cr"]) {
+  position: relative;
+  background-image: linear-gradient(to right, transparent 50%, var(--md-primary-fg-color--light) 50%);
+  background-origin: 0;
+  background-size: 200% 100%;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  transition: background-position 0.5s ease-out;
+  cursor: pointer;
+  text-decoration: underline dotted var(--md-default-fg-color--lighter);
+  text-underline-offset: 5px;
+}
+
+.syllogism li p {
+  display: inline-flex;
+}
+
+a[href*="#cv"], a[href*="#cr"] {
+  pointer-events: none;
+}
+
+.shown {
+  background-position: -100% 100% !important;
 }
 
 /* Special layout of TEI titles and lists */
@@ -101,30 +141,4 @@
 
 .tabbed-block ol[type="1"] > li {
   margin-bottom: 0;
-}
-
-/* Related interpretation passages are dynamically highlighted */
-[ana*="#cv"], [ana*="#cr"], [ana="#premise"], [ana="#conclusion"], p:has([href*="#cv"]), p:has([href*="#cr"]) {
-  position: relative;
-  background-image: linear-gradient(to right, transparent 50%, var(--md-primary-fg-color--light) 50%);
-  background-origin: 0;
-  background-size: 200% 100%;
-  background-repeat: repeat-x;
-  background-position: 0 100%;
-  transition: background-position 0.5s ease-out;
-  cursor: pointer;
-  text-decoration: underline dotted gray;
-  text-underline-offset: 5px;
-}
-
-.syllogism li p {
-  display: inline-flex;
-}
-
-a[href*="#cv"], a[href*="#cr"] {
-  pointer-events: none;
-}
-
-.shown {
-  background-position: -100% 100% !important;
 }
