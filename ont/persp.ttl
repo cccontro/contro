@@ -7,12 +7,12 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix frame: <https://w3id.org/framester/schema/> .
 @prefix cpann: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
+@prefix frame: <https://w3id.org/framester/schema/> .
 @base <https://w3id.org/contro/persp#> .
 
 <https://w3id.org/contro/persp> rdf:type owl:Ontology ;
-                                 owl:versionIRI <https://w3id.org/contro/persp/1.0> ;
+                                 owl:versionIRI <https://w3id.org/contro/persp/1.0.0> ;
                                  cpann:isCloneOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl> ;
                                  rdfs:comment """An ontology for the perspectivisation frame: a type of events or situations, where a fact (a background) is reported within a certain storytelling (a lens), which creates a viewpoint (a cut), towards which the source (a conceptualiser)  holds a positive, negative, or neutral stance (an attitude).
 The result of perspectivisation is not only a linguistic or rhetorical artifice, because it typically involves a 'blending' of the entities playing two roles: the cut, and the lens.

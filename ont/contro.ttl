@@ -1,4 +1,5 @@
 @prefix : <https://w3id.org/contro#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix arg: <https://w3id.org/contro/arg#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -8,29 +9,26 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix persp: <https://w3id.org/contro/persp#> .
+@prefix contro: <https://w3id.org/contro/caro-castelvetro#> .
 @base <https://w3id.org/contro#> .
 
 <https://w3id.org/contro> rdf:type owl:Ontology ;
-                           owl:versionIRI <https://w3id.org/contro/1.0> ;
-                           owl:imports <https://w3id.org/contro/arg/1.0> ,
-                                       <https://w3id.org/contro/persp/1.0> ;
-                           <http://purl.org/dc/elements/1.1/creator> "Alberto Ciarrocca" ,
-                                                                     "Francesca Massarenti" .
+                           owl:versionIRI <https://w3id.org/contro/0.4.0> ;
+                           owl:imports <https://w3id.org/contro/arg/0.4.0> ,
+                                       <https://w3id.org/contro/persp/1.0.0> ;
+                           dc:creator "Alberto Ciarrocca" ,
+                                      "Francesca Massarenti" .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember
-dul:hasMember rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/contro/arg#Author
-arg:Author rdfs:subPropertyOf persp:Conceptualiser .
-
-
 ###  https://w3id.org/contro/arg#Conclusion
 arg:Conclusion rdfs:subPropertyOf persp:Cut .
+
+
+###  https://w3id.org/contro/arg#DialogicalAgent
+arg:DialogicalAgent rdfs:subPropertyOf persp:Conceptualiser .
 
 
 ###  https://w3id.org/contro/arg#KnowledgeBase
@@ -39,10 +37,6 @@ arg:KnowledgeBase rdfs:subPropertyOf persp:Background .
 
 ###  https://w3id.org/contro/arg#Premise
 arg:Premise rdfs:subPropertyOf persp:Lens .
-
-
-###  https://w3id.org/contro/arg#Topic
-arg:Topic rdfs:subPropertyOf persp:Eventuality .
 
 
 ###  https://w3id.org/contro/persp#contrasts
@@ -57,274 +51,43 @@ persp:contrasts owl:propertyChainAxiom ( [ owl:inverseOf persp:Cut
 
 
 #################################################################
-#    Data properties
+#    Annotations
 #################################################################
 
-###  http://www.w3.org/ns/prov#value
-prov:value rdf:type owl:DatatypeProperty .
+contro:w1 rdfs:label "cede"@it .
 
 
-#################################################################
-#    Classes
-#################################################################
+contro:w10 rdfs:label "gesti"@it .
 
-###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection
-dul:Collection rdf:type owl:Class .
 
+contro:w11 rdfs:label "inserte"@it .
 
-#################################################################
-#    Individuals
-#################################################################
 
-###  http://viaf.org/viaf/22166452
-<http://viaf.org/viaf/22166452> rdf:type owl:NamedIndividual ;
-                                owl:sameAs :castelvetro .
+contro:w12 rdfs:label "amene"@it .
 
 
-###  https://w3id.org/contro#castelvetro
+contro:w2 rdfs:label "ambo"@it .
 
-###  http://viaf.org/viaf/51714622
-<http://viaf.org/viaf/51714622> rdf:type owl:NamedIndividual ;
-                                owl:sameAs :caro .
 
+contro:w3 rdfs:label "simulacri"@it .
 
-###  https://w3id.org/contro#caro
 
-###  https://w3id.org/contro#anon
-:anon rdf:type owl:NamedIndividual ,
-               dul:Agent ;
-      arg:personaOf :castelvetro ;
-      rdfs:comment "The text is presented as if written by an anonymous figure."@en ;
-      rdfs:label "Anonymous" .
+contro:w4 rdfs:label "ancor essa"@it .
 
 
-###  https://w3id.org/contro#caro
-:caro rdf:type owl:NamedIndividual ,
-               dul:Agent ;
-      rdfs:label "Annibal Caro" .
+contro:w5 rdfs:label "Suo merto e tuo valor"@it .
 
 
-###  https://w3id.org/contro#castelvetro
-:castelvetro rdf:type owl:NamedIndividual ,
-                      dul:Agent ;
-             rdfs:label "Lodovico Castelvetro" .
+contro:w6 rdfs:label "inviolata"@it .
 
 
-###  https://w3id.org/contro#cr-a1
-:cr-a1 rdf:type owl:NamedIndividual ,
-                arg:Argument ;
-       arg:Author :predella ;
-       arg:Premise :cr-s1 ,
-                   :cv-s1 ;
-       arg:Topic :disputed-words .
+contro:w7 rdfs:label "tarpato"@it .
 
 
-###  https://w3id.org/contro#cr-a2
-:cr-a2 rdf:type owl:NamedIndividual ,
-                arg:Argument ;
-       arg:Author :predella ;
-       arg:Conclusion :cr-s3 ;
-       arg:Premise :cr-s2 ,
-                   :cv-s1 ,
-                   :cv-s2 ;
-       arg:Topic :disputed-words .
+contro:w8 rdfs:label "propizia"@it .
 
 
-###  https://w3id.org/contro#cr-a3
-:cr-a3 rdf:type owl:NamedIndividual ,
-                arg:Argument ;
-       arg:Author :predella ;
-       arg:Premise :cr-s4 ,
-                   :cv-s1 ;
-       arg:Topic :disputed-words .
-
-
-###  https://w3id.org/contro#cr-s1
-:cr-s1 rdf:type owl:NamedIndividual ;
-       arg:contradicts :cv-s3 ;
-       prov:value "But in saying outright that he would not use them, one must consider whether you have reliable authority on the matter, and what exactly you know of it; whether, by chance, as you so freely dispense the name and wisdom of Petrarch, his very spirit has entered your body."@en ,
-                  "Ma, dicendo affermativamente non l’userebbe, bisogna intender se l’avete di buon loco, e quel che voi ne sapete; se per aventura spacciando, come fate, il nome e ’l senno del Petrarca, vi fosse entrato il suo spirito in corpo"@it ;
-       rdfs:label "It is not possible to know whether Petrarch would have used those words merely because he did not happen to use them."@en .
-
-
-###  https://w3id.org/contro#cr-s2
-:cr-s2 rdf:type owl:NamedIndividual ;
-       arg:Antecedent :cv-s1 ,
-                      :cv-s2 ;
-       arg:Consequent :cr-s3 ;
-       prov:value "non vi contentarete voi del giudizio, dell’autorità e dell’essempio di quelli che sono i maestri dell’arte dello scrivere, dai quali hanno imparato il Petrarca e tutti gli altri buoni scrittori"@it ,
-                  "would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing—the very ones from whom Petrarch and all other good writers have learned"@en ;
-       rdfs:label "Although Petrarch did not use those words, the authority of other influential authors in Italian literature legitimizes their use."@en .
-
-
-###  https://w3id.org/contro#cr-s3
-:cr-s3 rdf:type owl:NamedIndividual ;
-       arg:contradicts :cv-s6 ;
-       rdfs:label "Those words can be used."@en .
-
-
-###  https://w3id.org/contro#cr-s4
-:cr-s4 rdf:type owl:NamedIndividual ;
-       arg:contradicts :cv-s5 ;
-       prov:value "Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel Petrarca e nel Boccaccio si termini tutta la favella volgare, come negli Evangeli ed in san Paolo tutta la sacra Scrittura."@it ,
-                  "This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to Petrarch and Boccaccio, just as to claim that sacred Scripture is wholly contained in the Gospels and Saint Paul."@en ;
-       rdfs:label "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en .
-
-
-###  https://w3id.org/contro#cv-a1
-:cv-a1 rdf:type owl:NamedIndividual ,
-                arg:Argument ;
-       arg:Author :anon ;
-       arg:Conclusion :cv-s4 ;
-       arg:Premise :cv-s1 ,
-                   :cv-s2 ,
-                   :cv-s3 ;
-       arg:Topic :disputed-words .
-
-
-###  https://w3id.org/contro#cv-a2
-:cv-a2 rdf:type owl:NamedIndividual ,
-                arg:Argument ;
-       arg:Author :anon ;
-       arg:Conclusion :cv-s6 ;
-       arg:Premise :cv-s4 ,
-                   :cv-s5 ;
-       arg:Topic :disputed-words .
-
-
-###  https://w3id.org/contro#cv-s1
-:cv-s1 rdf:type owl:NamedIndividual ;
-       prov:value "If you were to say that Petrarch had not used them, one might believe you, for you are well-versed in vocabulary"@en ,
-                  "Se voi diceste che ’l Petrarca non l’avesse usate, vi si potrebbe credere, perché siete molto pratico nel vocabolario"@it ,
-                  "che lo mosse a lasciarle da parte"@it ,
-                  "that led him to set them aside"@en ;
-       rdfs:label "Petrarch never used certain words."@en .
-
-
-###  https://w3id.org/contro#cv-s2
-:cv-s2 rdf:type owl:NamedIndividual ;
-       prov:value "conciofossecosaché al suo tempo fossero state usate forse tutte, ma senza dubbio la maggior parte, dagli scrittori"@it ,
-                  "since they had perhaps all, or at least most, been used by writers of his time"@en ;
-       rdfs:label "Other authors of his time used those words."@en .
-
-
-###  https://w3id.org/contro#cv-s3
-:cv-s3 rdf:type owl:NamedIndividual ;
-       arg:Antecedent :cv-s1 ,
-                      :cv-s2 ;
-       arg:Consequent :cv-s4 ;
-       rdfs:label "The fact that Petrarch left out words used in the literature of his time is a sign that he did not use them deliberately."@en .
-
-
-###  https://w3id.org/contro#cv-s4
-:cv-s4 rdf:type owl:NamedIndividual ;
-       prov:value "Il Petrarca non userebbe:"@it ,
-                  "Petrarch would not have used any of the elements he noted in Caro’s canzone"@en ,
-                  "Petrarch would not use:"@en ,
-                  "che il Petrarca non userebbe cede ed altre voci che seguono"@it ,
-                  "il Petrarca non avrebbe usata niuna delle cose notate da lui nella canzone del Caro"@it ,
-                  "that Petrarch would not use cede and the other words that follow"@en ;
-       rdfs:label "Petrarch wouldn’t have used those words."@en .
-
-
-###  https://w3id.org/contro#cv-s5
-:cv-s5 rdf:type owl:NamedIndividual ;
-       arg:Antecedent :cv-s4 ;
-       arg:Consequent :cv-s6 ;
-       rdfs:label "In the context of Petrarchist poetry, authors should not use words that Petrarch himself chose not to use."@en .
-
-
-###  https://w3id.org/contro#cv-s6
-:cv-s6 rdf:type owl:NamedIndividual ;
-       rdfs:label "Those words should not be used."@en .
-
-
-###  https://w3id.org/contro#disputed-words
-:disputed-words rdf:type owl:NamedIndividual ,
-                         dul:Collection ,
-                         arg:Topic ;
-                dul:hasMember :w1 ,
-                              :w10 ,
-                              :w11 ,
-                              :w12 ,
-                              :w2 ,
-                              :w3 ,
-                              :w4 ,
-                              :w5 ,
-                              :w6 ,
-                              :w7 ,
-                              :w8 ,
-                              :w9 ;
-                rdfs:comment "Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro."@en ;
-                rdfs:label "Disputed words"@en .
-
-
-###  https://w3id.org/contro#predella
-:predella rdf:type owl:NamedIndividual ,
-                   dul:Agent ;
-          arg:personaOf :caro ;
-          rdfs:comment "Fictional author: the text is presented as if written by the janitor of Accademia di Banchi di Roma."@en ;
-          rdfs:label "Predella" .
-
-
-###  https://w3id.org/contro#w1
-:w1 rdf:type owl:NamedIndividual ;
-    rdfs:label "cede"@it .
-
-
-###  https://w3id.org/contro#w10
-:w10 rdf:type owl:NamedIndividual ;
-     rdfs:label "gesti"@it .
-
-
-###  https://w3id.org/contro#w11
-:w11 rdf:type owl:NamedIndividual ;
-     rdfs:label "inserte"@it .
-
-
-###  https://w3id.org/contro#w12
-:w12 rdf:type owl:NamedIndividual ;
-     rdfs:label "amene"@it .
-
-
-###  https://w3id.org/contro#w2
-:w2 rdf:type owl:NamedIndividual ;
-    rdfs:label "ambo"@it .
-
-
-###  https://w3id.org/contro#w3
-:w3 rdf:type owl:NamedIndividual ;
-    rdfs:label "simulacri"@it .
-
-
-###  https://w3id.org/contro#w4
-:w4 rdf:type owl:NamedIndividual ;
-    rdfs:label "ancor essa"@it .
-
-
-###  https://w3id.org/contro#w5
-:w5 rdf:type owl:NamedIndividual ;
-    rdfs:label "Suo merto e tuo valor"@it .
-
-
-###  https://w3id.org/contro#w6
-:w6 rdf:type owl:NamedIndividual ;
-    rdfs:label "inviolata"@it .
-
-
-###  https://w3id.org/contro#w7
-:w7 rdf:type owl:NamedIndividual ;
-    rdfs:label "tarpato"@it .
-
-
-###  https://w3id.org/contro#w8
-:w8 rdf:type owl:NamedIndividual ;
-    rdfs:label "propizia"@it .
-
-
-###  https://w3id.org/contro#w9
-:w9 rdf:type owl:NamedIndividual ;
-    rdfs:label "illustri"@it .
+contro:w9 rdfs:label "illustri"@it .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,359 @@
+/* Guided scroll setup */
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  width: 100vw;
+}
+
+section {
+  position: relative;
+  height: fit-content;
+  max-height: calc(100vh - var(--header-height) - 1.6rem);
+  padding: 15vw 0;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-content: start;
+  scroll-margin-top: var(--header-height);
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+section:first-of-type {
+  height: calc(100vh - (2.5rem + var(--header-height)));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: end;
+  padding-top: 0;
+  padding-bottom: 2.5rem;
+}
+
+section:last-of-type {
+  scroll-snap-align: end;
+}
+
+footer {
+  scroll-snap-align: end;
+}
+
+/* Hero */
+.hero {
+  flex-flow: column;
+  text-align: center;
+  width: var(--head-gap);
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  margin: 0 auto;
+  gap: 5vh;
+}
+
+.hero h1 {
+  font-size: 1.5625em;
+  line-height: 1.4;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0;
+  color: unset;
+}
+
+.emph {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#hero-bg {
+  display: flex;
+  justify-content: center;
+  gap: var(--head-gap);
+  position: absolute;
+  top: var(--header-height);
+  left: 50%;
+  width: max(100vh, 100vw);
+  height: calc(100vh - var(--header-height));
+  padding: 1em 0;
+  transform: translateX(-50%);
+  z-index: -1;
+  contain: size;
+}
+
+#hero-bg svg {
+  font-size: 11.4px;
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+  aspect-ratio: 484.76 / 805.29;
+}
+
+/* Grid animation */
+.md-typeset .grid.cards {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+}
+
+.md-typeset .grid.cards > ul > li {
+  transition: border .25s, box-shadow .25s, transform .75s cubic-bezier(.075,.85,.175,1), opacity .75s;
+}
+
+.md-typeset .grid.cards.no-border li, #questions > p:first-child {
+  transition: transform .75s cubic-bezier(.075,.85,.175,1), opacity .75s;
+}
+
+.md-typeset .grid.cards.no-border li {
+  border: none;
+}
+
+.md-typeset .grid.cards.no-border li:hover, .md-typeset .grid.cards.no-border li:focus-within {
+  box-shadow: none;
+}
+
+[hidden] li {
+  opacity: 0;
+}
+
+[hidden] li {
+  transform: translate(-.8rem,.4rem);
+}
+
+[hidden] li:nth-child(2n) {
+  transform: translate(.8rem,.4rem);
+}
+
+.md-typeset .grid.cards li:first-child {
+  transition-delay: 200ms;
+}
+
+.md-typeset .grid.cards li:nth-child(2) {
+  transition-delay: 275ms;
+}
+
+.md-typeset .grid.cards li:nth-child(3) {
+  transition-delay: 350ms;
+}
+
+.md-typeset .grid.cards li:nth-child(4) {
+  transition-delay: 425ms;
+}
+
+.md-typeset .grid.cards li:nth-child(5) {
+  transition-delay: 500ms;
+}
+
+.md-typeset .grid.cards li:nth-child(6) {
+  transition-delay: 575ms;
+}
+
+/* Text */
+section > p {
+  font-family: var(--md-serif-font-family);
+  font-size: 1.5625em;
+  line-height: 1.4;
+  letter-spacing: -.01em;
+}
+
+.md-typeset .grid.cards h1 {
+  margin-bottom: 0.64em;
+}
+
+/* Quotes section */
+[dir="ltr"] .md-typeset blockquote {
+  position: relative;
+  font-size: x-large;
+  border-left: none;
+  font-style: italic;
+  padding: 0;
+  max-width: 30em;
+}
+
+blockquote:before {
+  display: block;
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  top: -2.5em;
+  content: '';
+}
+
+#quotes li:first-child blockquote:before {
+  right: 0.2rem;
+  -webkit-mask: var(--md-quote-left-icon) no-repeat 50% 50%;
+  mask: var(--md-quote-left-icon) no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: var(--md-accent-fg-color);
+}
+
+#quotes li:last-child blockquote:before {
+  left: -0.2rem;
+  -webkit-mask: var(--md-quote-right-icon) no-repeat 50% 50%;
+  mask: var(--md-quote-right-icon) no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: var(--md-secondary-fg-color);
+}
+
+#quotes li:last-child {
+  text-align: right;
+}
+
+#quotes li:last-child blockquote {
+  margin-left: auto;
+}
+
+#quotes p {
+  display: contents;
+}
+
+#quotes .grid.cards {
+  row-gap: 4.5em;
+}
+
+/* Distill section */
+#distill {
+  position: relative;
+  background-color: var(--md-secondary-fg-color--transparent);
+  padding: 2em;
+  border-radius: 32px;
+}
+
+#distill p {
+  max-width: 40em;
+  font-size: 1.2em;
+}
+
+#distill img {
+  height: min(23vh, 250px);
+}
+
+#distill .grid.cards {
+  grid-template-columns: 50em auto;
+  column-gap: 0;
+}
+
+#distill li:first-child {
+  padding-right: 0;
+}
+
+#distill li:last-child p {
+  text-align: center;
+  margin: auto;
+}
+
+#distill [hidden] li:first-child {
+  transform: translateY(1.6rem);
+}
+
+#distill [hidden] li:last-child {
+  transform: translateY(-1.6rem);
+}
+
+/* Questions section */
+#questions {
+  text-align: center;
+}
+
+#questions > p:has(+ [hidden]) {
+  opacity: 0;
+}
+
+#questions .grid.cards {
+  display: flex;
+  flex-flow: column;
+}
+
+#questions li {
+  width: fit-content;
+  margin: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 32px;
+  flex-flow: row;
+}
+
+#questions [hidden] li {
+  transform: translateY(1.6rem);
+}
+
+/* Overview section */
+#overview .grid.cards {
+  gap: 1.6rem;
+}
+
+#overview li {
+  gap: .6rem;
+  padding: 0;
+  flex-flow: row;
+}
+
+#overview strong {
+  display: block;
+  font-size: 1.5625em;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: .175em 0 .4em;
+  font-family: var(--md-text-font-family);
+}
+
+#overview .twemoji {
+  background-color: var(--md-default-fg-color--lightest);
+  border-radius: 100%;
+  flex-shrink: 0;
+  height: 2.2rem;
+  padding: .4rem;
+  width: 2.2rem;
+  align-content: center;
+  justify-content: center;
+}
+
+#overview p {
+  margin: 0;
+}
+
+#overview p:first-child {
+  display: contents;
+}
+
+
+@media (max-width: 1220px) {
+  .md-content {
+    contain: paint;
+  }
+
+  #hero-bg {
+    top: 0;
+  }
+
+  .hero {
+    font-size: 80%;
+  }
+
+  [dir="ltr"] .md-typeset blockquote {
+    font-size: large;
+  }
+
+  .md-typeset .grid.cards > ul > li {
+    margin: auto 0;
+    padding: 0;
+  }
+
+  .md-typeset .grid.cards p {
+    max-width: none;
+  }
+
+  .md-typeset .grid.cards.no-border {
+    row-gap: 3em;
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 750px) {
+  #distill p {
+    font-size: unset;
+  }
+
+section:last-of-type {
+  scroll-snap-type: none;
+  scroll-snap-align: start;
+  max-height: unset;
+}
+}
