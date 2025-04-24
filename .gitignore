@@ -1,4 +1,7 @@
+__pycache__
 contro
 site
 docs/ont/catalog*
 controEnv
+common/
+*.jar

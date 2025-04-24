@@ -1,10 +1,10 @@
 <!-- 
 Stylesheet for converting TEI to HTML-in-Markdown format, intended for post-processing
-with Python-Markdown. 
+with Python-Markdown.
 
 To use it:
 1. Clone the TEI Stylesheets repository: https://github.com/TEIC/Stylesheets
-2. Place this file in the `./markdown` folder.
+2. Copy the `./common` folder in the same directory this file is.
 -->
 
 <xsl:stylesheet
@@ -15,7 +15,7 @@ To use it:
         xpath-default-namespace="http://www.tei-c.org/ns/1.0"
         exclude-result-prefixes="tei xs">
 
-    <xsl:import href="../common/common.xsl" />
+    <xsl:import href="common/common.xsl" />
 
     <xsl:strip-space elements="additional address adminInfo
                 altGrp altIdentifier analytic
@@ -137,8 +137,11 @@ To use it:
     <xsl:output method="xhtml" html-version="5.0" encoding="UTF-8" indent="no" omit-xml-declaration="yes" />
 
     <!-- Hide either of the two languages -->
-    <xsl:variable name="lang" select="'it'" />
+    <xsl:param name="lang" as="xs:string" required="no" select="'it'" />
     <xsl:template match="*[@xml:lang= $lang]" priority="10" />
+
+    <!-- Suffix for the opposite language -->
+    <xsl:variable name="other-lang" as="xs:string" select="if ($lang = 'it') then 'en' else 'it'" />
 
     <!-- Match only titles, character list and text, avoid all other metadata -->
     <xsl:template match="/">
@@ -183,7 +186,9 @@ To use it:
             <xsl:attribute name="markdown">1</xsl:attribute>
             <xsl:if test="@xml:id">
                 <xsl:attribute name="id">
-                    <xsl:value-of select="@xml:id" />
+                    <xsl:value-of select="if (ends-with(@xml:id, '-it') or ends-with(@xml:id, '-en'))
+                                          then @xml:id
+                                          else concat(@xml:id, '-', $other-lang)" />
                 </xsl:attribute>
             </xsl:if>
             <xsl:if test="@ana">
@@ -408,7 +413,11 @@ To use it:
     <!-- In-text references are rendered as regular markdown links.
          The title is set as the location of the referent, if available. -->
     <xsl:template match="*[@corresp]" name="corresp">
-        <xsl:value-of select="tei:mkLink(.,@corresp,'')" />
+        <xsl:variable name="corresp-suffixed"
+              select="if (ends-with(@corresp, '-it') or ends-with(@corresp, '-en'))
+                      then @corresp
+                      else concat(@corresp, '-', $other-lang)" />
+        <xsl:value-of select="tei:mkLink(.,$corresp-suffixed,'')" />
         <xsl:variable name="target" select="id(substring(@corresp, 2))" />
         <xsl:choose>
             <xsl:when test="$target/parent::l">
@@ -489,11 +498,10 @@ To use it:
         </xsl:variable>
         <xsl:call-template name="newline" />
         <xsl:choose>
-            <xsl:when test="$depth=0">##</xsl:when>
-            <xsl:when test="$depth=1">###</xsl:when>
-            <xsl:when test="$depth=2">####</xsl:when>
-            <xsl:when test="$depth=3">#####</xsl:when>
-            <xsl:when test="$depth=4">######</xsl:when>
+            <xsl:when test="$depth=0">###</xsl:when>
+            <xsl:when test="$depth=1">####</xsl:when>
+            <xsl:when test="$depth=2">#####</xsl:when>
+            <xsl:when test="$depth=3">######</xsl:when>
             <xsl:otherwise>#</xsl:otherwise>
         </xsl:choose>
         <xsl:text xml:space="preserve"> </xsl:text>

@@ -19,7 +19,7 @@ $light-theme: (
   primary-fg-color--dark: color.scale($steel-blue, $lightness: +20%, $space: oklch), // Used for git repo link in small media
   typeset-a-color: $steel-blue,
   accent-fg-color: color.scale($steel-blue, $lightness: +20%, $space: oklch), // Link on hover
-  accent-fg-color--transparent: color.change($light-steel-blue, $alpha: 0.07), // Search bar background on hover
+  accent-fg-color--transparent: color.change($light-steel-blue, $alpha: 0.15), // Search bar background on hover
   secondary-fg-color: $raspberry,
   secondary-fg-color--hover: color.scale($raspberry, $lightness: +20%, $space: oklch),
   secondary-fg-color--transparent: color.change($raspberry, $alpha: 0.15),
@@ -35,7 +35,7 @@ $dark-theme: (
   primary-fg-color--dark: color.scale($teal, $lightness: -20%, $space: oklch), // Used for git repo link in small media
   typeset-a-color: $turquoise,
   accent-fg-color: color.scale($turquoise, $lightness: -10%, $space: oklch), // Link on hover
-  accent-fg-color--transparent: color.change($teal, $alpha: 0.13), // Search bar background on hover
+  accent-fg-color--transparent: color.change($teal, $alpha: 0.15), // Search bar background on hover
   secondary-fg-color: $purple,
   secondary-fg-color--hover: color.scale($purple, $lightness: -10%, $space: oklch),
   secondary-fg-color--light: color.scale($purple, $lightness: +60%, $chroma: -50%, $space: oklch),

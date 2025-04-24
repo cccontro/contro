@@ -1,3 +1,4 @@
+// In view observer
 const intersectionObserver = new IntersectionObserver(entries => {
 entries.forEach(entry => {
   if (entry.isIntersecting) {
@@ -8,6 +9,19 @@ entries.forEach(entry => {
 });
 }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
 
+// First-seen observer
+const intersectionObserver2 = new IntersectionObserver((entries, obs) => {
+entries.forEach(entry => {
+  if (entry.isIntersecting) {
+    const el = entry.target;
+    el.removeAttribute('hidden');
+
+    obs.unobserve(el);
+  }
+});
+}, { threshold: 0.3 });
+
+// Active tab observer
 const resizeObserver = new ResizeObserver(visibilityChange);
 
 function visibilityChange() {
@@ -61,9 +75,11 @@ document$.subscribe(function () {
 
     // Observe titles and other elements to highlight when viewed on scroll
     const titles = document.querySelectorAll("h1, h2, h3, .highlight");
+    titles.forEach(el => intersectionObserver.observe(el));
 
-    titles.forEach(title => intersectionObserver.observe(title));
-
+    // Landing page animation
+    const animated = document.querySelectorAll('[hidden]');
+    animated.forEach(el => intersectionObserver2.observe(el));
 
     // Highlight selected analysis spans
     document.querySelectorAll("[id*='cv-s'], [id*='cr-s'], [ana*='#cv'], [ana*='#cr'], p:has([href*='cv-s']), p:has([href*='cr-s'])").forEach(element => {

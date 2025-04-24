@@ -8,14 +8,14 @@
 [poliziano]: http://viaf.org/viaf/9867884 "Angelo Poliziano"
 [st-paul]: http://viaf.org/viaf/100178828 "Saint Paul, the Apostle"
 
-## Caro’s Canzone <br/><small>in Praise of the House of France</small>   {: data-toc-label="Caro’s Canzone" }
+### Caro’s Canzone <br/><small>in Praise of the House of France</small>   {: data-toc-label="Caro’s Canzone" }
 [Annibal Caro][caro]
 
 
 I.  
     1.  Venite all’ombra de’ gran gigli d’oro,
     2.  care muse, devote a’ miei giacinti:
-    3.  e d’<span markdown="1" id="w2" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">ambo</span> insieme avinti
+    3.  e d’<span markdown="1" id="w2-en" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">ambo</span> insieme avinti
     4.  tessiam ghirlande a’ nostri idoli, e fregi.
     5.  E tu, signor, ch’io per mio sole adoro,
     6.  perché non sian dall’altro sole estinti,
@@ -32,14 +32,14 @@ I.
 II.  
     1.  Giace, quasi gran conca, infra due mari
     2.  e due monti famosi, Alpe e Pirene,
-    3.  parte delle più <span markdown="1" id="w12" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">amene</span>
+    3.  parte delle più <span markdown="1" id="w12-en" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">amene</span>
     4.  d’Europa, e di quant’anco il sol circonda:
     5.  di tesori e di popoli e d’altari,
     6.  ch’al nostro vero nume erge e mantene,
     7.  di preziose vene,
     8.  d’arti e d’armi e d’amor madre feconda.
     9.  Novella Berecintia, a cui gioconda
-    10.  <span markdown="1" id="w1" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">cede</span> l’altra il suo carro e i suoi leoni:
+    10.  <span markdown="1" id="w1-en" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">cede</span> l’altra il suo carro e i suoi leoni:
     11.  e sol par ch’incoroni
     12.  di tutte le sue torri Italia e lei:
     13.  e dica: — Ite, miei Galli, or Galli interi,
@@ -48,7 +48,7 @@ II.
 
 III.  
     1.  Di questa madre generosa e chiara,
-    2.  madre <span markdown="1" id="w4" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">ancor essa</span> di celesti eroi,
+    2.  madre <span markdown="1" id="w4-en" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">ancor essa</span> di celesti eroi,
     3.  regnano oggi fra noi
     4.  d’altri Giovi altri figli ed altre suore;
     5.  e vie più degni ancor d’incenso e d’ara,
@@ -61,7 +61,7 @@ III.
     12.  con la pietà, con l’onestà, con l’armi,
     13.  col sollevar gli oppressi e punir gli empi,
     14.  non coi bronzi o coi marmi,
-    15.  si va sacrando i <span markdown="1" id="w3" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">simulacri</span> e i tempi.
+    15.  si va sacrando i <span markdown="1" id="w3-en" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">simulacri</span> e i tempi.
 
 IV.  
     1.  Mirate, come placido e severo
@@ -85,8 +85,8 @@ V.
     2.  gode dell’amor suo, lieta e sicura;
     3.  e non è sdegno o cura
     4.  che ’l cor le punga, o di Calisto o d’Io.
-    5.  <span markdown="1" id="w5" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">Suo merto e tuo valor</span>, donna gentile,
-    6.  di nome e d’alma <span markdown="1" id="w6" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">inviolata</span> e pura.
+    5.  <span markdown="1" id="w5-en" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">Suo merto e tuo valor</span>, donna gentile,
+    6.  di nome e d’alma <span markdown="1" id="w6-en" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">inviolata</span> e pura.
     7.  E fu nostra ventura,
     8.  e providenza del superno Iddio,
     9.  ch’in sì gran regno, a sì gran re t’unio,
@@ -101,9 +101,9 @@ VI.
     1.  Vera Minerva, e veramente nata
     2.  di Giove stesso e del suo senno è quella
     3.  ch’ora è figlia e sorella
-    4.  di regi <span markdown="1" id="w9" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">illustri</span>, e ne fia madre e sposa.
+    4.  di regi <span markdown="1" id="w9-en" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">illustri</span>, e ne fia madre e sposa.
     5.  Vergine, che di gloria incoronata,
-    6.  quasi lunge dal sol <span markdown="1" id="w8" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">propizia</span> stella,
+    6.  quasi lunge dal sol <span markdown="1" id="w8-en" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">propizia</span> stella,
     7.  ti stai d’amor rubella,
     8.  per dar più luce a questa notte ombrosa.
     9.  Viva perla, serena e preziosa,
@@ -112,7 +112,7 @@ VI.
     12.  col tuo sfavilla il suo bel lume tanto
     13.  ch’ogni cor arde, e ’l mio ne sente un foco
     14.  tal, ch’io ne volo e canto
-    15.  infra i tuoi cigni, e son <span markdown="1" id="w7" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">tarpato</span> e roco.
+    15.  infra i tuoi cigni, e son <span markdown="1" id="w7-en" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">tarpato</span> e roco.
 
 VII.  
     1.  Evvi ancor Cintia, e v’era Endimione:
@@ -132,74 +132,74 @@ VII.
     15.  o di clava o di tirso o di tridente?
 
 VIII.  
-    1.  Canzon, se la virtù, se i chiari <span markdown="1" id="w10" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">gesti</span>
+    1.  Canzon, se la virtù, se i chiari <span markdown="1" id="w10-en" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">gesti</span>
     2.  ne fan celesti, del ciel degne sono
     3.  l’alme di ch’io ragiono.
     4.  Tu lor queste di fiori umìli offerte
     5.  porgi in mia vece, e di’: — Se non son elle
-    6.  d’oro e di gemme <span markdown="1" id="w11" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">inserte</span>,
+    6.  d’oro e di gemme <span markdown="1" id="w11-en" ana="#disputed-words" title="Disputed word.&lt;br/&gt;Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro.">inserte</span>,
     7.  son di voi stessi, e saran poi di stelle.
 
 
 
-## Castelvetro’s Opinion <br/><small>On the Previous Canzone</small>   {: data-toc-label="Castelvetro’s Opinion" }
+### Castelvetro’s Opinion <br/><small>On the Previous Canzone</small>   {: data-toc-label="Castelvetro’s Opinion" }
 [Lodovico Castelvetro][castelvetro]
 
 
-### I
+#### I
 
-<span markdown="1" id="parere-en-1" ana="#cv-s4">[Petrarch][petrarca]{: .persName } would not use:</span> 
+<span markdown="1" id="parere-1-en" ana="#cv-s4">[Petrarch][petrarca]{: .persName } would not use:</span> 
 
 <div markdown="1" class="list gloss">
-«[Cede](#w1){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 10" }»
+«[Cede](#w1-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 10" }»
 :  
 
-«[Ambo](#w2){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> I, 3" }»
+«[Ambo](#w2-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> I, 3" }»
 :  When referring to two feminine referents without the accompaniment of a noun, as in «ambe le braccia».
 
-«[Simulacri](#w3){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 15" }»
+«[Simulacri](#w3-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 15" }»
 :  
 
-«[Ancor essa](#w4){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }»
+«[Ancor essa](#w4-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }»
 :  This is a plebeian way of speaking.
 
-«[Suo merto e tuo valor](#w5){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 5" }»
+«[Suo merto e tuo valor](#w5-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 5" }»
 :  This construction is novel without «per».
 
-«[Inviolata](#w6){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 6" }»
+«[Inviolata](#w6-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 6" }»
 :  
 
-«[Tarpato](#w7){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 15" }»
+«[Tarpato](#w7-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 15" }»
 :  
 
-«[Propizia](#w8){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 6" }»
+«[Propizia](#w8-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 6" }»
 :  
 
-«[Illustri](#w9){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 4" }»
+«[Illustri](#w9-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 4" }»
 :  Used in rhyme by [Petrarch][petrarca]{: .persName }.
 
-«[Gesti](#w10){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 1" }»
+«[Gesti](#w10-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 1" }»
 :  
 
-«[Inserte](#w11){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 6" }»
+«[Inserte](#w11-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 6" }»
 :  
 
-«[Amene](#w12){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 3" }»
+«[Amene](#w12-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 3" }»
 :  
 
 </div>
 
 
 
-## Declaration on Some Aspects of the Preceding Opinion 
+### Declaration on Some Aspects of the Preceding Opinion 
 [Anonymous (Lodovico Castelvetro)][anon]
 
 [...]
 Someone wrote to him from Rome to know his opinion about this canzone, for there it was esteemed by many not only as beautiful but also as such that, had [Petrarch][petrarca]{: .persName } been presented with a similar occasion in his time, he would not have written it differently. However, he, holding a very different opinion from those fervent Roman admirers, replied that <span markdown="1" ana="#cv-s4">[Petrarch][petrarca]{: .persName } would not have used any of the elements he noted in [Caro][caro]{: .persName }’s canzone</span>. It is up to others to prove that [Petrarch][petrarca]{: .persName } would have used them, if they wish to charge the opponent with ignorance. But since some of these elements are concisely expressed—having no need to be written differently for the questioner, who understands such brevity—and since their conciseness may, by chance, lead some to regard as puerile and vain what in fact is not, it is appropriate that I, who am aware of the opponent’s intention, expand upon them and clarify them in other words.
 
-First of all, then, the opponent wished to argue that [Petrarch][petrarca]{: .persName } would not use the words «[cede](#w1){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 10" }», «[inviolata](#w6){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 6" }», «[propizia](#w8){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 6" }», «[gesti](#w10){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 1" }», «[inserte](#w11){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 6" }», «[amene](#w12){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 3" }», «[simulacri](#w3){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 15" }», or «[illustri](#w9){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 4" }» outside of rhyme—not because these words were unheard of, <span markdown="1" ana="#cv-s2">since they had perhaps all, or at least most, been used by writers of his time</span>, but for some other reason, whatever it may have been, <span markdown="1" ana="#cv-s1">that led him to set them aside</span>. Nor, similarly, would he use «[ambo](#w2){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> I, 3" }» when referring to two feminine referents without the explicit—and not implied—accompaniment of a noun. Nor would he use «[ancor essa](#w4){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }», since refined usage of the language does not admit «esso» with an explicit noun unless it precedes it. For instance, as an example: «Il Petrarca fa delle rime care, ed esso Caro ne fa ancora». (Petrarch writes precious verses, and Caro himself does so as well.) But one cannot say: «Il Petrarca fa delle rime care, ed il Caro esso ne fa ancora». (Petrarch writes precious verses, and himself Caro does so as well.) Consequently, one also cannot say: «Il Petrarca fa delle rime care, ed il Caro ne fa ancor esso». Nor could one say «[madre ancor essa](#w4){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }».
+First of all, then, the opponent wished to argue that [Petrarch][petrarca]{: .persName } would not use the words «[cede](#w1-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 10" }», «[inviolata](#w6-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 6" }», «[propizia](#w8-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 6" }», «[gesti](#w10-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 1" }», «[inserte](#w11-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 6" }», «[amene](#w12-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 3" }», «[simulacri](#w3-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 15" }», or «[illustri](#w9-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 4" }» outside of rhyme—not because these words were unheard of, <span markdown="1" ana="#cv-s2">since they had perhaps all, or at least most, been used by writers of his time</span>, but for some other reason, whatever it may have been, <span markdown="1" ana="#cv-s1">that led him to set them aside</span>. Nor, similarly, would he use «[ambo](#w2-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> I, 3" }» when referring to two feminine referents without the explicit—and not implied—accompaniment of a noun. Nor would he use «[ancor essa](#w4-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }», since refined usage of the language does not admit «esso» with an explicit noun unless it precedes it. For instance, as an example: «Il Petrarca fa delle rime care, ed esso Caro ne fa ancora». (Petrarch writes precious verses, and Caro himself does so as well.) But one cannot say: «Il Petrarca fa delle rime care, ed il Caro esso ne fa ancora». (Petrarch writes precious verses, and himself Caro does so as well.) Consequently, one also cannot say: «Il Petrarca fa delle rime care, ed il Caro ne fa ancor esso». Nor could one say «[madre ancor essa](#w4-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }».
 
-Nor would he use «[suo merto e tuo valore](#w5){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 5" }» without «per», since, as far as I recall from my readings, the omission of «per» occurs only before three nouns: «tempo», «grazia», and «mercé» or «mercede», as in: «E di notte tempo, con iscale ed altri ingegni, entrò nella città di Cortona». (And by night-time, with ladders and other devices, he entered the city of Cortona.) [...] Nor would he use «[tarpato](#w7){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 15" }», as it is a plebeian word, never perhaps accepted in any writings except those of [Angelo Poliziano][poliziano]{: .persName }.
+Nor would he use «[suo merto e tuo valore](#w5-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 5" }» without «per», since, as far as I recall from my readings, the omission of «per» occurs only before three nouns: «tempo», «grazia», and «mercé» or «mercede», as in: «E di notte tempo, con iscale ed altri ingegni, entrò nella città di Cortona». (And by night-time, with ladders and other devices, he entered the city of Cortona.) [...] Nor would he use «[tarpato](#w7-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 15" }», as it is a plebeian word, never perhaps accepted in any writings except those of [Angelo Poliziano][poliziano]{: .persName }.
 [...]
 
 <div markdown="1" class="note paraphrase">
@@ -233,11 +233,11 @@ Nor would he use «[suo merto e tuo valore](#w5){: .q title="<em>Venite all’om
 </div>
 
 
-## Predella’s Resentment 
+### Predella’s Resentment 
 [Predella (Annibal Caro)][predella]
 
 
-[...] But, to answer you point by point, following your order, let us come to what you say in your censure: <span markdown="1" ana="#cv-s4">that [Petrarch][petrarca]{: .persName } would not use «cede» and the other words that follow</span>. [...] <span markdown="1" ana="#cv-s1">If you were to say that [Petrarch][petrarca]{: .persName } had not used them, one might believe you, for you are well-versed in vocabulary</span>. <span markdown="1" ana="#cr-s1">But in saying outright that «[he would not use them](#parere-en-1){: .q title="<em>Castelvetro’s Opinion</em> I, p. 96" }», one must consider whether you have reliable authority on the matter, and what exactly you know of it; whether, by chance, as you so freely dispense the name and wisdom of [Petrarch][petrarca]{: .persName }, his very spirit has entered your body.</span> For in that case—or if you had it by revelation, or by some other demonstration, provided it did not come from your own mind—I am content to accept what you say; and [Caro][caro]{: .persName } will admit he used them poorly, since he holds [Petrarch][petrarca]{: .persName } as the prince of poets in our language, worthy of reverence and admiration above all others. But if it is merely something you say and imagine on your own, I am under no obligation to believe it, and your imagination carries no weight.— Nor should one believe you either — you will say. Very well: on this, we are in agreement. It remains that we must agree to refer the matter (as is necessary) to third parties more knowledgeable than both you and I. And to this end, <span markdown="1" ana="#cr-s2">would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing—the very ones from whom [Petrarch][petrarca]{: .persName } and all other good writers have learned</span>, and who should also have taught you to judge, had you read them, or read them well, or interpreted them soundly?
+[...] But, to answer you point by point, following your order, let us come to what you say in your censure: <span markdown="1" ana="#cv-s4">that [Petrarch][petrarca]{: .persName } would not use «cede» and the other words that follow</span>. [...] <span markdown="1" ana="#cv-s1">If you were to say that [Petrarch][petrarca]{: .persName } had not used them, one might believe you, for you are well-versed in vocabulary</span>. <span markdown="1" ana="#cr-s1">But in saying outright that «[he would not use them](#parere-1-en){: .q title="<em>Castelvetro’s Opinion</em> I, p. 96" }», one must consider whether you have reliable authority on the matter, and what exactly you know of it; whether, by chance, as you so freely dispense the name and wisdom of [Petrarch][petrarca]{: .persName }, his very spirit has entered your body.</span> For in that case—or if you had it by revelation, or by some other demonstration, provided it did not come from your own mind—I am content to accept what you say; and [Caro][caro]{: .persName } will admit he used them poorly, since he holds [Petrarch][petrarca]{: .persName } as the prince of poets in our language, worthy of reverence and admiration above all others. But if it is merely something you say and imagine on your own, I am under no obligation to believe it, and your imagination carries no weight.— Nor should one believe you either — you will say. Very well: on this, we are in agreement. It remains that we must agree to refer the matter (as is necessary) to third parties more knowledgeable than both you and I. And to this end, <span markdown="1" ana="#cr-s2">would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing—the very ones from whom [Petrarch][petrarca]{: .persName } and all other good writers have learned</span>, and who should also have taught you to judge, had you read them, or read them well, or interpreted them soundly?
 
 
 <div markdown="1" class="note paraphrase">

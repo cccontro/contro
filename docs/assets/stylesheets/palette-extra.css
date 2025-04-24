@@ -4,7 +4,7 @@
   --md-primary-fg-color--dark: oklch(67.04% 0.0993 245.74deg);
   --md-typeset-a-color: oklch(58.8% 0.0993 245.74deg);
   --md-accent-fg-color: oklch(67.04% 0.0993 245.74deg);
-  --md-accent-fg-color--transparent: oklch(80.27% 0.05 245.74deg / 0.07);
+  --md-accent-fg-color--transparent: oklch(80.27% 0.05 245.74deg / 0.15);
   --md-secondary-fg-color: oklch(54.3% 0.159 8.98deg);
   --md-secondary-fg-color--hover: oklch(63.44% 0.159 8.98deg);
   --md-secondary-fg-color--transparent: oklch(54.3% 0.159 8.98deg / 0.15);
@@ -20,7 +20,7 @@
   --md-primary-fg-color--dark: oklch(40.8215476448% 0.0714435786 186.473946929deg);
   --md-typeset-a-color: oklch(71.47% 0.1308 178.71deg);
   --md-accent-fg-color: oklch(64.9029258742% 0.1198792498 177.5180587362deg);
-  --md-accent-fg-color--transparent: oklch(50.03% 0.0872 187.43deg / 0.13);
+  --md-accent-fg-color--transparent: oklch(50.03% 0.0872 187.43deg / 0.15);
   --md-secondary-fg-color: oklch(34.4204424785% 0.1492937984 340.3702604317deg);
   --md-secondary-fg-color--hover: oklch(31.7972003432% 0.1376048694 340.877697558deg);
   --md-secondary-fg-color--light: oklch(73.768% 0.07465 340.37deg);

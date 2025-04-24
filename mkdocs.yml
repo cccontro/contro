@@ -63,20 +63,39 @@ theme:
 
 plugins:
   - search
+  - open-in-new-tab
+  - git-revision-date-localized:
+      enable_creation_date: false
+      exclude:
+        - index.md
+  - bibtex:
+      bib_file: bib/references.bib
+      csl_file: bib/ieee.csl
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
+      cache_safe: true
+      js_files:
+          - assets/javascripts/extra.js
+      css_files:
+          - assets/stylesheets/extra.css
+          - assets/stylesheets/palette-extra.css
   - exclude-search:
         exclude:
           - tei/Apologia-TEI.md
           - tei/Apologia-TEI-it.md
-          - examples.md#caros-canzone-in-praise-of-the-house-of-france
-          - examples.md#castelvetros-opinion-on-the-previous-canzone
-          - examples.md#declaration-on-some-aspects-of-the-preceding-opinion
-          - examples.md#i
-          - examples.md#predellas-resentment
           - examples.md#canzone-del-caro-in-lode-della-casa-di-francia
           - examples.md#parere-del-castelvetro-sopra-la-canzone-precedente
           - examples.md#i_1
           - examples.md#dichiarazione-dalcune-cose-dellantiscritto-parere
           - examples.md#risentimento-del-predella
+
+exclude_docs: |
+  tei/Apologia-TEI.md
+  tei/Apologia-TEI-it.md
 markdown_extensions:
   - attr_list
   - def_list
@@ -88,6 +107,8 @@ markdown_extensions:
   - pymdownx.blocks.html
   - pymdownx.fancylists
   - pymdownx.snippets
+  - pymdownx.caret
+  - pymdownx.mark
   - pymdownx.critic:
       mode: view
   - pymdownx.blocks.tab:
@@ -113,5 +134,6 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/extra.js
-  - path: assets/javascripts/tables.mjs
-    type: module
+
+hooks:
+  - hook.py
