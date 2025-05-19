@@ -26,7 +26,7 @@ body {
 
 .headerlink {
   transition: color .25s ease,opacity 0.8s ease !important;
-  font-family: "Noto Serif", serif;
+  font-family: var(--md-serif-font-family), var(--md-text-font-family);
 }
 
 /* Dynamic span highlight */
@@ -253,6 +253,14 @@ body {
   color: var(--md-default-fg-color);
 }
 
+.md-typeset blockquote p:not(:first-child) {
+  margin-top: 0;
+}
+
+.md-typeset blockquote p:not(:last-child) {
+  margin-bottom: 0;
+}
+
 /* Responsive */
 @media (max-width: 1220px) {
   :root {
@@ -301,3 +309,42 @@ html .md-typeset .footnote-ref {
   content: "]";
 }
 
+/* Diagrams */
+.mermaid {
+  display: flex;
+  justify-content: center;
+}
+
+.diagram {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.diagram > * {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diagram svg {
+  display: block;
+  height: auto;
+  fill: var(--md-default-fg-color);
+  font-size: 14px;
+  height: 120px;
+}
+
+.line, .cross {
+  stroke: var(--md-diagram-fg-color--light);
+  fill: var(--md-diagram-fg-color--light);
+}
+
+.dot {
+  fill: var(--md-secondary-fg-color);
+}
+
+.cross {
+  stroke-width: 1.5px;
+}
