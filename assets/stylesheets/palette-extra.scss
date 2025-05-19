@@ -6,11 +6,15 @@ $light-steel-blue: oklch(80.27% 0.05 245.74); // Primary
 $steel-blue: oklch(58.8% 0.0993 245.74); // Accent
 $raspberry: oklch(54.3% 0.159 8.98); // Secondary
 $off-white: oklch(98.48% 0.0013 106.42); // Background
+$black: hsl(225deg, 0%, 0%); // Foreground
+
 
 // Dark colors
 $teal: oklch(50.03% 0.0872 187.43); // Primary
 $turquoise: oklch(71.47% 0.1308 178.71); // Accent
 $purple: oklch(34.42% 0.1493 340.37); // Secondary
+$slate: hsl(225deg, 15%, 14%); // Background
+$white: hsl(225deg, 15%, 90%); // Foreground
 
 
 $light-theme: (
@@ -26,7 +30,8 @@ $light-theme: (
   default-bg-color: $off-white,
   accent-bg-color: $off-white,
   primary-bg-color: oklch(0% 0 0 / 87%), // Dark overlays
-  primary-bg-color--light: oklch(0% 0 0 / 54%)
+  primary-bg-color--light: oklch(0% 0 0 / 54%),
+  diagram-fg-color--light: color.mix($black, $off-white, $weight: 32%, $method: rgb) // Opaque lighter color for diagrams
 );
 
 $dark-theme: (
@@ -41,7 +46,8 @@ $dark-theme: (
   secondary-fg-color--light: color.scale($purple, $lightness: +60%, $chroma: -50%, $space: oklch),
   secondary-fg-color--light-hover: color.scale($purple, $lightness: +40%, $chroma: -30%, $space: oklch),
   secondary-fg-color--transparent: color.change($purple, $alpha: 0.2),
-  footer-bg-color--dark: oklch(0% 0 0 / 32%)
+  footer-bg-color--dark: oklch(0% 0 0 / 32%),
+  diagram-fg-color--light: color.mix($white, $slate, $weight: 32%, $method: rgb) // Opaque lighter color for diagrams
 );
 
 // Mixin to apply the themes
