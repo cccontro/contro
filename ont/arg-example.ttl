@@ -9,7 +9,6 @@
 @base <https://w3id.org/contro/arg/example#> .
 
 <https://w3id.org/contro/arg/example> rdf:type owl:Ontology ;
-                                       owl:imports <https://w3id.org/contro/arg/0.3.0> ;
                                        dc:creator "Alberto Ciarrocca" ,
                                                   "Francesca Massarenti" .
 
@@ -19,6 +18,46 @@
 
 ###  http://purl.org/dc/elements/1.1/creator
 dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/contro/arg#Author
+arg:Author rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/contro/arg#Antecedent
+arg:Antecedent rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/contro/arg#Conclusion
+arg:Conclusion rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/contro/arg#Consequent
+arg:Consequent rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/contro/arg#Premise
+arg:Premise rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/contro/arg#contradicts
+arg:contradicts rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/contro/arg#personaOf
+arg:personaOf rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/contro/arg#Assertion
+arg:Assertion rdf:type owl:Class .
 
 
 #################################################################
@@ -89,9 +128,9 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/contro/arg/example#defeasible_inference
 :defeasible_inference rdf:type owl:NamedIndividual ;
-                      arg:Author :person_1 ;
                       arg:Conclusion :B ;
-                      arg:Premise :A .
+                      arg:Premise :A ;
+                      arg:Author :person_1 .
 
 
 ###  https://w3id.org/contro/arg/example#dependant_inference
@@ -142,10 +181,10 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/contro/arg/example#rebuttal
 :rebuttal rdf:type owl:NamedIndividual ;
-          arg:Author :alias ;
           arg:Conclusion :not_B ;
           arg:Premise :A ,
-                      :C .
+                      :C ;
+          arg:Author :alias .
 
 
 ###  https://w3id.org/contro/arg/example#undercut

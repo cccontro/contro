@@ -1,6 +1,7 @@
 @prefix : <https://w3id.org/contro/arg#> .
 @prefix d0: <http://www.ontologydesignpatterns.org/ont/d0.owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,18 +9,23 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frame: <https://w3id.org/framester/schema/> .
+@prefix persp: <https://w3id.org/contro/persp#> .
 @prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
 @base <https://w3id.org/contro/arg#> .
 
 <https://w3id.org/contro/arg> rdf:type owl:Ontology ;
-                               owl:imports <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ,
-                                           <https://w3id.org/contro/persp/1.0.0> ;
                                dc:creator "Alberto Ciarrocca" ,
                                           "Francesca Massarenti" ;
-                               dc:date "04/04/2025" ;
-                               rdfs:comment "Description"@en ;
+                               dct:created "12/03/2025" ;
+                               dct:description "The Argumentation ontology can be used to reconstruct argumentative structures in text."@en ;
+                               dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                               dct:modified "21/05/2025" ;
+                               dct:title "The argumentation ontology"@en ;
+                               vann:preferredNamespacePrefix "arg" ;
+                               vann:preferredNamespaceUri : ;
                                rdfs:label "Argumentation"@en ;
-                               rdfs:seeAlso "Sanjay Modgil and Henry Prakken. \"A general account of argumentation with preferences.\" Artificial Intelligence, vol. 195, 1 Feb. 2013, pp. 361-97, doi:10.1016/j.artint.2012.10.008."@en ;
                                owl:versionInfo "0.5.0" .
 
 #################################################################
@@ -30,6 +36,38 @@
 dc:creator rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/elements/1.1/rights
+dc:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
 ###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
 swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
 
@@ -38,16 +76,8 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole
-dul:definesRole rdf:type owl:ObjectProperty .
-
-
 ###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent
 dul:hasComponent rdf:type owl:ObjectProperty .
-
-
-###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole
-dul:hasRole rdf:type owl:ObjectProperty .
 
 
 ###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor
@@ -62,48 +92,31 @@ dul:satisfies rdf:type owl:ObjectProperty .
 :Antecedent rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf dul:isSettingFor ;
             rdfs:domain dul:Situation ;
-            rdfs:range [ rdf:type owl:Restriction ;
-                         owl:onProperty dul:hasRole ;
-                         owl:hasValue :Antecedent
-                       ] .
+            rdfs:range :Statement .
+
+
+###  https://w3id.org/contro/arg#Author
+:Author rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf dul:isSettingFor ;
+        rdfs:domain dul:Situation ;
+        rdfs:range dul:Agent ;
+        owl:propertyChainAxiom ( :Author
+                                 :personaOf
+                               ) .
 
 
 ###  https://w3id.org/contro/arg#Conclusion
 :Conclusion rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf dul:isSettingFor ;
             rdfs:domain dul:Situation ;
-            rdfs:range [ rdf:type owl:Restriction ;
-                         owl:onProperty dul:hasRole ;
-                         owl:hasValue :Conclusion
-                       ] .
+            rdfs:range :Conclusion .
 
 
 ###  https://w3id.org/contro/arg#Consequent
 :Consequent rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf dul:isSettingFor ;
             rdfs:domain dul:Situation ;
-            rdfs:range [ rdf:type owl:Restriction ;
-                         owl:onProperty dul:hasRole ;
-                         owl:hasValue :Consequent
-                       ] .
-
-
-###  https://w3id.org/contro/arg#DialogicalAgent
-:DialogicalAgent rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf dul:isSettingFor ;
-                 rdfs:domain dul:Situation ;
-                 rdfs:range dul:Agent ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty dul:hasRole ;
-                              owl:hasValue :DialogicalAgent
-                            ] .
-
-
-###  https://w3id.org/contro/arg#InferenceRule
-:InferenceRule rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf dul:isSettingFor ;
-               rdfs:domain dul:Situation ;
-               rdfs:range :InferenceRule .
+            rdfs:range :Statement .
 
 
 ###  https://w3id.org/contro/arg#KnowledgeBase
@@ -117,10 +130,14 @@ dul:satisfies rdf:type owl:ObjectProperty .
 :Premise rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf dul:isSettingFor ;
          rdfs:domain dul:Situation ;
-         rdfs:range [ rdf:type owl:Restriction ;
-                      owl:onProperty dul:hasRole ;
-                      owl:hasValue :Premise
-                    ] .
+         rdfs:range :Premise .
+
+
+###  https://w3id.org/contro/arg#Topic
+:Topic rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf dul:isSettingFor ;
+       rdfs:domain dul:Situation ;
+       rdfs:range :Topic .
 
 
 ###  https://w3id.org/contro/arg#attackedBy
@@ -141,7 +158,8 @@ dul:satisfies rdf:type owl:ObjectProperty .
                                   :contradicts
                                   [ owl:inverseOf :Premise
                                   ]
-                                ) .
+                                ) ;
+         rdfs:comment "The relationship between a Conflict and the argument it targets."@en .
 
 
 ###  https://w3id.org/contro/arg#contradictedBy
@@ -151,12 +169,9 @@ dul:satisfies rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/contro/arg#contradicts
 :contradicts rdf:type owl:ObjectProperty ;
-             rdfs:domain :Literal ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty dul:hasRole ;
-                           owl:hasValue :Contradictory
-                         ] ;
-             rdfs:range :Literal .
+             rdfs:domain :Statement ;
+             rdfs:range :Statement ;
+             rdfs:comment "The relationship between two opposing statements."@en .
 
 
 ###  https://w3id.org/contro/arg#personaOf
@@ -172,24 +187,29 @@ dul:satisfies rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/contro/arg#supports
 :supports rdf:type owl:ObjectProperty ;
-          rdfs:domain :Argument ;
-          rdfs:range :Argument ;
           owl:propertyChainAxiom ( :Conclusion
                                    [ owl:inverseOf :Premise
                                    ]
-                                 ) .
+                                 ) ;
+          rdfs:comment "The relationship between two arguments in which the first's conclusion acts as the second's premise."@en .
+
+
+###  https://w3id.org/contro/persp#Attitude
+persp:Attitude rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dul:isSettingFor ;
+               rdfs:domain dul:Situation .
 
 
 #################################################################
 #    Classes
 #################################################################
 
+###  http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality
+d0:Eventuality rdf:type owl:Class .
+
+
 ###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent
 dul:Agent rdf:type owl:Class .
-
-
-###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept
-dul:Concept rdf:type owl:Class .
 
 
 ###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description
@@ -208,45 +228,46 @@ dul:Situation rdf:type owl:Class .
                               ] ;
           rdfs:subClassOf :ArgumentationTheorySituation ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :DialogicalAgent ;
+                            owl:onProperty :Author ;
                             owl:someValuesFrom dul:Agent
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :InferenceRule ;
+                            owl:onProperty :Premise ;
                             owl:someValuesFrom :InferenceRule
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :Premise ;
-                            owl:someValuesFrom :Literal
+                            owl:someValuesFrom :Statement
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :Topic ;
+                            owl:someValuesFrom dul:Situation
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :KnowledgeBase ;
                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                            owl:onClass :KnowledgeBase
+                            owl:onClass dul:Situation
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :Conclusion ;
                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                            owl:onClass :Literal
+                            owl:onClass :Statement
                           ] ;
-          owl:disjointWith :InferenceRule ,
-                           :KnowledgeBase ,
-                           :Literal .
+          owl:disjointWith :Statement .
 
 
 ###  https://w3id.org/contro/arg#ArgumentationTheorySituation
 :ArgumentationTheorySituation rdf:type owl:Class ;
-                              rdfs:subClassOf dul:Situation ;
-                              rdfs:label "Argumentation Theory Situation"@en .
+                              rdfs:subClassOf dul:Situation .
 
 
 ###  https://w3id.org/contro/arg#Conclusion
 :Conclusion rdf:type owl:Class ;
             owl:equivalentClass [ rdf:type owl:Restriction ;
-                                  owl:onProperty dul:hasRole ;
+                                  owl:onProperty dul:satisfies ;
                                   owl:hasValue :Conclusion
                                 ] ;
-            rdfs:subClassOf :Literal .
+            rdfs:subClassOf :Statement .
 
 
 ###  https://w3id.org/contro/arg#Conflict
@@ -255,7 +276,8 @@ dul:Situation rdf:type owl:Class .
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :attacks ;
                             owl:someValuesFrom :Argument
-                          ] .
+                          ] ;
+          rdfs:comment "An argument that establishes a conflict relation with another one."@en .
 
 
 ###  https://w3id.org/contro/arg#DefeasibleInference
@@ -264,24 +286,28 @@ dul:Situation rdf:type owl:Class .
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty :Conclusion ;
                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                  owl:onClass :Literal
+                                                                  owl:onClass :Statement
                                                                 ]
                                                               ) ;
                                            rdf:type owl:Class
                                          ] ;
-                     rdfs:label "Defeasible Inference"@en .
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty persp:Attitude ;
+                                       owl:someValuesFrom dul:Situation
+                                     ] ;
+                     rdfs:comment "An argument that draws a conclusion from a set of premises and an Inference Rule and that is susceptible of an attack that targets said Inference Rule."@en .
 
 
 ###  https://w3id.org/contro/arg#InferenceRule
 :InferenceRule rdf:type owl:Class ;
-               owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+               owl:equivalentClass [ owl:intersectionOf ( :Statement
+                                                          [ rdf:type owl:Restriction ;
                                                             owl:onProperty :Antecedent ;
-                                                            owl:someValuesFrom :Literal
+                                                            owl:someValuesFrom :Statement
                                                           ]
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :Consequent ;
-                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                            owl:onClass :Literal
+                                                            owl:someValuesFrom :Statement
                                                           ]
                                                         ) ;
                                      rdf:type owl:Class
@@ -289,9 +315,7 @@ dul:Situation rdf:type owl:Class .
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty dul:satisfies ;
                                      owl:hasValue :InferenceRule
-                                   ] ;
-               rdfs:subClassOf :ArgumentationTheorySituation ;
-               owl:disjointWith :Literal .
+                                   ] .
 
 
 ###  https://w3id.org/contro/arg#KnowledgeBase
@@ -305,20 +329,17 @@ dul:Situation rdf:type owl:Class .
 
 ###  https://w3id.org/contro/arg#Literal
 :Literal rdf:type owl:Class ;
-         owl:equivalentClass [ rdf:type owl:Restriction ;
-                               owl:onProperty dul:satisfies ;
-                               owl:hasValue :Literal
-                             ] ;
-         rdfs:subClassOf :ArgumentationTheorySituation .
+         rdfs:subClassOf :Statement ;
+         rdfs:comment "A propositional literal."@en .
 
 
 ###  https://w3id.org/contro/arg#Premise
 :Premise rdf:type owl:Class ;
          owl:equivalentClass [ rdf:type owl:Restriction ;
-                               owl:onProperty dul:hasRole ;
+                               owl:onProperty dul:satisfies ;
                                owl:hasValue :Premise
                              ] ;
-         rdfs:subClassOf :Literal .
+         rdfs:subClassOf :Statement .
 
 
 ###  https://w3id.org/contro/arg#Rebuttal
@@ -327,43 +348,54 @@ dul:Situation rdf:type owl:Class .
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty :Conclusion ;
                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                       owl:onClass :Literal
+                                                       owl:onClass :Statement
                                                      ]
                                                    ) ;
                                 rdf:type owl:Class
                               ] ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty persp:Attitude ;
+                            owl:someValuesFrom dul:Situation
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :Premise ;
+                            owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Statement
+                          ] ;
           rdfs:comment "A rebuttal is a conflict that attacks an argument on its conclusion, providing an alternative one."@en .
+
+
+###  https://w3id.org/contro/arg#Statement
+:Statement rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty dul:satisfies ;
+                                 owl:hasValue :Statement
+                               ] ;
+           rdfs:subClassOf :ArgumentationTheorySituation ;
+           owl:disjointUnionOf ( :InferenceRule
+                                 :Literal
+                               ) .
+
+
+###  https://w3id.org/contro/arg#Topic
+:Topic rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Restriction ;
+                             owl:onProperty dul:satisfies ;
+                             owl:hasValue :Topic
+                           ] ;
+       rdfs:subClassOf d0:Eventuality ,
+                       :ArgumentationTheorySituation .
 
 
 ###  https://w3id.org/contro/arg#Undercut
 :Undercut rdf:type owl:Class ;
-          owl:equivalentClass [ owl:intersectionOf ( :Conflict
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :Premise ;
-                                                       owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                            owl:onProperty :contradicts ;
-                                                                            owl:someValuesFrom :InferenceRule
-                                                                          ]
-                                                     ]
-                                                   ) ;
-                                rdf:type owl:Class
-                              ] ;
+          rdfs:subClassOf :Conflict ;
           rdfs:comment "An undercut is a conflict that attacks an argument on its inference rule."@en .
 
 
 ###  https://w3id.org/contro/arg#Undermining
 :Undermining rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :Conflict
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :Premise ;
-                                                          owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                               owl:onProperty :contradicts ;
-                                                                               owl:someValuesFrom :Premise
-                                                                             ]
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
+             rdfs:subClassOf :Conflict ;
              rdfs:comment "An undermining is a conflict that attacks an argument on its premise."@en .
 
 
@@ -371,60 +403,80 @@ dul:Situation rdf:type owl:Class .
 #    Individuals
 #################################################################
 
+###  https://w3id.org/contro/arg#A
+:A rdf:type owl:NamedIndividual ,
+            :Literal .
+
+
+###  https://w3id.org/contro/arg#A_and_C__implies_not_B
+:A_and_C__implies_not_B rdf:type owl:NamedIndividual ;
+                        :Antecedent :A ,
+                                    :C ;
+                        :Consequent :not_B .
+
+
+###  https://w3id.org/contro/arg#A_implies_B
+:A_implies_B rdf:type owl:NamedIndividual ;
+             :Antecedent :A ;
+             :Consequent :B .
+
+
 ###  https://w3id.org/contro/arg#Antecedent
 :Antecedent rdf:type owl:NamedIndividual ,
-                     dul:Role .
+                     dul:Description .
 
 
 ###  https://w3id.org/contro/arg#Argument
 :Argument rdf:type owl:NamedIndividual ,
                    dul:Description ;
-          dul:definesRole :Conclusion ,
-                          :Premise ;
-          dul:expands :ArgumentationTheory .
+          dul:hasComponent :Author ,
+                           :Conclusion ,
+                           :KnowledgeBase ,
+                           :Premise ,
+                           :Topic .
 
 
-###  https://w3id.org/contro/arg#ArgumentationSystem
-:ArgumentationSystem rdf:type owl:NamedIndividual ,
-                              dul:Description ;
-                     dul:definesRole :Contradictory ;
-                     dul:hasComponent :InferenceRule ,
-                                      :Literal .
+###  https://w3id.org/contro/arg#Author
+:Author rdf:type owl:NamedIndividual ,
+                 dul:Description .
 
 
-###  https://w3id.org/contro/arg#ArgumentationTheory
-:ArgumentationTheory rdf:type owl:NamedIndividual ,
-                              dul:Description ;
-                     dul:definesRole :DialogicalAgent ;
-                     dul:hasComponent :ArgumentationSystem ,
-                                      :KnowledgeBase .
+###  https://w3id.org/contro/arg#B
+:B rdf:type owl:NamedIndividual ,
+            :Literal .
+
+
+###  https://w3id.org/contro/arg#B_implies_D
+:B_implies_D rdf:type owl:NamedIndividual ;
+             :Antecedent :B ;
+             :Consequent :D .
+
+
+###  https://w3id.org/contro/arg#C
+:C rdf:type owl:NamedIndividual ,
+            :Literal .
 
 
 ###  https://w3id.org/contro/arg#Conclusion
 :Conclusion rdf:type owl:NamedIndividual ,
-                     dul:Role .
+                     dul:Description .
 
 
 ###  https://w3id.org/contro/arg#Consequent
 :Consequent rdf:type owl:NamedIndividual ,
-                     dul:Role .
+                     dul:Description .
 
 
-###  https://w3id.org/contro/arg#Contradictory
-:Contradictory rdf:type owl:NamedIndividual ,
-                        dul:Role .
-
-
-###  https://w3id.org/contro/arg#DialogicalAgent
-:DialogicalAgent rdf:type owl:NamedIndividual ,
-                          dul:Role .
+###  https://w3id.org/contro/arg#D
+:D rdf:type owl:NamedIndividual ,
+            :Literal .
 
 
 ###  https://w3id.org/contro/arg#InferenceRule
 :InferenceRule rdf:type owl:NamedIndividual ,
                         dul:Description ;
-               dul:defines :Antecedent ,
-                           :Consequent .
+               dul:hasComponent :Antecedent ,
+                                :Consequent .
 
 
 ###  https://w3id.org/contro/arg#KnowledgeBase
@@ -432,79 +484,246 @@ dul:Situation rdf:type owl:Class .
                         dul:Description .
 
 
-###  https://w3id.org/contro/arg#Literal
-:Literal rdf:type owl:NamedIndividual ,
+###  https://w3id.org/contro/arg#Premise
+:Premise rdf:type owl:NamedIndividual ,
                   dul:Description .
 
 
-###  https://w3id.org/contro/arg#Premise
-:Premise rdf:type owl:NamedIndividual ,
-                  dul:Role .
+###  https://w3id.org/contro/arg#Statement
+:Statement rdf:type owl:NamedIndividual ,
+                    dul:Description .
+
+
+###  https://w3id.org/contro/arg#Topic
+:Topic rdf:type owl:NamedIndividual ,
+                dul:Description .
+
+
+###  https://w3id.org/contro/arg#alias
+:alias rdf:type owl:NamedIndividual ;
+       :personaOf :secret_opponent .
+
+
+###  https://w3id.org/contro/arg#defeasible_inference
+:defeasible_inference rdf:type owl:NamedIndividual ;
+                      :Author :alias ;
+                      :Conclusion :B ;
+                      :Premise :A ;
+                      :Topic :topic_1 .
+
+
+###  https://w3id.org/contro/arg#dependant_inference
+:dependant_inference rdf:type owl:NamedIndividual ;
+                     :Conclusion :D ;
+                     :Premise :B .
+
+
+###  https://w3id.org/contro/arg#dependant_undermining
+:dependant_undermining rdf:type owl:NamedIndividual ;
+                       :Premise :B_implies_D ,
+                                :not_B .
+
+
+###  https://w3id.org/contro/arg#not_A
+:not_A rdf:type owl:NamedIndividual ;
+       :contradicts :A .
+
+
+###  https://w3id.org/contro/arg#not_B
+:not_B rdf:type owl:NamedIndividual ;
+       :contradicts :B .
+
+
+###  https://w3id.org/contro/arg#not__A_implies_B
+:not__A_implies_B rdf:type owl:NamedIndividual ;
+                  :contradicts :A_implies_B .
+
+
+###  https://w3id.org/contro/arg#rebuttal
+:rebuttal rdf:type owl:NamedIndividual ;
+          :Conclusion :not_B ;
+          :Premise :A ,
+                   :C .
+
+
+###  https://w3id.org/contro/arg#secret_opponent
+:secret_opponent rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/contro/arg#topic_1
+:topic_1 rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/contro/arg#undercut
+:undercut rdf:type owl:NamedIndividual ;
+          :Premise :A ,
+                   :not__A_implies_B .
+
+
+###  https://w3id.org/contro/arg#undermining
+:undermining rdf:type owl:NamedIndividual ;
+             :Premise :A_implies_B ,
+                      :not_A .
+
+
+###  https://w3id.org/contro/persp#Attitude
+persp:Attitude rdf:type owl:NamedIndividual .
 
 
 #################################################################
 #    Annotations
 #################################################################
 
-:Argument rdfs:comment "An argument is defined relative to an argumentation theory AT = (AS, K), and chain applications of the inference rules from AS into inference trees, starting with elements from the knowledge base K. Its premises are the formulas of K used to build the argument, its conclusion is the formula inferred from the premises through the application of the inference rules."@en .
+:Antecedent rdfs:comment "The relationship that defines the first half of an hypothetical proposition (Inference Rule)."@en .
 
 
-:DialogicalAgent rdfs:comment "An agent who takes part in a spoken or written interaction."@en ;
-                 rdfs:label "Dialogical Agent"@en .
+:Argument rdfs:comment "An argument is defined relative to an argumentation theory and a knowledge base. Its premises are the formulas and inference rule from the knowledge base, its conclusion is the formula inferred from the premises through the application of said inference rule."@en .
 
 
-:InferenceRule rdfs:comment """An inference rule is a way of drawing a conclusion from a set of premises. It can be represented as a scheme in which a rule’s antecedents and consequent are metavariables ranging over L.
-As is usual in logic, inference rules are defined over the language L, and are not elements in the language. Nonetheless, they can be named and referred to (negatively) in undercut attacks. Together with premises, they are part of the knowledge base of the dialogical agent who constructs the argument.
-When applied in an argument, the antecedents of the rule take the role of premises and the consequent that of the conclusion."""@en ;
-               rdfs:label "Inference Rule"@en .
+:Conclusion rdfs:comment "The statement resulting from an argument. It is supported by a set of premises and justified by the Inference Rule that connects them."@en .
 
 
-:KnowledgeBase rdfs:comment "A knowledge base in an argumentation system (L, − , R) is a set K ⊆ L containing premises and rules available to an agent to construct arguments."@en ;
-               rdfs:label "Knowledge Base"@en .
+:Consequent rdfs:comment "The relationship that defines the second half of an hypothetical proposition (Inference Rule)."@en .
 
 
-:Literal rdfs:comment "A propositional literal."@en .
+:InferenceRule rdfs:comment """An inference rule is a way of drawing a conclusion from a set of premises.
+It can be named and referred to (negatively) in undercut attacks. Together with premises, they are part of the knowledge base of the dialogical agent who constructs the argument.
+When applied in an argument, the antecedents of the rule take the role of premises and the consequent that of the conclusion."""@en .
+
+
+:KnowledgeBase rdfs:comment "A knowledge base in an argumentation system is a set containing premises and rules available to an agent to construct arguments."@en .
+
+
+:Premise rdfs:comment "A statement that supports an argument and that in conjunction with an Inference Rule leads to a conclusion."@en .
+
+
+:Statement rdfs:comment "Any kind of proposition expressed or implied by a Dialogical Agent that can be assigned a truth value. They can either be atomic (Literal) or an Inference Rule that connects other statements together."@en .
+
+
+:Topic rdfs:comment "The eventuality about which an argument expresses an opinion."@en .
 
 
 #################################################################
 #    Rules
 #################################################################
 
-:arg rdf:type swrl:Variable .
+:p rdf:type swrl:Variable .
 
-:prem rdf:type swrl:Variable .
+:a rdf:type swrl:Variable .
 
-:conc rdf:type swrl:Variable .
+:not_p rdf:type swrl:Variable .
 
-:inf rdf:type swrl:Variable .
+:c rdf:type swrl:Variable .
+
+:i rdf:type swrl:Variable .
 
 [ swrla:isRuleEnabled "true"^^xsd:boolean ;
-   rdfs:comment "An argument that concludes B from A has the implicit premise that there exists an implication from A to B" ;
-   rdfs:label "R1" ;
+   rdfs:comment "An Undercut is a conflict that negates the implication of the argumentation it attacks." ;
+   rdfs:label "S2" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :InferenceRule ;
+                           swrl:argument1 :p
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :Premise ;
+                                      swrl:argument1 :a ;
+                                      swrl:argument2 :not_p
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:ClassAtom ;
+                                                 swrl:classPredicate :Conflict ;
+                                                 swrl:argument1 :a
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate :contradicts ;
+                                                            swrl:argument1 :not_p ;
+                                                            swrl:argument2 :p
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :Undercut ;
+                           swrl:argument1 :a
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "An Undermining is a conflict that negates an atomic statement that is a premise of the argumentation it attacks." ;
+   rdfs:label "S3" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :Literal ;
+                           swrl:argument1 :p
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :Premise ;
+                                      swrl:argument1 :a ;
+                                      swrl:argument2 :not_p
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:ClassAtom ;
+                                                 swrl:classPredicate :Conflict ;
+                                                 swrl:argument1 :a
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate :contradicts ;
+                                                            swrl:argument1 :not_p ;
+                                                            swrl:argument2 :p
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :Undermining ;
+                           swrl:argument1 :a
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "An argumentation that concludes B from A has the implicit premise that there exists an implication from A to B" ;
+   rdfs:label "S1" ;
    rdf:type swrl:Imp ;
    swrl:body [ rdf:type swrl:AtomList ;
                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
                            swrl:propertyPredicate :Premise ;
-                           swrl:argument1 :arg ;
-                           swrl:argument2 :prem
+                           swrl:argument1 :a ;
+                           swrl:argument2 :p
                          ] ;
                rdf:rest [ rdf:type swrl:AtomList ;
                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
                                       swrl:propertyPredicate :Conclusion ;
-                                      swrl:argument1 :arg ;
-                                      swrl:argument2 :conc
+                                      swrl:argument1 :a ;
+                                      swrl:argument2 :c
                                     ] ;
                           rdf:rest [ rdf:type swrl:AtomList ;
                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
                                                  swrl:propertyPredicate :Antecedent ;
-                                                 swrl:argument1 :inf ;
-                                                 swrl:argument2 :prem
+                                                 swrl:argument1 :i ;
+                                                 swrl:argument2 :p
                                                ] ;
                                      rdf:rest [ rdf:type swrl:AtomList ;
                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
                                                             swrl:propertyPredicate :Consequent ;
-                                                            swrl:argument1 :inf ;
-                                                            swrl:argument2 :conc
+                                                            swrl:argument1 :i ;
+                                                            swrl:argument2 :c
                                                           ] ;
                                                 rdf:rest rdf:nil
                                               ]
@@ -514,8 +733,8 @@ When applied in an argument, the antecedents of the rule take the role of premis
    swrl:head [ rdf:type swrl:AtomList ;
                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
                            swrl:propertyPredicate :Premise ;
-                           swrl:argument1 :arg ;
-                           swrl:argument2 :inf
+                           swrl:argument1 :a ;
+                           swrl:argument2 :i
                          ] ;
                rdf:rest rdf:nil
              ]
