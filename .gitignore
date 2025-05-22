@@ -1,7 +1,5 @@
 __pycache__
-contro
 site
-docs/ont/catalog*
+catalog*.xml
 controEnv
 common/
-*.jar

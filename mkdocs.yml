@@ -85,17 +85,12 @@ plugins:
           - assets/stylesheets/palette-extra.css
   - exclude-search:
         exclude:
-          - tei/Apologia-TEI.md
-          - tei/Apologia-TEI-it.md
           - examples.md#canzone-del-caro-in-lode-della-casa-di-francia
           - examples.md#parere-del-castelvetro-sopra-la-canzone-precedente
           - examples.md#i_1
           - examples.md#dichiarazione-dalcune-cose-dellantiscritto-parere
           - examples.md#risentimento-del-predella
 
-exclude_docs: |
-  tei/Apologia-TEI.md
-  tei/Apologia-TEI-it.md
 markdown_extensions:
   - attr_list
   - def_list
@@ -113,7 +108,7 @@ markdown_extensions:
       mode: view
   - pymdownx.blocks.tab:
       alternate_style: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      slugify: !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
   - toc:
       title: In this section
       permalink: ‽
@@ -141,4 +136,4 @@ extra_javascript:
   - assets/javascripts/extra.js
 
 hooks:
-  - hook.py
+  - scripts/hook.py

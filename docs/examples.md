@@ -27,11 +27,11 @@ The second sub-argument introduces a rebuttal (or distinction) that supports a c
 This pattern is at play in [Caro's response](#predellas-resentment) (under the pseudonym Predella) to the first point of Castelvetro's critique.
 
 /// tab | English
---8<-- "docs/tei/Apologia-TEI.md"
+--8<-- "tei/Apologia-TEI.md"
 ///
 
 /// tab | Italian
---8<-- "docs/tei/Apologia-TEI-it.md"
+--8<-- "tei/Apologia-TEI-it.md"
 ///
 
 ## From tree to graph
