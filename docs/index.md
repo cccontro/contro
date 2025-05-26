@@ -8,11 +8,8 @@ template: hero.html
 ---
 
 <div id="hero-bg" aria-hidden="true" role="presentation" data-search-exclude markdown="span">
---8<--
-docs/assets/images/Castelvetro.svg:2:-1
-
-docs/assets/images/Caro.svg:2:-1
---8<--
+![Calligram of Castelvetro](assets/images/Castelvetro.svg)
+![Calligram of Caro](assets/images/Caro.svg)
 </div>
 
 <section class="hero">
@@ -43,7 +40,7 @@ docs/assets/images/Caro.svg:2:-1
 
     Our project aims to formalize how personal perspectives are externalized through argumentation in dialectical contexts. What we are interested in is the *shape* of an argument: when discourse is reconstructed in terms of argumentation structures, the communicative intent of the agents involved emerges with greater clarity.
 
-- ![](assets/images/distill-light.svg#only-light)![](assets/images/distill-dark.svg#only-dark)
+- ![Opinion distiller](assets/images/distiller.svg)
 
 </div>
 

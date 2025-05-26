@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.36 100">
+  <defs>
+    <style>
+      @media (prefers-color-scheme: light) {
+        :root {
+          --md-typeset-color: rgba(0, 0, 0, 0.87);
+          --md-primary-fg-color: oklch(58.8% 0.0993 245.74);
+          --md-primary-fg-color--light: oklch(80.27% 0.05 245.74);
+          --md-secondary-fg-color: oklch(54.3% 0.159 8.98);
+          --md-secondary-fg-color--light: oklch(63.44% 0.159 8.98);
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --md-typeset-color: rgba(226, 228, 233, 0.82);
+          --md-primary-fg-color: oklch(50.03% 0.0872 187.43);
+          --md-primary-fg-color--light: oklch(71.47% 0.1308 178.71);
+          --md-secondary-fg-color: oklch(31.7972003432% 0.1376048694 340.877697558);
+          --md-secondary-fg-color--light: oklch(34.42% 0.1493 340.37);
+        }
+      }
+      
+      .text1 {
+        fill: var(--md-secondary-fg-color);
+      }
+
+      .text2 {
+        fill: var(--md-primary-fg-color);
+      }
+
+      .funnel {
+        fill: var(--md-typeset-color);
+      }
+
+      .drop {
+        animation: dropFall 4s ease-in-out 600ms infinite, colorSwitch 8s steps(1, end) 3.2s infinite;
+        transform-origin: center;
+        fill: none;
+      }
+
+      #textGroup {
+        animation: moveDown 8s linear infinite;
+      }
+
+      @keyframes dropFall {
+        10%  { transform: translateY(30px); opacity: 1; }
+        60%  { transform: translateY(50px); opacity: 0; }
+        70%  { transform: translateY(-10px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+      }
+
+      @keyframes colorSwitch {
+        0% {
+          fill: var(--md-primary-fg-color--light);
+        }
+        50% {
+          fill: var(--md-secondary-fg-color--light);
+        }
+        100% {
+          fill: var(--md-primary-fg-color--light);
+        }
+      }
+
+      @keyframes moveDown {
+        0% {
+          transform: translate(0px, -37.62px);
+        }
+        100% {
+          transform: translate(0px, 0px);
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Masking area to only show lines above the funnel -->
+  <mask id="textMask">
+    <rect x="0" y="0" width="100%" height="38.27" fill="white"/>
+  </mask>
+
+  <g mask="url(#textMask)">
+    <g id="textGroup" transform="translate(0, 0)">
+      <!-- Repeat the set of 4 rectangles twice to create a seamless loop -->
+      <rect class="text1" x="6.77" y="0" width="43.89" height="6.58" rx="3.29" ry="3.29"/>
+      <rect class="text1" x="6.77" y="9.41" width="36.38" height="6.57" rx="3.29" ry="3.29"/>
+      <rect class="text2" x="14.6" y="18.81" width="40.1" height="6.58" rx="3.29" ry="3.29"/>
+      <rect class="text2" x="27.9" y="28.21" width="26.8" height="6.57" rx="3.29" ry="3.29"/>
+
+      <rect class="text1" x="6.77" y="37.62" width="43.89" height="6.58" rx="3.29" ry="3.29"/>
+      <rect class="text1" x="6.77" y="47.03" width="36.38" height="6.57" rx="3.29" ry="3.29"/>
+      <rect class="text2" x="14.6" y="56.43" width="40.1" height="6.58" rx="3.29" ry="3.29"/>
+      <rect class="text2" x="27.9" y="65.83" width="26.8" height="6.57" rx="3.29" ry="3.29"/>
+    </g>
+  </g>
+
+  <!-- Water drop -->
+  <path class="drop" d="m36.01,84.72c0,2.98-2.41,5.39-5.39,5.39s-5.39-2.41-5.39-5.39,5.39-9.43,5.39-9.43c0,0,5.39,6.45,5.39,9.43Z"/>
+
+  <!-- Funnel body -->
+  <path class="funnel" d="m57.91,38.26H3.45c-3.83,0-4.59,2.05-1.69,4.55l22.52,19.42v11.01h12.8v-11l22.52-19.42c2.9-2.5,2.14-4.55-1.69-4.55Z"/>
+</svg>
+

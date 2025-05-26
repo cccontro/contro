@@ -193,36 +193,6 @@ body {
   justify-content: center;
 }
 
-/* Images */
-.md-typeset figure {
-  width: 100%;
-}
-
-.md-typeset figure img {
-  max-height: 75vh;
-  width: 100%;
-}
-
-.md-typeset figure > :first-child {
-  background-color: var(--md-accent-fg-color--transparent);
-}
-
-.md-typeset figcaption {
-  max-width: unset;
-  text-align: left;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.64rem;
-  letter-spacing: 0.1px;
-}
-
-.md-typeset figure > p {
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-  padding: 0.5rem;
-}
-
 /* Icons */
 [data-md-color-scheme=default] {
   .only-dark {
@@ -261,28 +231,6 @@ body {
   margin-bottom: 0;
 }
 
-/* Responsive */
-@media (max-width: 1220px) {
-  :root {
-    --header-height: 48px;
-  }
-
-  .md-nav__link {
-    gap: 0.7rem;
-  }
-
-  .md-typeset figure {
-    width: 100vw;
-    max-width: unset;
-    margin-right: calc(0px - var(--md-margin));
-    margin-left: calc(0px - var(--md-margin));
-  }
-
-  .md-typeset figcaption {
-    margin: var(--md-margin);
-  }
-}
-
 /* Footnotes */
 html .md-typeset .footnote-ref {
   font-size: unset;
@@ -309,42 +257,145 @@ html .md-typeset .footnote-ref {
   content: "]";
 }
 
+/* Images */
+.md-typeset figure {
+  width: 100%;
+}
+
+.md-typeset figure img {
+  max-height: 75vh;
+  width: 100%;
+}
+
+.md-typeset figure > img, .md-typeset figure > p {
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+.md-typeset figure figcaption {
+  max-width: unset;
+  text-align: left;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.64rem;
+  letter-spacing: 0.1px;
+}
+
+.md-typeset figure > p {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  padding: 0.5rem;
+}
+
+
 /* Diagrams */
 .mermaid {
+  width: 100%;
   display: flex;
-  justify-content: center;
-}
-
-.diagram {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
-
-.diagram > * {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: center;
 }
 
-.diagram svg {
-  display: block;
-  height: auto;
-  fill: var(--md-default-fg-color);
-  font-size: 14px;
-  height: 120px;
+.mermaid figcaption {
+  font-style: normal;
+  font-size: .72rem;
+  text-align: center;
 }
 
-.line, .cross {
+.mermaid > figcaption {
+  font-weight: 700;
+  margin: 0 0 1em;
+}
+
+.mermaid > p {
+  display: contents;
+}
+
+.diagram {
+  width: 100%;
+  margin-top: 1.2em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  row-gap: var(--md-margin);
+}
+
+.md-typeset .diagram > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 var(--md-margin);
+}
+
+.md-typeset .diagram svg {
+  display: block;
+  min-height: 120px;
+  height: auto;
+  fill: var(--md-default-fg-color);
+  font-size: .6rem;
+}
+
+.md-typeset .diagram figcaption {
+  margin-top: .5rem;
+}
+
+.diagram .line, .diagram .cross {
   stroke: var(--md-diagram-fg-color--light);
   fill: var(--md-diagram-fg-color--light);
 }
 
-.dot {
+.diagram .dot {
   fill: var(--md-secondary-fg-color);
 }
 
-.cross {
+.diagram .cross {
   stroke-width: 1.5px;
+}
+
+/* Tabs */
+.tabbed-block {
+  margin-top: 2em;
+}
+
+/* Admonition Info */
+.md-typeset .admonition.info, .md-typeset details.info {
+  border-color: var(--md-primary-fg-color--dark);
+}
+
+.md-typeset .info > .admonition-title::before, .md-typeset .info > summary::before {
+  background-color: var(--md-accent-fg-color);
+}
+
+.md-typeset .info > .admonition-title::after, .md-typeset .info > summary::after {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset .info > .admonition-title, .md-typeset .info > summary {
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+.md-typeset .admonition.info:focus-within, .md-typeset details.info:focus-within {
+  box-shadow: 0 0 0 .2rem var(--md-accent-fg-color--transparent);
+}
+
+/* Responsive */
+@media (max-width: 1220px) {
+  :root {
+    --header-height: 48px;
+  }
+
+  .md-nav__link {
+    gap: 0.7rem;
+  }
+
+  .md-typeset figure {
+    width: 100vw;
+    max-width: unset;
+    margin-right: calc(0px - var(--md-margin));
+    margin-left: calc(0px - var(--md-margin));
+  }
+
+  .md-typeset figcaption {
+    margin: var(--md-margin);
+  }
 }
