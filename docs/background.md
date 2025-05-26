@@ -6,7 +6,13 @@ icon: octicons/book-16
 
 > In large measure dialectic is to our *factual* knowledge what logic is to our *formal* knowledge: a mechanism of rational validation. ==Nicholas Rescher, *Dialectics. A Controversy-Oriented Approach to the Theory of Knowledge*, p. xiii==
 
-Argumentation theory studies how conclusions can be justified through structured reasoning, particularly in the presence of conflicting views. To achieve this, it must account for *how arguments can be constructed*, *how they can be defeated* and *how they can be defended against defeating counterarguments*. Early work produced many different systems with as many ways of representing knowledge, and this diversity reflects the limitations of formal logic in modeling real-life debate—defeasible, context-sensitive, and embedded in dialogue. This section surveys key responses to that challenge, tracing how different models have reconceived rational justification beyond the bounds of deductive form.
+Argumentation theory studies how conclusions can be justified through structured reasoning, particularly in the presence of conflicting views. To achieve this, it must account for:
+
+1. How arguments can be constructed; 
+2. How arguments can be defeated;
+3. How arguments can be defended against defeating counterarguments.
+
+Early work produced many different systems with as many ways of representing knowledge, and this diversity reflects the limitations of formal logic in modeling real-life debate—defeasible, context-sensitive, and embedded in dialogue. This section surveys key responses to that challenge, tracing how different models have reconceived rational justification beyond the bounds of deductive form.
 
 ## Models
 
@@ -111,9 +117,11 @@ A canonical example of the latter is the Tweety case, first introduced by Raymon
 
 Here, the initial generalization is rebutted by a specific exception. Notice also that in this case the premise *Tweety is a bird* is not only conceded but implicitly reaffirmed by the added information that Tweety is a penguin. This shows how deductive and defeasible reasoning can coexist within a single discourse: while the inference *Tweety is a penguin* → *Tweety is a bird* is deductively valid, the defeasible rule *Birds fly* is overridden by a more specific case.
 
+<div class="mermaid">
+<figcaption>Pollock's Three Types of Attack</figcaption>
 <div class="diagram">
 <div>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-2.5 0 140 96" height="120px">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-2.5 0 140 96">
   <g class="line">
     <path d="M 22.5 15.5 L 22.5 73.38"/>
     <path d="M 22.5 79.5 L 17.75 70 L 22.5 72.38 L 27.25 70 Z"/>
@@ -129,13 +137,13 @@ Here, the initial generalization is rebutted by a specific exception. Notice als
   </g>
   <text x="-2.5" y="12.5">A</text>
   <text x="-2.5" y="92.5">B</text>
-  <text x="110" y="44.5">C</text>
+  <text x="110" y="52.5">C</text>
 </svg>
-<figcaption>Undercut</figcaption>
+<figcaption>Undercut<br/>C → ¬(A → B)</figcaption>
 </div>
 
 <div>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-2.5 0 140 96" height="120px">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-2.5 0 140 96">
   <g class="line">
     <path d="M 22.5 15.5 L 22.5 73.38"/>
     <path d="M 102.5 15.5 L 102.5 73.38"/>
@@ -157,11 +165,11 @@ Here, the initial generalization is rebutted by a specific exception. Notice als
   <text x="117.5" y="12.5">C</text>
   <text x="117.5" y="92.5">¬B</text>
 </svg>
-<figcaption>Rebuttal</figcaption>
+<figcaption>Rebuttal<br/>A ∧ C → ¬B</figcaption>
 </div>
 
 <div>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-2.5 0 140 96" height="120px">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-2.5 0 140 96">
   <g class="line">
     <path d="M 22.5 15.5 L 22.5 73.38"/>
     <path d="M 22.5 79.5 L 17.75 70 L 22.5 72.38 L 27.25 70 Z"/>
@@ -179,12 +187,17 @@ Here, the initial generalization is rebutted by a specific exception. Notice als
   <text x="-2.5" y="92.5">B</text>
   <text x="117.5" y="12.5">¬A</text>
 </svg>
-<figcaption>Undermining</figcaption>
+<figcaption>Undermining<br/>¬A</figcaption>
+</div>
 </div>
 </div>
 
 ### Dung's abstract argumentation
 In 1995, Phan Minh Dung introduced an abstract formalism for argumentation-based inference that separated the question of the acceptability of arguments from both their internal structure and the nature of their conflicts. Dung focused instead on the attack relations among arguments, representing them as nodes in a graph connected by a binary attack relation. His semantics determine which sets of arguments—called *extensions*—are collectively acceptable, and hence which conclusions can be considered justified. These extensions are defined based solely on the attack and defense relations within the set: a defense occurs when an argument in the set attacks an attacker of another member.
+
+Such frameworks are simply directed graphs in which the arguments (nodes) are related
+to other arguments by attack or defeat relations (arcs). A ‘calculus of opposition’ is then applied to
+a framework to determine sets of acceptable arguments (extensions).
 
 ### Revival of pragmatism
 
@@ -193,6 +206,18 @@ In 1995, Phan Minh Dung introduced an abstract formalism for argumentation-based
 
 ASPIC^+^ [@Modgil2013] was conceived as a general abstract model of structured argumentation, and reading through the detail of the way it represents knowledge, constructs arguments, and identifies conflicts, it clearly draws in elements of many different argumentation systems. However, it only considers one method for establishing which arguments are acceptable, the Dung semantics.
 For a good overview see [@vanEemeren2014].
+
+
+Historically, the ASPIC + framework originates from the European ASPIC project that ran
+from 2004 to 2007, which (among other things) aimed to integrate and consolidate the main
+approaches to structured argumentation. The first relevant publication was Caminada and Amgoud
+(2007), which also introduced the idea of desirable properties (rationality postulates) for structured
+argumentation. The ASPIC + framework as published in this paper was generalised and extended
+in Prakken (2010) and Modgil and Prakken (2013) so as to capture a broader range of instantiating
+concrete logics (Besnard & Hunter 2009), other structured general accounts of argumentation
+(Amgoud & Besnard 2009, Bondarenko, Dung, Kowalski, & Toni 1997), and to account for the
+use of preferences to decide which attacks succeed as defeats. Unless indicated otherwise, the
+version of ASPIC + presented here is the one of Modgil and Prakken (2013).
 
 ASPIC project (Argumentation Service Platform with Integrated Components)
 ASPIC+ is not a system but a framework for specifying systems [@Modgil2013]
