@@ -92,6 +92,10 @@ plugins:
           - examples.md#risentimento-del-predella
 
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+        alternate_style: true
   - attr_list
   - def_list
   - sane_lists

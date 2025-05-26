@@ -1,0 +1,126 @@
+h3 .headerlink {
+  display: none !important;
+}
+
+.md-typeset details,
+.md-typeset .admonition,
+.md-typeset details h3,
+.md-typeset .admonition h3,
+.md-typeset details h4,
+.md-typeset p,
+.md-typeset details dl,
+.md-typeset details dt,
+.md-typeset details dd {
+  margin: 0;
+}
+
+.overview {
+  padding: .4rem 1.8rem .4rem 2rem;
+}
+
+details .description {
+  padding: .4rem .6rem;
+  background-color: var(--md-default-bg-color);
+}
+
+.md-typeset details + details, .md-typeset .admonition + .admonition {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+}
+
+.md-typeset details:has(+ details), .md-typeset .admonition:has(+ .admonition) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.md-typeset .admonition-title::before, .md-typeset summary::before {
+  top: 0.5rem
+}
+
+.md-typeset details summary, .admonition .description {
+  font-weight: 500;
+}
+
+.md-typeset dt {
+  font-weight: 650;
+}
+
+[dir="ltr"] .md-typeset summary {
+  padding: 0;
+}
+
+summary .overview {
+  display: grid;
+  row-gap: 0.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+}
+
+.overview > dl {
+  justify-self: end;
+}
+
+[dir="ltr"] .md-typeset details summary dd {
+  margin-left: 0;
+}
+
+.admonition .description {
+  margin-top: .4rem;
+  margin-bottom: .2rem;
+}
+
+.extra {
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 0.2rem;
+  column-gap: 1rem;
+  justify-content: start;
+}
+
+.extra > dl {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+a + .superscript::after {
+  content: attr(data-text);
+  display: inline;
+  padding-left: .1rem;
+  font-size: x-small;
+  font-weight: 900;
+  vertical-align: super;
+  pointer-events: auto;
+}
+
+a + .superscript {
+  pointer-events: auto;
+  cursor: help;
+}
+
+/* Smartphone and tablet */
+@media screen and (max-width: 768px) {
+  summary .overview {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 0.3rem;
+  }
+
+  .overview dl {
+    text-align: right;
+    flex-grow: 2;
+  }
+
+  .label {
+    flex-shrink: 0;
+  }
+
+  .extra {
+    flex-flow: column;
+  }
+
+  [dir="ltr"] .md-typeset dd {
+    margin-left: 1em;
+  }
+  
+}

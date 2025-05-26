@@ -12,6 +12,7 @@
   --md-accent-bg-color: oklch(98.48% 0.0013 106.42deg);
   --md-primary-bg-color: oklch(0% 0 none / 0.87);
   --md-primary-bg-color--light: oklch(0% 0 none / 0.54);
+  --md-diagram-fg-color: hsl(59.9955169055, 0.1975261515%, 12.7194768698%);
   --md-diagram-fg-color--light: hsl(59.9955169055, 0.3926793506%, 66.5326482422%);
 }
 
@@ -28,6 +29,7 @@
   --md-secondary-fg-color--light-hover: oklch(60.652% 0.10451 340.37deg);
   --md-secondary-fg-color--transparent: oklch(34.4204424785% 0.1492937984 340.3702604317deg / 0.2);
   --md-footer-bg-color--dark: oklch(0% 0 none / 0.32);
+  --md-diagram-fg-color: hsl(225, 6.7905405405%, 76.32%);
   --md-diagram-fg-color--light: hsl(225, 4.9791231733%, 38.32%);
 }
 
