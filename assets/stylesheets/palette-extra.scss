@@ -31,7 +31,8 @@ $light-theme: (
   accent-bg-color: $off-white,
   primary-bg-color: oklch(0% 0 0 / 87%), // Dark overlays
   primary-bg-color--light: oklch(0% 0 0 / 54%),
-  diagram-fg-color--light: color.mix($black, $off-white, $weight: 32%, $method: rgb) // Opaque lighter color for diagrams
+  diagram-fg-color: color.mix($black, $off-white, $weight: 87%, $method: rgb),
+  diagram-fg-color--light: color.mix($black, $off-white, $weight: 32%, $method: rgb), // Opaque lighter color for diagrams
 );
 
 $dark-theme: (
@@ -47,6 +48,7 @@ $dark-theme: (
   secondary-fg-color--light-hover: color.scale($purple, $lightness: +40%, $chroma: -30%, $space: oklch),
   secondary-fg-color--transparent: color.change($purple, $alpha: 0.2),
   footer-bg-color--dark: oklch(0% 0 0 / 32%),
+  diagram-fg-color: color.mix($white, $slate, $weight: 82%, $method: rgb),
   diagram-fg-color--light: color.mix($white, $slate, $weight: 32%, $method: rgb) // Opaque lighter color for diagrams
 );
 

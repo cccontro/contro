@@ -79,12 +79,9 @@ footer {
   contain: size;
 }
 
-#hero-bg svg {
-  font-size: 11.4px;
-  fill: currentColor;
-  height: 100%;
-  width: auto;
-  aspect-ratio: 484.76 / 805.29;
+#hero-bg img {
+  height: max(73vh, 47.7vw);
+  margin: auto 0;
 }
 
 /* Grid animation */
