@@ -2,73 +2,109 @@ h3 .headerlink {
   display: none !important;
 }
 
+.md-typeset summary {
+  background-color: transparent !important;
+}
+
+/* Margins */
 .md-typeset details,
 .md-typeset .admonition,
 .md-typeset details h3,
 .md-typeset .admonition h3,
 .md-typeset details h4,
 .md-typeset p,
-.md-typeset details dl,
-.md-typeset details dt,
-.md-typeset details dd {
+.md-typeset h4,
+[dir="ltr"] .md-typeset ul,
+[dir="ltr"] .md-typeset ul li {
   margin: 0;
-}
-
-.overview {
-  padding: .4rem 1.8rem .4rem 2rem;
-}
-
-details .description {
-  padding: .4rem .6rem;
-  background-color: var(--md-default-bg-color);
-}
-
-.md-typeset details + details, .md-typeset .admonition + .admonition {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-top: none;
-}
-
-.md-typeset details:has(+ details), .md-typeset .admonition:has(+ .admonition) {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.md-typeset .admonition-title::before, .md-typeset summary::before {
-  top: 0.5rem
-}
-
-.md-typeset details summary, .admonition .description {
-  font-weight: 500;
-}
-
-.md-typeset dt {
-  font-weight: 650;
 }
 
 [dir="ltr"] .md-typeset summary {
   padding: 0;
 }
 
-summary .overview {
+.md-typeset .overview {
+  padding: .4rem 1.8rem .4rem 2rem !important;
+}
+
+.md-typeset .overview + * {
+  margin-top: .4rem;
+}
+
+.md-typeset summary > :not(.overview) {
+  margin-left: .6rem;
+  margin-right: .6rem;
+}
+
+.md-typeset summary > :last-child:not(.overview) {
+  margin-bottom: .4rem;
+}
+
+.md-typeset details[open] summary > :last-child {
+  margin-bottom: 0;
+}
+
+.md-typeset summary + * {
+  margin-top: .4rem;
+}
+
+.md-typeset__scrollwrap, .md-typeset__table {
+  margin-bottom: 0;
+}
+
+/* Border radii */
+.md-typeset details + details,
+.md-typeset details + .admonition,
+.md-typeset .admonition + .admonition,
+.md-typeset .admonition + details {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+}
+
+.md-typeset details:has(+ details, + .admonition),
+.md-typeset .admonition:has(+ .admonition, + details) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Fonts */
+.md-typeset details summary, .md-typeset .admonition-title, .admonition:not(.rule) .description {
+  font-weight: 500;
+}
+
+.md-typeset h4 {
+  font-weight: 650;
+}
+
+.md-typeset details ul, .md-typeset .admonition ul {
+  list-style-type: none;
+}
+
+.md-typeset strong {
+  font-weight: 650;
+}
+
+/* Overview */
+.overview {
   display: grid;
   row-gap: 0.2rem;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  grid-template-columns: auto 16em 16em;
 }
 
-.overview > dl {
-  justify-self: end;
+.overview > ul:last-of-type {
+  grid-column: 3;
 }
 
-[dir="ltr"] .md-typeset details summary dd {
+[dir="ltr"] .md-typeset .overview li {
   margin-left: 0;
 }
 
-.admonition .description {
-  margin-top: .4rem;
-  margin-bottom: .2rem;
+.md-typeset .admonition-title::before, .md-typeset summary::before {
+  top: 0.5rem
 }
 
+/* Extra */
 .extra {
   display: flex;
   flex-flow: row wrap;
@@ -77,12 +113,13 @@ summary .overview {
   justify-content: start;
 }
 
-.extra > dl {
-  flex-shrink: 0;
+.extra > ul {
+  flex-shrink: 1;
   flex-grow: 1;
 }
 
-a + .superscript::after {
+/* Superscript markers */
+a + .sup::after {
   content: attr(data-text);
   display: inline;
   padding-left: .1rem;
@@ -92,35 +129,67 @@ a + .superscript::after {
   pointer-events: auto;
 }
 
-a + .superscript {
+a + .sup {
   pointer-events: auto;
   cursor: help;
 }
 
+/* Shield badges */
+.md-typeset a > img {
+  border-radius: 32px;
+  filter: grayscale(20%);
+}
+
+.md-typeset p > a > img {
+  display: inline;
+  vertical-align: middle;
+}
+
+.md-typeset p > a:not(:first-child) > img {
+  margin-left: .2rem;
+}
+
 /* Smartphone and tablet */
 @media screen and (max-width: 768px) {
-  summary .overview {
+  .overview {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 0.3rem;
+    row-gap: .3rem;
   }
 
-  .overview dl {
+  .overview ul {
     text-align: right;
-    flex-grow: 2;
+    flex: 2.5 2 auto;
+  }
+
+  .overview ul + ul {
+    flex: 1 1 100%;
   }
 
   .label {
-    flex-shrink: 0;
+    flex: 5 1 auto;
   }
 
   .extra {
     flex-flow: column;
   }
 
-  [dir="ltr"] .md-typeset dd {
+  [dir="ltr"] .md-typeset li {
     margin-left: 1em;
+  }
+
+  .md-typeset p > a > img {
+    display: block;
+    margin: .2rem 0;
+  }
+
+  .md-typeset p > a:not(:first-child) > img {
+    margin-left: 0;
+  }
+
+  .md-typeset p > a + a > img {
+    margin-top: .3rem;
   }
   
 }
