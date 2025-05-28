@@ -15,8 +15,8 @@ def write_if_changed(new, path):
 
 def main():
   parser = argparse.ArgumentParser(description='Extract CONTRO entities from a XML-TEI file.')
-  parser.add_argument('xml_path', nargs='?', default='../tei/Apologia-TEI.xml', help='Path to the input .xml file.')
-  parser.add_argument('ttl_path', nargs='?', default='data.ttl', help='Path to the output .ttl file.')
+  parser.add_argument('xml_path', help='Path to the input .xml file.')
+  parser.add_argument('ttl_path', help='Path to the output .ttl file.')
 
   args = parser.parse_args()
 
