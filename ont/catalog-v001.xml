@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://w3id.org/contro/persp" uri="persp.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/contro/arg" uri="arg.ttl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/contro/arg/0.4.0" uri="arg.ttl"/>
     <uri id="Imports Wizard Entry" name="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" uri="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" uri="dul.ttl"/>
