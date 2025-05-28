@@ -10,7 +10,10 @@ nav:
   - Scenario: scenario.md
   - Background: background.md
   - Model: model.md
-  - Elements: elements.md
+  - Elements:
+      - elements/index.md
+      - Argumentation: elements/arg.md
+      - Perspectivisation: elements/persp.md
   - Examples: examples.md
 theme:
   name: material
@@ -18,9 +21,10 @@ theme:
   custom_dir: overrides
   features:
     - navigation.instant
+    - navigation.instant.progress
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.sections
+    - navigation.indexes
     - toc.integrate
     - toc.follow
     - navigation.footer
@@ -62,6 +66,7 @@ theme:
     code: Source Code Pro
 
 plugins:
+  - meta
   - search
   - open-in-new-tab
   - git-revision-date-localized:
@@ -112,12 +117,13 @@ markdown_extensions:
       mode: view
   - pymdownx.blocks.tab:
       alternate_style: true
+      combine_header_slug: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
   - toc:
       title: In this section
       permalink: ‽
       permalink_title: Anchor
-      toc_depth: "2-6"
+      toc_depth: 2-3
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg

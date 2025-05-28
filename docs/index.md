@@ -4,7 +4,8 @@ hide:
 description:
 subtitle: About the project
 icon: material/earth
-template: hero.html
+extra_css:
+  - assets/stylesheets/hero.css
 ---
 
 <div id="hero-bg" aria-hidden="true" role="presentation" data-search-exclude markdown="span">

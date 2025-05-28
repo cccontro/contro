@@ -1,0 +1,5 @@
+description:
+extra_css:
+  - assets/stylesheets/documentation.css
+  - assets/stylesheets/palette-doc.css
+toc_depth: 1
