@@ -1,4 +1,7 @@
-<!-- Table of contents item -->
+{#-
+  Configure toc_depth from page metadata
+-#}
+{#- Table of contents item -#}
 <li class="md-nav__item">
   <a class="md-nav__link" href="{{ toc_item.url }}">
     <span class="md-ellipsis">
@@ -6,7 +9,7 @@
     </span>
   </a>
 
-  <!-- Table of contents list -->
+  {#- Table of contents list -#}
   {% if toc_item.children and (not page.meta.toc_depth or toc_item.level <= page.meta.toc_depth) %}
   <nav class="md-nav" aria-label="{{ toc_item.title | striptags | e }}">
     <ul class="md-nav__list">

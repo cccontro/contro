@@ -2,8 +2,9 @@
   --header-height: 4.8rem;
   --md-margin: 0.8rem;
   --md-search-result-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 19,9.5316034 A 0.75,0.75 0 0 1 18.25,10.281603 H 12 a 0.5,0.5 0 0 0 0,1 h 2.533 l 0.004,0.086 c 0.012,0.317 0.008,0.637 -0.027,0.816 -0.027,0.134 -0.096,0.294 -0.182,0.448 -0.042,0.077 -0.147,0.15 -0.314,0.15 H 12 a 0.5,0.5 0 1 0 0,1 h 1.565 l 0.01,0.106 c 0.024,0.316001 0.01,0.584001 -0.04,0.708001 -0.046,0.118 -0.207,0.3 -0.43,0.486 -0.096,0.081 -0.19,0.15 -0.259,0.2 H 11.5 a 0.50000015,0.50000015 0 0 0 0,1 h 1 v 0.342 a 1,1 0 0 1 -1.1,0.995 l -2.715,-0.271 a 2.5,2.5 0 0 1 -0.991,-0.317 l -2.442,-1.395 A 0.5,0.5 0 0 1 5,15.201604 V 8.8166034 a 0.5,0.5 0 0 1 0.223,-0.416 l 2.15,-1.433 a 1.5,1.5 0 0 1 0.666,-0.243 l 3.105,-0.345 a 0.5,0.5 0 0 1 0.546,0.399 l 0.2,1.003 H 11 a 0.5,0.5 0 0 0 0,1 h 7.25 a 0.75,0.75 0 0 1 0.75,0.75 m -3.466,1.7499996 h 2.716 a 1.75,1.75 0 1 0 0,-3.4999996 h -5.34 l -0.24,-1.2 a 1.5,1.5 0 0 0 -1.636,-1.196 l -3.106,0.345 a 2.5,2.5 0 0 0 -1.11,0.405 l -2.15,1.433 A 1.5,1.5 0 0 0 4,8.8166034 v 6.3850006 a 1.5,1.5 0 0 0 0.756,1.302 l 2.441,1.395 a 3.5,3.5 0 0 0 1.389,0.444 l 2.715,0.271 a 2,2 0 0 0 2.199,-1.99 v -0.581 a 5,5 0 0 0 0.248,-0.195 c 0.229,-0.191 0.568,-0.51 0.716,-0.88 0.146,-0.364 0.132,-0.846 0.108,-1.158001 l -0.012,-0.132 a 1.26,1.26 0 0 0 0.642,-0.56 2.6,2.6 0 0 0 0.288,-0.738 c 0.062,-0.31 0.058,-0.739 0.046,-1.05 z m -2.025,2.094"/></svg>');
-  --md-toc-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="m 6.646,3.6461311 a 0.5,0.5 0 0 1 0.708,0 l 6,6 a 0.5,0.5 0 0 1 0,0.7079999 l -6,6 a 0.5006316,0.5006316 0 0 1 -0.708,-0.708 l 5.647,-5.646 -5.647,-5.6459999 a 0.5,0.5 0 0 1 0,-0.708"/></svg>');
-  --md-nav-icon--prev: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="m 13.354,3.6461311 a 0.5,0.5 0 0 0 -0.708,0 l -6.0000001,6 a 0.5,0.5 0 0 0 0,0.7079999 l 6.0000001,6 a 0.5006316,0.5006316 0 0 0 0.708,-0.708 L 7.7069999,10.000131 13.354,4.3541311 a 0.5,0.5 0 0 0 0,-0.708"/></svg>');
+  --md-nav-icon--next: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg>');
+  --md-toc-icon: var(--md-nav-icon--next);
+  --md-nav-icon--prev: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.28 5.22a.75.75 0 0 1 0 1.06L9.56 12l5.72 5.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-6.25-6.25a.75.75 0 0 1 0-1.06l6.25-6.25a.75.75 0 0 1 1.06 0"/></svg>');
   --md-quote-right-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m9.48,4.3c1.06-1.65,3.25-2.12,4.89-1.07,1.02.65,1.63,1.79,1.63,3,0,1.96-1.59,3.54-3.55,3.54-.67,0-1.33-.19-1.9-.55.28.83.8,1.71,1.65,2.59.34.35.33.91-.02,1.25-.35.34-.91.33-1.25-.02-3.16-3.28-2.75-6.84-1.45-8.75h0ZM.97,4.3c1.06-1.65,3.25-2.12,4.89-1.07,1.02.65,1.63,1.79,1.63,3,0,1.96-1.59,3.54-3.55,3.54-.67,0-1.33-.19-1.9-.55.28.83.8,1.71,1.65,2.59.34.35.33.91-.02,1.25s-.91.33-1.25-.02C-.74,9.78-.33,6.22.97,4.31h0Z"/></svg>');
   --md-quote-left-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m6.52,4.3c-1.06-1.65-3.25-2.12-4.89-1.07C.61,3.89,0,5.02,0,6.23c0,1.96,1.59,3.54,3.55,3.54.67,0,1.33-.19,1.9-.55-.28.83-.8,1.71-1.65,2.59-.34.35-.33.91.02,1.25.35.34.91.33,1.25-.02,3.16-3.28,2.75-6.84,1.45-8.75h0Zm8.51,0c-1.06-1.65-3.25-2.12-4.89-1.07-1.02.65-1.63,1.79-1.63,3,0,1.96,1.59,3.54,3.55,3.54.67,0,1.33-.19,1.9-.55-.28.83-.8,1.71-1.65,2.59-.34.35-.33.91.02,1.25s.91.33,1.25-.02c3.16-3.28,2.75-6.84,1.45-8.75h0Z"/></svg>');
   --head-gap: max(8em, 16vw);
@@ -60,7 +61,7 @@ body {
   font-weight: 600;
 }
 
-.md-header__topic, .md-nav__title:not([for="__toc"]), h1, h2, h3 {
+.md-header__topic, .md-nav__title[for="__drawer"], h1, h2, h3 {
   font-family: var(--md-serif-font-family);
 }
 
@@ -74,15 +75,7 @@ body {
   margin-left: .6rem !important;
 }
 
-.md-logo {
-  display: none !important;
-}
-
 /* Navbar icons */
-.md-tabs__link svg {
-  display: none;
-}
-
 .md-nav__link {
   align-items: center;
 }
@@ -93,10 +86,19 @@ body {
 
 /* Highlight icons in drawer */
 @media screen and (max-width: 76.2344em) {
-  .md-nav--primary .md-nav__item--active svg, .md-nav--primary .md-nav__item--active .md-nav__icon {
-    color: var(--md-accent-fg-color);
+  .md-nav--primary .md-nav__link .md-nav__icon:after,
+  .md-nav--primary .md-nav__title .md-nav__icon:after {
+    background-color: var(--md-default-fg-color--light);
   }
 
+  .md-nav--primary .md-nav__item--active .md-nav__link .md-nav__icon:after {
+    background-color: var(--md-accent-fg-color);
+  }
+
+  .md-nav--primary .md-nav__item--active svg,
+  .md-nav--primary .md-nav__item--active .md-nav__icon {
+    color: var(--md-accent-fg-color);
+  }
 }
 
 /* Navbar transition */
@@ -136,7 +138,7 @@ body {
 }
 
 /* Capitalize title */
-.md-header__topic:first-child, .md-nav__title:not([for="__toc"]) {
+.md-header__topic:first-child, .md-nav__title[for="__drawer"] {
   text-transform: uppercase;
 }
 
@@ -401,7 +403,11 @@ html .md-typeset .footnote-ref {
 }
 
 .md-typeset table:not([class]) {
-border: .1rem solid var(--md-typeset-table-color);
+  border: .1rem solid var(--md-typeset-table-color);
+}
+
+.md-typeset table:not([class]) a {
+  word-break: break-word;
 }
 
 /* Responsive */
@@ -424,4 +430,25 @@ border: .1rem solid var(--md-typeset-table-color);
   .md-typeset figcaption {
     margin: var(--md-margin);
   }
+
+  .md-typeset table:not([class]) td:has(+ td),
+  .md-typeset table:not([class]) th:has(+ th) {
+    padding-right: .2rem;
+  }
+
+  .md-typeset table:not([class]) td + td,
+  .md-typeset table:not([class]) th + th {
+    padding-left: .2rem;
+  }
+
+  .md-typeset__table {
+    width: 100%;
+  }
+
+  .md-typeset table:not([class]) {
+    display: table;
+    table-layout: auto;
+    width: 100%;
+  }
+
 }
