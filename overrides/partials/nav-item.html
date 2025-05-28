@@ -165,7 +165,7 @@
   {% else %}
     <li class="{{ class }}">
       <a href="{{ nav_item.url | url }}" class="md-nav__link">
-        {% if "navigation.indexes.alt" in features and nav_item.is_index %}
+        {% if "navigation.indexes.alt" in features and nav_item.is_index and level != 1 %}
           {{ render_content(nav_item, strip=true) }}
         {% else %}
           {{ render_content(nav_item) }}
