@@ -1,6 +1,7 @@
 @prefix : <https://w3id.org/contro/persp#> .
 @prefix d0: <http://www.ontologydesignpatterns.org/ont/d0.owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -9,16 +10,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cpann: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
 @prefix frame: <https://w3id.org/framester/schema/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @base <https://w3id.org/contro/persp#> .
 
 <https://w3id.org/contro/persp> rdf:type owl:Ontology ;
-                                 owl:versionIRI <https://w3id.org/contro/persp/1.0.0> ;
-                                 cpann:isCloneOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl> ;
-                                 rdfs:comment """An ontology for the perspectivisation frame: a type of events or situations, where a fact (a background) is reported within a certain storytelling (a lens), which creates a viewpoint (a cut), towards which the source (a conceptualiser)  holds a positive, negative, or neutral stance (an attitude).
+                                dc:creator "Alberto Ciarrocca" ,
+                                            "Francesca Massarenti" ;
+                                dct:created "12/03/2025" ;
+                                cpann:isCloneOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl> ;
+                                dct:description """An ontology for the perspectivisation frame: a type of events or situations, where a fact (a background) is reported within a certain storytelling (a lens), which creates a viewpoint (a cut), towards which the source (a conceptualiser)  holds a positive, negative, or neutral stance (an attitude).
 The result of perspectivisation is not only a linguistic or rhetorical artifice, because it typically involves a 'blending' of the entities playing two roles: the cut, and the lens.
+
 For example, in political talk, when e.g. a democrat says that taxes are investments, the democrat (conceptualiser) holds an attitude towards the current taxation policies (cut from a background), viewed through the generally positive value associated with investments (lens).
 The expected result from the example is that a new entity emerges: an 'investment-blended' meaning of taxes.
-A lot of public discussions, even in formal contexts, shows perspectivisation situations.""" .
+A lot of public discussions, even in formal contexts, shows perspectivisation situations."""@en ;
+                                dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                dct:modified "21/05/2025" ;
+                                dct:title "Perspectivisation Ontology"@en ;
+                                vann:preferredNamespacePrefix "persp" ;
+                                vann:preferredNamespaceUri : ;
+                                rdfs:label "Perspectivisation"@en ;
+                                owl:versionInfo "1.0" .
 
 #################################################################
 #    Annotation properties

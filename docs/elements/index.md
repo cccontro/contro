@@ -4,4 +4,4 @@ subtitle: Vocabulary description
 icon: material/puzzle
 ---
 
---8<-- "docs/elements/data.md"
+--8<-- "docs/elements/contro.md"

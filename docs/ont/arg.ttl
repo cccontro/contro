@@ -19,14 +19,14 @@
                                dc:creator "Alberto Ciarrocca" ,
                                           "Francesca Massarenti" ;
                                dct:created "12/03/2025" ;
-                               dct:description "The Argumentation ontology can be used to reconstruct argumentative structures in text."@en ;
+                               dct:description "Reconstruct argumentative structures in text."@en ;
                                dct:license <https://creativecommons.org/licenses/by/4.0/> ;
                                dct:modified "21/05/2025" ;
-                               dct:title "The argumentation ontology"@en ;
+                               dct:title "Argumentation Ontology"@en ;
                                vann:preferredNamespacePrefix "arg" ;
                                vann:preferredNamespaceUri : ;
                                rdfs:label "Argumentation"@en ;
-                               owl:versionInfo "0.5.0" .
+                               owl:versionInfo "0.5" .
 
 #################################################################
 #    Annotation properties

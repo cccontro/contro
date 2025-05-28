@@ -1,10 +1,12 @@
-<h1>The argumentation ontology <smaller>(arg)</smaller></h1>
+<!--- This file was automatically generated - do not edit -->
+
+<h1>Argumentation Ontology <smaller>(arg)</smaller></h1>
 
 ## Overview
 
 **IRI:** <https://w3id.org/contro/arg>
 
-**Version:** 0.5.0
+**Version:** 0.5
 
 **Release:** 12/03/2025
 
@@ -22,7 +24,7 @@
 [![Format: JSON LD](https://img.shields.io/badge/Format-JSON_LD-blue.svg?style=for-the-badge)](https://w3id.org/contro/arg.json-ld)
 
 ### Description
-The Argumentation ontology can be used to reconstruct argumentative structures in text.
+Reconstruct argumentative structures in text.
 
 ### Namespaces
 

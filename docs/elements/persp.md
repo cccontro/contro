@@ -1,13 +1,21 @@
+<!--- This file was automatically generated - do not edit -->
+
+<h1>Perspectivisation Ontology <smaller>(persp)</smaller></h1>
 
 ## Overview
 
 **IRI:** <https://w3id.org/contro/persp>
 
+**Version:** 1.0
+
+**Release:** 12/03/2025
+
+**Last update:** 21/05/2025
+
+**Authors:** Alberto Ciarrocca, Francesca Massarenti
 
 
-
-
-
+**License:** [![License: CC BY 4.0](https://img.shields.io/badge/-CC%20BY%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by/4.0/)
 
 **Available:**
 
@@ -15,6 +23,13 @@
 [![Format: XML/RDF](https://img.shields.io/badge/Format-XML/RDF-red.svg?style=for-the-badge)](https://w3id.org/contro/persp.owl)
 [![Format: JSON LD](https://img.shields.io/badge/Format-JSON_LD-blue.svg?style=for-the-badge)](https://w3id.org/contro/persp.json-ld)
 
+### Description
+An ontology for the perspectivisation frame: a type of events or situations, where a fact (a background) is reported within a certain storytelling (a lens), which creates a viewpoint (a cut), towards which the source (a conceptualiser)  holds a positive, negative, or neutral stance (an attitude).
+The result of perspectivisation is not only a linguistic or rhetorical artifice, because it typically involves a 'blending' of the entities playing two roles: the cut, and the lens.
+
+For example, in political talk, when e.g. a democrat says that taxes are investments, the democrat (conceptualiser) holds an attitude towards the current taxation policies (cut from a background), viewed through the generally positive value associated with investments (lens).
+The expected result from the example is that a new entity emerges: an 'investment-blended' meaning of taxes.
+A lot of public discussions, even in formal contexts, shows perspectivisation situations.
 
 ### Namespaces
 
@@ -24,10 +39,12 @@
 | cpann | <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> |
 | d0 | <http://www.ontologydesignpatterns.org/ont/d0.owl#> |
 | dc | <http://purl.org/dc/elements/1.1/> |
+| dct | <http://purl.org/dc/terms/> |
 | dul | <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> |
 | owl | <http://www.w3.org/2002/07/owl#> |
 | rdf | <http://www.w3.org/1999/02/22-rdf-syntax-ns#> |
 | rdfs | <http://www.w3.org/2000/01/rdf-schema#> |
+| vann | <http://purl.org/vocab/vann/> |
 
 ## Classes
 
