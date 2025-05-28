@@ -11,9 +11,9 @@ nav:
   - Background: background.md
   - Model: model.md
   - Elements:
-      - elements/index.md
       - Argumentation: elements/arg.md
       - Perspectivisation: elements/persp.md
+      - elements/index.md
   - Examples: examples.md
 theme:
   name: material
@@ -24,10 +24,10 @@ theme:
     - navigation.instant.progress
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.indexes
+    - navigation.footer
+    - navigation.indexes.alt
     - toc.integrate
     - toc.follow
-    - navigation.footer
     - content.code.copy
     - content.tooltips
   palette:
@@ -90,6 +90,8 @@ plugins:
           - assets/stylesheets/palette-extra.css
   - exclude-search:
         exclude:
+          - elements/contro.md
+          - elements/data.md
           - examples.md#canzone-del-caro-in-lode-della-casa-di-francia
           - examples.md#parere-del-castelvetro-sopra-la-canzone-precedente
           - examples.md#i_1

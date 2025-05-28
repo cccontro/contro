@@ -1,5 +1,5 @@
 {#-
-  Remove icons from navbar and title to navbar links
+  Remove icons from navbar and add title to navbar links
 -#}
 {% macro render_content(nav_item, ref) %}
   {% set ref = ref or nav_item %}
@@ -18,7 +18,7 @@
     {% if first.children %}
       {{ render(first, ref) }}
     {% else %}
-      <li class="{{ class }}" name="{{ first.title }}">
+      <li class="{{ class }}" name="{{ nav_item.title }}">
         <a href="{{ first.url | url }}" class="md-tabs__link">
           {{ render_content(first, ref) }}
         </a>
