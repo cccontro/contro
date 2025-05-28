@@ -143,7 +143,7 @@
       {% endif %}
       {% if toc %}
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          {% if "navigation.indexes.alt" in features and nav_item.is_index %}
+          {% if "navigation.indexes.alt" in features and nav_item.is_index and level != 1 %}
             {{ render_content(nav_item, strip=true) }}
           {% else %}
             {{ render_content(nav_item) }}
@@ -152,7 +152,7 @@
         </label>
       {% endif %}
       <a href="{{ nav_item.url | url }}" class="md-nav__link md-nav__link--active">
-        {% if "navigation.indexes.alt" in features and nav_item.is_index %}
+        {% if "navigation.indexes.alt" in features and nav_item.is_index and level != 1 %}
           {{ render_content(nav_item, strip=true) }}
         {% else %}
           {{ render_content(nav_item) }}
