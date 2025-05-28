@@ -16,6 +16,10 @@ body {
 
 
 /* Anchor links */
+.headerlink:after {
+  content: "‽";
+}
+
 .md-typeset :target > .headerlink, .shown > .headerlink {
   color: var(--md-secondary-fg-color);
   opacity: 1;
@@ -25,8 +29,8 @@ body {
   color: var(--md-secondary-fg-color--hover);
 }
 
-.headerlink {
-  transition: color .25s ease,opacity 0.8s ease !important;
+.md-typeset .headerlink {
+  transition: color .25s ease, opacity 0.8s ease;
   font-family: var(--md-serif-font-family), var(--md-text-font-family);
 }
 

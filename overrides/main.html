@@ -1,7 +1,18 @@
 {#-
+  Use pipe as page title separator
   Add css and javascripts via page metadata
 -#}
 {% extends "base.html" %}
+
+{% block htmltitle %}
+    {% if page.meta and page.meta.title %}
+    <title>{{ page.meta.title }} | {{ config.site_name }}</title>
+    {% elif page.title and not page.is_homepage %}
+    <title>{{ page.title | striptags }} | {{ config.site_name }}</title>
+    {% else %}
+    <title>{{ config.site_name }}</title>
+    {% endif %}
+{% endblock %}
 
 {% block extrahead %}
     {% if page.is_page %}
