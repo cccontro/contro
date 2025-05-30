@@ -34,7 +34,7 @@ These steps need to be taken iteratively as in our case we were adapting a non-m
 
 The *Perspectivisation Ontology Design Pattern* (ODP), introduced in [@Gangemi2022], models the conceptual "cuts" a subject makes on an eventuality through the lenses (conscious or unconscious) available to them. Just as a filmmaker frames reality through a camera lens, a subject construes an eventuality through their own preconceptions, beliefs and values. The result is a **composition** of the eventuality and the conceptualiser’s lens: a cut that is conveyed in the subject’s expressions and may conflict with representations produced by other agents.
 
-This perspectivisation situation is modeled as an *n-ary relation* that links the conceptualiser, the eventuality, the background knowledge from which the eventuality is extracted, the lens through which it is construed, the resulting cut, and the conceptualiser's attitude toward that cut.
+This perspectivisation situation is modeled as an *n-ary relation* that links the conceptualiser, the eventuality, the background knowledge from which the eventuality is extracted, the lens through which it is construed, the resulting cut, and the conceptualiser's attitude toward that cut. Apart from the agent who has the role of conceptualiser, all the components of the n-ary relation are also modeled as situations, that is, as further unspecified n-ary relations.
 
 <!-- Come non citare poi grandi campioni come l'Agent e l'Attitude che rompon di brutto i coglioni (leggi che metrica sto periodo) -->
 

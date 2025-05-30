@@ -1,6 +1,6 @@
 <!--- This file was automatically generated - do not edit -->
 
-<h1>Controversy Ontology <smaller>(contro)</smaller></h1>
+<h1>Controversy Ontology <small>(contro)</small></h1>
 
 ## Overview
 
@@ -14,14 +14,13 @@
 
 **Authors:** Alberto Ciarrocca, Francesca Massarenti
 
-
 **License:** [![License: CC BY 4.0](https://img.shields.io/badge/-CC%20BY%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by/4.0/)
 
 **Available:**
 
 [![Format: TTL](https://img.shields.io/badge/Format-TTL-green.svg?style=for-the-badge)](https://w3id.org/contro.ttl)
 [![Format: XML/RDF](https://img.shields.io/badge/Format-XML/RDF-red.svg?style=for-the-badge)](https://w3id.org/contro.owl)
-[![Format: JSON LD](https://img.shields.io/badge/Format-JSON_LD-blue.svg?style=for-the-badge)](https://w3id.org/contro.json-ld)
+[![Format: JSON-LD](https://img.shields.io/badge/Format-JSON--LD-blue.svg?style=for-the-badge)](https://w3id.org/contro.jsonld)
 
 ### Description
 Extract perspectives from arguments.
@@ -38,12 +37,6 @@ Extract perspectives from arguments.
 | rdf | <http://www.w3.org/1999/02/22-rdf-syntax-ns#> |
 | rdfs | <http://www.w3.org/2000/01/rdf-schema#> |
 | vann | <http://purl.org/vocab/vann/> |
-
-
-
-
-
-
 
 
 

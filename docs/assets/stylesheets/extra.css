@@ -312,7 +312,6 @@ html .md-typeset .footnote-ref {
   padding: 0.5rem;
 }
 
-
 /* Diagrams */
 .mermaid {
   width: 100%;
@@ -418,6 +417,11 @@ html .md-typeset .footnote-ref {
 
 .md-typeset table:not([class]) a {
   word-break: break-word;
+}
+
+/* ToC */
+.md-sidebar__scrollwrap {
+  overflow-y: hidden;
 }
 
 /* Responsive */

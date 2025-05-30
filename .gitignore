@@ -3,3 +3,4 @@ site
 catalog*.xml
 controEnv
 common/
+.vscode

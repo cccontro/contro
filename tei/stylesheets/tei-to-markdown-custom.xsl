@@ -1,10 +1,10 @@
-<!-- 
+<!--
 Stylesheet for converting TEI to HTML-in-Markdown format, intended for post-processing
 with Python-Markdown.
 
-To use it:
-1. Clone the TEI Stylesheets repository: https://github.com/TEIC/Stylesheets
-2. Copy the `./common` folder in the same directory this file is.
+It links to the official TEI Stylesheets repo: to use it you must clone the contro repo
+with the option `git clone recurse-submodules` (double hyphen before recurse-submodules)
+so as to initialize it.
 -->
 
 <xsl:stylesheet
@@ -15,7 +15,7 @@ To use it:
         xpath-default-namespace="http://www.tei-c.org/ns/1.0"
         exclude-result-prefixes="tei xs">
 
-    <xsl:import href="common/common.xsl" />
+    <xsl:import href="official/common/common.xsl" />
 
     <xsl:strip-space elements="additional address adminInfo
                 altGrp altIdentifier analytic

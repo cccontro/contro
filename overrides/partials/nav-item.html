@@ -107,7 +107,7 @@
           <div class="md-nav__link md-nav__container">
             <a href="{{ index.url | url }}" class="md-nav__link {{ class }}">
               {{ render_content(index, nav_item) }}
-              </a>
+            </a>
             {% if nav_item.children | length > 1 %}
               {% set tabindex = "0" if not is_section %}
               <label class="md-nav__link {{ class }}" for="{{ path }}" id="{{ path }}_label" tabindex="{{ tabindex }}">

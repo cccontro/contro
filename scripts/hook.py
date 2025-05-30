@@ -5,7 +5,7 @@ def on_pre_build(config):
   docs_dir = config['docs_dir']
   xml_path = os.path.join('tei', 'Apologia-TEI.xml')
   xslt_path = os.path.join('tei', 'stylesheets', 'tei-to-markdown-custom.xsl')
-  templ_path = os.path.join('templates', 'doc-template.md.j2')
+  templ_path = os.path.join('templates', 'doc-template.md')
 
   def ont(name):
     return os.path.join(docs_dir, 'ont', f'{name}.ttl')
