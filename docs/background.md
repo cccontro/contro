@@ -85,7 +85,7 @@ In the mid-1980s, John Pollock played a central role in applying **defeasible re
 
 One of Pollock’s key examples illustrates this:
 
-> The object looks red to me.
+> The object looks red.
 
 > Therefore, the object is red.
 
@@ -97,9 +97,9 @@ In this case, the object appears red and is therefore presumed to be red until i
 
 Pollock formalized defeasible reasoning by distinguishing two kinds of attacks on arguments:
 
-- **Undercutters**, such as the red-light case, which challenge the connection between premise and conclusion without offering an alternative conclusion (under those conditions, one cannot know what color the object really is).
+- **Undercut**, such as the red-light case, which challenges the connection between premise and conclusion without offering an alternative conclusion (under those conditions, one cannot know what color the object really is).
 
-- **Rebuttals**, or distinctions, which accept the validity of the inference A → B but introduce a new premise C that leads to conclude that the case under consideration is a special case, an exception, and therefore to reach the opposite conclusion: A ∧ C → ¬B.
+- **Rebuttal**, or distinction, which accepts the validity of the inference A → B but introduces a new premise C that leads to conclude that the case under consideration is a special case, an exception, and therefore to reach the opposite conclusion: A ∧ C → ¬B.
 
 A canonical example of the latter is the Tweety case, first introduced by Raymond Reiter in 1980:
 
@@ -113,12 +113,14 @@ A canonical example of the latter is the Tweety case, first introduced by Raymon
 
 > Penguins don’t fly.
 
->So Tweety doesn’t fly.
+> So Tweety doesn’t fly.
 
 Here, the initial generalization is rebutted by a specific exception. Notice also that in this case the premise *Tweety is a bird* is not only conceded but implicitly reaffirmed by the added information that Tweety is a penguin. This shows how deductive and defeasible reasoning can coexist within a single discourse: while the inference *Tweety is a penguin* → *Tweety is a bird* is deductively valid, the defeasible rule *Birds fly* is overridden by a more specific case.
 
+Pollock’s system did not allow attacks on premises, but later formalisations recognized the need for a third type of attack to account for plausible reasoning. This attack, now known as **undermining**, negates an argument’s non-axiomatic premise and removes the support for its conclusion. Unlike undercuts, it does not invalidate the inference itself, but the conclusion remains unsupported unless the premise is defended. Undermining is currently being investigated in the context of belief revision, as it reduces the informational base from which agents draw further inferences.
+
 <div class="mermaid">
-<figcaption>Pollock's Three Types of Attack</figcaption>
+<figcaption>Three Types of Attack</figcaption>
 <div class="diagram">
 <div>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-2.5 0 140 96">
@@ -169,66 +171,65 @@ Here, the initial generalization is rebutted by a specific exception. Notice als
 </div>
 
 <div>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-2.5 0 140 96">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 140 175.5">
   <g class="line">
-    <path d="M 22.5 15.5 L 22.5 73.38"/>
-    <path d="M 22.5 79.5 L 17.75 70 L 22.5 72.38 L 27.25 70 Z"/>
-    <path d="M 95 8 L 30 8"/>
+    <path d="m25,95v57.9"/>
+    <path d="m97.5,87.5H32.5"/>
+    <path d="m105,15v57.9"/>
+    <path d="m25,159l-4.8-9.5,4.8,2.4,4.8-2.4-4.8,9.5Z"/>
+    <path d="m105,79l-4.8-9.5,4.8,2.4,4.8-2.4-4.8,9.5Z"/>
   </g>
   <g class="cross">
-    <path d="M 30.75 2.25 L 42.25 13.75 M 30.75 13.75 L 42.25 2.25"/>
+    <path d="m33.2,81.8l11.5,11.5m-11.5,0l11.5-11.5"/>
   </g>
   <g class="dot">
-    <ellipse cx="22.5" cy="8" rx="7.5" ry="7.5"/>
-    <ellipse cx="22.5" cy="88" rx="7.5" ry="7.5"/>
-    <ellipse cx="102.5" cy="8" rx="7.5" ry="7.5"/>
+    <circle cx="25" cy="87.5" r="7.5"/>
+    <circle cx="25" cy="167.5" r="7.5"/>
+    <circle cx="105" cy="7.5" r="7.5"/>
+    <circle cx="105" cy="87.5" r="7.5"/>
   </g>
-  <text x="-2.5" y="12.5">A</text>
-  <text x="-2.5" y="92.5">B</text>
-  <text x="117.5" y="12.5">¬A</text>
+  <text transform="translate(0 92)">A</text>
+  <text transform="translate(0 172)">B</text>
+  <text transform="translate(120 92)">¬A</text>
+  <text transform="translate(120.4 11.7)">C</text>
 </svg>
-<figcaption>Undermining<br/>¬A</figcaption>
+<figcaption>Undermining<br/>C → ¬A</figcaption>
 </div>
 </div>
 </div>
 
 ### Dung's abstract argumentation
-In 1995, Phan Minh Dung introduced an abstract formalism for argumentation-based inference that separated the question of the acceptability of arguments from both their internal structure and the nature of their conflicts. Dung focused instead on the attack relations among arguments, representing them as nodes in a graph connected by a binary attack relation. His semantics determine which sets of arguments—called *extensions*—are collectively acceptable, and hence which conclusions can be considered justified. These extensions are defined based solely on the attack and defense relations within the set: a defense occurs when an argument in the set attacks an attacker of another member.
+In 1995, Phan Minh Dung introduced an abstract formalism for argumentation that separated the acceptability of arguments from both their internal structure and the specific nature of their conflicts. In his model, arguments are nodes in a directed graph connected by binary attack relations. A *calculus of opposition* is then applied to determine sets of acceptable arguments, called **extensions**, that represent rational stances if they are internally coherent (conflict-free) and externally defended. These extensions depend solely on attack and defense: a defense occurs when an argument in the set attacks an attacker of another member. The arguments of such an admissible extension are labelled as accepted, those attacked by an argument of the extension are defeated, and the others are undefined.
 
-Such frameworks are simply directed graphs in which the arguments (nodes) are related
-to other arguments by attack or defeat relations (arcs). A ‘calculus of opposition’ is then applied to
-a framework to determine sets of acceptable arguments (extensions).
-
-### Revival of pragmatism
-
+This set-theoretic approach decoupled abstract from structured argumentation, revolutionizing the field and enabling further mathematical development. Dung’s semantics now underpins most formal models of argumentation. It also helped clarify the distinction between *attack*—a non-evaluative conflict relation—and *defeat*, which is assigned after computing the extensions.
 
 ## ASPIC^+^
 
-ASPIC^+^ [@Modgil2013] was conceived as a general abstract model of structured argumentation, and reading through the detail of the way it represents knowledge, constructs arguments, and identifies conflicts, it clearly draws in elements of many different argumentation systems. However, it only considers one method for establishing which arguments are acceptable, the Dung semantics.
-For a good overview see [@vanEemeren2014].
+!!! info inline end "Rules beyond language"
+	
+	As usual in logic, inference rules lie outside the formal language from which they derive their variables. In ASPIC^+^, however, a **naming function** brings them into the object language, allowing them to be targeted by undercut attacks. These named rules are included in the knowledge base used to build arguments. To allow conflicts over a rule’s admissibility, opposing knowledge bases should not share the same inference rules.
 
+The original ASPIC (Argumentation Service Platform with Integrated Components) was developed within a European project (2004–2007) to integrate, generalize, and extend existing approaches to structured argumentation. Its successor, ASPIC^+^ [@Modgil2013], first introduced in 2010, combines Dung’s abstract semantics with structured argumentation. It allows Pollock-style attacks to be formally represented while preserving a clear link to Dung’s acceptability criteria.
 
-Historically, the ASPIC + framework originates from the European ASPIC project that ran
-from 2004 to 2007, which (among other things) aimed to integrate and consolidate the main
-approaches to structured argumentation. The first relevant publication was Caminada and Amgoud
-(2007), which also introduced the idea of desirable properties (rationality postulates) for structured
-argumentation. The ASPIC + framework as published in this paper was generalised and extended
-in Prakken (2010) and Modgil and Prakken (2013) so as to capture a broader range of instantiating
-concrete logics (Besnard & Hunter 2009), other structured general accounts of argumentation
-(Amgoud & Besnard 2009, Bondarenko, Dung, Kowalski, & Toni 1997), and to account for the
-use of preferences to decide which attacks succeed as defeats. Unless indicated otherwise, the
-version of ASPIC + presented here is the one of Modgil and Prakken (2013).
+ASPIC^+^ is built around the following core components:
 
-ASPIC project (Argumentation Service Platform with Integrated Components)
-ASPIC+ is not a system but a framework for specifying systems [@Modgil2013]
+**Argumentation System**
+: Consists of a logical language, a contradiction function (not necessarily symmetric) over formulas, and a set of inference rules—either *strict* (deductive) or *defeasible*.
 
-Semplificazioni:
-- IN ASPIC, le regole di inferenza sono al di fuori del linguaggio; tuttavia è prevista una funzione che le nomina, e che permette dunque che siano oggetto di un undercut attack. Le regole in questo modo nominate sono anche parte della knwoledge base a partire dalla quale si costruiscono le argomentazioni: per permettere uno scontro sulla liceità dell'applicazione di una regola, la knowledge base degli opponoenti non può contenere le stesse regole di inferenza.
-Distinzione tra regole di inferenza al di fuori del lunguaggio logico 
-Simplification of ASPIC without preferences between arguments nor distinction between defeasible/strict rules or axioms/ordinary premises.
+**Knowledge Base**
+: A subset of the language, divided into *axioms* (certain, not attackable) and *ordinary premises* (uncertain, attackable).
 
-We follow "the crude way of incorporating classical logic", which is "more like how people reason: people often summarise chunks of deductive reasoning in one step" [@Modgil2014, pp. 45-48]
+**Argument**
+: A structure built from a set of premises, a conclusion, and a strict or defeasible inference rule connecting them. An argument is built on the basis of a knowledge base within a given argumentation system.
 
-Application of ASPIC in dialogical contexts [@Prakken2011].
+**Attack**
+: A relation between two arguments where the conclusion of one contradicts an ordinary premise, the consequent of a defeasible rule, or a defeasible inference step in the other. These are called undermining, rebutting, and undercutting attacks, respectively.
 
-ASPIC+ refines this by combining Dung’s abstract semantics with structured argumentation, allowing attacks in the style of Pollock to be formally represented while maintaining a clear link to Dung’s acceptability criteria.
+ASPIC^+^ arguments generate abstract argumentation frameworks, to which Dung-like extension calculus can be applied to evaluate acceptability. Importantly, ASPIC^+^ is not a specific argumentation system, but a general framework for specifying such systems. It supports flexible instantiation, even with partial structures (e.g. only axioms or only ordinary premises), while ensuring that a complying system will satisfy some key rationality postualtes.
+
+### Application in dialogical contexts
+
+These structures define consequence relations from a fixed body of information, representing it statically. However, they are compatible with dynamic models of argumentative interaction, addressing critiques—such as Walton's—that arguments are meaningful only within dialogues or procedures. This tension is resolved by embedding argumentation logics within dialogue systems, where arguments become disputes between agents with distinct, evolving information states. Through interaction, agents may revise their beliefs and co-construct a joint theory of the issue, which also develops over time.
+[@Prakken2011]
+ 
+Si può vedere come abbiamo semplificato ASPIC^+^ in the [next section](model.md#adapting-aspic-structures). For a good overview see [@vanEemeren2014].

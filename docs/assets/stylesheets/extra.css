@@ -341,19 +341,18 @@ html .md-typeset .footnote-ref {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  align-items: end;
   row-gap: var(--md-margin);
 }
 
 .md-typeset .diagram > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 0 var(--md-margin);
+  height: fit-content;
 }
 
 .md-typeset .diagram svg {
   display: block;
-  min-height: 120px;
+  min-width: 160px;
   height: auto;
   fill: var(--md-default-fg-color);
   font-size: .6rem;
@@ -422,6 +421,12 @@ html .md-typeset .footnote-ref {
 /* ToC */
 .md-sidebar__scrollwrap {
   overflow-y: hidden;
+}
+
+/* Definition lists */
+.md-typeset dd {
+    margin-bottom: .3em;
+    margin-top: 0;
 }
 
 /* Responsive */

@@ -1,5 +1,4 @@
 ---
-title: Contro
 subtitle: Vocabulary description
 icon: material/puzzle
 ---

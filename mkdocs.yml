@@ -13,7 +13,7 @@ nav:
   - Elements:
       - Argumentation: elements/arg.md
       - Perspectivisation: elements/persp.md
-      - elements/index.md
+      - Contro: elements/index.md
   - Examples: examples.md
 theme:
   name: material
