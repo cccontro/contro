@@ -8,29 +8,28 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix cpann: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
-@prefix frame: <https://w3id.org/framester/schema/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @base <https://w3id.org/contro/persp#> .
 
 <https://w3id.org/contro/persp> rdf:type owl:Ontology ;
-                                dc:creator "Alberto Ciarrocca" ,
+                                 dc:creator "Alberto Ciarrocca" ,
                                             "Francesca Massarenti" ;
-                                dct:created "12/03/2025" ;
-                                cpann:isCloneOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl> ;
-                                dct:description """An ontology for the perspectivisation frame: a type of events or situations, where a fact (a background) is reported within a certain storytelling (a lens), which creates a viewpoint (a cut), towards which the source (a conceptualiser)  holds a positive, negative, or neutral stance (an attitude).
+                                 dct:created "12/03/2025" ;
+                                 dct:description """An ontology for the perspectivisation frame: a type of events or situations, where a fact (a background) is reported within a certain storytelling (a lens), which creates a viewpoint (a cut), towards which the source (a conceptualiser)  holds a positive, negative, or neutral stance (an attitude).
 The result of perspectivisation is not only a linguistic or rhetorical artifice, because it typically involves a 'blending' of the entities playing two roles: the cut, and the lens.
 
 For example, in political talk, when e.g. a democrat says that taxes are investments, the democrat (conceptualiser) holds an attitude towards the current taxation policies (cut from a background), viewed through the generally positive value associated with investments (lens).
 The expected result from the example is that a new entity emerges: an 'investment-blended' meaning of taxes.
 A lot of public discussions, even in formal contexts, shows perspectivisation situations."""@en ;
-                                dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                dct:modified "21/05/2025" ;
-                                dct:title "Perspectivisation Ontology"@en ;
-                                vann:preferredNamespacePrefix "persp" ;
-                                vann:preferredNamespaceUri : ;
-                                rdfs:label "Perspectivisation"@en ;
-                                owl:versionInfo "1.0" .
+                                 dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                 dct:modified "21/05/2025" ;
+                                 dct:source <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl> ;
+                                 dct:title "Perspectivisation Ontology"@en ;
+                                 vann:preferredNamespacePrefix "persp" ;
+                                 vann:preferredNamespaceUri : ;
+                                 rdfs:label "Perspectivisation"@en ;
+                                 rdfs:seeAlso "A. Gangemi and V. Presutti, “Formal representation and extraction of perspectives,” in *Creating a more transparent internet*. Cambridge: Cambridge University Press, 2022, pp. 208–228, doi: [10.1017/9781108641104.016](https://doi.org/10.1017/9781108641104.016)." ;
+                                 owl:versionInfo "1.0" .
 
 #################################################################
 #    Annotation properties
@@ -44,8 +43,36 @@ dc:creator rdf:type owl:AnnotationProperty .
 dc:date rdf:type owl:AnnotationProperty .
 
 
-###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#isCloneOf
-cpann:isCloneOf rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 #################################################################

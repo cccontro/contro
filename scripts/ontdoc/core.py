@@ -20,7 +20,7 @@ from ontdoc.elements import (
 from ontdoc.utils import is_schema_predicate
 
 from typing import Union, Dict, List, Tuple
-from rdflib import Graph, URIRef, Literal, BNode, RDF, OWL, DC, DCTERMS, VANN
+from rdflib import Graph, URIRef, Literal, BNode, RDF, RDFS, OWL, DC, DCTERMS, VANN
 from rdflib.namespace import split_uri
 
 
@@ -72,6 +72,8 @@ class OntDoc:
         self.version = self.meta(OWL.versionInfo)
         self.license = self.meta(DCTERMS.license)
         self.prefix = self.meta(VANN.preferredNamespacePrefix)
+        self.bib = self.meta(RDFS.seeAlso)
+        self.source = self.meta(DCTERMS.source) or self.meta(DC.source)
 
         # Ontology elements
         self.classes = self.get_properties(OWL.Class)
@@ -260,5 +262,6 @@ class OntDoc:
             ('Version', self.version),
             ('Release', self.created),
             ('Last update', self.modified),
-            ('Authors', ', '.join(self.creator) if isinstance(self.creator, list) else self.creator)
+            ('Authors', ', '.join(self.creator) if isinstance(self.creator, list) else self.creator),
+            ('Source', '<'+self.source+'>' if self.source else self.source)
         ]

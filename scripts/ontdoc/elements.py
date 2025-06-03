@@ -35,6 +35,7 @@ class OntoElement:
         el.also_defined_as = [
             context.format_node(uri, o) for o in context.g.objects(uri, RDF.type) if o != owl_type and o in labels
         ]
+        el.see_also = context.meta(RDFS.seeAlso, uri, 'object', owl_type)
 
     def __repr__(el) -> str:
         return f"{el.__class__.__name__}({el.label})"
@@ -74,7 +75,8 @@ class Class(OntoElement):
         'in_domain': 'In domain of',
         'disjoint': 'Disjoint with',
         'disjoint_union': 'Disjoint union',
-        'instances': 'Instances'
+        'instances': 'Instances',
+        'see_also': 'See also'
     }
 
     def __init__(el, uri: URIRef, context):
@@ -95,6 +97,7 @@ class Property(OntoElement):
         'equivalent': 'Equivalent to',
         'subproperty_of': 'Subproperty of',
         'superproperty_of': 'Superproperty of',
+        'see_also': 'See also'
     }
 
     def __init__(el, uri: URIRef, owl_type: URIRef, sup: str, context):
@@ -112,7 +115,8 @@ class ObjectProperty(Property):
         'inverse': 'Inverse of',
         'subproperty_of': 'Subproperty of',
         'superproperty_of': 'Superproperty of',
-        'chain': 'Superproperty of chain'
+        'chain': 'Superproperty of chain',
+        'see_also': 'See also'
     }
 
     def __init__(el, uri: URIRef, context):
@@ -133,7 +137,7 @@ class AnnotationProperty(Property):
 
 class Individual(OntoElement):
     _base = {'of_class': 'Class'}
-    _extra = {'assertions': 'Assertions'}
+    _extra = {'assertions': 'Assertions', 'see_also': 'See also'}
 
     def __init__(el, uri: URIRef, context):
         super().__init__(uri, OWL.NamedIndividual, 'i', context)

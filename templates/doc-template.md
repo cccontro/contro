@@ -100,6 +100,11 @@
 {{ doc.description }}
 {% endif %}
 
+{% if doc.bib %}
+#### Bibliography
+{{ doc.bib }}
+{% endif %}
+
 ### Namespaces
 
 | Prefix | URI |

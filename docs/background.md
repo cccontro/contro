@@ -199,7 +199,7 @@ Pollock’s system did not allow attacks on premises, but later formalisations r
 </div>
 
 ### Dung's abstract argumentation
-In 1995, Phan Minh Dung introduced an abstract formalism for argumentation that separated the acceptability of arguments from both their internal structure and the specific nature of their conflicts. In his model, arguments are nodes in a directed graph connected by binary attack relations. A *calculus of opposition* is then applied to determine sets of acceptable arguments, called **extensions**, that represent rational stances if they are internally coherent (conflict-free) and externally defended. These extensions depend solely on attack and defense: a defense occurs when an argument in the set attacks an attacker of another member. The arguments of such an admissible extension are labelled as accepted, those attacked by an argument of the extension are defeated, and the others are undefined.
+In 1995, Phan Minh Dung introduced an abstract formalism for argumentation that separated the acceptability of arguments from both their internal structure and the specific nature of their conflicts. In his model, arguments are nodes in a directed graph connected by binary attack relations. A *calculus of opposition* is then applied to determine sets of acceptable arguments, called **extensions**, that represent rational stances if they are *internally coherent* (conflict-free) and *externally defended*. These extensions depend solely on attack and defense: a defense occurs when an argument in the set attacks an attacker of another member. The arguments of such an admissible extension are labelled as accepted, those attacked by an argument of the extension are defeated, and the others are undefined.
 
 This set-theoretic approach decoupled abstract from structured argumentation, revolutionizing the field and enabling further mathematical development. Dung’s semantics now underpin most formal models of argumentation. It also helped clarify the distinction between *attack*—a non-evaluative conflict relation—and *defeat*, which is assigned after computing the extensions.
 
@@ -217,20 +217,23 @@ ASPIC^+^ is built around the following core components:
 : Consists of a logical language, a contradiction function (not necessarily symmetric) over formulas, and a set of inference rules—either *strict* (deductive) or *defeasible*.
 
 **Knowledge Base**
-: A subset of the language, divided into *axioms* (certain, not attackable) and *ordinary premises* (uncertain, attackable).
+: A subset of the language, containing the *axioms* (facts, not attackable) and *ordinary premises* (assumptions, attackable) available for argument construction.
+
+**Argumentation Theory**
+: The combination of an argumentation system and a knowledge base, relative to which arguments are generated and evaluated.
 
 **Argument**
-: A structure built from a set of premises, a conclusion, and a strict or defeasible inference rule connecting them. An argument is built on the basis of a knowledge base within a given argumentation system.
+: A structure built from a set of premises, a conclusion, and a strict or defeasible inference rule connecting them. An argument is built on the basis of an argumentation theory with a given knowledge base and argumentation system.
 
 **Attack**
 : A relation between two arguments where the conclusion of one contradicts a premise, the conclusion, or the inference rule in the other. These are called undermining, rebutting, and undercutting attacks, respectively.
 
-ASPIC^+^ arguments generate abstract argumentation frameworks, to which Dung-like extension calculus can be applied to evaluate acceptability. Importantly, ASPIC^+^ is not a specific argumentation system, but a general framework for specifying such systems. It supports flexible instantiation, even with partial structures (e.g. only axioms or only ordinary premises), while ensuring that a complying system will satisfy some key rationality postualtes.
+ASPIC^+^ arguments generate abstract argumentation frameworks, to which Dung-like extension calculus can be applied to evaluate acceptability. Importantly, ASPIC^+^ is not a specific argumentation system, but a general framework for specifying such systems. It supports flexible instantiation, even with partial structures (e.g. only strict or defeasible rules), while ensuring that a complying system will satisfy some key rationality postualtes.
 
 ### Application in dialogical contexts
 
-ASPIC^+^ argument schemes define a notion of consequence based on a fixed body of information, which is thus represented statically. This may seem incompatible with Walton’s claim that arguments can only be evaluated in the context of a dialogue or procedure. However, the two perspectives can be reconciled by embedding argumentation logics within dialogue systems, where arguments are modeled as interactions between agents with distinct and evolving knowledge bases, and possibly changing beliefs.
+ASPIC^+^ argument schemes define a notion of consequence based on a fixed body of information, which is thus represented statically. This may seem incompatible with Walton’s claim that arguments can only be evaluated in the context of a dialogue or procedure. However, the two perspectives can be reconciled by embedding argumentation logics within **argumentative dialogue systems**, where arguments are modeled as interactions between agents with distinct and evolving knowledge bases, and possibly changing beliefs.
 
-In [@Prakken2011], ASPIC^+^ is adapted to dialogue by assigning each agent its own knowledge base within a shared argumentation framework that enables communication. Dialogical agents evaluate incoming arguments relative to their internal argumentation theory and the arguments it can generate. Depending on their acceptance attitude, they may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise.
+In [@Prakken2011], ASPIC^+^ is adapted to dialogue by assigning each agent their own knowledge base within a shared argumentation system that enables communication. Dialogical agents evaluate incoming arguments relative to their internal argumentation theory and the arguments it can generate. Depending on their **assertion and acceptance attitudes** [@Prakken2006], they may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise.
 
-For details on our instantiation of ASPIC^+^ in Description Logic, see [Model](model.md#adapting-aspic-structures). For a broader overview of argumentation theory, see [@Prakken2018].
+The practical application of ASPIC^+^ is illustrated with useful examples in [@Modgil2014]. For details on our instantiation of ASPIC^+^ in Description Logic, see [Model](model.md#adapting-aspic-structures). For a broader overview of argumentation theory, see [@Prakken2018].

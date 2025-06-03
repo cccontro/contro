@@ -3,7 +3,11 @@ from rdflib import URIRef, RDF, RDFS, OWL
 
 
 def split_camel_case(s: str) -> str:
-    return re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', s)
+    split = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', s)
+    if not split:
+        return split
+    return split[0] + split[1:].lower()
+
 
 
 def is_schema_predicate(p: URIRef) -> bool:

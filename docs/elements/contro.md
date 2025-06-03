@@ -25,6 +25,7 @@
 ### Description
 Extract perspectives from arguments.
 
+
 ### Namespaces
 
 | Prefix | URI |

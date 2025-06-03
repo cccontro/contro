@@ -13,6 +13,7 @@
 [![Format: JSON-LD](https://img.shields.io/badge/Format-JSON--LD-blue.svg?style=for-the-badge)](https://w3id.org/contro/caro-castelvetro.jsonld)
 
 
+
 ### Namespaces
 
 | Prefix | URI |
@@ -104,7 +105,7 @@
     <ul>
       <h4>Assertions</h4>
       <li>
-        <a class="object_property" href="https://w3id.org/contro/arg#personaOf" title="https://w3id.org/contro/arg#personaOf">persona Of</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#castelvetro_i" title="https://w3id.org/contro/caro-castelvetro#castelvetro">Lodovico Castelvetro</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="https://w3id.org/contro/arg#personaOf" title="https://w3id.org/contro/arg#personaOf">persona of</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#castelvetro_i" title="https://w3id.org/contro/caro-castelvetro#castelvetro">Lodovico Castelvetro</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
     </ul>
   </div>
@@ -318,40 +319,40 @@
     <ul>
       <h4>Assertions</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w1_i" title="https://w3id.org/contro/caro-castelvetro#w1">w1</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w1_i" title="https://w3id.org/contro/caro-castelvetro#w1">w1</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w10_i" title="https://w3id.org/contro/caro-castelvetro#w10">w10</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w10_i" title="https://w3id.org/contro/caro-castelvetro#w10">w10</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w11_i" title="https://w3id.org/contro/caro-castelvetro#w11">w11</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w11_i" title="https://w3id.org/contro/caro-castelvetro#w11">w11</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w12_i" title="https://w3id.org/contro/caro-castelvetro#w12">w12</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w12_i" title="https://w3id.org/contro/caro-castelvetro#w12">w12</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w2_i" title="https://w3id.org/contro/caro-castelvetro#w2">w2</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w2_i" title="https://w3id.org/contro/caro-castelvetro#w2">w2</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w3_i" title="https://w3id.org/contro/caro-castelvetro#w3">w3</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w3_i" title="https://w3id.org/contro/caro-castelvetro#w3">w3</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w4_i" title="https://w3id.org/contro/caro-castelvetro#w4">w4</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w4_i" title="https://w3id.org/contro/caro-castelvetro#w4">w4</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w5_i" title="https://w3id.org/contro/caro-castelvetro#w5">w5</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w5_i" title="https://w3id.org/contro/caro-castelvetro#w5">w5</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w6_i" title="https://w3id.org/contro/caro-castelvetro#w6">w6</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w6_i" title="https://w3id.org/contro/caro-castelvetro#w6">w6</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w7_i" title="https://w3id.org/contro/caro-castelvetro#w7">w7</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w7_i" title="https://w3id.org/contro/caro-castelvetro#w7">w7</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w8_i" title="https://w3id.org/contro/caro-castelvetro#w8">w8</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w8_i" title="https://w3id.org/contro/caro-castelvetro#w8">w8</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w9_i" title="https://w3id.org/contro/caro-castelvetro#w9">w9</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#w9_i" title="https://w3id.org/contro/caro-castelvetro#w9">w9</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
     </ul>
   </div>
@@ -553,7 +554,7 @@
     <ul>
       <h4>Assertions</h4>
       <li>
-        <a class="object_property" href="https://w3id.org/contro/arg#personaOf" title="https://w3id.org/contro/arg#personaOf">persona Of</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#caro_i" title="https://w3id.org/contro/caro-castelvetro#caro">Annibal Caro</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="https://w3id.org/contro/arg#personaOf" title="https://w3id.org/contro/arg#personaOf">persona of</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#caro_i" title="https://w3id.org/contro/caro-castelvetro#caro">Annibal Caro</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
     </ul>
   </div>
