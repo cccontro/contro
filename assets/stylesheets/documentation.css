@@ -7,13 +7,17 @@ h3 .headerlink {
 }
 
 /* Margins */
+.md-typeset h4 {
+  margin-bottom: 0;
+}
+
 .md-typeset details,
 .md-typeset .admonition,
 .md-typeset details h3,
 .md-typeset .admonition h3,
 .md-typeset details h4,
+.md-typeset .admonition h4,
 .md-typeset p,
-.md-typeset h4,
 [dir="ltr"] .md-typeset ul,
 [dir="ltr"] .md-typeset ul li {
   margin: 0;
@@ -89,6 +93,7 @@ h3 .headerlink {
 .overview {
   display: grid;
   row-gap: 0.2rem;
+  column-gap: 0.5rem;
   grid-template-columns: auto 16em 16em;
 }
 
