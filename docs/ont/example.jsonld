@@ -1,0 +1,187 @@
+[ {
+  "@id" : "https://w3id.org/contro/example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Example"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/contro/arg"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#A1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#InferenceRule" : [ {
+    "@id" : "https://w3id.org/contro/example#d1"
+  } ],
+  "https://w3id.org/contro/arg#by" : [ {
+    "@id" : "https://w3id.org/contro/example#agentA"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#A2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#Conclusion" : [ {
+    "@id" : "https://w3id.org/contro/example#r"
+  } ],
+  "https://w3id.org/contro/arg#Premise" : [ {
+    "@id" : "https://w3id.org/contro/example#q"
+  } ],
+  "https://w3id.org/contro/arg#by" : [ {
+    "@id" : "https://w3id.org/contro/example#agentA_alias"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#A3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#InferenceRule" : [ {
+    "@id" : "https://w3id.org/contro/example#d5"
+  } ],
+  "https://w3id.org/contro/arg#by" : [ {
+    "@id" : "https://w3id.org/contro/example#agentA"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#B1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#Conclusion" : [ {
+    "@id" : "https://w3id.org/contro/example#¬d1"
+  } ],
+  "https://w3id.org/contro/arg#by" : [ {
+    "@id" : "https://w3id.org/contro/example#agentB_alias"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#B2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#Conclusion" : [ {
+    "@id" : "https://w3id.org/contro/example#¬r"
+  } ],
+  "https://w3id.org/contro/arg#Premise" : [ {
+    "@id" : "https://w3id.org/contro/example#s"
+  } ],
+  "https://w3id.org/contro/arg#by" : [ {
+    "@id" : "https://w3id.org/contro/example#agentB_alias"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#agentA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/contro/example#agentA_alias",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#isAliasOf" : [ {
+    "@id" : "https://w3id.org/contro/example#agentA"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#agentB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/contro/example#agentB_alias",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#isAliasOf" : [ {
+    "@id" : "https://w3id.org/contro/example#agentB"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#d1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#Antecedent" : [ {
+    "@id" : "https://w3id.org/contro/example#p"
+  } ],
+  "https://w3id.org/contro/arg#Consequent" : [ {
+    "@id" : "https://w3id.org/contro/example#q"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#d2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#Antecedent" : [ {
+    "@id" : "https://w3id.org/contro/example#q"
+  } ],
+  "https://w3id.org/contro/arg#Consequent" : [ {
+    "@id" : "https://w3id.org/contro/example#r"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#d3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#Consequent" : [ {
+    "@id" : "https://w3id.org/contro/example#¬d1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#d4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#Antecedent" : [ {
+    "@id" : "https://w3id.org/contro/example#p"
+  }, {
+    "@id" : "https://w3id.org/contro/example#s"
+  } ],
+  "https://w3id.org/contro/arg#Consequent" : [ {
+    "@id" : "https://w3id.org/contro/example#¬r"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#d5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#Antecedent" : [ {
+    "@id" : "https://w3id.org/contro/example#t"
+  } ],
+  "https://w3id.org/contro/arg#Consequent" : [ {
+    "@id" : "https://w3id.org/contro/example#¬s"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#knowledgeA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/contro/example#knowledgeB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/contro/example#p",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/contro/example#q",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/contro/example#r",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/contro/example#s",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/contro/example#t",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/contro/example#theoryA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#DialogicalAgent" : [ {
+    "@id" : "https://w3id.org/contro/example#agentA"
+  } ],
+  "https://w3id.org/contro/arg#KnowledgeBase" : [ {
+    "@id" : "https://w3id.org/contro/example#knowledgeA"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#theoryB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#DialogicalAgent" : [ {
+    "@id" : "https://w3id.org/contro/example#agentB"
+  } ],
+  "https://w3id.org/contro/arg#KnowledgeBase" : [ {
+    "@id" : "https://w3id.org/contro/example#knowledgeB"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#¬d1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#contradicts" : [ {
+    "@id" : "https://w3id.org/contro/example#d1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#¬p",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#contradicts" : [ {
+    "@id" : "https://w3id.org/contro/example#p"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#¬r",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#contradicts" : [ {
+    "@id" : "https://w3id.org/contro/example#r"
+  } ]
+}, {
+  "@id" : "https://w3id.org/contro/example#¬s",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#contradicts" : [ {
+    "@id" : "https://w3id.org/contro/example#s"
+  } ]
+} ]

@@ -17,7 +17,13 @@
                                dc:creator "Alberto Ciarrocca" ,
                                           "Francesca Massarenti" ;
                                dct:created "12/03/2025" ;
-                               dct:description "Reconstruct argumentative structures in text."@en ;
+                               dct:description """An ontology for representing defeasible argumentation based on the ASPIC+ framework.
+
+In this model, each Dialogical Agent participates in discourse with an individual Argumentation Theory, comprising a Knowledge Base and an Acceptance Attitude toward external arguments. From this theory, the agent can construct Arguments, each consisting of a set of Premises, an Inference Rule, and a resulting Conclusion.
+
+The Conclusion of an Argument may Contradict another's Premise, Inference Rule, or Conclusion, giving rise to an Attack relation. These are classified respectively as Undermining, Undercut, and Rebuttal Conflicts.
+
+The ontology is designed to function with minimal annotation of Premises and Conclusions, and is compatible with the HermiT 1.4+ reasoner. An [example instance](http://www.w3id.org/contro/example.ttl) is available for demonstration purposes."""@en ;
                                dct:license <https://creativecommons.org/licenses/by/4.0/> ;
                                dct:modified "03/06/2025" ;
                                dct:title "Argumentation Ontology"@en ;
@@ -98,6 +104,7 @@ dul:satisfies rdf:type owl:ObjectProperty .
 ###  https://w3id.org/contro/arg#AcceptanceAttitude
 :AcceptanceAttitude rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf dul:isSettingFor ;
+                    rdfs:domain dul:Situation ;
                     rdfs:range :AcceptanceAttitude .
 
 
@@ -237,13 +244,14 @@ dul:satisfies rdf:type owl:ObjectProperty .
                                   [ owl:inverseOf :Premise
                                   ]
                                 ) ;
+         rdfs:comment "The non symmetric relation between two Arguments where the Conclusion of the first contradicts the Premise, Inference Rule, or Conclusion of the second."@en ;
          rdfs:label "attacks"@en .
 
 
 ###  https://w3id.org/contro/arg#by
 :by rdf:type owl:ObjectProperty ;
-    rdfs:domain :Argument ;
-    rdfs:range dul:Agent .
+    rdfs:range dul:Agent ;
+    rdfs:comment "A shortcut between an Argument and the Dialogical Agent of the Argumentation Theory that generated it."@en .
 
 
 ###  https://w3id.org/contro/arg#contradictedBy
@@ -254,13 +262,7 @@ dul:satisfies rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/contro/arg#contradicts
 :contradicts rdf:type owl:ObjectProperty ;
-             rdfs:domain :Conclusion ;
-             rdfs:range [ rdf:type owl:Class ;
-                          owl:unionOf ( :Conclusion
-                                        :InferenceRule
-                                        :Premise
-                                      )
-                        ] ;
+             rdfs:comment "A non symmetric relation between two entities, where the first is logically incompatible with the second. When the contradicting entity is the Conclusion of an Argument, it gives rise to an Attack against any other Argument in which the contradicted entity appears as a Premise, an Inference Rule, or a Conclusion."@en ;
              rdfs:label "contradicts"@en .
 
 
@@ -271,7 +273,7 @@ dul:satisfies rdf:type owl:ObjectProperty .
          owl:propertyChainAxiom ( :attacks
                                   :attacks
                                 ) ;
-         rdfs:comment "Irreflexive"@en ;
+         rdfs:comment "The irreflexive relation between two arguments where the first attacks an attacker of the second."@en ;
          rdfs:label "defends"@en .
 
 
@@ -279,7 +281,14 @@ dul:satisfies rdf:type owl:ObjectProperty .
 :extractedFrom rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf [ owl:inverseOf :hasMember
                                   ] ;
-               owl:propertyChainAxiom ( [ owl:inverseOf :InferenceRule
+               rdfs:domain dul:Situation ;
+               rdfs:range :KnowledgeBase ;
+               owl:propertyChainAxiom ( [ owl:inverseOf :Conclusion
+                                        ]
+                                        :ArgumentationTheory
+                                        :KnowledgeBase
+                                      ) ,
+                                      ( [ owl:inverseOf :InferenceRule
                                         ]
                                         :ArgumentationTheory
                                         :KnowledgeBase
@@ -289,11 +298,13 @@ dul:satisfies rdf:type owl:ObjectProperty .
                                         :ArgumentationTheory
                                         :KnowledgeBase
                                       ) ;
+               rdfs:comment "A Dialogical Agent draws the Premises, Inference Rule, and Conclusion necessary to build an Argument from their Knowledge Base."@en ;
                rdfs:label "extracted from"@en .
 
 
 ###  https://w3id.org/contro/arg#hasMember
 :hasMember rdf:type owl:ObjectProperty ;
+           rdfs:comment "A relation between a collection and the entities it comprises. Adapted from DOLCE, this version omits the restriction of Collection as domain, in order to avoid imposing DOLCE’s structural constraints on the Knowledge Base."@en ;
            rdfs:label "has member"@en ;
            rdfs:seeAlso dul:hasMember .
 
@@ -307,14 +318,15 @@ dul:satisfies rdf:type owl:ObjectProperty .
                                          [ owl:inverseOf :Conclusion
                                          ]
                                        ) ;
-                rdfs:comment "A transitive relation between arguments, where one argument has as sub-argument the other if it derives one of its premises from the other’s conclusion. If the sub-argument argument is defeated, so is the dependent argument."@en ;
-                rdfs:label "has Sub-Argument"@en .
+                rdfs:comment "A transitive relation between Arguments, where one Argument is a sub-argument of another if its Conclusion is used to derive a Premise of the other. If a sub-argument is defeated, the dependent argument is likewise considered defeated."@en ;
+                rdfs:label "has sub-argument"@en .
 
 
 ###  https://w3id.org/contro/arg#isAliasOf
 :isAliasOf rdf:type owl:ObjectProperty ;
            rdfs:domain dul:Agent ;
            rdfs:range dul:Agent ;
+           rdfs:comment "Traces an alternative identity back to a Dialogical Agent."@en ;
            rdfs:label "is alias of"@en .
 
 
@@ -366,7 +378,22 @@ dul:Situation rdf:type owl:Class .
 
 ###  https://w3id.org/contro/arg#Argument
 :Argument rdf:type owl:Class ;
-          owl:equivalentClass [ rdf:type owl:Restriction ;
+          owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :Conclusion ;
+                                                       owl:someValuesFrom :Conclusion
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :InferenceRule ;
+                                                       owl:someValuesFrom :InferenceRule
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :Premise ;
+                                                       owl:someValuesFrom :Premise
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty dul:satisfies ;
                                 owl:hasValue :Argument
                               ] ;
@@ -384,17 +411,13 @@ dul:Situation rdf:type owl:Class .
                             owl:someValuesFrom :InferenceRule
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :Topic ;
-                            owl:someValuesFrom d0:Eventuality
+                            owl:onProperty :Premise ;
+                            owl:someValuesFrom :Premise
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :Premise ;
-                            owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                            owl:onClass :Premise
-                          ] ;
-          owl:disjointWith :ArgumentationTheory ,
-                           :InferenceRule ,
-                           :KnowledgeBase .
+                            owl:onProperty :Topic ;
+                            owl:someValuesFrom d0:Eventuality
+                          ] .
 
 
 ###  https://w3id.org/contro/arg#ArgumentationTheory
@@ -427,8 +450,7 @@ dul:Situation rdf:type owl:Class .
                                   owl:onProperty dul:satisfies ;
                                   owl:hasValue :Conclusion
                                 ] ;
-            rdfs:subClassOf :ArgumentationTheorySituation ;
-            owl:disjointWith :InferenceRule .
+            rdfs:subClassOf :Consequent .
 
 
 ###  https://w3id.org/contro/arg#Conflict
@@ -451,24 +473,16 @@ dul:Situation rdf:type owl:Class .
             rdfs:subClassOf :ArgumentationTheorySituation .
 
 
-###  https://w3id.org/contro/arg#DefeasibleInference
-:DefeasibleInference rdf:type owl:Class ;
-                     rdfs:subClassOf :Argument ;
-                     rdfs:comment "An argument that draws its conclusion by applying at least one defeasible inference rule. It can be attacked on its rule application and may be defeated even if all its premises hold, since the support it provides for the conclusion is presumptive rather than deductive."@en ;
-                     rdfs:label "Defeasible Inference"@en .
-
-
 ###  https://w3id.org/contro/arg#InferenceRule
 :InferenceRule rdf:type owl:Class ;
                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :Consequent ;
+                                                            owl:someValuesFrom :Consequent
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
                                                             owl:onProperty :Antecedent ;
                                                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                                             owl:onClass :Antecedent
-                                                          ]
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty :Consequent ;
-                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                            owl:onClass :Consequent
                                                           ]
                                                         ) ;
                                      rdf:type owl:Class
@@ -477,8 +491,7 @@ dul:Situation rdf:type owl:Class .
                                      owl:onProperty dul:satisfies ;
                                      owl:hasValue :InferenceRule
                                    ] ;
-               rdfs:subClassOf :ArgumentationTheorySituation ;
-               owl:disjointWith :Premise .
+               rdfs:subClassOf :ArgumentationTheorySituation .
 
 
 ###  https://w3id.org/contro/arg#KnowledgeBase
@@ -496,7 +509,7 @@ dul:Situation rdf:type owl:Class .
                                owl:onProperty dul:satisfies ;
                                owl:hasValue :Premise
                              ] ;
-         rdfs:subClassOf :ArgumentationTheorySituation .
+         rdfs:subClassOf :Antecedent .
 
 
 ###  https://w3id.org/contro/arg#Rebuttal

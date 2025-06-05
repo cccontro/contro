@@ -1,0 +1,957 @@
+@prefix : <https://w3id.org/contro/example-inferred#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/contro/example-inferred> .
+
+<https://w3id.org/contro/example-inferred> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/contro/arg#AcceptanceAttitude
+<https://w3id.org/contro/arg#AcceptanceAttitude> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                                 rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                                 rdf:type owl:Class ;
+                                                 rdfs:range <https://w3id.org/contro/arg#AcceptanceAttitude> .
+
+
+###  https://w3id.org/contro/arg#Antecedent
+<https://w3id.org/contro/arg#Antecedent> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                         rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                         rdf:type owl:Class ;
+                                         rdfs:range <https://w3id.org/contro/arg#Antecedent> .
+
+
+###  https://w3id.org/contro/arg#ArgumentationTheory
+<https://w3id.org/contro/arg#ArgumentationTheory> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                                  rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                                  rdf:type owl:Class ;
+                                                  rdfs:range <https://w3id.org/contro/arg#ArgumentationTheory> ;
+                                                  owl:propertyChainAxiom ( <https://w3id.org/contro/arg#by>
+                                                                           [ owl:inverseOf <https://w3id.org/contro/arg#DialogicalAgent>
+                                                                           ]
+                                                                         ) .
+
+
+###  https://w3id.org/contro/arg#Conclusion
+<https://w3id.org/contro/arg#Conclusion> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                         rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                         rdf:type owl:Class ;
+                                         rdfs:range <https://w3id.org/contro/arg#Conclusion> ;
+                                         owl:propertyChainAxiom ( <https://w3id.org/contro/arg#InferenceRule>
+                                                                  <https://w3id.org/contro/arg#Consequent>
+                                                                ) .
+
+
+###  https://w3id.org/contro/arg#Consequent
+<https://w3id.org/contro/arg#Consequent> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                         rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                         rdf:type owl:Class ;
+                                         rdfs:range <https://w3id.org/contro/arg#Consequent> .
+
+
+###  https://w3id.org/contro/arg#DialogicalAgent
+<https://w3id.org/contro/arg#DialogicalAgent> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                              rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                              rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                                              rdf:type owl:NamedIndividual ;
+                                              rdfs:range [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> ;
+                                                           owl:hasValue <https://w3id.org/contro/arg#DialogicalAgent>
+                                                         ] ;
+                                              owl:propertyChainAxiom ( <https://w3id.org/contro/arg#DialogicalAgent>
+                                                                       [ owl:inverseOf <https://w3id.org/contro/arg#isAliasOf>
+                                                                       ]
+                                                                     ) .
+
+
+###  https://w3id.org/contro/arg#InferenceRule
+<https://w3id.org/contro/arg#InferenceRule> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                            rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                            rdf:type owl:Class ;
+                                            rdfs:range <https://w3id.org/contro/arg#InferenceRule> .
+
+
+###  https://w3id.org/contro/arg#KnowledgeBase
+<https://w3id.org/contro/arg#KnowledgeBase> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                            rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                            rdf:type owl:Class ;
+                                            rdfs:range <https://w3id.org/contro/arg#KnowledgeBase> .
+
+
+###  https://w3id.org/contro/arg#Premise
+<https://w3id.org/contro/arg#Premise> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                      rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                      rdf:type owl:Class ;
+                                      rdfs:range <https://w3id.org/contro/arg#Premise> ;
+                                      owl:propertyChainAxiom ( <https://w3id.org/contro/arg#InferenceRule>
+                                                               <https://w3id.org/contro/arg#Antecedent>
+                                                             ) .
+
+
+###  https://w3id.org/contro/arg#Topic
+<https://w3id.org/contro/arg#Topic> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                    rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                    rdfs:range <http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality> ;
+                                    rdf:type owl:NamedIndividual ;
+                                    rdfs:range [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> ;
+                                                 owl:hasValue <https://w3id.org/contro/arg#Topic>
+                                               ] .
+
+
+###  https://w3id.org/contro/arg#attackedBy
+<https://w3id.org/contro/arg#attackedBy> rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf <https://w3id.org/contro/arg#attacks> .
+
+
+###  https://w3id.org/contro/arg#attacks
+<https://w3id.org/contro/arg#attacks> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <https://w3id.org/contro/arg#Conflict> ;
+                                      rdfs:range <https://w3id.org/contro/arg#Argument> ;
+                                      owl:propertyChainAxiom ( <https://w3id.org/contro/arg#Conclusion>
+                                                               <https://w3id.org/contro/arg#contradicts>
+                                                               [ owl:inverseOf <https://w3id.org/contro/arg#Antecedent>
+                                                               ]
+                                                               [ owl:inverseOf <https://w3id.org/contro/arg#InferenceRule>
+                                                               ]
+                                                             ) ,
+                                                             ( <https://w3id.org/contro/arg#Conclusion>
+                                                               <https://w3id.org/contro/arg#contradicts>
+                                                               [ owl:inverseOf <https://w3id.org/contro/arg#Conclusion>
+                                                               ]
+                                                             ) ,
+                                                             ( <https://w3id.org/contro/arg#Conclusion>
+                                                               <https://w3id.org/contro/arg#contradicts>
+                                                               [ owl:inverseOf <https://w3id.org/contro/arg#Consequent>
+                                                               ]
+                                                               [ owl:inverseOf <https://w3id.org/contro/arg#InferenceRule>
+                                                               ]
+                                                             ) ,
+                                                             ( <https://w3id.org/contro/arg#Conclusion>
+                                                               <https://w3id.org/contro/arg#contradicts>
+                                                               [ owl:inverseOf <https://w3id.org/contro/arg#InferenceRule>
+                                                               ]
+                                                             ) ,
+                                                             ( <https://w3id.org/contro/arg#Conclusion>
+                                                               <https://w3id.org/contro/arg#contradicts>
+                                                               [ owl:inverseOf <https://w3id.org/contro/arg#Premise>
+                                                               ]
+                                                             ) ,
+                                                             ( <https://w3id.org/contro/arg#InferenceRule>
+                                                               <https://w3id.org/contro/arg#Consequent>
+                                                               <https://w3id.org/contro/arg#contradicts>
+                                                               [ owl:inverseOf <https://w3id.org/contro/arg#Conclusion>
+                                                               ]
+                                                             ) ,
+                                                             ( <https://w3id.org/contro/arg#InferenceRule>
+                                                               <https://w3id.org/contro/arg#Consequent>
+                                                               <https://w3id.org/contro/arg#contradicts>
+                                                               [ owl:inverseOf <https://w3id.org/contro/arg#Premise>
+                                                               ]
+                                                             ) .
+
+
+###  https://w3id.org/contro/arg#by
+<https://w3id.org/contro/arg#by> rdf:type owl:ObjectProperty ;
+                                 rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+
+
+###  https://w3id.org/contro/arg#contradictedBy
+<https://w3id.org/contro/arg#contradictedBy> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <https://w3id.org/contro/arg#contradicts> .
+
+
+###  https://w3id.org/contro/arg#contradicts
+<https://w3id.org/contro/arg#contradicts> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/contro/arg#defends
+<https://w3id.org/contro/arg#defends> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <https://w3id.org/contro/arg#Argument> ;
+                                      rdfs:range <https://w3id.org/contro/arg#Argument> ;
+                                      owl:propertyChainAxiom ( <https://w3id.org/contro/arg#attacks>
+                                                               <https://w3id.org/contro/arg#attacks>
+                                                             ) .
+
+
+###  https://w3id.org/contro/arg#extractedFrom
+<https://w3id.org/contro/arg#extractedFrom> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf [ owl:inverseOf <https://w3id.org/contro/arg#hasMember>
+                                                               ] ;
+                                            rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                            rdfs:range <https://w3id.org/contro/arg#KnowledgeBase> ;
+                                            owl:propertyChainAxiom ( [ owl:inverseOf <https://w3id.org/contro/arg#Conclusion>
+                                                                     ]
+                                                                     <https://w3id.org/contro/arg#ArgumentationTheory>
+                                                                     <https://w3id.org/contro/arg#KnowledgeBase>
+                                                                   ) ,
+                                                                   ( [ owl:inverseOf <https://w3id.org/contro/arg#InferenceRule>
+                                                                     ]
+                                                                     <https://w3id.org/contro/arg#ArgumentationTheory>
+                                                                     <https://w3id.org/contro/arg#KnowledgeBase>
+                                                                   ) ,
+                                                                   ( [ owl:inverseOf <https://w3id.org/contro/arg#Premise>
+                                                                     ]
+                                                                     <https://w3id.org/contro/arg#ArgumentationTheory>
+                                                                     <https://w3id.org/contro/arg#KnowledgeBase>
+                                                                   ) .
+
+
+###  https://w3id.org/contro/arg#hasMember
+<https://w3id.org/contro/arg#hasMember> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/contro/arg#hasSubArgument
+<https://w3id.org/contro/arg#hasSubArgument> rdf:type owl:ObjectProperty ,
+                                                      owl:TransitiveProperty ;
+                                             rdfs:domain <https://w3id.org/contro/arg#Argument> ;
+                                             rdfs:range <https://w3id.org/contro/arg#Argument> ;
+                                             owl:propertyChainAxiom ( <https://w3id.org/contro/arg#Premise>
+                                                                      [ owl:inverseOf <https://w3id.org/contro/arg#Conclusion>
+                                                                      ]
+                                                                    ) .
+
+
+###  https://w3id.org/contro/arg#isAliasOf
+<https://w3id.org/contro/arg#isAliasOf> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                                        rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality
+<http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> rdf:type owl:Class .
+
+
+###  https://w3id.org/contro/arg#AcceptanceAttitude
+<https://w3id.org/contro/arg#AcceptanceAttitude> rdf:type owl:Class ,
+                                                          owl:NamedIndividual ;
+                                                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
+                                                                       owl:hasValue <https://w3id.org/contro/arg#AcceptanceAttitude>
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/contro/arg#ArgumentationTheorySituation> .
+
+
+###  https://w3id.org/contro/arg#Antecedent
+<https://w3id.org/contro/arg#Antecedent> rdf:type owl:Class ,
+                                                  owl:NamedIndividual ;
+                                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
+                                                               owl:hasValue <https://w3id.org/contro/arg#Antecedent>
+                                                             ] ;
+                                         rdfs:subClassOf <https://w3id.org/contro/arg#ArgumentationTheorySituation> .
+
+
+###  https://w3id.org/contro/arg#Argument
+<https://w3id.org/contro/arg#Argument> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/contro/arg#Conclusion> ;
+                                                                                    owl:someValuesFrom <https://w3id.org/contro/arg#Conclusion>
+                                                                                  ]
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/contro/arg#InferenceRule> ;
+                                                                                    owl:someValuesFrom <https://w3id.org/contro/arg#InferenceRule>
+                                                                                  ]
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/contro/arg#Premise> ;
+                                                                                    owl:someValuesFrom <https://w3id.org/contro/arg#Premise>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdf:type owl:NamedIndividual ;
+                                       owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
+                                                             owl:hasValue <https://w3id.org/contro/arg#Argument>
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/contro/arg#ArgumentationTheory> ;
+                                                         owl:someValuesFrom <https://w3id.org/contro/arg#ArgumentationTheory>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/contro/arg#Conclusion> ;
+                                                         owl:someValuesFrom <https://w3id.org/contro/arg#Conclusion>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/contro/arg#InferenceRule> ;
+                                                         owl:someValuesFrom <https://w3id.org/contro/arg#InferenceRule>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/contro/arg#Premise> ;
+                                                         owl:someValuesFrom <https://w3id.org/contro/arg#Premise>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/contro/arg#Topic> ;
+                                                         owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality>
+                                                       ] .
+
+
+###  https://w3id.org/contro/arg#ArgumentationTheory
+<https://w3id.org/contro/arg#ArgumentationTheory> rdf:type owl:Class ,
+                                                           owl:NamedIndividual ;
+                                                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
+                                                                        owl:hasValue <https://w3id.org/contro/arg#ArgumentationTheory>
+                                                                      ] ;
+                                                  rdfs:subClassOf <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://w3id.org/contro/arg#DialogicalAgent> ;
+                                                                    owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://w3id.org/contro/arg#KnowledgeBase> ;
+                                                                    owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                                    owl:onClass <https://w3id.org/contro/arg#KnowledgeBase>
+                                                                  ] .
+
+
+###  https://w3id.org/contro/arg#ArgumentationTheorySituation
+<https://w3id.org/contro/arg#ArgumentationTheorySituation> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> .
+
+
+###  https://w3id.org/contro/arg#Conclusion
+<https://w3id.org/contro/arg#Conclusion> rdf:type owl:Class ,
+                                                  owl:NamedIndividual ;
+                                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
+                                                               owl:hasValue <https://w3id.org/contro/arg#Conclusion>
+                                                             ] ;
+                                         rdfs:subClassOf <https://w3id.org/contro/arg#Consequent> .
+
+
+###  https://w3id.org/contro/arg#Conflict
+<https://w3id.org/contro/arg#Conflict> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/contro/arg#Argument> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/contro/arg#attacks> ;
+                                                         owl:someValuesFrom <https://w3id.org/contro/arg#Argument>
+                                                       ] .
+
+
+###  https://w3id.org/contro/arg#Consequent
+<https://w3id.org/contro/arg#Consequent> rdf:type owl:Class ,
+                                                  owl:NamedIndividual ;
+                                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
+                                                               owl:hasValue <https://w3id.org/contro/arg#Consequent>
+                                                             ] ;
+                                         rdfs:subClassOf <https://w3id.org/contro/arg#ArgumentationTheorySituation> .
+
+
+###  https://w3id.org/contro/arg#InferenceRule
+<https://w3id.org/contro/arg#InferenceRule> rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/contro/arg#Consequent> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/contro/arg#Consequent>
+                                                                                       ]
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/contro/arg#Antecedent> ;
+                                                                                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                                                         owl:onClass <https://w3id.org/contro/arg#Antecedent>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdf:type owl:NamedIndividual ;
+                                            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
+                                                                  owl:hasValue <https://w3id.org/contro/arg#InferenceRule>
+                                                                ] ;
+                                            rdfs:subClassOf <https://w3id.org/contro/arg#ArgumentationTheorySituation> .
+
+
+###  https://w3id.org/contro/arg#KnowledgeBase
+<https://w3id.org/contro/arg#KnowledgeBase> rdf:type owl:Class ,
+                                                     owl:NamedIndividual ;
+                                            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
+                                                                  owl:hasValue <https://w3id.org/contro/arg#KnowledgeBase>
+                                                                ] ;
+                                            rdfs:subClassOf <https://w3id.org/contro/arg#ArgumentationTheorySituation> .
+
+
+###  https://w3id.org/contro/arg#Premise
+<https://w3id.org/contro/arg#Premise> rdf:type owl:Class ,
+                                               owl:NamedIndividual ;
+                                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
+                                                            owl:hasValue <https://w3id.org/contro/arg#Premise>
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/contro/arg#Antecedent> .
+
+
+###  https://w3id.org/contro/arg#Rebuttal
+<https://w3id.org/contro/arg#Rebuttal> rdf:type owl:Class ;
+                                       owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/contro/arg#Conclusion> ;
+                                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/contro/arg#contradicts> ;
+                                                                                  owl:someValuesFrom <https://w3id.org/contro/arg#Conclusion>
+                                                                                ]
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/contro/arg#Conflict> .
+
+
+###  https://w3id.org/contro/arg#Undercut
+<https://w3id.org/contro/arg#Undercut> rdf:type owl:Class ;
+                                       owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/contro/arg#Conclusion> ;
+                                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/contro/arg#contradicts> ;
+                                                                                  owl:someValuesFrom <https://w3id.org/contro/arg#InferenceRule>
+                                                                                ]
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/contro/arg#Conflict> .
+
+
+###  https://w3id.org/contro/arg#Undermining
+<https://w3id.org/contro/arg#Undermining> rdf:type owl:Class ;
+                                          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://w3id.org/contro/arg#Conclusion> ;
+                                                                owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/contro/arg#contradicts> ;
+                                                                                     owl:someValuesFrom <https://w3id.org/contro/arg#Premise>
+                                                                                   ]
+                                                              ] ;
+                                          rdfs:subClassOf <https://w3id.org/contro/arg#Conflict> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/contro/arg#AcceptanceAttitude
+<https://w3id.org/contro/arg#AcceptanceAttitude> rdf:type owl:NamedIndividual ,
+                                                          <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> .
+
+
+###  https://w3id.org/contro/arg#Antecedent
+<https://w3id.org/contro/arg#Antecedent> rdf:type owl:NamedIndividual ,
+                                                  <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> .
+
+
+###  https://w3id.org/contro/arg#Argument
+<https://w3id.org/contro/arg#Argument> rdf:type owl:NamedIndividual ,
+                                                <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> ;
+                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole> <https://w3id.org/contro/arg#Topic> ;
+                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> <https://w3id.org/contro/arg#ArgumentationTheory> ,
+                                                                                                            <https://w3id.org/contro/arg#Conclusion> ,
+                                                                                                            <https://w3id.org/contro/arg#InferenceRule> ,
+                                                                                                            <https://w3id.org/contro/arg#Premise> .
+
+
+###  https://w3id.org/contro/arg#ArgumentationTheory
+<https://w3id.org/contro/arg#ArgumentationTheory> rdf:type owl:NamedIndividual ,
+                                                           <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> ;
+                                                  <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole> <https://w3id.org/contro/arg#DialogicalAgent> ;
+                                                  <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> <https://w3id.org/contro/arg#AcceptanceAttitude> ,
+                                                                                                                       <https://w3id.org/contro/arg#KnowledgeBase> .
+
+
+###  https://w3id.org/contro/arg#Conclusion
+<https://w3id.org/contro/arg#Conclusion> rdf:type owl:NamedIndividual ,
+                                                  <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> .
+
+
+###  https://w3id.org/contro/arg#Consequent
+<https://w3id.org/contro/arg#Consequent> rdf:type owl:NamedIndividual ,
+                                                  <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> .
+
+
+###  https://w3id.org/contro/arg#DialogicalAgent
+<https://w3id.org/contro/arg#DialogicalAgent> rdf:type owl:NamedIndividual ,
+                                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> .
+
+
+###  https://w3id.org/contro/arg#InferenceRule
+<https://w3id.org/contro/arg#InferenceRule> rdf:type owl:NamedIndividual ,
+                                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> ;
+                                            <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> <https://w3id.org/contro/arg#Antecedent> ,
+                                                                                                                 <https://w3id.org/contro/arg#Consequent> .
+
+
+###  https://w3id.org/contro/arg#KnowledgeBase
+<https://w3id.org/contro/arg#KnowledgeBase> rdf:type owl:NamedIndividual ,
+                                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> .
+
+
+###  https://w3id.org/contro/arg#Premise
+<https://w3id.org/contro/arg#Premise> rdf:type owl:NamedIndividual ,
+                                               <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> .
+
+
+###  https://w3id.org/contro/arg#Topic
+<https://w3id.org/contro/arg#Topic> rdf:type owl:NamedIndividual ,
+                                             <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> .
+
+
+###  https://w3id.org/contro/example#A1
+<https://w3id.org/contro/example#A1> rdf:type owl:NamedIndividual ,
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                              <https://w3id.org/contro/arg#Argument> ,
+                                              <https://w3id.org/contro/arg#ArgumentationTheorySituation> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/example#d1> ,
+                                                                                                          <https://w3id.org/contro/example#p> ,
+                                                                                                          <https://w3id.org/contro/example#q> ,
+                                                                                                          <https://w3id.org/contro/example#theoryA> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ;
+                                     <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/example#theoryA> ;
+                                     <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/example#q> ;
+                                     <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/example#d1> ;
+                                     <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/example#p> ;
+                                     <https://w3id.org/contro/arg#attackedBy> <https://w3id.org/contro/example#B1> ;
+                                     <https://w3id.org/contro/arg#by> <https://w3id.org/contro/example#agentA> .
+
+
+###  https://w3id.org/contro/example#A2
+<https://w3id.org/contro/example#A2> rdf:type owl:NamedIndividual ,
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                              <https://w3id.org/contro/arg#Argument> ,
+                                              <https://w3id.org/contro/arg#ArgumentationTheorySituation> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/example#d2> ,
+                                                                                                          <https://w3id.org/contro/example#q> ,
+                                                                                                          <https://w3id.org/contro/example#r> ,
+                                                                                                          <https://w3id.org/contro/example#theoryA> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ;
+                                     <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/example#theoryA> ;
+                                     <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/example#r> ;
+                                     <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/example#d2> ;
+                                     <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/example#q> ;
+                                     <https://w3id.org/contro/arg#attackedBy> <https://w3id.org/contro/example#B2> ;
+                                     <https://w3id.org/contro/arg#by> <https://w3id.org/contro/example#agentA_alias> ;
+                                     <https://w3id.org/contro/arg#hasSubArgument> <https://w3id.org/contro/example#A1> .
+
+
+###  https://w3id.org/contro/example#A3
+<https://w3id.org/contro/example#A3> rdf:type owl:NamedIndividual ,
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                              <https://w3id.org/contro/arg#Argument> ,
+                                              <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                              <https://w3id.org/contro/arg#Conflict> ,
+                                              <https://w3id.org/contro/arg#Undermining> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/example#d5> ,
+                                                                                                          <https://w3id.org/contro/example#t> ,
+                                                                                                          <https://w3id.org/contro/example#theoryA> ,
+                                                                                                          <https://w3id.org/contro/example#¬s> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ;
+                                     <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/example#theoryA> ;
+                                     <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/example#¬s> ;
+                                     <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/example#d5> ;
+                                     <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/example#t> ;
+                                     <https://w3id.org/contro/arg#attacks> <https://w3id.org/contro/example#B2> ;
+                                     <https://w3id.org/contro/arg#by> <https://w3id.org/contro/example#agentA> ;
+                                     <https://w3id.org/contro/arg#defends> <https://w3id.org/contro/example#A2> .
+
+
+###  https://w3id.org/contro/example#B1
+<https://w3id.org/contro/example#B1> rdf:type owl:NamedIndividual ,
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                              <https://w3id.org/contro/arg#Argument> ,
+                                              <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                              <https://w3id.org/contro/arg#Conflict> ,
+                                              <https://w3id.org/contro/arg#Undercut> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/example#theoryB> ,
+                                                                                                          <https://w3id.org/contro/example#¬d1> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ;
+                                     <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/example#theoryB> ;
+                                     <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/example#¬d1> ;
+                                     <https://w3id.org/contro/arg#attacks> <https://w3id.org/contro/example#A1> ;
+                                     <https://w3id.org/contro/arg#by> <https://w3id.org/contro/example#agentB_alias> .
+
+
+###  https://w3id.org/contro/example#B2
+<https://w3id.org/contro/example#B2> rdf:type owl:NamedIndividual ,
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                              <https://w3id.org/contro/arg#Argument> ,
+                                              <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                              <https://w3id.org/contro/arg#Conflict> ,
+                                              <https://w3id.org/contro/arg#Rebuttal> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/example#d4> ,
+                                                                                                          <https://w3id.org/contro/example#p> ,
+                                                                                                          <https://w3id.org/contro/example#s> ,
+                                                                                                          <https://w3id.org/contro/example#theoryB> ,
+                                                                                                          <https://w3id.org/contro/example#¬r> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ;
+                                     <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/example#theoryB> ;
+                                     <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/example#¬r> ;
+                                     <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/example#d4> ;
+                                     <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/example#p> ,
+                                                                           <https://w3id.org/contro/example#s> ;
+                                     <https://w3id.org/contro/arg#attackedBy> <https://w3id.org/contro/example#A3> ;
+                                     <https://w3id.org/contro/arg#attacks> <https://w3id.org/contro/example#A2> ;
+                                     <https://w3id.org/contro/arg#by> <https://w3id.org/contro/example#agentB_alias> .
+
+
+###  https://w3id.org/contro/example#agentA
+<https://w3id.org/contro/example#agentA> rdf:type owl:NamedIndividual ,
+                                                  <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                                         <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> <https://w3id.org/contro/arg#DialogicalAgent> .
+
+
+###  https://w3id.org/contro/example#agentA_alias
+<https://w3id.org/contro/example#agentA_alias> rdf:type owl:NamedIndividual ,
+                                                        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                                               <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> <https://w3id.org/contro/arg#DialogicalAgent> ;
+                                               <https://w3id.org/contro/arg#isAliasOf> <https://w3id.org/contro/example#agentA> .
+
+
+###  https://w3id.org/contro/example#agentB
+<https://w3id.org/contro/example#agentB> rdf:type owl:NamedIndividual ,
+                                                  <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                                         <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> <https://w3id.org/contro/arg#DialogicalAgent> .
+
+
+###  https://w3id.org/contro/example#agentB_alias
+<https://w3id.org/contro/example#agentB_alias> rdf:type owl:NamedIndividual ,
+                                                        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                                               <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> <https://w3id.org/contro/arg#DialogicalAgent> ;
+                                               <https://w3id.org/contro/arg#isAliasOf> <https://w3id.org/contro/example#agentB> .
+
+
+###  https://w3id.org/contro/example#d1
+<https://w3id.org/contro/example#d1> rdf:type owl:NamedIndividual ,
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                              <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                              <https://w3id.org/contro/arg#InferenceRule> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/example#p> ,
+                                                                                                          <https://w3id.org/contro/example#q> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#InferenceRule> ;
+                                     <https://w3id.org/contro/arg#Antecedent> <https://w3id.org/contro/example#p> ;
+                                     <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/example#q> ;
+                                     <https://w3id.org/contro/arg#contradictedBy> <https://w3id.org/contro/example#¬d1> ;
+                                     <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeA> .
+
+
+###  https://w3id.org/contro/example#d2
+<https://w3id.org/contro/example#d2> rdf:type owl:NamedIndividual ,
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                              <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                              <https://w3id.org/contro/arg#InferenceRule> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/example#q> ,
+                                                                                                          <https://w3id.org/contro/example#r> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#InferenceRule> ;
+                                     <https://w3id.org/contro/arg#Antecedent> <https://w3id.org/contro/example#q> ;
+                                     <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/example#r> ;
+                                     <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeA> .
+
+
+###  https://w3id.org/contro/example#d3
+<https://w3id.org/contro/example#d3> rdf:type owl:NamedIndividual ,
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                              <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                              <https://w3id.org/contro/arg#InferenceRule> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/example#¬d1> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#InferenceRule> ;
+                                     <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/example#¬d1> .
+
+
+###  https://w3id.org/contro/example#d4
+<https://w3id.org/contro/example#d4> rdf:type owl:NamedIndividual ,
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                              <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                              <https://w3id.org/contro/arg#InferenceRule> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/example#p> ,
+                                                                                                          <https://w3id.org/contro/example#s> ,
+                                                                                                          <https://w3id.org/contro/example#¬r> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#InferenceRule> ;
+                                     <https://w3id.org/contro/arg#Antecedent> <https://w3id.org/contro/example#p> ,
+                                                                              <https://w3id.org/contro/example#s> ;
+                                     <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/example#¬r> ;
+                                     <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeB> .
+
+
+###  https://w3id.org/contro/example#d5
+<https://w3id.org/contro/example#d5> rdf:type owl:NamedIndividual ,
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                              <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                              <https://w3id.org/contro/arg#InferenceRule> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/example#t> ,
+                                                                                                          <https://w3id.org/contro/example#¬s> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#InferenceRule> ;
+                                     <https://w3id.org/contro/arg#Antecedent> <https://w3id.org/contro/example#t> ;
+                                     <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/example#¬s> ;
+                                     <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeA> .
+
+
+###  https://w3id.org/contro/example#knowledgeA
+<https://w3id.org/contro/example#knowledgeA> rdf:type owl:NamedIndividual ,
+                                                      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                                      <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                                      <https://w3id.org/contro/arg#KnowledgeBase> ;
+                                             <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#KnowledgeBase> ;
+                                             <https://w3id.org/contro/arg#hasMember> <https://w3id.org/contro/example#d1> ,
+                                                                                     <https://w3id.org/contro/example#d2> ,
+                                                                                     <https://w3id.org/contro/example#d5> ,
+                                                                                     <https://w3id.org/contro/example#p> ,
+                                                                                     <https://w3id.org/contro/example#q> ,
+                                                                                     <https://w3id.org/contro/example#r> ,
+                                                                                     <https://w3id.org/contro/example#t> ,
+                                                                                     <https://w3id.org/contro/example#¬s> .
+
+
+###  https://w3id.org/contro/example#knowledgeB
+<https://w3id.org/contro/example#knowledgeB> rdf:type owl:NamedIndividual ,
+                                                      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                                      <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                                      <https://w3id.org/contro/arg#KnowledgeBase> ;
+                                             <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#KnowledgeBase> ;
+                                             <https://w3id.org/contro/arg#hasMember> <https://w3id.org/contro/example#d4> ,
+                                                                                     <https://w3id.org/contro/example#p> ,
+                                                                                     <https://w3id.org/contro/example#s> ,
+                                                                                     <https://w3id.org/contro/example#¬d1> ,
+                                                                                     <https://w3id.org/contro/example#¬r> .
+
+
+###  https://w3id.org/contro/example#p
+<https://w3id.org/contro/example#p> rdf:type owl:NamedIndividual ,
+                                             <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                             <https://w3id.org/contro/arg#Antecedent> ,
+                                             <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                             <https://w3id.org/contro/arg#Premise> ;
+                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
+                                                                                                      <https://w3id.org/contro/arg#Premise> ;
+                                    <https://w3id.org/contro/arg#contradictedBy> <https://w3id.org/contro/example#¬p> ;
+                                    <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeA> ,
+                                                                                <https://w3id.org/contro/example#knowledgeB> .
+
+
+###  https://w3id.org/contro/example#q
+<https://w3id.org/contro/example#q> rdf:type owl:NamedIndividual ,
+                                             <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                             <https://w3id.org/contro/arg#Antecedent> ,
+                                             <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                             <https://w3id.org/contro/arg#Conclusion> ,
+                                             <https://w3id.org/contro/arg#Consequent> ,
+                                             <https://w3id.org/contro/arg#Premise> ;
+                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
+                                                                                                      <https://w3id.org/contro/arg#Conclusion> ,
+                                                                                                      <https://w3id.org/contro/arg#Consequent> ,
+                                                                                                      <https://w3id.org/contro/arg#Premise> ;
+                                    <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeA> .
+
+
+###  https://w3id.org/contro/example#r
+<https://w3id.org/contro/example#r> rdf:type owl:NamedIndividual ,
+                                             <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                             <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                             <https://w3id.org/contro/arg#Conclusion> ,
+                                             <https://w3id.org/contro/arg#Consequent> ;
+                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Conclusion> ,
+                                                                                                      <https://w3id.org/contro/arg#Consequent> ;
+                                    <https://w3id.org/contro/arg#contradictedBy> <https://w3id.org/contro/example#¬r> ;
+                                    <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeA> .
+
+
+###  https://w3id.org/contro/example#s
+<https://w3id.org/contro/example#s> rdf:type owl:NamedIndividual ,
+                                             <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                             <https://w3id.org/contro/arg#Antecedent> ,
+                                             <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                             <https://w3id.org/contro/arg#Premise> ;
+                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
+                                                                                                      <https://w3id.org/contro/arg#Premise> ;
+                                    <https://w3id.org/contro/arg#contradictedBy> <https://w3id.org/contro/example#¬s> ;
+                                    <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeB> .
+
+
+###  https://w3id.org/contro/example#t
+<https://w3id.org/contro/example#t> rdf:type owl:NamedIndividual ,
+                                             <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                             <https://w3id.org/contro/arg#Antecedent> ,
+                                             <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                             <https://w3id.org/contro/arg#Premise> ;
+                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
+                                                                                                      <https://w3id.org/contro/arg#Premise> ;
+                                    <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeA> .
+
+
+###  https://w3id.org/contro/example#theoryA
+<https://w3id.org/contro/example#theoryA> rdf:type owl:NamedIndividual ,
+                                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                                   <https://w3id.org/contro/arg#ArgumentationTheory> ,
+                                                   <https://w3id.org/contro/arg#ArgumentationTheorySituation> ;
+                                          <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/example#agentA> ,
+                                                                                                               <https://w3id.org/contro/example#agentA_alias> ,
+                                                                                                               <https://w3id.org/contro/example#knowledgeA> ;
+                                          <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#ArgumentationTheory> ;
+                                          <https://w3id.org/contro/arg#DialogicalAgent> <https://w3id.org/contro/example#agentA> ,
+                                                                                        <https://w3id.org/contro/example#agentA_alias> ;
+                                          <https://w3id.org/contro/arg#KnowledgeBase> <https://w3id.org/contro/example#knowledgeA> .
+
+
+###  https://w3id.org/contro/example#theoryB
+<https://w3id.org/contro/example#theoryB> rdf:type owl:NamedIndividual ,
+                                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                                   <https://w3id.org/contro/arg#ArgumentationTheory> ,
+                                                   <https://w3id.org/contro/arg#ArgumentationTheorySituation> ;
+                                          <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/example#agentB> ,
+                                                                                                               <https://w3id.org/contro/example#agentB_alias> ,
+                                                                                                               <https://w3id.org/contro/example#knowledgeB> ;
+                                          <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#ArgumentationTheory> ;
+                                          <https://w3id.org/contro/arg#DialogicalAgent> <https://w3id.org/contro/example#agentB> ,
+                                                                                        <https://w3id.org/contro/example#agentB_alias> ;
+                                          <https://w3id.org/contro/arg#KnowledgeBase> <https://w3id.org/contro/example#knowledgeB> .
+
+
+###  https://w3id.org/contro/example#¬d1
+<https://w3id.org/contro/example#¬d1> rdf:type owl:NamedIndividual ,
+                                               <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                               <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                               <https://w3id.org/contro/arg#Conclusion> ,
+                                               <https://w3id.org/contro/arg#Consequent> ;
+                                      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Conclusion> ,
+                                                                                                        <https://w3id.org/contro/arg#Consequent> ;
+                                      <https://w3id.org/contro/arg#contradicts> <https://w3id.org/contro/example#d1> ;
+                                      <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeB> .
+
+
+###  https://w3id.org/contro/example#¬p
+<https://w3id.org/contro/example#¬p> rdf:type owl:NamedIndividual ;
+                                     <https://w3id.org/contro/arg#contradicts> <https://w3id.org/contro/example#p> .
+
+
+###  https://w3id.org/contro/example#¬r
+<https://w3id.org/contro/example#¬r> rdf:type owl:NamedIndividual ,
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                              <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                              <https://w3id.org/contro/arg#Conclusion> ,
+                                              <https://w3id.org/contro/arg#Consequent> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Conclusion> ,
+                                                                                                       <https://w3id.org/contro/arg#Consequent> ;
+                                     <https://w3id.org/contro/arg#contradicts> <https://w3id.org/contro/example#r> ;
+                                     <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeB> .
+
+
+###  https://w3id.org/contro/example#¬s
+<https://w3id.org/contro/example#¬s> rdf:type owl:NamedIndividual ,
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                              <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                              <https://w3id.org/contro/arg#Conclusion> ,
+                                              <https://w3id.org/contro/arg#Consequent> ;
+                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Conclusion> ,
+                                                                                                       <https://w3id.org/contro/arg#Consequent> ;
+                                     <https://w3id.org/contro/arg#contradicts> <https://w3id.org/contro/example#s> ;
+                                     <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeA> .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<https://w3id.org/contro/arg#arg> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<https://w3id.org/contro/arg#prem> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<https://w3id.org/contro/arg#conc> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<https://w3id.org/contro/arg#rule> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "An argument that concludes B from A has the implicit rule that there exists an implication from A to B." ;
+   rdfs:label "Implicit Inference Rule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/contro/arg#Premise> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/contro/arg#arg> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <https://w3id.org/contro/arg#prem>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/contro/arg#Conclusion> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/contro/arg#arg> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <https://w3id.org/contro/arg#conc>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/contro/arg#Antecedent> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/contro/arg#rule> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <https://w3id.org/contro/arg#prem>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/contro/arg#Consequent> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/contro/arg#rule> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <https://w3id.org/contro/arg#conc>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/contro/arg#InferenceRule> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/contro/arg#arg> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <https://w3id.org/contro/arg#rule>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
