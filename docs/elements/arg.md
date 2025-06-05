@@ -23,7 +23,13 @@
 [![Format: JSON-LD](https://img.shields.io/badge/Format-JSON--LD-blue.svg?style=for-the-badge)](https://w3id.org/contro/arg.jsonld)
 
 ### Description
-Reconstruct argumentative structures in text.
+An ontology for representing defeasible argumentation based on the ASPIC+ framework.
+
+In this model, each Dialogical Agent participates in discourse with an individual Argumentation Theory, comprising a Knowledge Base and an Acceptance Attitude toward external arguments. From this theory, the agent can construct Arguments, each consisting of a set of Premises, an Inference Rule, and a resulting Conclusion.
+
+The Conclusion of an Argument may Contradict another's Premise, Inference Rule, or Conclusion, giving rise to an Attack relation. These are classified respectively as Undermining, Undercut, and Rebuttal Conflicts.
+
+The ontology is designed to function with minimal annotation of Premises and Conclusions, and is compatible with the HermiT 1.4+ reasoner. An [example instance](http://www.w3id.org/contro/example.ttl) is available for demonstration purposes.
 
 #### Bibliography
 S. Modgil and H. Prakken. “A general account of argumentation with preferences.” *Artificial Intelligence*, vol. 195, 1 Feb. 2013, pp. 361–97, doi: [10.1016/j.artint.2012.10.008](https://doi.org/10.1016/j.artint.2012.10.008).
@@ -111,6 +117,12 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
   </summary>
   <div class="extra">
     <ul>
+      <h4>Superclass of</h4>
+      <li>
+        <a class="class" href="#Premise_c" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="c" title="Class"></span>
+      </li>
+    </ul>
+    <ul>
       <h4>In range of</h4>
       <li>
         <a class="object_property" href="#Antecedent_op" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="op" title="Object Property"></span>
@@ -138,6 +150,9 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
   <ul>
     <h4>Equivalent to</h4>
     <li>
+      <a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#Conclusion_c" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="c" title="Class"></span> and <br/><a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#InferenceRule_c" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="c" title="Class"></span> and <br/><a class="object_property" href="#Premise_op" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#Premise_c" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+    <li>
       <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies">satisfies</a><span class="sup" data-text="op" title="Object Property"></span> value <a class="individual" href="#Argument_i" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="i" title="Individual"></span>
     </li>
   </ul>
@@ -156,7 +171,7 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
       <a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#InferenceRule_c" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
-      <a class="object_property" href="#Premise_op" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="op" title="Object Property"></span> min 0 <a class="class" href="#Premise_c" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="object_property" href="#Premise_op" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#Premise_c" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
       <a class="object_property" href="#Topic_op" title="https://w3id.org/contro/arg#Topic">Topic</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality" title="http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality">Eventuality</a><span class="sup" data-text="c" title="Class"></span>
@@ -171,9 +186,6 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
       <li>
         <a class="class" href="#Conflict_c" title="https://w3id.org/contro/arg#Conflict">Conflict</a><span class="sup" data-text="c" title="Class"></span>
       </li>
-      <li>
-        <a class="class" href="#DefeasibleInference_c" title="https://w3id.org/contro/arg#DefeasibleInference">Defeasible Inference</a><span class="sup" data-text="c" title="Class"></span>
-      </li>
     </ul>
     <ul>
       <h4>In range of</h4>
@@ -184,31 +196,16 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
         <a class="object_property" href="#defends_op" title="https://w3id.org/contro/arg#defends">defends</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
       <li>
-        <a class="object_property" href="#hasSubArgument_op" title="https://w3id.org/contro/arg#hasSubArgument">has Sub-Argument</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="#hasSubArgument_op" title="https://w3id.org/contro/arg#hasSubArgument">has sub-argument</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
       <h4>In domain of</h4>
       <li>
-        <a class="object_property" href="#by_op" title="https://w3id.org/contro/arg#by">by</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
-      <li>
         <a class="object_property" href="#defends_op" title="https://w3id.org/contro/arg#defends">defends</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
       <li>
-        <a class="object_property" href="#hasSubArgument_op" title="https://w3id.org/contro/arg#hasSubArgument">has Sub-Argument</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
-    </ul>
-    <ul>
-      <h4>Disjoint with</h4>
-      <li>
-        <a class="class" href="#ArgumentationTheory_c" title="https://w3id.org/contro/arg#ArgumentationTheory">Argumentation Theory</a><span class="sup" data-text="c" title="Class"></span>
-      </li>
-      <li>
-        <a class="class" href="#InferenceRule_c" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="c" title="Class"></span>
-      </li>
-      <li>
-        <a class="class" href="#KnowledgeBase_c" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="c" title="Class"></span>
+        <a class="object_property" href="#hasSubArgument_op" title="https://w3id.org/contro/arg#hasSubArgument">has sub-argument</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -256,12 +253,6 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
       </li>
     </ul>
     <ul>
-      <h4>Disjoint with</h4>
-      <li>
-        <a class="class" href="#Argument_c" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="c" title="Class"></span>
-      </li>
-    </ul>
-    <ul>
       <h4>Also defined as</h4>
       <li>
         <a class="object_property" href="#ArgumentationTheory_op" title="https://w3id.org/contro/arg#ArgumentationTheory">Object Property</a>
@@ -304,9 +295,6 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
         <a class="class" href="#ArgumentationTheory_c" title="https://w3id.org/contro/arg#ArgumentationTheory">Argumentation Theory</a><span class="sup" data-text="c" title="Class"></span>
       </li>
       <li>
-        <a class="class" href="#Conclusion_c" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="c" title="Class"></span>
-      </li>
-      <li>
         <a class="class" href="#Consequent_c" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="c" title="Class"></span>
       </li>
       <li>
@@ -314,9 +302,6 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
       </li>
       <li>
         <a class="class" href="#KnowledgeBase_c" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="c" title="Class"></span>
-      </li>
-      <li>
-        <a class="class" href="#Premise_c" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="c" title="Class"></span>
       </li>
     </ul>
   </div>
@@ -338,7 +323,7 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
   <ul>
     <h4>Subclass of</h4>
     <li>
-      <a class="class" href="#ArgumentationTheorySituation_c" title="https://w3id.org/contro/arg#ArgumentationTheorySituation">Argumentation Theory Situation</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="#Consequent_c" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -349,18 +334,6 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
       <h4>In range of</h4>
       <li>
         <a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
-    </ul>
-    <ul>
-      <h4>In domain of</h4>
-      <li>
-        <a class="object_property" href="#contradicts_op" title="https://w3id.org/contro/arg#contradicts">contradicts</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
-    </ul>
-    <ul>
-      <h4>Disjoint with</h4>
-      <li>
-        <a class="class" href="#InferenceRule_c" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="c" title="Class"></span>
       </li>
     </ul>
     <ul>
@@ -440,6 +413,12 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
   </summary>
   <div class="extra">
     <ul>
+      <h4>Superclass of</h4>
+      <li>
+        <a class="class" href="#Conclusion_c" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="c" title="Class"></span>
+      </li>
+    </ul>
+    <ul>
       <h4>In range of</h4>
       <li>
         <a class="object_property" href="#Consequent_op" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="op" title="Object Property"></span>
@@ -457,22 +436,6 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
   </div>
 </details>
 
-<div class="admonition class" markdown>
-  <div class="admonition-title overview">
-    <div class="label">
-      <h3 id="DefeasibleInference_c">Defeasible Inference</h3>
-      <a class="class" href="#DefeasibleInference_c">https://w3id.org/contro/arg#DefeasibleInference</a>
-    </div>
-  <ul>
-    <h4>Subclass of</h4>
-    <li>
-      <a class="class" href="#Argument_c" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="c" title="Class"></span>
-    </li>
-  </ul>
-  </div>
-  <p class="description">An argument that draws its conclusion by applying at least one defeasible inference rule. It can be attacked on its rule application and may be defeated even if all its premises hold, since the support it provides for the conclusion is presumptive rather than deductive.</p>
-  </div>
-
 <details class="class" name="element" markdown>
   <summary>
   <div class="overview">
@@ -483,7 +446,7 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
   <ul>
     <h4>Equivalent to</h4>
     <li>
-      <a class="object_property" href="#Antecedent_op" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="op" title="Object Property"></span> min 0 <a class="class" href="#Antecedent_c" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="c" title="Class"></span> and <br/><a class="object_property" href="#Consequent_op" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="op" title="Object Property"></span> exactly 1 <a class="class" href="#Consequent_c" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="object_property" href="#Consequent_op" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#Consequent_c" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="c" title="Class"></span> and <br/><a class="object_property" href="#Antecedent_op" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="op" title="Object Property"></span> min 0 <a class="class" href="#Antecedent_c" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
       <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies">satisfies</a><span class="sup" data-text="op" title="Object Property"></span> value <a class="individual" href="#InferenceRule_i" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="i" title="Individual"></span>
@@ -505,18 +468,6 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <h4>In range of</h4>
       <li>
         <a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
-    </ul>
-    <ul>
-      <h4>Disjoint with</h4>
-      <li>
-        <a class="class" href="#Argument_c" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="c" title="Class"></span>
-      </li>
-      <li>
-        <a class="class" href="#Conclusion_c" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="c" title="Class"></span>
-      </li>
-      <li>
-        <a class="class" href="#Premise_c" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="c" title="Class"></span>
       </li>
     </ul>
     <ul>
@@ -557,13 +508,10 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>In range of</h4>
       <li>
-        <a class="object_property" href="#KnowledgeBase_op" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="#extractedFrom_op" title="https://w3id.org/contro/arg#extractedFrom">extracted from</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
-    </ul>
-    <ul>
-      <h4>Disjoint with</h4>
       <li>
-        <a class="class" href="#Argument_c" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="c" title="Class"></span>
+        <a class="object_property" href="#KnowledgeBase_op" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -594,7 +542,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
   <ul>
     <h4>Subclass of</h4>
     <li>
-      <a class="class" href="#ArgumentationTheorySituation_c" title="https://w3id.org/contro/arg#ArgumentationTheorySituation">Argumentation Theory Situation</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="#Antecedent_c" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -605,12 +553,6 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <h4>In range of</h4>
       <li>
         <a class="object_property" href="#Premise_op" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
-    </ul>
-    <ul>
-      <h4>Disjoint with</h4>
-      <li>
-        <a class="class" href="#InferenceRule_c" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="c" title="Class"></span>
       </li>
     </ul>
     <ul>
@@ -700,6 +642,12 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <h3 id="AcceptanceAttitude_op">Acceptance Attitude</h3>
       <a class="object_property" href="#AcceptanceAttitude_op">https://w3id.org/contro/arg#AcceptanceAttitude</a>
     </div>
+  <ul>
+    <h4>Domain</h4>
+    <li>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+  </ul>
   <ul>
     <h4>Range</h4>
     <li>
@@ -855,6 +803,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     </li>
   </ul>
   </div>
+  <p class="description">The non symmetric relation between two Arguments where the Conclusion of the first contradicts the Premise, Inference Rule, or Conclusion of the second.</p>
   </summary>
   <div class="extra">
     <ul>
@@ -897,18 +846,13 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <a class="object_property" href="#by_op">https://w3id.org/contro/arg#by</a>
     </div>
   <ul>
-    <h4>Domain</h4>
-    <li>
-      <a class="class" href="#Argument_c" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="c" title="Class"></span>
-    </li>
-  </ul>
-  <ul>
     <h4>Range</h4>
     <li>
       <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">Agent</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
+  <p class="description">A shortcut between an Argument and the Dialogical Agent of the Argumentation Theory that generated it.</p>
   </div>
 
 <details class="object_property" name="element" markdown>
@@ -1025,19 +969,8 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <h3 id="contradicts_op">contradicts</h3>
       <a class="object_property" href="#contradicts_op">https://w3id.org/contro/arg#contradicts</a>
     </div>
-  <ul>
-    <h4>Domain</h4>
-    <li>
-      <a class="class" href="#Conclusion_c" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="c" title="Class"></span>
-    </li>
-  </ul>
-  <ul>
-    <h4>Range</h4>
-    <li>
-      <a class="class" href="#Conclusion_c" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="c" title="Class"></span> or <a class="class" href="#InferenceRule_c" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="c" title="Class"></span> or <a class="class" href="#Premise_c" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="c" title="Class"></span>
-    </li>
-  </ul>
   </div>
+  <p class="description">A non symmetric relation between two entities, where the first is logically incompatible with the second. When the contradicting entity is the Conclusion of an Argument, it gives rise to an Attack against any other Argument in which the contradicted entity appears as a Premise, an Inference Rule, or a Conclusion.</p>
   </summary>
   <div class="extra">
     <ul>
@@ -1069,7 +1002,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     </li>
   </ul>
   </div>
-  <p class="description">Irreflexive</p>
+  <p class="description">The irreflexive relation between two arguments where the first attacks an attacker of the second.</p>
   </summary>
   <div class="extra">
     <ul>
@@ -1135,7 +1068,20 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <h3 id="extractedFrom_op">extracted from</h3>
       <a class="object_property" href="#extractedFrom_op">https://w3id.org/contro/arg#extractedFrom</a>
     </div>
+  <ul>
+    <h4>Domain</h4>
+    <li>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+  </ul>
+  <ul>
+    <h4>Range</h4>
+    <li>
+      <a class="class" href="#KnowledgeBase_c" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+  </ul>
   </div>
+  <p class="description">A Dialogical Agent draws the Premises, Inference Rule, and Conclusion necessary to build an Argument from their Knowledge Base.</p>
   </summary>
   <div class="extra">
     <ul>
@@ -1146,6 +1092,9 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     </ul>
     <ul>
       <h4>Superproperty of chain</h4>
+      <li>
+        inverse(<a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span>) o <a class="object_property" href="#ArgumentationTheory_op" title="https://w3id.org/contro/arg#ArgumentationTheory">Argumentation Theory</a><span class="sup" data-text="op" title="Object Property"></span> o <a class="object_property" href="#KnowledgeBase_op" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="op" title="Object Property"></span>
+      </li>
       <li>
         inverse(<a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span>) o <a class="object_property" href="#ArgumentationTheory_op" title="https://w3id.org/contro/arg#ArgumentationTheory">Argumentation Theory</a><span class="sup" data-text="op" title="Object Property"></span> o <a class="object_property" href="#KnowledgeBase_op" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
@@ -1164,6 +1113,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <a class="object_property" href="#hasMember_op">https://w3id.org/contro/arg#hasMember</a>
     </div>
   </div>
+  <p class="description">A relation between a collection and the entities it comprises. Adapted from DOLCE, this version omits the restriction of Collection as domain, in order to avoid imposing DOLCE’s structural constraints on the Knowledge Base.</p>
   </summary>
   <div class="extra">
     <ul>
@@ -1179,7 +1129,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
   <summary>
   <div class="overview">
     <div class="label">
-      <h3 id="hasSubArgument_op">has Sub-Argument</h3>
+      <h3 id="hasSubArgument_op">has sub-argument</h3>
       <a class="object_property" href="#hasSubArgument_op">https://w3id.org/contro/arg#hasSubArgument</a>
     </div>
   <ul>
@@ -1195,7 +1145,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     </li>
   </ul>
   </div>
-  <p class="description">A transitive relation between arguments, where one argument has as sub-argument the other if it derives one of its premises from the other’s conclusion. If the sub-argument argument is defeated, so is the dependent argument.</p>
+  <p class="description">A transitive relation between Arguments, where one Argument is a sub-argument of another if its Conclusion is used to derive a Premise of the other. If a sub-argument is defeated, the dependent argument is likewise considered defeated.</p>
   </summary>
   <div class="extra">
     <ul>
@@ -1269,6 +1219,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     </li>
   </ul>
   </div>
+  <p class="description">Traces an alternative identity back to a Dialogical Agent.</p>
   </div>
 
 <details class="object_property" name="element" markdown>

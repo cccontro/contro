@@ -18,11 +18,11 @@ Although Castelvetro had expressed a desire for his views to remain private—ho
 
 Caro promptly began to prepare a defensive strategy, mobilizing influential supporters to direct harsh criticism at Castelvetro. In 1554, the *Canzone* appeared in print as an appendix to a collection of letters by illustrious men edited by Lodovico Dolce, accompanied by a commentary attributed to Caro and almost certainly his own work, though he always refuted its authorship. Castevetro, caught off guard by the scale of the backlash, circulated a second text titled *Dichiarazione d’alcune cose dell’antiscritto Parere* in an attempt to clarify his position.
 
-## The ***Apologia***
+## The *Apologia*
 
 It took three years of reflection for Caro to complete his definitive self-defense, the *Apologia*, issued anonymously in 1558. During this time, we imagine him—despite professed indifference and within the narrow margins left by his official duties—engaged in the careful orchestration of his polemical and literary campaign, seeking the advice of his circle and especially his friend Benedetto Varchi. “I feel like the man who tried to build a house in the town square but couldn't finish it because of the sheer number of architects,” he wrote to Varchi, explaining his decision to go to print despite conflicting advice: some urging caution, others warning that softening the polemical tone would spoil the effect.
 
-<figure markdown="span">
+<figure class="media" markdown="span">
 ![Title page of Caro's Apologia](assets/images/apologia-impresa.svg)
 <figcaption markdown>Title page of Caro's *Apologia*. The specially-made device depicts a serpentine matchlock mechanism, crowned with the words <span class="small">vim vi</span>, a shorthand for the maxim “vim vi repellere licet” (“It is permitted to repel force with force”), and framed by four satyr heads.</figcaption>
 </figure>
@@ -31,7 +31,7 @@ By the time of publication, the Farnese had shifted to the imperial side and the
 
 The work mocks Castelvetro starting with its very structure: a sequence of contributions attributed to a ludicrous cast of fictitious Roman academics, all introduced by Mastro Pasquino—the academy’s janitor, who proclaims himself Castelvetro’s accomplice in slander. Each voice takes on a distinct stylistic function: Predella delivers a point-by-point rebuttal of Castelvetro’s critique; Buratto unleashes a caustic invective; and Ser Fedocco recounts an allegorical dream in which the adversary is represented as a barn owl, a caricature of the owl Castelvetro had adopted as his emblem, dwelling in a glass castle, a pun on his name, clear on the outside but foul within. The castle had appeared up in the air, disrupting the peace of Parnassus, and is demolished by order of Apollo. From the rubble, the owl is dragged in mock triumph, crowned with nettle, tried before a dwarfish embodiment of the very words Castelvetro had condemned in the *Canzone*, and ultimately subjected to a grotesque crucifixion.
 
-<figure markdown>
+<figure class="media" role="group" markdown>
 ![Index of Caro's Apologia (1)](assets/images/apologia-index-p1.svg)
 ![Index of Caro's Apologia (2)](assets/images/apologia-index-p2.svg)
 ![Index of Caro's Apologia (3)](assets/images/apologia-index-p3.svg)
@@ -43,10 +43,10 @@ The work mocks Castelvetro starting with its very structure: a sequence of contr
 
 Although the *Apologia* deploys a range of rhetorical strategies, Predella’s contribution merits closer attention for the substance of its literary arguments. Caro reaffirms his Petrarchist allegiance, even as he slips its constraints: poetic rules and models must yield to the creative freedom of the poet and to the evolution of a living language, against the treatment of poetry as a dead language or a mathematical calculus.
 
-## The ***Ragione***
+## The *Ragione*
 Castelvetro was evidently champing at the bit for the *Apologia*’s appearance—so much so that, according to Varchi’s *Ercolano*, he offered to cover the cost of publication himself—and produced his rebuttal in a mere forty-five days. With the *Ragione*, Castelvetro seizes the opportunity to display the full extent of his erudition: it is a treatise on language and poetic style that, while responding point-by-point to the *Apologia*, stands as an autonomous work.
 
-<figure markdown="span">
+<figure class="media" markdown="span">
 ![Title page of Castelvetro's Ragione](assets/images/ragione-impresa.svg)
 <figcaption markdown>Title page of Castelvetro's *Ragione*. The author is identified by his device, which depicts the owl of Athena perched on top of a toppled urn, revealed to be empty, with the Greek *inscriptio* <span class="small">kekrika</span> (“I have judged”).</figcaption>
 </figure>

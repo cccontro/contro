@@ -74,7 +74,7 @@ document$.subscribe(function () {
     });
 
     // Observe titles and other elements to highlight when viewed on scroll
-    const titles = document.querySelectorAll("h1, h2, h3, .highlight");
+    const titles = document.querySelectorAll("h1, h2, h3");
     titles.forEach(el => intersectionObserver.observe(el));
 
     // Landing page animation

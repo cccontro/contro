@@ -49,7 +49,7 @@ To evaluate this argument, one may ask: *How credible is E a source? Is E truly 
 
 Walton regarded argument schemes as **dialogical devices**: each argument is a move in a dialogue, and the scheme it instantiates defines the set of appropriate responses (counterarguments) to that move. Schemes such as the appeal to expert opinion model source-based reasoning, and thereby offer a casuistic refinement of Toulmin’s notion of backing for warrants.
 
-``` mermaid
+```mermaid
 ---
 config:
   fontFamily: var(--md-text-font-family)
@@ -119,58 +119,9 @@ Here, the initial generalization is rebutted by a specific exception. Notice als
 
 Pollock’s system did not allow attacks on premises, but later formalisations recognized the need for a third type of attack to account for plausible reasoning. This attack, now known as **undermining**, negates an argument’s non-axiomatic premise and removes the support for its conclusion. Unlike undercuts, it does not invalidate the inference itself, but the conclusion remains unsupported unless the premise is defended. Undermining is currently being investigated in the context of belief revision, as it reduces the informational base from which agents draw further inferences.
 
-<div class="mermaid">
+<figure class="diagram" role="group">
 <figcaption>Three Types of Attack</figcaption>
-<div class="diagram">
-<div>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-2.5 0 140 96">
-  <g class="line">
-    <path d="M 22.5 15.5 L 22.5 73.38"/>
-    <path d="M 22.5 79.5 L 17.75 70 L 22.5 72.38 L 27.25 70 Z"/>
-    <path d="M 87.5 48 L 22.5 48"/>
-  </g>
-  <g class="dot">
-    <ellipse cx="22.5" cy="8" rx="7.5" ry="7.5"/>
-    <ellipse cx="22.5" cy="88" rx="7.5" ry="7.5"/>
-    <ellipse cx="95" cy="48" rx="7.5" ry="7.5"/>
-  </g>
-  <g class="cross">
-    <path d="M 16.75 42.25 L 28.25 53.75 M 16.75 53.75 L 28.25 42.25"/>
-  </g>
-  <text x="-2.5" y="12.5">A</text>
-  <text x="-2.5" y="92.5">B</text>
-  <text x="110" y="52.5">C</text>
-</svg>
-<figcaption>Undercut<br/>C → ¬(A → B)</figcaption>
-</div>
-
-<div>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-2.5 0 140 96">
-  <g class="line">
-    <path d="M 22.5 15.5 L 22.5 73.38"/>
-    <path d="M 102.5 15.5 L 102.5 73.38"/>
-    <path d="M 22.5 79.5 L 17.75 70 L 22.5 72.38 L 27.25 70 Z"/>
-    <path d="M 102.5 79.5 L 97.75 70 L 102.5 72.38 L 107.25 70 Z"/>
-    <path d="M 95 88 L 30 88"/>
-  </g>
-  <g class="cross">
-    <path d="M 30.75 82.25 L 42.25 93.75 M 30.75 93.75 L 42.25 82.25"/>
-  </g>
-  <g class="dot">
-    <ellipse cx="22.5" cy="8" rx="7.5" ry="7.5"/>
-    <ellipse cx="22.5" cy="88" rx="7.5" ry="7.5"/>
-    <ellipse cx="102.5" cy="8" rx="7.5" ry="7.5"/>
-    <ellipse cx="102.5" cy="88" rx="7.5" ry="7.5"/>
-  </g>
-  <text x="-2.5" y="12.5">A</text>
-  <text x="-2.5" y="92.5">B</text>
-  <text x="117.5" y="12.5">C</text>
-  <text x="117.5" y="92.5">¬B</text>
-</svg>
-<figcaption>Rebuttal<br/>A ∧ C → ¬B</figcaption>
-</div>
-
-<div>
+<figure>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 140 175.5">
   <g class="line">
     <path d="m25,95v57.9"/>
@@ -194,9 +145,57 @@ Pollock’s system did not allow attacks on premises, but later formalisations r
   <text transform="translate(120.4 11.7)">C</text>
 </svg>
 <figcaption>Undermining<br/>C → ¬A</figcaption>
-</div>
-</div>
-</div>
+</figure>
+
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-2.5 0 140 96">
+  <g class="line">
+    <path d="M 22.5 15.5 L 22.5 73.38"/>
+    <path d="M 22.5 79.5 L 17.75 70 L 22.5 72.38 L 27.25 70 Z"/>
+    <path d="M 87.5 48 L 22.5 48"/>
+  </g>
+  <g class="dot">
+    <ellipse cx="22.5" cy="8" rx="7.5" ry="7.5"/>
+    <ellipse cx="22.5" cy="88" rx="7.5" ry="7.5"/>
+    <ellipse cx="95" cy="48" rx="7.5" ry="7.5"/>
+  </g>
+  <g class="cross">
+    <path d="M 16.75 42.25 L 28.25 53.75 M 16.75 53.75 L 28.25 42.25"/>
+  </g>
+  <text x="-2.5" y="12.5">A</text>
+  <text x="-2.5" y="92.5">B</text>
+  <text x="110" y="52.5">C</text>
+</svg>
+<figcaption>Undercut<br/>C → ¬(A → B)</figcaption>
+</figure>
+
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-2.5 0 140 96">
+  <g class="line">
+    <path d="M 22.5 15.5 L 22.5 73.38"/>
+    <path d="M 102.5 15.5 L 102.5 73.38"/>
+    <path d="M 22.5 79.5 L 17.75 70 L 22.5 72.38 L 27.25 70 Z"/>
+    <path d="M 102.5 79.5 L 97.75 70 L 102.5 72.38 L 107.25 70 Z"/>
+    <path d="M 95 88 L 30 88"/>
+  </g>
+  <g class="cross">
+    <path d="M 30.75 82.25 L 42.25 93.75 M 30.75 93.75 L 42.25 82.25"/>
+  </g>
+  <g class="dot">
+    <ellipse cx="22.5" cy="8" rx="7.5" ry="7.5"/>
+    <ellipse cx="22.5" cy="88" rx="7.5" ry="7.5"/>
+    <ellipse cx="102.5" cy="8" rx="7.5" ry="7.5"/>
+    <ellipse cx="102.5" cy="88" rx="7.5" ry="7.5"/>
+  </g>
+  <text x="-2.5" y="12.5">A</text>
+  <text x="-2.5" y="92.5">B</text>
+  <text x="117.5" y="12.5">C</text>
+  <text x="117.5" y="92.5">¬B</text>
+</svg>
+<figcaption>Rebuttal<br/>A ∧ C → ¬B</figcaption>
+</figure>
+
+</figure>
 
 ### Dung's abstract argumentation
 In 1995, Phan Minh Dung introduced an abstract formalism for argumentation that separated the acceptability of arguments from both their internal structure and the specific nature of their conflicts. In his model, arguments are nodes in a directed graph connected by binary attack relations. A *calculus of opposition* is then applied to determine sets of acceptable arguments, called **extensions**, that represent rational stances if they are *internally coherent* (conflict-free) and *externally defended*. These extensions depend solely on attack and defense: a defense occurs when an argument in the set attacks an attacker of another member. The arguments of such an admissible extension are labelled as accepted, those attacked by an argument of the extension are defeated, and the others are undefined.

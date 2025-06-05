@@ -28,6 +28,7 @@ theme:
     - toc.integrate
     - toc.follow
     - content.code.copy
+    - content.code.annotate
     - content.tooltips
   palette:
     # Automatic
@@ -62,6 +63,7 @@ theme:
     next: bootstrap/arrow-right-short
   font:
     text: Source Sans 3
+    serif: Source Serif 4
     code: Source Code Pro
 
 plugins:
@@ -109,6 +111,7 @@ markdown_extensions:
   - abbr
   - footnotes
   - md_in_html
+  - pymdownx.inlinehilite
   - pymdownx.blocks.html
   - pymdownx.fancylists
   - pymdownx.snippets
@@ -140,8 +143,6 @@ markdown_extensions:
 extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/palette-extra.css
-  - https://fonts.googleapis.com/css?family=Source+Serif+4:226,300i,400,400i,700,700i&display=fallback
-  - https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap
 
 extra_javascript:
   - assets/javascripts/extra.js

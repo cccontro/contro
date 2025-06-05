@@ -1,6 +1,7 @@
 {#-
   Use pipe as page title separator
   Add css and javascripts via page metadata
+  Add variable fonts + serif option
 -#}
 {% extends "base.html" %}
 
@@ -11,6 +12,22 @@
     <title>{{ page.title | striptags }} | {{ config.site_name }}</title>
     {% else %}
     <title>{{ config.site_name }}</title>
+    {% endif %}
+{% endblock %}
+
+{% block fonts %}
+    {% if config.theme.font != false %}
+    {% set text = config.theme.font.text | d("Noto Sans", true) %}
+    {% set code = config.theme.font.code | d("Noto Sans Mono", true) %}
+    {% set serif = config.theme.font.serif | d("Noto Serif", true) %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?{{
+        'family=' + text | replace(' ', '+') + ':ital,wght@0,200..900;1,200..900' +
+        '&family=' + serif | replace(' ', '+') + ':ital,wght@0,200..900;1,200..900' +
+        '&family=' + code | replace(' ', '+') + ':wght@200..900'
+        }}&display=swap">
+    <style>:root{--md-text-font:"{{ text }}";--md-serif-font:"{{ serif }}";--md-code-font:"{{ code }}"}</style>
     {% endif %}
 {% endblock %}
 

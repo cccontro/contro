@@ -10,7 +10,7 @@ extra_css:
 
 CONTRO's aim is to extract opinions—both implicit and explicit—as they emerge within dialectical discourse through its structure. In this section, we demonstrate how illuminating this formal interpretation can be, using the first point of contention between Caro and Castelvetro as a case study.
 
-We begin by reconstructing the arguments directly from the text. Then, we show how these arguments are formalized in the ontology—both from the diachronic perspective of argumentative progression and the synchronic perspective of cognitive perspectivization. If you prefer to skip the textual excerpts, you can go directly to the [next section](#from-tree-to-graph).
+We begin by reconstructing the arguments directly from the text. Then, we show how these arguments are formalized in the ontology—both from the diachronic perspective of argumentative progression and the synchronic perspective of cognitive perspectivisation. If you prefer to skip the textual excerpts, you can go directly to the [next section](#from-tree-to-graph). The XML-TEI file, ontology extraction script and TEI-to-markdown stylesheets are available in the project's repository for consultation.
 
 ## Argument analysis in text
 

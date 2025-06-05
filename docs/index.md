@@ -54,8 +54,8 @@ Given a dialogical agent, we can ask the following questions:
 - How is their argumentative style characterized?
 - What kinds of attacks do they tend to favor?
 - What reasons do they put forward during argumentation?
-- What reasons are implicit in their arguments?
 - How are these reasons reflected in their view of the issue at stake?
+- What is their final opinion?
 </div>
 
 </section>
@@ -79,7 +79,7 @@ Given a dialogical agent, we can ask the following questions:
 - :custom-brick-outline:{ .lg .middle .only-light }:custom-brick:{ .lg .middle .only-dark }
 
     **Built on design patterns**
-    We chose to build upon the perspectivization ontology design pattern, extending it both extensionally and intensionally to support dialectical contexts.
+    We chose to build upon the perspectivisation ontology design pattern, extending it both extensionally and intensionally to support dialectical contexts.
 
 - :fontawesome-solid-gears:{ .lg .middle }
 
