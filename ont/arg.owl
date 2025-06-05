@@ -1,0 +1,1234 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/contro/arg"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/contro/arg">
+    <Prefix name="" IRI="https://w3id.org/contro/arg#"/>
+    <Prefix name="d0" IRI="http://www.ontologydesignpatterns.org/ont/d0.owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="dul" IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="swrla" IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Alberto Ciarrocca</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Francesca Massarenti</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:created"/>
+        <Literal>12/03/2025</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="en">An ontology for representing defeasible argumentation based on the ASPIC+ framework.
+
+In this model, each Dialogical Agent participates in discourse with an individual Argumentation Theory, comprising a Knowledge Base and an Acceptance Attitude toward external arguments. From this theory, the agent can construct Arguments, each consisting of a set of Premises, an Inference Rule, and a resulting Conclusion.
+
+The Conclusion of an Argument may Contradict another&apos;s Premise, Inference Rule, or Conclusion, giving rise to an Attack relation. These are classified respectively as Undermining, Undercut, and Rebuttal Conflicts.
+
+The ontology is designed to function with minimal annotation of Premises and Conclusions, and is compatible with the HermiT 1.4+ reasoner. An [example instance](http://www.w3id.org/contro/example.ttl) is available for demonstration purposes.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+        <IRI>https://creativecommons.org/licenses/by/4.0/</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
+        <Literal>03/06/2025</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal xml:lang="en">Argumentation Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal>arg</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+        <IRI>#</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">Argumentation</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal>S. Modgil and H. Prakken. “A general account of argumentation with preferences.” *Artificial Intelligence*, vol. 195, 1 Feb. 2013, pp. 361–97, doi: [10.1016/j.artint.2012.10.008](https://doi.org/10.1016/j.artint.2012.10.008).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="d0:Eventuality"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Description"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Role"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AcceptanceAttitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Antecedent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Argument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArgumentationTheory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArgumentationTheorySituation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conclusion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conflict"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Consequent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InferenceRule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KnowledgeBase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Premise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rebuttal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Undercut"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Undermining"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:definesRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:hasRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:isSettingFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:satisfies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AcceptanceAttitude"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Antecedent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ArgumentationTheory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Conclusion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Consequent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DialogicalAgent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#InferenceRule"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#KnowledgeBase"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Premise"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Topic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#attackedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#attacks"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contradictedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contradicts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defends"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#extractedFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMember"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSubArgument"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAliasOf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AcceptanceAttitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Antecedent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Argument"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ArgumentationTheory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Conclusion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Consequent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DialogicalAgent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InferenceRule"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#KnowledgeBase"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Premise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Topic"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:created"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#AcceptanceAttitude"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="dul:satisfies"/>
+            <NamedIndividual IRI="#AcceptanceAttitude"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Antecedent"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="dul:satisfies"/>
+            <NamedIndividual IRI="#Antecedent"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Argument"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#Conclusion"/>
+                <Class IRI="#Conclusion"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#InferenceRule"/>
+                <Class IRI="#InferenceRule"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#Premise"/>
+                <Class IRI="#Premise"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Argument"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="dul:satisfies"/>
+            <NamedIndividual IRI="#Argument"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ArgumentationTheory"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="dul:satisfies"/>
+            <NamedIndividual IRI="#ArgumentationTheory"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Conclusion"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="dul:satisfies"/>
+            <NamedIndividual IRI="#Conclusion"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Consequent"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="dul:satisfies"/>
+            <NamedIndividual IRI="#Consequent"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#InferenceRule"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#Consequent"/>
+                <Class IRI="#Consequent"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="0">
+                <ObjectProperty IRI="#Antecedent"/>
+                <Class IRI="#Antecedent"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#InferenceRule"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="dul:satisfies"/>
+            <NamedIndividual IRI="#InferenceRule"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#KnowledgeBase"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="dul:satisfies"/>
+            <NamedIndividual IRI="#KnowledgeBase"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Premise"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="dul:satisfies"/>
+            <NamedIndividual IRI="#Premise"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Rebuttal"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Conclusion"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#contradicts"/>
+                <Class IRI="#Conclusion"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Undercut"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Conclusion"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#contradicts"/>
+                <Class IRI="#InferenceRule"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Undermining"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Conclusion"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#contradicts"/>
+                <Class IRI="#Premise"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AcceptanceAttitude"/>
+        <Class IRI="#ArgumentationTheorySituation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Antecedent"/>
+        <Class IRI="#ArgumentationTheorySituation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Argument"/>
+        <Class IRI="#ArgumentationTheorySituation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Argument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ArgumentationTheory"/>
+            <Class IRI="#ArgumentationTheory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Argument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Conclusion"/>
+            <Class IRI="#Conclusion"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Argument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#InferenceRule"/>
+            <Class IRI="#InferenceRule"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Argument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Premise"/>
+            <Class IRI="#Premise"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Argument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Topic"/>
+            <Class abbreviatedIRI="d0:Eventuality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArgumentationTheory"/>
+        <Class IRI="#ArgumentationTheorySituation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArgumentationTheory"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#DialogicalAgent"/>
+            <Class abbreviatedIRI="dul:Agent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArgumentationTheory"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#KnowledgeBase"/>
+            <Class IRI="#KnowledgeBase"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArgumentationTheorySituation"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Conclusion"/>
+        <Class IRI="#Consequent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Conflict"/>
+        <Class IRI="#Argument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Conflict"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#attacks"/>
+            <Class IRI="#Argument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Consequent"/>
+        <Class IRI="#ArgumentationTheorySituation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InferenceRule"/>
+        <Class IRI="#ArgumentationTheorySituation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KnowledgeBase"/>
+        <Class IRI="#ArgumentationTheorySituation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Premise"/>
+        <Class IRI="#Antecedent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rebuttal"/>
+        <Class IRI="#Conflict"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Undercut"/>
+        <Class IRI="#Conflict"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Undermining"/>
+        <Class IRI="#Conflict"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dul:Description"/>
+        <NamedIndividual IRI="#AcceptanceAttitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dul:Description"/>
+        <NamedIndividual IRI="#Antecedent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dul:Description"/>
+        <NamedIndividual IRI="#Argument"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dul:Description"/>
+        <NamedIndividual IRI="#ArgumentationTheory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dul:Description"/>
+        <NamedIndividual IRI="#Conclusion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dul:Description"/>
+        <NamedIndividual IRI="#Consequent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dul:Role"/>
+        <NamedIndividual IRI="#DialogicalAgent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dul:Description"/>
+        <NamedIndividual IRI="#InferenceRule"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dul:Description"/>
+        <NamedIndividual IRI="#KnowledgeBase"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dul:Description"/>
+        <NamedIndividual IRI="#Premise"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dul:Role"/>
+        <NamedIndividual IRI="#Topic"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dul:definesRole"/>
+        <NamedIndividual IRI="#Argument"/>
+        <NamedIndividual IRI="#Topic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+        <NamedIndividual IRI="#Argument"/>
+        <NamedIndividual IRI="#ArgumentationTheory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+        <NamedIndividual IRI="#Argument"/>
+        <NamedIndividual IRI="#Conclusion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+        <NamedIndividual IRI="#Argument"/>
+        <NamedIndividual IRI="#InferenceRule"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+        <NamedIndividual IRI="#Argument"/>
+        <NamedIndividual IRI="#Premise"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dul:definesRole"/>
+        <NamedIndividual IRI="#ArgumentationTheory"/>
+        <NamedIndividual IRI="#DialogicalAgent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+        <NamedIndividual IRI="#ArgumentationTheory"/>
+        <NamedIndividual IRI="#AcceptanceAttitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+        <NamedIndividual IRI="#ArgumentationTheory"/>
+        <NamedIndividual IRI="#KnowledgeBase"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+        <NamedIndividual IRI="#InferenceRule"/>
+        <NamedIndividual IRI="#Antecedent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+        <NamedIndividual IRI="#InferenceRule"/>
+        <NamedIndividual IRI="#Consequent"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#AcceptanceAttitude"/>
+        <ObjectProperty abbreviatedIRI="dul:isSettingFor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Antecedent"/>
+        <ObjectProperty abbreviatedIRI="dul:isSettingFor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ArgumentationTheory"/>
+        <ObjectProperty abbreviatedIRI="dul:isSettingFor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Conclusion"/>
+        <ObjectProperty abbreviatedIRI="dul:isSettingFor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Consequent"/>
+        <ObjectProperty abbreviatedIRI="dul:isSettingFor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#DialogicalAgent"/>
+        <ObjectProperty abbreviatedIRI="dul:isSettingFor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#InferenceRule"/>
+        <ObjectProperty abbreviatedIRI="dul:isSettingFor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#KnowledgeBase"/>
+        <ObjectProperty abbreviatedIRI="dul:isSettingFor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Premise"/>
+        <ObjectProperty abbreviatedIRI="dul:isSettingFor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Topic"/>
+        <ObjectProperty abbreviatedIRI="dul:isSettingFor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#extractedFrom"/>
+        <ObjectInverseOf>
+            <ObjectProperty IRI="#hasMember"/>
+        </ObjectInverseOf>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#attackedBy"/>
+        <ObjectProperty IRI="#attacks"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#contradictedBy"/>
+        <ObjectProperty IRI="#contradicts"/>
+    </InverseObjectProperties>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasSubArgument"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AcceptanceAttitude"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Antecedent"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ArgumentationTheory"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Conclusion"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Consequent"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#DialogicalAgent"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#InferenceRule"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#KnowledgeBase"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Premise"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Topic"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#attacks"/>
+        <Class IRI="#Conflict"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#defends"/>
+        <Class IRI="#Argument"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#extractedFrom"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSubArgument"/>
+        <Class IRI="#Argument"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAliasOf"/>
+        <Class abbreviatedIRI="dul:Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AcceptanceAttitude"/>
+        <Class IRI="#AcceptanceAttitude"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Antecedent"/>
+        <Class IRI="#Antecedent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ArgumentationTheory"/>
+        <Class IRI="#ArgumentationTheory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Conclusion"/>
+        <Class IRI="#Conclusion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Consequent"/>
+        <Class IRI="#Consequent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#DialogicalAgent"/>
+        <Class abbreviatedIRI="dul:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#DialogicalAgent"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="dul:hasRole"/>
+            <NamedIndividual IRI="#DialogicalAgent"/>
+        </ObjectHasValue>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#InferenceRule"/>
+        <Class IRI="#InferenceRule"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#KnowledgeBase"/>
+        <Class IRI="#KnowledgeBase"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Premise"/>
+        <Class IRI="#Premise"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Topic"/>
+        <Class abbreviatedIRI="d0:Eventuality"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Topic"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="dul:hasRole"/>
+            <NamedIndividual IRI="#Topic"/>
+        </ObjectHasValue>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#attacks"/>
+        <Class IRI="#Argument"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#by"/>
+        <Class abbreviatedIRI="dul:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#defends"/>
+        <Class IRI="#Argument"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#extractedFrom"/>
+        <Class IRI="#KnowledgeBase"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSubArgument"/>
+        <Class IRI="#Argument"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAliasOf"/>
+        <Class abbreviatedIRI="dul:Agent"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#Conclusion"/>
+            <ObjectProperty IRI="#contradicts"/>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#Antecedent"/>
+            </ObjectInverseOf>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#InferenceRule"/>
+            </ObjectInverseOf>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#attacks"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#Conclusion"/>
+            <ObjectProperty IRI="#contradicts"/>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#Conclusion"/>
+            </ObjectInverseOf>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#attacks"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#Conclusion"/>
+            <ObjectProperty IRI="#contradicts"/>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#Consequent"/>
+            </ObjectInverseOf>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#InferenceRule"/>
+            </ObjectInverseOf>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#attacks"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#Conclusion"/>
+            <ObjectProperty IRI="#contradicts"/>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#InferenceRule"/>
+            </ObjectInverseOf>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#attacks"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#Conclusion"/>
+            <ObjectProperty IRI="#contradicts"/>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#Premise"/>
+            </ObjectInverseOf>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#attacks"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#DialogicalAgent"/>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#isAliasOf"/>
+            </ObjectInverseOf>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#DialogicalAgent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#InferenceRule"/>
+            <ObjectProperty IRI="#Antecedent"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#Premise"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#InferenceRule"/>
+            <ObjectProperty IRI="#Consequent"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#Conclusion"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#InferenceRule"/>
+            <ObjectProperty IRI="#Consequent"/>
+            <ObjectProperty IRI="#contradicts"/>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#Conclusion"/>
+            </ObjectInverseOf>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#attacks"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#InferenceRule"/>
+            <ObjectProperty IRI="#Consequent"/>
+            <ObjectProperty IRI="#contradicts"/>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#Premise"/>
+            </ObjectInverseOf>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#attacks"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#Premise"/>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#Conclusion"/>
+            </ObjectInverseOf>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#hasSubArgument"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#attacks"/>
+            <ObjectProperty IRI="#attacks"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#defends"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#by"/>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#DialogicalAgent"/>
+            </ObjectInverseOf>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#ArgumentationTheory"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#Conclusion"/>
+            </ObjectInverseOf>
+            <ObjectProperty IRI="#ArgumentationTheory"/>
+            <ObjectProperty IRI="#KnowledgeBase"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#extractedFrom"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#InferenceRule"/>
+            </ObjectInverseOf>
+            <ObjectProperty IRI="#ArgumentationTheory"/>
+            <ObjectProperty IRI="#KnowledgeBase"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#extractedFrom"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#Premise"/>
+            </ObjectInverseOf>
+            <ObjectProperty IRI="#ArgumentationTheory"/>
+            <ObjectProperty IRI="#KnowledgeBase"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#extractedFrom"/>
+    </SubObjectPropertyOf>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>An argument that concludes B from A has the implicit rule that there exists an implication from A to B.</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Implicit Inference Rule</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#Premise"/>
+                <Variable IRI="#arg"/>
+                <Variable IRI="#prem"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#Conclusion"/>
+                <Variable IRI="#arg"/>
+                <Variable IRI="#conc"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#Antecedent"/>
+                <Variable IRI="#rule"/>
+                <Variable IRI="#prem"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#Consequent"/>
+                <Variable IRI="#rule"/>
+                <Variable IRI="#conc"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#InferenceRule"/>
+                <Variable IRI="#arg"/>
+                <Variable IRI="#rule"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AcceptanceAttitude</IRI>
+        <Literal xml:lang="en">The attitude a dialogical agent holds toward the argument of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AcceptanceAttitude</IRI>
+        <Literal xml:lang="en">Acceptance Attitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Antecedent</IRI>
+        <Literal xml:lang="en">One of the formulas that make up the first half of an inference rule, each expressing part of the condition for its application.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Antecedent</IRI>
+        <Literal xml:lang="en">Antecedent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Argument</IRI>
+        <Literal xml:lang="en">A structure built from a set of premises, a conclusion, and an inference rule connecting them. It is generated by an agent&apos;s argumentation theory on the basis of their knowledge base.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Argument</IRI>
+        <Literal xml:lang="en">Argument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ArgumentationTheory</IRI>
+        <Literal xml:lang="en">An agent&apos;s argumentation theory is the combination of their knowledge base and acceptance attitude, relative to which arguments are generated and evaluated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ArgumentationTheory</IRI>
+        <Literal xml:lang="en">Argumentation Theory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ArgumentationTheorySituation</IRI>
+        <Literal xml:lang="en">Argumentation Theory Situation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Conclusion</IRI>
+        <Literal xml:lang="en">The claim of an argument, following from its constituent premises and rule application. It may contradict another argument&apos;s premise, inference rule application or conclusion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Conclusion</IRI>
+        <Literal>Conclusion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Conflict</IRI>
+        <Literal xml:lang="en">They can only target at fallible elements of an argument: their uncertain premises, their defeasible inferences, or the conclusions of their defeasible inferences.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Conflict</IRI>
+        <Literal xml:lang="en">Conflict</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Consequent</IRI>
+        <Literal xml:lang="en">The formula that makes up the second half of an inference rule and is inferred when the antecedents are satisfied.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Consequent</IRI>
+        <Literal xml:lang="en">Consequent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DialogicalAgent</IRI>
+        <Literal xml:lang="en">An agent who takes part in a spoken or written interaction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DialogicalAgent</IRI>
+        <Literal xml:lang="en">Dialogical Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#InferenceRule</IRI>
+        <Literal xml:lang="en">A way of drawing a conclusion from a set of premises. When applied in an argument, the antecedents of the rule serve as premises and the consequent as the conclusion.
+It may express a general principle of reasoning or encode domain-specific knowledge as a scheme in which the rule’s antecedents and consequent are formulas about a term (topic).
+Inference rules, together with premises, form part of the dialogical agent’s knowledge base.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#InferenceRule</IRI>
+        <Literal xml:lang="en">Inference Rule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#KnowledgeBase</IRI>
+        <Literal xml:lang="en">The set of premises and inference rules available to an agent for constructing arguments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#KnowledgeBase</IRI>
+        <Literal xml:lang="en">Knowledge Base</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Premise</IRI>
+        <Literal xml:lang="en">A formula that supports the conclusion of an argument. It may either be extracted from the knowledge base or derived as the conclusion of another argument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Premise</IRI>
+        <Literal xml:lang="en">Premise</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Rebuttal</IRI>
+        <Literal xml:lang="en">A rebuttal is a conflict that attacks an argument on its conclusion, providing an alternative one.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Topic</IRI>
+        <Literal xml:lang="en">What the argument is about, as opposed to what is being said about it. It can be understood as a term that appears in both the premises and the conclusion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Topic</IRI>
+        <Literal xml:lang="en">Topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Undercut</IRI>
+        <Literal xml:lang="en">An undercut is a conflict that attacks an argument on its inference rule.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Undermining</IRI>
+        <Literal xml:lang="en">An undermining is a conflict that attacks an argument on its premise.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#attackedBy</IRI>
+        <Literal xml:lang="en">attacked by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#attacks</IRI>
+        <Literal xml:lang="en">The non symmetric relation between two Arguments where the Conclusion of the first contradicts the Premise, Inference Rule, or Conclusion of the second.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#attacks</IRI>
+        <Literal xml:lang="en">attacks</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#by</IRI>
+        <Literal xml:lang="en">A shortcut between an Argument and the Dialogical Agent of the Argumentation Theory that generated it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#contradictedBy</IRI>
+        <Literal xml:lang="en">contradicted by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#contradicts</IRI>
+        <Literal xml:lang="en">A non symmetric relation between two entities, where the first is logically incompatible with the second. When the contradicting entity is the Conclusion of an Argument, it gives rise to an Attack against any other Argument in which the contradicted entity appears as a Premise, an Inference Rule, or a Conclusion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#contradicts</IRI>
+        <Literal xml:lang="en">contradicts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#defends</IRI>
+        <Literal xml:lang="en">The irreflexive relation between two arguments where the first attacks an attacker of the second.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#defends</IRI>
+        <Literal xml:lang="en">defends</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#extractedFrom</IRI>
+        <Literal xml:lang="en">A Dialogical Agent draws the Premises, Inference Rule, and Conclusion necessary to build an Argument from their Knowledge Base.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#extractedFrom</IRI>
+        <Literal xml:lang="en">extracted from</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMember</IRI>
+        <Literal xml:lang="en">A relation between a collection and the entities it comprises. Adapted from DOLCE, this version omits the restriction of Collection as domain, in order to avoid imposing DOLCE’s structural constraints on the Knowledge Base.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMember</IRI>
+        <Literal xml:lang="en">has member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#hasMember</IRI>
+        <AbbreviatedIRI>dul:hasMember</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSubArgument</IRI>
+        <Literal xml:lang="en">A transitive relation between Arguments, where one Argument is a sub-argument of another if its Conclusion is used to derive a Premise of the other. If a sub-argument is defeated, the dependent argument is likewise considered defeated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSubArgument</IRI>
+        <Literal xml:lang="en">has sub-argument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isAliasOf</IRI>
+        <Literal xml:lang="en">Traces an alternative identity back to a Dialogical Agent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isAliasOf</IRI>
+        <Literal xml:lang="en">is alias of</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

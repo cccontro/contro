@@ -30,7 +30,7 @@
 
 ###  https://w3id.org/contro/example#A3
 :A3 rdf:type owl:NamedIndividual ;
-    arg:InferenceRule :d4 ;
+    arg:InferenceRule :d5 ;
     arg:by :agentA .
 
 
@@ -79,13 +79,18 @@
 
 ###  https://w3id.org/contro/example#d3
 :d3 rdf:type owl:NamedIndividual ;
+    arg:Consequent <https://w3id.org/contro/example#¬d1> .
+
+
+###  https://w3id.org/contro/example#d4
+:d4 rdf:type owl:NamedIndividual ;
     arg:Antecedent :p ,
                    :s ;
     arg:Consequent <https://w3id.org/contro/example#¬r> .
 
 
-###  https://w3id.org/contro/example#d4
-:d4 rdf:type owl:NamedIndividual ;
+###  https://w3id.org/contro/example#d5
+:d5 rdf:type owl:NamedIndividual ;
     arg:Antecedent :t ;
     arg:Consequent <https://w3id.org/contro/example#¬s> .
 
