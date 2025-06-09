@@ -6,11 +6,63 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/contro/example-inferred> .
 
-<https://w3id.org/contro/example-inferred> rdf:type owl:Ontology .
+<https://w3id.org/contro/example-inferred> rdf:type owl:Ontology ;
+                                            <http://purl.org/dc/elements/1.1/creator> "Alberto Ciarrocca" ,
+                                                                                      "Francesca Massarenti" ;
+                                            <http://purl.org/dc/terms/created> "12/03/2025" ;
+                                            <http://purl.org/dc/terms/description> """An ontology for representing defeasible argumentation based on the ASPIC+ framework.
+
+In this model, each Dialogical Agent participates in discourse with an individual Argumentation Theory, comprising a Knowledge Base and an Acceptance Attitude toward external arguments. From this theory, the agent can construct Arguments, each consisting of a set of Premises, an Inference Rule, and a resulting Conclusion.
+
+The Conclusion of an Argument may Contradict another's Premise, Inference Rule, or Conclusion, giving rise to an Attack relation. These are classified respectively as Undermining, Undercut, and Rebuttal Conflicts.
+
+The ontology is designed to function with minimal annotation of Premises and Conclusions, and is compatible with the HermiT 1.4+ reasoner. A [sample instance](http://www.w3id.org/contro/example.ttl) is available for demonstration purposes."""@en ;
+                                            <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                            <http://purl.org/dc/terms/modified> "03/06/2025" ;
+                                            <http://purl.org/dc/terms/title> "Argumentation Ontology"@en ;
+                                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "arg" ;
+                                            <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/contro/arg#> ;
+                                            rdfs:comment "Sample arguments to display their interactions in the Argumentation Ontology."@en ;
+                                            rdfs:label "Argumentation"@en ;
+                                            rdfs:seeAlso <https.//w3id.org/contro/arg> ,
+                                                         "S. Modgil and H. Prakken. “A general account of argumentation with preferences.” *Artificial Intelligence*, vol. 195, 1 Feb. 2013, pp. 361–97, doi: [10.1016/j.artint.2012.10.008](https://doi.org/10.1016/j.artint.2012.10.008)." ;
+                                            owl:versionInfo 0.7 .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
 
 ###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
@@ -144,7 +196,8 @@
 
 ###  https://w3id.org/contro/arg#attackedBy
 <https://w3id.org/contro/arg#attackedBy> rdf:type owl:ObjectProperty ;
-                                         owl:inverseOf <https://w3id.org/contro/arg#attacks> .
+                                         owl:inverseOf <https://w3id.org/contro/arg#attacks> ;
+                                         rdfs:label "attacked by"@en .
 
 
 ###  https://w3id.org/contro/arg#attacks
@@ -191,21 +244,27 @@
                                                                <https://w3id.org/contro/arg#contradicts>
                                                                [ owl:inverseOf <https://w3id.org/contro/arg#Premise>
                                                                ]
-                                                             ) .
+                                                             ) ;
+                                      rdfs:comment "The non symmetric relation between two Arguments where the Conclusion of the first contradicts the Premise, Inference Rule, or Conclusion of the second."@en ;
+                                      rdfs:label "attacks"@en .
 
 
 ###  https://w3id.org/contro/arg#by
 <https://w3id.org/contro/arg#by> rdf:type owl:ObjectProperty ;
-                                 rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+                                 rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                                 rdfs:comment "A shortcut between an Argument and the Dialogical Agent of the Argumentation Theory that generated it."@en .
 
 
 ###  https://w3id.org/contro/arg#contradictedBy
 <https://w3id.org/contro/arg#contradictedBy> rdf:type owl:ObjectProperty ;
-                                             owl:inverseOf <https://w3id.org/contro/arg#contradicts> .
+                                             owl:inverseOf <https://w3id.org/contro/arg#contradicts> ;
+                                             rdfs:label "contradicted by"@en .
 
 
 ###  https://w3id.org/contro/arg#contradicts
-<https://w3id.org/contro/arg#contradicts> rdf:type owl:ObjectProperty .
+<https://w3id.org/contro/arg#contradicts> rdf:type owl:ObjectProperty ;
+                                          rdfs:comment "A non symmetric relation between two entities, where the first is logically incompatible with the second. When the contradicting entity is the Conclusion of an Argument, it gives rise to an Attack against any other Argument in which the contradicted entity appears as a Premise, an Inference Rule, or a Conclusion."@en ;
+                                          rdfs:label "contradicts"@en .
 
 
 ###  https://w3id.org/contro/arg#defends
@@ -214,7 +273,9 @@
                                       rdfs:range <https://w3id.org/contro/arg#Argument> ;
                                       owl:propertyChainAxiom ( <https://w3id.org/contro/arg#attacks>
                                                                <https://w3id.org/contro/arg#attacks>
-                                                             ) .
+                                                             ) ;
+                                      rdfs:comment "The irreflexive relation between two arguments where the first attacks an attacker of the second."@en ;
+                                      rdfs:label "defends"@en .
 
 
 ###  https://w3id.org/contro/arg#extractedFrom
@@ -237,11 +298,16 @@
                                                                      ]
                                                                      <https://w3id.org/contro/arg#ArgumentationTheory>
                                                                      <https://w3id.org/contro/arg#KnowledgeBase>
-                                                                   ) .
+                                                                   ) ;
+                                            rdfs:comment "A Dialogical Agent draws the Premises, Inference Rule, and Conclusion necessary to build an Argument from their Knowledge Base."@en ;
+                                            rdfs:label "extracted from"@en .
 
 
 ###  https://w3id.org/contro/arg#hasMember
-<https://w3id.org/contro/arg#hasMember> rdf:type owl:ObjectProperty .
+<https://w3id.org/contro/arg#hasMember> rdf:type owl:ObjectProperty ;
+                                        rdfs:comment "A relation between a collection and the entities it comprises. Adapted from DOLCE, this version omits the restriction of Collection as domain, in order to avoid imposing DOLCE’s structural constraints on the Knowledge Base."@en ;
+                                        rdfs:label "has member"@en ;
+                                        rdfs:seeAlso <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> .
 
 
 ###  https://w3id.org/contro/arg#hasSubArgument
@@ -252,13 +318,31 @@
                                              owl:propertyChainAxiom ( <https://w3id.org/contro/arg#Premise>
                                                                       [ owl:inverseOf <https://w3id.org/contro/arg#Conclusion>
                                                                       ]
-                                                                    ) .
+                                                                    ) ;
+                                             rdfs:comment "A transitive relation between Arguments, where one Argument is a sub-argument of another if its Conclusion is used to derive a Premise of the other. If a sub-argument is defeated, the dependent argument is likewise considered defeated."@en ;
+                                             rdfs:label "has sub-argument"@en .
+
+
+###  https://w3id.org/contro/arg#holds
+<https://w3id.org/contro/arg#holds> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                                    rdfs:range <https://w3id.org/contro/arg#AcceptanceAttitude> ;
+                                    rdfs:comment "An agent may hold a credulous, cautious or skeptical attitude depending on the degree of support they require to concede an opponent's statement."@en .
 
 
 ###  https://w3id.org/contro/arg#isAliasOf
 <https://w3id.org/contro/arg#isAliasOf> rdf:type owl:ObjectProperty ;
                                         rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
-                                        rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+                                        rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                                        rdfs:comment "Traces an alternative identity back to a Dialogical Agent."@en ;
+                                        rdfs:label "is alias of"@en .
+
+
+###  https://w3id.org/contro/arg#toward
+<https://w3id.org/contro/arg#toward> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <https://w3id.org/contro/arg#AcceptanceAttitude> ;
+                                     rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                     rdfs:comment "An agent holds a certain acceptance attitude toward an opponent's statement depending on the conditions they require to not attack it."@en .
 
 
 #################################################################
@@ -371,7 +455,8 @@
 
 ###  https://w3id.org/contro/arg#ArgumentationTheorySituation
 <https://w3id.org/contro/arg#ArgumentationTheorySituation> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> .
+                                                           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                                           rdfs:label "Argumentation Theory Situation"@en .
 
 
 ###  https://w3id.org/contro/arg#Conclusion
@@ -390,7 +475,9 @@
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <https://w3id.org/contro/arg#attacks> ;
                                                          owl:someValuesFrom <https://w3id.org/contro/arg#Argument>
-                                                       ] .
+                                                       ] ;
+                                       rdfs:comment "They can only target at fallible elements of an argument: their uncertain premises, their defeasible inferences, or the conclusions of their defeasible inferences."@en ;
+                                       rdfs:label "Conflict"@en .
 
 
 ###  https://w3id.org/contro/arg#Consequent
@@ -454,7 +541,8 @@
                                                                                   owl:someValuesFrom <https://w3id.org/contro/arg#Conclusion>
                                                                                 ]
                                                            ] ;
-                                       rdfs:subClassOf <https://w3id.org/contro/arg#Conflict> .
+                                       rdfs:subClassOf <https://w3id.org/contro/arg#Conflict> ;
+                                       rdfs:comment "A rebuttal is a conflict that attacks an argument on its conclusion, providing an alternative one."@en .
 
 
 ###  https://w3id.org/contro/arg#Undercut
@@ -466,7 +554,8 @@
                                                                                   owl:someValuesFrom <https://w3id.org/contro/arg#InferenceRule>
                                                                                 ]
                                                            ] ;
-                                       rdfs:subClassOf <https://w3id.org/contro/arg#Conflict> .
+                                       rdfs:subClassOf <https://w3id.org/contro/arg#Conflict> ;
+                                       rdfs:comment "An undercut is a conflict that attacks an argument on its inference rule."@en .
 
 
 ###  https://w3id.org/contro/arg#Undermining
@@ -478,7 +567,8 @@
                                                                                      owl:someValuesFrom <https://w3id.org/contro/arg#Premise>
                                                                                    ]
                                                               ] ;
-                                          rdfs:subClassOf <https://w3id.org/contro/arg#Conflict> .
+                                          rdfs:subClassOf <https://w3id.org/contro/arg#Conflict> ;
+                                          rdfs:comment "An undermining is a conflict that attacks an argument on its premise."@en .
 
 
 #################################################################
@@ -775,7 +865,6 @@
                                              <https://w3id.org/contro/arg#Premise> ;
                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                       <https://w3id.org/contro/arg#Premise> ;
-                                    <https://w3id.org/contro/arg#contradictedBy> <https://w3id.org/contro/example#¬p> ;
                                     <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeA> ,
                                                                                 <https://w3id.org/contro/example#knowledgeB> .
 
@@ -870,11 +959,6 @@
                                       <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeB> .
 
 
-###  https://w3id.org/contro/example#¬p
-<https://w3id.org/contro/example#¬p> rdf:type owl:NamedIndividual ;
-                                     <https://w3id.org/contro/arg#contradicts> <https://w3id.org/contro/example#p> .
-
-
 ###  https://w3id.org/contro/example#¬r
 <https://w3id.org/contro/example#¬r> rdf:type owl:NamedIndividual ,
                                               <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
@@ -897,6 +981,56 @@
                                                                                                        <https://w3id.org/contro/arg#Consequent> ;
                                      <https://w3id.org/contro/arg#contradicts> <https://w3id.org/contro/example#s> ;
                                      <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/example#knowledgeA> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://w3id.org/contro/arg#AcceptanceAttitude> rdfs:comment "The attitude a dialogical agent holds toward the statement of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise."@en ;
+                                                 rdfs:label "Acceptance Attitude"@en .
+
+
+<https://w3id.org/contro/arg#Antecedent> rdfs:comment "One of the formulas that make up the first half of an inference rule, each expressing part of the condition for its application."@en ;
+                                         rdfs:label "Antecedent"@en .
+
+
+<https://w3id.org/contro/arg#Argument> rdfs:comment "A structure built from a set of premises, a conclusion, and an inference rule connecting them. It is generated by an agent's argumentation theory on the basis of their knowledge base."@en ;
+                                       rdfs:label "Argument"@en .
+
+
+<https://w3id.org/contro/arg#ArgumentationTheory> rdfs:comment "An agent's argumentation theory is the combination of their knowledge base and acceptance attitude, relative to which arguments are generated and evaluated."@en ;
+                                                  rdfs:label "Argumentation Theory"@en .
+
+
+<https://w3id.org/contro/arg#Conclusion> rdfs:comment "The claim of an argument, following from its constituent premises and rule application. It may contradict another argument's premise, inference rule application or conclusion."@en ;
+                                         rdfs:label "Conclusion" .
+
+
+<https://w3id.org/contro/arg#Consequent> rdfs:comment "The formula that makes up the second half of an inference rule and is inferred when the antecedents are satisfied."@en ;
+                                         rdfs:label "Consequent"@en .
+
+
+<https://w3id.org/contro/arg#DialogicalAgent> rdfs:comment "An agent who takes part in a spoken or written interaction."@en ;
+                                              rdfs:label "Dialogical Agent"@en .
+
+
+<https://w3id.org/contro/arg#InferenceRule> rdfs:comment """A way of drawing a conclusion from a set of premises. When applied in an argument, the antecedents of the rule serve as premises and the consequent as the conclusion.
+It may express a general principle of reasoning or encode domain-specific knowledge as a scheme in which the rule’s antecedents and consequent are formulas about a term (topic).
+Inference rules, together with premises, form part of the dialogical agent’s knowledge base."""@en ;
+                                            rdfs:label "Inference Rule"@en .
+
+
+<https://w3id.org/contro/arg#KnowledgeBase> rdfs:comment "The set of premises and inference rules available to an agent for constructing arguments."@en ;
+                                            rdfs:label "Knowledge Base"@en .
+
+
+<https://w3id.org/contro/arg#Premise> rdfs:comment "A formula that supports the conclusion of an argument. It may either be extracted from the knowledge base or derived as the conclusion of another argument."@en ;
+                                      rdfs:label "Premise"@en .
+
+
+<https://w3id.org/contro/arg#Topic> rdfs:comment "What the argument is about, as opposed to what is being said about it. It can be understood as a term that appears in both the premises and the conclusion."@en ;
+                                    rdfs:label "Topic"@en .
 
 
 #################################################################

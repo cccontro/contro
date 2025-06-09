@@ -39,7 +39,7 @@ In this model, each Dialogical Agent participates in discourse with an individua
 
 The Conclusion of an Argument may Contradict another&apos;s Premise, Inference Rule, or Conclusion, giving rise to an Attack relation. These are classified respectively as Undermining, Undercut, and Rebuttal Conflicts.
 
-The ontology is designed to function with minimal annotation of Premises and Conclusions, and is compatible with the HermiT 1.4+ reasoner. An [example instance](http://www.w3id.org/contro/example.ttl) is available for demonstration purposes.</Literal>
+The ontology is designed to function with minimal annotation of Premises and Conclusions, and is compatible with the HermiT 1.4+ reasoner. A [sample instance](http://www.w3id.org/contro/example.ttl) is available for demonstration purposes.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:license"/>
@@ -71,7 +71,7 @@ The ontology is designed to function with minimal annotation of Premises and Con
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
     </Annotation>
     <Declaration>
         <Class abbreviatedIRI="d0:Eventuality"/>
@@ -206,7 +206,13 @@ The ontology is designed to function with minimal annotation of Premises and Con
         <ObjectProperty IRI="#hasSubArgument"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#holds"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isAliasOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#toward"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#AcceptanceAttitude"/>
@@ -714,8 +720,16 @@ The ontology is designed to function with minimal annotation of Premises and Con
         <Class IRI="#Argument"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#holds"/>
+        <Class abbreviatedIRI="dul:Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isAliasOf"/>
         <Class abbreviatedIRI="dul:Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#toward"/>
+        <Class IRI="#AcceptanceAttitude"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#AcceptanceAttitude"/>
@@ -792,8 +806,16 @@ The ontology is designed to function with minimal annotation of Premises and Con
         <Class IRI="#Argument"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#holds"/>
+        <Class IRI="#AcceptanceAttitude"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#isAliasOf"/>
         <Class abbreviatedIRI="dul:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#toward"/>
+        <Class abbreviatedIRI="dul:Situation"/>
     </ObjectPropertyRange>
     <SubObjectPropertyOf>
         <ObjectPropertyChain>
@@ -997,7 +1019,7 @@ The ontology is designed to function with minimal annotation of Premises and Con
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#AcceptanceAttitude</IRI>
-        <Literal xml:lang="en">The attitude a dialogical agent holds toward the argument of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise.</Literal>
+        <Literal xml:lang="en">The attitude a dialogical agent holds toward the statement of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1218,6 +1240,11 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#holds</IRI>
+        <Literal xml:lang="en">An agent may hold a credulous, cautious or skeptical attitude depending on the degree of support they require to concede an opponent&apos;s statement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isAliasOf</IRI>
         <Literal xml:lang="en">Traces an alternative identity back to a Dialogical Agent.</Literal>
     </AnnotationAssertion>
@@ -1225,6 +1252,11 @@ Inference rules, together with premises, form part of the dialogical agent’s k
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#isAliasOf</IRI>
         <Literal xml:lang="en">is alias of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#toward</IRI>
+        <Literal xml:lang="en">An agent holds a certain acceptance attitude toward an opponent&apos;s statement depending on the conditions they require to not attack it.</Literal>
     </AnnotationAssertion>
 </Ontology>
 

@@ -23,7 +23,7 @@ In this model, each Dialogical Agent participates in discourse with an individua
 
 The Conclusion of an Argument may Contradict another's Premise, Inference Rule, or Conclusion, giving rise to an Attack relation. These are classified respectively as Undermining, Undercut, and Rebuttal Conflicts.
 
-The ontology is designed to function with minimal annotation of Premises and Conclusions, and is compatible with the HermiT 1.4+ reasoner. An [example instance](http://www.w3id.org/contro/example.ttl) is available for demonstration purposes."""@en ;
+The ontology is designed to function with minimal annotation of Premises and Conclusions, and is compatible with the HermiT 1.4+ reasoner. A [sample instance](http://www.w3id.org/contro/example.ttl) is available for demonstration purposes."""@en ;
                                dct:license <https://creativecommons.org/licenses/by/4.0/> ;
                                dct:modified "03/06/2025" ;
                                dct:title "Argumentation Ontology"@en ;
@@ -31,7 +31,7 @@ The ontology is designed to function with minimal annotation of Premises and Con
                                vann:preferredNamespaceUri : ;
                                rdfs:label "Argumentation"@en ;
                                rdfs:seeAlso "S. Modgil and H. Prakken. “A general account of argumentation with preferences.” *Artificial Intelligence*, vol. 195, 1 Feb. 2013, pp. 361–97, doi: [10.1016/j.artint.2012.10.008](https://doi.org/10.1016/j.artint.2012.10.008)." ;
-                               owl:versionInfo 0.6 .
+                               owl:versionInfo 0.7 .
 
 #################################################################
 #    Annotation properties
@@ -322,12 +322,26 @@ dul:satisfies rdf:type owl:ObjectProperty .
                 rdfs:label "has sub-argument"@en .
 
 
+###  https://w3id.org/contro/arg#holds
+:holds rdf:type owl:ObjectProperty ;
+       rdfs:domain dul:Agent ;
+       rdfs:range :AcceptanceAttitude ;
+       rdfs:comment "An agent may hold a credulous, cautious or skeptical attitude depending on the degree of support they require to concede an opponent's statement."@en .
+
+
 ###  https://w3id.org/contro/arg#isAliasOf
 :isAliasOf rdf:type owl:ObjectProperty ;
            rdfs:domain dul:Agent ;
            rdfs:range dul:Agent ;
            rdfs:comment "Traces an alternative identity back to a Dialogical Agent."@en ;
            rdfs:label "is alias of"@en .
+
+
+###  https://w3id.org/contro/arg#toward
+:toward rdf:type owl:ObjectProperty ;
+        rdfs:domain :AcceptanceAttitude ;
+        rdfs:range dul:Situation ;
+        rdfs:comment "An agent holds a certain acceptance attitude toward an opponent's statement depending on the conditions they require to not attack it."@en .
 
 
 #################################################################
@@ -624,7 +638,7 @@ dul:Situation rdf:type owl:Class .
 #    Annotations
 #################################################################
 
-:AcceptanceAttitude rdfs:comment "The attitude a dialogical agent holds toward the argument of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise."@en ;
+:AcceptanceAttitude rdfs:comment "The attitude a dialogical agent holds toward the statement of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise."@en ;
                     rdfs:label "Acceptance Attitude"@en .
 
 

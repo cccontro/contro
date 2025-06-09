@@ -9,7 +9,8 @@
 
 <https://w3id.org/contro/example> rdf:type owl:Ontology ;
                                    owl:imports <https://w3id.org/contro/arg> ;
-                                   rdfs:comment "Example"@en .
+                                   rdfs:comment "Sample arguments to display their interactions in the Argumentation Ontology."@en ;
+                                   rdfs:seeAlso <https.//w3id.org/contro/arg> .
 
 #################################################################
 #    Individuals
@@ -17,6 +18,7 @@
 
 ###  https://w3id.org/contro/example#A1
 :A1 rdf:type owl:NamedIndividual ;
+    arg:Conclusion :q ;
     arg:InferenceRule :d1 ;
     arg:by :agentA .
 
@@ -138,11 +140,6 @@
 ###  https://w3id.org/contro/example#¬d1
 <https://w3id.org/contro/example#¬d1> rdf:type owl:NamedIndividual ;
                                       arg:contradicts :d1 .
-
-
-###  https://w3id.org/contro/example#¬p
-<https://w3id.org/contro/example#¬p> rdf:type owl:NamedIndividual ;
-                                     arg:contradicts :p .
 
 
 ###  https://w3id.org/contro/example#¬r

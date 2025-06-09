@@ -543,7 +543,7 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
-    "@value" : "An ontology for representing defeasible argumentation based on the ASPIC+ framework.\n\nIn this model, each Dialogical Agent participates in discourse with an individual Argumentation Theory, comprising a Knowledge Base and an Acceptance Attitude toward external arguments. From this theory, the agent can construct Arguments, each consisting of a set of Premises, an Inference Rule, and a resulting Conclusion.\n\nThe Conclusion of an Argument may Contradict another's Premise, Inference Rule, or Conclusion, giving rise to an Attack relation. These are classified respectively as Undermining, Undercut, and Rebuttal Conflicts.\n\nThe ontology is designed to function with minimal annotation of Premises and Conclusions, and is compatible with the HermiT 1.4+ reasoner. An [example instance](http://www.w3id.org/contro/example.ttl) is available for demonstration purposes."
+    "@value" : "An ontology for representing defeasible argumentation based on the ASPIC+ framework.\n\nIn this model, each Dialogical Agent participates in discourse with an individual Argumentation Theory, comprising a Knowledge Base and an Acceptance Attitude toward external arguments. From this theory, the agent can construct Arguments, each consisting of a set of Premises, an Inference Rule, and a resulting Conclusion.\n\nThe Conclusion of an Argument may Contradict another's Premise, Inference Rule, or Conclusion, giving rise to an Attack relation. These are classified respectively as Undermining, Undercut, and Rebuttal Conflicts.\n\nThe ontology is designed to function with minimal annotation of Premises and Conclusions, and is compatible with the HermiT 1.4+ reasoner. A [sample instance](http://www.w3id.org/contro/example.ttl) is available for demonstration purposes."
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
@@ -570,7 +570,7 @@
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0.6"
+    "@value" : "0.7"
   } ]
 }, {
   "@id" : "https://w3id.org/contro/arg#AcceptanceAttitude",
@@ -580,7 +580,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The attitude a dialogical agent holds toward the argument of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise."
+    "@value" : "The attitude a dialogical agent holds toward the statement of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"
@@ -1246,6 +1246,19 @@
     } ]
   } ]
 }, {
+  "@id" : "https://w3id.org/contro/arg#holds",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An agent may hold a credulous, cautious or skeptical attitude depending on the degree of support they require to concede an opponent's statement."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/contro/arg#AcceptanceAttitude"
+  } ]
+}, {
   "@id" : "https://w3id.org/contro/arg#isAliasOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1268,4 +1281,17 @@
 }, {
   "@id" : "https://w3id.org/contro/arg#rule",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "https://w3id.org/contro/arg#toward",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An agent holds a certain acceptance attitude toward an opponent's statement depending on the conditions they require to not attack it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/contro/arg#AcceptanceAttitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"
+  } ]
 } ]

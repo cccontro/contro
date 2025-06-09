@@ -3,7 +3,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Example"
+    "@value" : "Sample arguments to display their interactions in the Argumentation Ontology."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://w3id.org/contro/examplehttps.//w3id.org/contro/arg"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
     "@id" : "https://w3id.org/contro/arg"
@@ -11,6 +14,9 @@
 }, {
   "@id" : "https://w3id.org/contro/example#A1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/contro/arg#Conclusion" : [ {
+    "@id" : "https://w3id.org/contro/example#q"
+  } ],
   "https://w3id.org/contro/arg#InferenceRule" : [ {
     "@id" : "https://w3id.org/contro/example#d1"
   } ],
@@ -165,12 +171,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "https://w3id.org/contro/arg#contradicts" : [ {
     "@id" : "https://w3id.org/contro/example#d1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/contro/example#¬p",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "https://w3id.org/contro/arg#contradicts" : [ {
-    "@id" : "https://w3id.org/contro/example#p"
   } ]
 }, {
   "@id" : "https://w3id.org/contro/example#¬r",

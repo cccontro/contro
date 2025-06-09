@@ -16,7 +16,11 @@
     <Import>https://w3id.org/contro/arg</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal xml:lang="en">Example</Literal>
+        <Literal xml:lang="en">Sample arguments to display their interactions in the Argumentation Ontology.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>https.//w3id.org/contro/arg</IRI>
     </Annotation>
     <Declaration>
         <NamedIndividual IRI="#A1"/>
@@ -91,14 +95,16 @@
         <NamedIndividual IRI="#¬d1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#¬p"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#¬r"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#¬s"/>
     </Declaration>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="arg:Conclusion"/>
+        <NamedIndividual IRI="#A1"/>
+        <NamedIndividual IRI="#q"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="arg:InferenceRule"/>
         <NamedIndividual IRI="#A1"/>
@@ -243,11 +249,6 @@
         <ObjectProperty abbreviatedIRI="arg:contradicts"/>
         <NamedIndividual IRI="#¬d1"/>
         <NamedIndividual IRI="#d1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="arg:contradicts"/>
-        <NamedIndividual IRI="#¬p"/>
-        <NamedIndividual IRI="#p"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="arg:contradicts"/>
