@@ -99,7 +99,6 @@ footer {
 
 #hero-bg img {
   height: 100%;
-  max-height: max(calc(var(--vh, 1vh) * 73), 47.7vw);
   margin: auto 0;
 }
 
@@ -346,7 +345,7 @@ blockquote:before {
   }
 
   #hero-bg {
-    padding: 4.75em 0 1em;
+    padding: 31.5% 0 16.5%;
   }
 
   [dir="ltr"] .md-typeset blockquote {
