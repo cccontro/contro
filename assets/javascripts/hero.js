@@ -7,5 +7,4 @@ function setHeroHeight() {
 // Subscribe on load and on resize events
 document$.subscribe(() => {
   setHeroHeight();
-  window.addEventListener('resize', setHeroHeight);
 });
