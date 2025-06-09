@@ -127,7 +127,7 @@ a[href*="#s"] {
   text-underline-offset: 5px;
 }
 
-a[href*="#s"], .absent {
+a[href*="#s"], p.absent {
   pointer-events: none;
 }
 
