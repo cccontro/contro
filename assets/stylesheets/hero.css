@@ -244,10 +244,6 @@ blockquote:before {
   font-size: 1.2em;
 }
 
-#distill img {
-  height: min(23vh, 250px);
-}
-
 #distill .grid.cards {
   grid-template-columns: 50em auto;
   column-gap: 0;
@@ -257,9 +253,26 @@ blockquote:before {
   padding-right: 0;
 }
 
+.md-content {
+  contain: paint
+}
+
+#distill li:last-child {
+  position: relative;
+  height: 23vh;
+}
+
 #distill li:last-child p {
-  text-align: center;
-  margin: auto;
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 230vh;
+  z-index: 2;;
+}
+
+#distill img {
+  width: max(6.3em, 130px);
 }
 
 #distill [hidden] li:first-child {

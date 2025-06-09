@@ -7,8 +7,10 @@ function setHeroHeight() {
 // Subscribe on load and on resize events
 document$.subscribe(() => {
   requestAnimationFrame(() => {
-  setHeroHeight();
-  const hero = document.getElementById('hero-container');
-  hero.classList.add('ready');
+    setHeroHeight();
+    const hero = document.getElementById('hero-container');
+    if (hero) {
+        hero.classList.add('ready');
+    }
   })
 });
