@@ -71,11 +71,10 @@ footer {
 
 .md-container {
   position: relative;
-  font-size: .8rem;
 }
 
 #hero-container {
-  contain: content;
+  contain: paint;
   width: 100%;
   height: calc((var(--vh, 1vh) * 100) - var(--header-height));
   position: relative;
@@ -179,6 +178,11 @@ section > p {
 }
 
 /* Quotes section */
+h1#cits {
+  visibility: hidden;
+  position: absolute;
+}
+
 [dir="ltr"] .md-typeset blockquote {
   position: relative;
   font-size: x-large;
@@ -254,7 +258,7 @@ blockquote:before {
 }
 
 .md-content {
-  contain: paint
+  contain: paint;
 }
 
 #distill li:last-child {
@@ -268,7 +272,8 @@ blockquote:before {
   left: 50%;
   transform: translateX(-50%);
   height: 230vh;
-  z-index: 2;;
+  z-index: 2;
+  contain: paint;
 }
 
 #distill img {

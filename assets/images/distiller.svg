@@ -45,9 +45,8 @@
       }
 
       @keyframes dropFall {
-        58%  { transform: translateY(950px); opacity: 1; }
-        59%  { transform: translateY(1000px); opacity: 0; }
-        60%  { transform: translateY(50px); opacity: 0; }
+        68%  { transform: translateY(950px); opacity: 1; }
+        69%  { transform: translateY(1000px); opacity: 0; }
         70%  { transform: translateY(-10px); opacity: 0; }
         100% { transform: translateY(-2px); opacity: 1; }
       }
