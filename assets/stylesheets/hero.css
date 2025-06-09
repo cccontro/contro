@@ -81,6 +81,12 @@ footer {
   position: relative;
   top: 0;
   left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#hero-container.ready {
+  opacity: 1;
 }
 
 #hero-bg {
@@ -95,12 +101,6 @@ footer {
   padding: 1em 0;
   transform: translateX(-50%);
   z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-#hero-bg.ready {
-  opacity: 1;
 }
 
 #hero-bg img {

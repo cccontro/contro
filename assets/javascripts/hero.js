@@ -8,8 +8,8 @@ function setHeroHeight() {
 document$.subscribe(() => {
   setHeroHeight();
 
-  const heroBg = document.getElementById('hero-bg');
+  const hero = document.getElementById('hero-container');
   requestAnimationFrame(() => {
-  heroBg.classList.add('ready');
+  hero.classList.add('ready');
   })
 });
