@@ -1,4 +1,4 @@
-// Function to set the CSS variable
+// Function to set the vh variable
 function setHeroHeight() {
   const vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);

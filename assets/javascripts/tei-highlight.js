@@ -1,5 +1,6 @@
 // On page load
 document$.subscribe(function () {
+    console.log(document.title);
     // Highlight selected analysis spans
     document.querySelectorAll("[id^='s'], [ana^='#s'], p:has([href*='#s'])").forEach(element => {
         element.addEventListener("click", function () {
