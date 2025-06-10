@@ -106,9 +106,6 @@ footer {
   height: 100%;
   max-height: max(calc(var(--vh, 1vh) * 73), 47.7vw);
   margin: auto 0;
-  user-select: none;
-  pointer-events: none;
-  touch-action: none;
 }
 
 /* Grid animation */
@@ -251,6 +248,10 @@ blockquote:before {
   font-size: 1.2em;
 }
 
+#distill img {
+  height: min(23vh, 250px);
+}
+
 #distill .grid.cards {
   grid-template-columns: 50em auto;
   column-gap: 0;
@@ -260,29 +261,9 @@ blockquote:before {
   padding-right: 0;
 }
 
-.md-content {
-  contain: paint;
-}
-
-#distill li:last-child {
-  position: relative;
-  height: 23vh;
-}
-
 #distill li:last-child p {
-  position: absolute;
-  top: 13%;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 230vh;
-  z-index: 2;
-  user-select: none;
-  pointer-events: none;
-  touch-action: none;
-}
-
-#distill img {
-  width: max(6.3em, 130px);
+  text-align: center;
+  margin: auto;
 }
 
 #distill [hidden] li:first-child {
@@ -368,6 +349,17 @@ blockquote:before {
   display: contents;
 }
 
+/* Bottom image */
+article.md-content__inner > p:last-child {
+  contain: paint;
+}
+
+article.md-content__inner > p:last-child img {
+  left: -25px;
+  position: relative;
+  bottom: 0;
+}
+
 
 @media (max-width: 1220px) {
   #hero {
@@ -397,7 +389,7 @@ blockquote:before {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 720px) {
   #distill p {
     font-size: unset;
   }
@@ -410,5 +402,18 @@ blockquote:before {
     scroll-snap-type: none;
     scroll-snap-align: start;
     max-height: unset;
+  }
+
+  article.md-content__inner > p:last-child img {
+    position: relative;
+    left: -70%;
+    width: 170%;
+    max-width: unset;
+  }
+}
+
+@media (min-width: 720px) {
+  article.md-content__inner {
+    margin-bottom: 0;
   }
 }
