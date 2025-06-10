@@ -2,16 +2,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 223">
   <defs>
     <style>
-      @media (prefers-color-scheme: light) {
-        svg {
-          fill: rgba(0, 0, 0, 0.87)
-        }
-      }
-
-      @media (prefers-color-scheme: dark) {
-        svg {
-          fill: rgba(226, 228, 233, 0.82)
-        }
+      svg {
+        fill: rgba(0, 0, 0, 0.87);
       }
     </style>
   </defs>
