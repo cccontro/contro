@@ -108,6 +108,7 @@ footer {
   margin: auto 0;
   user-select: none;
   pointer-events: none;
+  touch-action: none;
 }
 
 /* Grid animation */
@@ -277,6 +278,7 @@ blockquote:before {
   z-index: 2;
   user-select: none;
   pointer-events: none;
+  touch-action: none;
 }
 
 #distill img {
