@@ -107,6 +107,7 @@ footer {
   max-height: max(calc(var(--vh, 1vh) * 73), 47.7vw);
   margin: auto 0;
   user-select: none;
+  pointer-events: none;
 }
 
 /* Grid animation */
@@ -275,6 +276,7 @@ blockquote:before {
   height: 230vh;
   z-index: 2;
   user-select: none;
+  pointer-events: none;
 }
 
 #distill img {
