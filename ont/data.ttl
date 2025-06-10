@@ -112,6 +112,28 @@ contro:CR3 a arg:Argument ;
 
 contro:CR4 a arg:Argument ;
     arg:Author contro:predella ;
+    arg:Conclusion contro:s10 ;
+    arg:Premise contro:r6,
+        contro:s1,
+        contro:s13,
+        contro:s14 ;
+    arg:Topic contro:disputed-words .
+
+contro:CR5 a arg:Argument ;
+    arg:Author contro:predella ;
+    arg:Premise contro:s1 ;
+    arg:Topic contro:disputed-words .
+
+contro:CR6 a arg:Argument ;
+    arg:Author contro:predella ;
+    arg:Conclusion contro:s25 ;
+    arg:Premise contro:r12,
+        contro:s23,
+        contro:s24 ;
+    arg:Topic contro:disputed-words .
+
+contro:CR7 a arg:Argument ;
+    arg:Author contro:predella ;
     arg:Premise contro:s1 ;
     arg:Topic contro:disputed-words .
 
@@ -230,6 +252,12 @@ contro:cv-a2 a owl:NamedIndividual,
 
 :w9 rdfs:label "illustri"@it .
 
+contro:r12 a arg:Statement ;
+    rdfs:label "Since denying authors interpretive authority over language is like denying the Church such authority over Scripture, and the Church has it, authors should have it too."@en ;
+    arg:Antecedent contro:s23,
+        contro:s24 ;
+    arg:Consequent contro:s25 .
+
 contro:r3 a arg:Statement ;
     rdfs:label "Although Petrarch did not use the words, it’s impossible to determine whether he would have used them without reliable or direct knowledge of his intentions, which is unavailable."@en,
         "Although Petrarch didn't use the words, it's impossible to determine whether he would have used them without a reliable authority or direct knowledge of his intentions."@en,
@@ -256,12 +284,19 @@ contro:r4 a arg:Statement ;
         contro:s9 .
 
 contro:r5 a arg:Statement ;
-    rdfs:label "Since denying authors interpretive authority over language is like denying the Church such authority over Scripture, and the Church has it, authors should have it too."@en ;
+    rdfs:label "Greek and Latin masters support the poetic license of using foreign words, as Latinisms are for Italian."@en,
+        "Since denying authors interpretive authority over language is like denying the Church such authority over Scripture, and the Church has it, authors should have it too."@en ;
     arg:Antecedent contro:s10,
         contro:s11,
         contro:s12 ;
     arg:Consequent contro:s12,
         contro:s13 .
+
+contro:r6 a arg:Statement ;
+    rdfs:label "It is licit to use those words as they are Latinisms."@en ;
+    arg:Antecedent contro:s13,
+        contro:s14 ;
+    arg:Consequent contro:s15 .
 
 contro:w1 rdfs:label "cede"@it .
 
@@ -378,13 +413,29 @@ contro:r2 a arg:Statement ;
     arg:Consequent contro:s5 .
 
 contro:s11 a arg:Statement ;
-    rdfs:label "The Church holds the autority to interpret and expand upon sacred Scripture."@en,
+    rdfs:label "Greek and Latin masters of rhetoric legitimize the use of foreign words in poetry."@en,
+        "The Church holds the autority to interpret and expand upon sacred Scripture."@en,
         "The Church holds the autority to interprete and expand upon sacred Scripture."@en,
         "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en ;
+    prov:value "It is said by all the good authors of the Greek and Latin languages"@en,
+        "This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to Petrarch and Boccaccio, just as to claim that sacred Scripture is wholly contained in the Gospels and Saint Paul."@en,
+        "Lo dicono tutti i buoni autori della lingua greca e della latina"@it,
+        "Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel Petrarca e nel Boccaccio si termini tutta la favella volgare, come negli Evangeli ed in san Paolo tutta la sacra Scrittura."@it .
+
+contro:s14 a arg:Statement ;
+    rdfs:label "Those words are Latinisms."@en ;
+    prov:value "Because they are Latin?"@en,
+        "Perché sono latine?"@it .
+
+contro:s23 a arg:Statement ;
+    rdfs:label "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en ;
     prov:value "This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to Petrarch and Boccaccio, just as to claim that sacred Scripture is wholly contained in the Gospels and Saint Paul."@en,
         "Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel Petrarca e nel Boccaccio si termini tutta la favella volgare, come negli Evangeli ed in san Paolo tutta la sacra Scrittura."@it .
 
-contro:s13 a arg:Statement ;
+contro:s24 a arg:Statement ;
+    rdfs:label "The Church holds the autority to interpret and expand upon sacred Scripture."@en .
+
+contro:s25 a arg:Statement ;
     rdfs:label "Contemporary authors have the freedom to interpret and develop the language."@en ;
     prov:value "Nor do I wish to be deprived of the freedom they themselves enjoyed, as did all writers in every language."@en,
         "Non voglio esser privo della libertà c’hanno avuto essi e tutti gli scrittori in tutte le lingue."@it .
@@ -468,16 +519,16 @@ contro:cv-s6 a owl:NamedIndividual,
         arg:Statement ;
     rdfs:label "Those words should not be used."@en .
 
-contro:s10 a arg:Statement ;
-    rdfs:label "Those words can be used."@en,
-        "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en ;
-    prov:value "This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to Petrarch and Boccaccio, just as to claim that sacred Scripture is wholly contained in the Gospels and Saint Paul."@en,
-        "Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel Petrarca e nel Boccaccio si termini tutta la favella volgare, come negli Evangeli ed in san Paolo tutta la sacra Scrittura."@it ;
-    arg:contradicts contro:s5 .
-
 contro:s12 a arg:Statement ;
     rdfs:label "Contemporary authors have the freedom to interpret and develop the language."@en,
+        "Latin words are foreign but intelligible in Italian."@en,
         "The Church holds the autority to interpret and expand upon sacred Scripture."@en ;
+    prov:value "Nor do I wish to be deprived of the freedom they themselves enjoyed, as did all writers in every language."@en,
+        "Non voglio esser privo della libertà c’hanno avuto essi e tutti gli scrittori in tutte le lingue."@it .
+
+contro:s13 a arg:Statement ;
+    rdfs:label "Contemporary authors have the freedom to interpret and develop the language."@en,
+        "Italian authors have license to use Latinisms."@en ;
     prov:value "Nor do I wish to be deprived of the freedom they themselves enjoyed, as did all writers in every language."@en,
         "Non voglio esser privo della libertà c’hanno avuto essi e tutti gli scrittori in tutte le lingue."@it .
 
@@ -526,6 +577,13 @@ contro:s9 a arg:Statement ;
         :w8,
         :w9 ;
     rdfs:comment "Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro."@en .
+
+contro:s10 a arg:Statement ;
+    rdfs:label "Those words can be used."@en,
+        "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en ;
+    prov:value "This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to Petrarch and Boccaccio, just as to claim that sacred Scripture is wholly contained in the Gospels and Saint Paul."@en,
+        "Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel Petrarca e nel Boccaccio si termini tutta la favella volgare, come negli Evangeli ed in san Paolo tutta la sacra Scrittura."@it ;
+    arg:contradicts contro:s5 .
 
 :cv-s1 a owl:NamedIndividual,
         arg:Statement ;

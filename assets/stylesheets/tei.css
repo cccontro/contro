@@ -31,7 +31,8 @@
 
 .md-typeset .syllogism ul li p[label]:before,
 .md-typeset .syllogism ul li p a[label]:before,
-.md-typeset .syllogism ul li p[against]:after {
+.md-typeset .syllogism ul li p[against]:after,
+.md-typeset .syllogism ul li p a[against]:after {
   color: var(--md-default-fg-color--lighter);
   font-style: normal;
   font-variant-caps: all-small-caps;
@@ -47,7 +48,8 @@
   padding: 1px .3rem 0 0;
 }
 
-.md-typeset .syllogism ul li p[against]:after {
+.md-typeset .syllogism ul li p[against]:after,
+.md-typeset .syllogism ul li p a[against]:after {
   content: "✖ " attr(against);
   padding: 1px 0 0 .3rem;
 }
