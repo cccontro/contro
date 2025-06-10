@@ -249,7 +249,8 @@ blockquote:before {
 }
 
 #distill img {
-  height: min(23vh, 250px);
+  max-width: 6.3em;
+  margin: 0 auto;
 }
 
 #distill .grid.cards {
@@ -262,8 +263,8 @@ blockquote:before {
 }
 
 #distill li:last-child p {
-  text-align: center;
-  margin: auto;
+  display: flex;
+  width: 100%;
 }
 
 #distill [hidden] li:first-child {
@@ -386,6 +387,7 @@ article.md-content__inner > p:last-child img {
   .md-typeset .grid.cards.no-border {
     row-gap: 1em;
     grid-template-columns: 1fr !important;
+    margin-bottom: 0;
   }
 }
 
@@ -416,4 +418,9 @@ article.md-content__inner > p:last-child img {
   article.md-content__inner {
     margin-bottom: 0;
   }
+
+#distill .grid.cards {
+  row-gap: 2em;
+}
+
 }
