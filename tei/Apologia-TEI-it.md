@@ -1,4 +1,6 @@
-<h1>Apologia degli Academici di Banchi di Roma <br/><small>contra messer Lodovico Castelvetro</small></h1>
+## Apologia degli Academici di Banchi di Roma {: #Apologia data-toc-label="Apologia" }
+<p class="subtitle">Contra messer Lodovico Castelvetro</p>
+
 [caro]: http://viaf.org/viaf/51714622 "Annibal Caro"
 [predella]: http://viaf.org/viaf/51714622 "Predella (Annibal Caro).<br/>Fictional author: the text is presented as if written by the janitor of Accademia di Banchi di Roma."
 [castelvetro]: http://viaf.org/viaf/22166452 "Lodovico Castelvetro"
@@ -6,12 +8,14 @@
 [petrarca]: http://viaf.org/viaf/39382430 "Francesco Petrarca"
 [boccaccio]: http://viaf.org/viaf/64002165 "Giovanni Boccaccio"
 [poliziano]: http://viaf.org/viaf/9867884 "Angelo Poliziano"
+[bembo]: http://viaf.org/viaf/54144140 "Pietro Bembo"
 [st-paul]: http://viaf.org/viaf/100178828 "Saint Paul, the Apostle"
 
-### Canzone del Caro <br/><small>in lode della Casa di Francia</small>   {: data-toc-label="Canzone del Caro" }
+### Canzone del Caro
+<p class="subtitle">In lode della Casa di Francia</p>   
 [Annibal Caro][caro]
 
-
+<details markdown="block"><summary></summary>
 I.  
     1.  Venite all’ombra de’ gran gigli d’oro,
     2.  care muse, devote a’ miei giacinti:
@@ -141,14 +145,15 @@ VIII.
     7.  son di voi stessi, e saran poi di stelle.
 
 
-
-### Parere del Castelvetro <br/><small>sopra la canzone precedente</small>   {: data-toc-label="Parere del Castelvetro" }
+</details>
+### Parere del Castelvetro
+<p class="subtitle">Sopra la canzone precedente</p>   
 [Lodovico Castelvetro][castelvetro]
 
 
 #### I
 
-<span markdown="1" id="parere-1-it" ana="#cv-s4">Il [Petrarca][petrarca]{: .persName } non userebbe:</span> 
+<span markdown="1" id="parere-1-it" ana="#s3">Il [Petrarca][petrarca]{: .persName } non userebbe:</span> 
 
 <div markdown="1" class="list gloss">
 «[Cede](#w1-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 10" }»
@@ -195,40 +200,43 @@ VIII.
 [Anonymous (Lodovico Castelvetro)][anon]
 
 [...]
-A lui adunque fu scritto da Roma, da colui che voleva intendere il suo parere, di questa canzone: che essa quivi da molti non solamente era stimata bella, ma tale ancora che il [Petrarca][petrarca]{: .persName }, se a’ suoi dì gli fosse stata pòrta cagione simile da farla, non l’avrebbe fatta altrimente. A che riguardando egli, il quale avea parere molto diverso da quello di quei lodatori romani così animosi; rispose che <span markdown="1" ana="#cv-s4">il [Petrarca][petrarca]{: .persName } non avrebbe usata niuna delle cose notate da lui nella canzone del [Caro][caro]{: .persName }</span>. Le quali altri dee provare che il [Petrarca][petrarca]{: .persName } avrebbe usate, se vuol provare l’ignoranza a dosso all’opponente. Ma perché ce ne sono alcune scritte strettamente, non facendo di bisogno a scriverle d’altra forma al domandante, intendente ogni stretto parlare, e può per aventura la loro strettezza far parere ad alcuno puerile e vano quello che in effetto non è, sarà bene ch’io, il quale sono consapevole della ’ntenzione dell’opponente, rallarghi queste cotali, e con altre parole le dechiari.
+A lui adunque fu scritto da Roma, da colui che voleva intendere il suo parere, di questa canzone: che essa quivi da molti non solamente era stimata bella, ma tale ancora che il [Petrarca][petrarca]{: .persName }, se a’ suoi dì gli fosse stata pòrta cagione simile da farla, non l’avrebbe fatta altrimente. A che riguardando egli, il quale avea parere molto diverso da quello di quei lodatori romani così animosi; rispose che <span markdown="1" ana="#s3">il [Petrarca][petrarca]{: .persName } non avrebbe usata niuna delle cose notate da lui nella canzone del [Caro][caro]{: .persName }</span>. Le quali altri dee provare che il [Petrarca][petrarca]{: .persName } avrebbe usate, se vuol provare l’ignoranza a dosso all’opponente. Ma perché ce ne sono alcune scritte strettamente, non facendo di bisogno a scriverle d’altra forma al domandante, intendente ogni stretto parlare, e può per aventura la loro strettezza far parere ad alcuno puerile e vano quello che in effetto non è, sarà bene ch’io, il quale sono consapevole della ’ntenzione dell’opponente, rallarghi queste cotali, e con altre parole le dechiari.
 
-Primieramente adunque volle dire l’opponente che il [Petrarca][petrarca]{: .persName } non userebbe «[cede](#w1-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 10" }», «[inviolata](#w6-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 6" }», «[propizia](#w8-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 6" }», «[gesti](#w10-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 1" }», «[inserte](#w11-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 6" }», «[amene](#w12-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 3" }», «[simulacri](#w3-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 15" }», «[illustri](#w9-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 4" }», fuor di rima: non perché egli avesse queste parole per non mai udite; <span markdown="1" ana="#cv-s2">conciofossecosaché al suo tempo fossero state usate forse tutte, ma senza dubbio la maggior parte, dagli scrittori</span>; ma per altra cagione, sia qual si voglia, <span markdown="1" ana="#cv-s1">che lo mosse a lasciarle da parte</span>. Né parimente «[ambo](#w2-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> I, 3" }», parlandosi di due femine, senza compagnia di sostantivo, manifesta e non sotto ’ntesa. Né «[ancor essa](#w4-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }», veggendo noi che l’uso nobile della lingua non riceve «esso» e «essa» con compagnia di sostantivo manifesto, se non davanti; come, per cagione d’essempio: «Il Petrarca fa delle rime care, ed esso Caro ne fa ancora». Ma non si può dir così: «Il Petrarca fa delle rime care, ed il Caro esso ne fa ancora». E per consequente ancora, non si può dire: «Il Petrarca fa delle rime care, ed il Caro ancora esso ne fa». Né «[madre ancor essa](#w4-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }».
+Primieramente adunque volle dire l’opponente che il [Petrarca][petrarca]{: .persName } non userebbe «[cede](#w1-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 10" }», «[inviolata](#w6-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 6" }», «[propizia](#w8-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 6" }», «[gesti](#w10-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 1" }», «[inserte](#w11-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 6" }», «[amene](#w12-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 3" }», «[simulacri](#w3-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 15" }», «[illustri](#w9-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 4" }», fuor di rima: non perché egli avesse queste parole per non mai udite; <span markdown="1" ana="#s2">conciofossecosaché al suo tempo fossero state usate forse tutte, ma senza dubbio la maggior parte, dagli scrittori</span>; ma per altra cagione, sia qual si voglia, <span markdown="1" ana="#s1">che lo mosse a lasciarle da parte</span>. Né parimente «[ambo](#w2-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> I, 3" }», parlandosi di due femine, senza compagnia di sostantivo, manifesta e non sotto ’ntesa. Né «[ancor essa](#w4-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }», veggendo noi che l’uso nobile della lingua non riceve «esso» e «essa» con compagnia di sostantivo manifesto, se non davanti; come, per cagione d’essempio: «Il Petrarca fa delle rime care, ed esso Caro ne fa ancora». Ma non si può dir così: «Il Petrarca fa delle rime care, ed il Caro esso ne fa ancora». E per consequente ancora, non si può dire: «Il Petrarca fa delle rime care, ed il Caro ancora esso ne fa». Né «[madre ancor essa](#w4-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }».
 
 Né userebbe «[suo merto e tuo valore](#w5-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 5" }», senza «per»: non trovandosi la perdita di «per», se non davanti a tre nomi, per quanto io mi ricordo aver letto; i quali sono: «tempo», «grazia», «mercé» o «mercede», così: «E di notte tempo, con iscale ed altri ingegni, entrò nella città di Cortona». [...] Né userebbe «[tarpato](#w7-it){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 15" }», essendo voce plebea, né mai forse ricevuta da altre scritture che da quelle d’[Angelo Poliziano][poliziano]{: .persName }.
 [...]
 
 <div markdown="1" class="note paraphrase">
 
-<div markdown="1" class="list syllogism" id="cv-a1" ana="#disputed-words">
+<div markdown="1" class="list syllogism" id="CV1" ana="#disputed-words">
 
 *  Petrarch never used certain words.
-{: #cv-s1 ana="#premise" }
+{: #s1 label="s1" ana="#premise" }
 
 *  Other authors of his time used those words.
-{: #cv-s2 ana="#premise" }
+{: #s2 label="s2" ana="#premise" }
 
 *  The fact that Petrarch left out words used in the literature of his time is a sign that he did not use them deliberately.
-{: #cv-s3 ana="#premise" }
+{: #r1 label="r1" ana="#rule" }
 
 *  Petrarch wouldn’t have used those words.
-{: #cv-s4 ana="#conclusion" }
+{: #s3 label="s3" ana="#conclusion" }
 </div>
  
-<div markdown="1" class="list syllogism" id="cv-a2" ana="#disputed-words">
+<div markdown="1" class="list syllogism" id="CV2" ana="#disputed-words">
 
-*  [Petrarch wouldn’t have used those words.](#cv-s4){: .ref }
+*  [Petrarch wouldn’t have used those words.](#s3){: .ref label="s3" }
 {: ana="#premise" }
 
-*  In the context of Petrarchist poetry, authors should not use words that Petrarch himself chose not to use.
-{: #cv-s5 ana="#premise" }
+*  Petrarch is an authority in Italian literature.
+{: #s4 label="s4" ana="#premise" }
+
+*  Italian authors should avoid words that an authority like Petrarch chose not to use.
+{: #r2 label="r2" ana="#rule" }
 
 *  Those words should not be used.
-{: #cv-s6 ana="#conclusion" }
+{: #s5 label="s5" ana="#conclusion" }
 </div>
 </div>
 
@@ -237,49 +245,172 @@ Né userebbe «[suo merto e tuo valore](#w5-it){: .q title="<em>Venite all’omb
 [Predella (Annibal Caro)][predella]
 
 
-[...] Ma, per rispondervi capo per capo, secondo il vostro ordine, vegniamo a quel che dite nella vostra censura: <span markdown="1" ana="#cv-s4">che il [Petrarca][petrarca]{: .persName } non userebbe «cede» ed altre voci che seguono</span>. [...] <span markdown="1" ana="#cv-s1">Se voi diceste che ’l [Petrarca][petrarca]{: .persName } non l’avesse usate, vi si potrebbe credere, perché siete molto pratico nel vocabolario</span>. <span markdown="1" ana="#cr-s1">Ma, dicendo affermativamente «[non l’userebbe](#parere-1-it){: .q title="<em>Parere del Castelvetro</em> I, p. 96" }», bisogna intender se l’avete di buon loco, e quel che voi ne sapete; se per aventura spacciando, come fate, il nome e ’l senno del [Petrarca][petrarca]{: .persName }, vi fosse entrato il suo spirito in corpo</span>: ché in questo caso, o quando l’aveste per revelazione, o per qualche altra demostrazione, purché non fosse del vostro cervello, mi contento che sia quel che dite; e il [Caro][caro]{: .persName } terrà di averle male usate, avendo il [Petrarca][petrarca]{: .persName } per principe de’ poeti in questa lingua e per degno di riverenza e d’ammirazione a tutte l’altre. Ma, quando lo diciate e ve l’imaginiate da voi, al vostro detto non sono obligato di credere, e la vostra imaginazione non fa caso. — Neanco a te — direte voi — s’ha da credere. — Sta bene: siamo in questo d’accordo. Resta che ci accordiamo a rimettercene (come è necessario) a terzi che ne sappiano più di voi e di me: e per venire a questo, <span markdown="1" ana="#cr-s2">non vi contentarete voi del giudizio, dell’autorità e dell’essempio di quelli che sono i maestri dell’arte dello scrivere, dai quali hanno imparato il [Petrarca][petrarca]{: .persName } e tutti gli altri buoni scrittori</span>, e che devrebbono aver insegnato ancora a voi di giudicare, se gli aveste letti, o ben letti, o sanamente interpretati? [...]
+[...] Ma, per rispondervi capo per capo, secondo il vostro ordine, vegniamo a quel che dite nella vostra censura: <span markdown="1" ana="#s3">che il [Petrarca][petrarca]{: .persName } non userebbe «cede» ed altre voci che seguono</span>. [...] <span markdown="1" ana="#s1">Se voi diceste che ’l [Petrarca][petrarca]{: .persName } non l’avesse usate, vi si potrebbe credere, perché siete molto pratico nel vocabolario</span>. <span markdown="1" ana="#s6 #s7">Ma, dicendo affermativamente «[non l’userebbe](#parere-1-it){: .q title="<em>Parere del Castelvetro</em> I, p. 96" }», bisogna intender se l’avete di buon loco, e quel che voi ne sapete; se per aventura spacciando, come fate, il nome e ’l senno del [Petrarca][petrarca]{: .persName }, vi fosse entrato il suo spirito in corpo</span>: ché in questo caso, o quando l’aveste per revelazione, o per qualche altra demostrazione, purché non fosse del vostro cervello, mi contento che sia quel che dite; e il [Caro][caro]{: .persName } terrà di averle male usate, <span markdown="1" ana="#s4">avendo il [Petrarca][petrarca]{: .persName } per principe de’ poeti in questa lingua e per degno di riverenza e d’ammirazione a tutte l’altre.</span> <span markdown="1" ana="#s8">Ma, quando lo diciate e ve l’imaginiate da voi, al vostro detto non sono obligato di credere, e la vostra imaginazione non fa caso.</span> — Neanco a te — direte voi — s’ha da credere. — Sta bene: siamo in questo d’accordo. Resta che ci accordiamo a rimettercene (come è necessario) a terzi che ne sappiano più di voi e di me: e per venire a questo, <span markdown="1" ana="#s2 #s9">non vi contentarete voi del giudizio, dell’autorità e dell’essempio di quelli che sono i maestri dell’arte dello scrivere</span>, dai quali hanno imparato il [Petrarca][petrarca]{: .persName } e tutti gli altri buoni scrittori, e che devrebbono aver insegnato ancora a voi di giudicare, se gli aveste letti, o ben letti, o sanamente interpretati? [...]
 
 
 <div markdown="1" class="note paraphrase">
 
-<div markdown="1" class="list syllogism" id="cr-a1" ana="#disputed-words">
+<div markdown="1" class="list syllogism" id="CR1" ana="#disputed-words">
 
-*  [Petrarch never used certain words.](#cv-s1){: .ref }
+*  [Petrarch never used certain words.](#s1){: .ref label="s1" }
 {: ana="#premise" }
 
-*  It is not possible to know whether Petrarch would have used those words merely because he did not happen to use them.
-{: #cr-s1 ana="#premise" }
+*  There is no direct knowledge of Petrarch’s intention.
+{: #s6 label="s6" ana="#premise" }
+
+*  Castelvetro is not a reliable interpreter of Petrarch's mind.
+{: #s7 label="s7" ana="#premise" }
+
+*  Although Petrarch did not use the words, it’s impossible to determine whether he would have used them without reliable or direct knowledge of his intentions, which is unavailable.
+{: #r3 label="r3" ana="#rule" }
+
+*  It is not possible to know whether Petrarch would have used those words.
+{: #s8 label="s8" ana="#conclusion" against="r1" }
 </div>
  
-<div markdown="1" class="list syllogism" id="cr-a2" ana="#disputed-words">
+<div markdown="1" class="list syllogism" id="CR2" ana="#disputed-words">
 
-*  [Petrarch never used certain words.](#cv-s1){: .ref }
+*  [Petrarch never used certain words.](#s1){: .ref label="s1" }
 {: ana="#premise" }
 
-*  [Other authors of his time used those words.](#cv-s2){: .ref }
+*  [Other authors of his time used those words.](#s2){: .ref label="s2" }
 {: ana="#premise" }
+
+*  [Petrarch is an authority in Italian literature.](#s4){: .ref label="s4" }
+{: ana="#premise" }
+
+*  Other authors have authority as well.
+{: #s9 label="s9" ana="#premise" }
 
 *  Although Petrarch did not use those words, the authority of other influential authors in Italian literature legitimizes their use.
-{: #cr-s2 ana="#premise" }
+{: #r4 label="r4" ana="#rule" }
 
 *  Those words can be used.
-{: #cr-s3 ana="#conclusion" }
+{: #s10 label="s10" ana="#conclusion" against="s5" }
 </div>
 </div>
 
 
-[...] Ma come è possibile che voi vogliate che un autore, per molto che scriva, possa mettere in opera tutti i vocaboli dell’età sua, che non ne lasci indietro ancora molti di quelli che sono ottimi? Che gli scrittori dopo loro siano privi e di quelli che essi hanno lasciati, e di quelli che non erano ancora a tempo loro? Oltre a ciò, che il [Petrarca][petrarca]{: .persName } abbia tolto agli altri quel c’ha fatto esso medesimo? che una lingua sia tutta in uno autor solo? che un solo la giudichi? un solo la finisca? <span markdown="1" ana="#cr-s4">Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel [Petrarca][petrarca]{: .persName } e nel [Boccaccio][boccaccio]{: .persName } si termini tutta la favella volgare, come negli Evangeli ed in [san Paolo][st-paul]{: .persName } tutta la sacra Scrittura.</span> [...] Voglio che la perfezion del dire (ancora che non si dia interamente in atto) sia in fino a ora in questa lingua, spezialmente nel [Petrarca][petrarca]{: .persName } e nel [Boccaccio][boccaccio]{: .persName }: ma non voglio per questo distrugger la natura d’essa lingua, che non possa, come l’altre, crescere e scemare; non voglio togliere in tutto i giudizi degli altri, che son venuti e che verranno dopo loro. Non voglio esser privo della libertà c’hanno avuto essi e tutti gli scrittori in tutte le lingue. [...]
+[...] Ma bisogna prima saper la cagione perché il [Petrarca][petrarca]{: .persName } non l’userebbe, secondo voi. <span markdown="1" ana="#s15">Perché sono latine?</span> Non è dunque lecito agli scrittori d’una lingua di valersi delle voci d’un’altra? O non sapete che non solamente <span markdown="1" ana="#s12 #s14">è lor concesso d’usar quelle che son forestiere e pratiche del paese, come son queste;</span> ma d’ammettere anco di quelle che non si sono mai più scritte? e le nuove e le nuovamente finte e le greche e le barbare, e le storte dalla prima forma e dal propio significato talvolta? e non solamente le parole, ma le figure del dire, trasportandole dall’una lingua all’altra, contra le regole e contra l’uso commune? E chi lo dice? Il [Castelvetro][castelvetro]{: .persName } forse? <span markdown="1" ana="#s11">Lo dicono tutti i buoni autori della lingua greca e della latina</span>, ed alcuni de’ nostri che scrivono dell’arte, e l’hanno messo in pratica tutti quelli che artifiziosamente hanno fino a qui scritto. [...]
 
 
 <div markdown="1" class="note paraphrase">
 
-<div markdown="1" class="list syllogism" id="cr-a3" ana="#disputed-words">
+<div markdown="1" class="list syllogism" id="CR3" ana="#disputed-words">
 
-*  [Petrarch never used certain words.](#cv-s1){: .ref }
+*  Greek and Latin masters of rhetoric endorse the literary use of foreign words.
+{: #s11 label="s11" ana="#premise" }
+
+*  Latin words are foreign, yet intelligible, in Italian.
+{: #s12 label="s12" ana="#premise" }
+
+*  Italian is a literary language whose norms can be guided by classical precedent.
+{: #s13 label="s13" ana="#premise" }
+
+*  If authoritative literary figures legitimize a rhetorical practice, and that practice is relevantly similar in a new context, then that practice is also legitimate in the new context.
+{: #r5 label="r5" ana="#rule" }
+
+*  Italian authors are justified in using Latinisms.
+{: #s14 label="s14" ana="#conclusion" }
+</div>
+ 
+<div markdown="1" class="list syllogism" id="CR4" ana="#disputed-words">
+
+*  [Italian authors are justified in using Latinisms.](#s14){: .ref label="s14" }
 {: ana="#premise" }
 
+*  Those words are Latinisms.
+{: #s15 label="s15" ana="#premise" }
+
+*  If Italian authors are justified in using Latinisms, as those words are, then Italian authors are justified in using those words.
+{: #r6 label="r6" ana="#rule" }
+
+*  [Those words can be used.](#s10){: .ref against="s5" label="s10" }
+{: ana="#conclusion" }
+</div>
+</div>
+
+
+[...] <span markdown="1" ana="#s16">Non sarebbe pazzo uno che, volendo imparare di caminare da un altro, gli andasse sempre dietro, mettendo i piedi appunto donde colui gli lieva?</span> <span markdown="1" ana="#s17">La medesima pazzia è quella che dite voi, a voler che si facciano i medesimi passi, e non il medesimo andare del [Petrarca][petrarca]{: .persName }.</span> <span markdown="1" ana="#s18">Imitar lui vuol dire che si deve portar la persona e le gambe come egli fece; e non porre ’l piedi nelle sue stesse pedate. Egli si valse giudiziosamente, in tutte le lingue, di tutte le buone voci: col medesimo giudizio è lecito di valersene ancora ad ognuno.</span> Quel che si deve avertire è che non si faccia senza debita considerazione. E in questo ha spezialmente la nostra favella perpetuo obligo col [Bembo][bembo]{: .persName }, perché n’insegnò la via di così fare, e raffrenò l’audacia di coloro che troppo licenziosamente in ciò trascorrevano. [...]
+
+
+<div markdown="1" class="note paraphrase">
+
+<div markdown="1" class="list syllogism" id="CR5" ana="#disputed-words">
+
+*  Learning involves emulating principles, not mimicking results.
+{: #s16 label="s16" ana="#premise" }
+
+*  Literary imitation is a kind of learning.
+{: #s17 label="s17" ana="#premise" }
+
+*  If learning in a domain requires emulating the method rather than the outcome, then learning in an analogous domain also requires the same.
+{: #r7 label="r7" ana="#rule" }
+
+*  Literary imitation should emulate the author's judgment, not reproduce their words.
+{: #s18 label="s18" ana="#conclusion" against="r2" }
+</div>
+</div>
+
+
+[...] Ma pogniamo ancora che ’I [Petrarca][petrarca]{: .persName } non si volesse valere di queste voci perché non gli piacessero. [...] Ma come è possibile che voi vogliate che un autore, per molto che scriva, possa mettere in opera tutti i vocaboli dell’età sua, che non ne lasci indietro ancora molti di quelli che sono ottimi? Che gli scrittori dopo loro siano privi e di quelli che essi hanno lasciati, e di quelli che non erano ancora a tempo loro? <span markdown="1" ana="#s22">Oltre a ciò, che il [Petrarca][petrarca]{: .persName } abbia tolto agli altri quel c’ha fatto esso medesimo?</span> che una lingua sia tutta in uno autor solo? che un solo la giudichi? un solo la finisca? <span markdown="1" ana="#s19">Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel [Petrarca][petrarca]{: .persName } e nel [Boccaccio][boccaccio]{: .persName } si termini tutta la favella volgare, come negli Evangeli ed in [san Paolo][st-paul]{: .persName } tutta la sacra Scrittura.</span> [...]
+
+
+<div markdown="1" class="note paraphrase">
+
+<div markdown="1" class="list syllogism" id="CR6" ana="#disputed-words">
+
 *  To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture.
-{: #cr-s4 ana="#premise" }
+{: #s19 label="s19" ana="#premise" }
+
+*  The Church holds the autority to interpret and expand upon sacred Scripture.
+{: #s20 label="s20" ana="#premise" }
+
+*  Since denying authors interpretive authority over language is like denying the Church such authority over Scripture, and the Church has it, authors should have it too.
+{: #r8 label="r8" ana="#rule" }
+
+*  Contemporary authors have the freedom to interpret and develop the language.
+{: #s21 label="s21" ana="#conclusion" }
+</div>
+</div>
+
+
+[...] <span markdown="1" ana="#s4">Voglio che la perfezion del dire (ancora che non si dia interamente in atto) sia in fino a ora in questa lingua, spezialmente nel [Petrarca][petrarca]{: .persName } e nel [Boccaccio][boccaccio]{: .persName }</span>: ma non voglio per questo distrugger la natura d’essa lingua, che non possa, come l’altre, crescere e scemare; non voglio togliere in tutto i giudizi degli altri, che son venuti e che verranno dopo loro. <span markdown="1" ana="#s21">Non voglio esser privo della libertà c’hanno avuto essi e tutti gli scrittori in tutte le lingue.</span> [...] <span markdown="1" ana="#s23">perché qui sta l’errore che avete preso, di credere che in questa lingua si debba fare come nella greca e nella latina; le quali essendo morte quanto all’uso del parlar commune, è necessario che si scrivano cavando dagli scritti de’ pochi ed imitando i migliori, non potendosi da noi conoscere la forza né la bellezza lor naturale.</span> <span markdown="1" ana="#s24">Ma in questa, che naturalmente o communemente si parla e s’intende da tutti e che viva e nuda interamente e in ogni sua parte ci si mostra,</span> <span markdown="1" ana="#s25">che giudizio è il vostro a pensare che necessariamente si debba cavar dagli scritti di un solo, e non anco da molti che la parlano e la scrivono;</span> essendo per assoluto precetto avertiti: <span title="Quintilian, Institutio Oratoria X,2,25">«Quod is qui maxime, non etiam unus imitandus est?»</span> [...]
+
+
+<div markdown="1" class="note paraphrase">
+
+<div markdown="1" class="list syllogism" id="CR7" ana="#disputed-words">
+
+*  [Petrarch is an authority in Italian literature.](#s4){: .ref label="s4" }
+{: ana="#premise" }
+
+*  [Literary imitation should emulate the author's judgment, not reproduce their words.](#s18){: .ref against="r2" label="s18" }
+{: ana="#premise" }
+
+*  Petrarch exercised authorial freedom in shaping the language.
+{: #s22 label="s22" ana="#premise" }
+
+*  If an exemplar author exercised authorial freedom, then others may follow that example by exercising similar freedom.
+{: #r9 label="r9" ana="#rule" }
+
+*  [Contemporary authors have the freedom to interpret and develop the language.](#s21){: .ref label="s21" }
+{: ana="#conclusion" }
+</div>
+ 
+<div markdown="1" class="list syllogism" id="CR8" ana="#disputed-words">
+
+*  In dead languages like Latin and Greek, one must imitate the best authors.
+{: #s23 label="s23" ana="#premise" }
+
+*  Italian is a living language.
+{: #s24 label="s24" ana="#premise" }
+
+*  Unlike dead languages, a living language must draw from the variety of its speakers and cannot be normed by a single authority.
+{: #r10 label="r10" ana="#rule" }
+
+*  Italian should not be limited to the authority of a single author, such as Petrarch.
+{: #s25 label="s25" ana="#conclusion" }
 </div>
 </div>
 

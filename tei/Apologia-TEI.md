@@ -1,4 +1,6 @@
-<h1>Apology of the Academics of Banchi di Roma <br/><small>Against Messer Lodovico Castelvetro</small></h1>
+## Apology of the Academics of Banchi di Roma {: #Apology data-toc-label="Apology" }
+<p class="subtitle">Against Messer Lodovico Castelvetro</p>
+
 [caro]: http://viaf.org/viaf/51714622 "Annibal Caro"
 [predella]: http://viaf.org/viaf/51714622 "Predella (Annibal Caro).<br/>Fictional author: the text is presented as if written by the janitor of Accademia di Banchi di Roma."
 [castelvetro]: http://viaf.org/viaf/22166452 "Lodovico Castelvetro"
@@ -6,12 +8,14 @@
 [petrarca]: http://viaf.org/viaf/39382430 "Francesco Petrarca"
 [boccaccio]: http://viaf.org/viaf/64002165 "Giovanni Boccaccio"
 [poliziano]: http://viaf.org/viaf/9867884 "Angelo Poliziano"
+[bembo]: http://viaf.org/viaf/54144140 "Pietro Bembo"
 [st-paul]: http://viaf.org/viaf/100178828 "Saint Paul, the Apostle"
 
-### Caro’s Canzone <br/><small>in Praise of the House of France</small>   {: data-toc-label="Caro’s Canzone" }
+### Caro’s Canzone
+<p class="subtitle">In Praise of the House of France</p>   
 [Annibal Caro][caro]
 
-
+<details markdown="block"><summary></summary>
 I.  
     1.  Venite all’ombra de’ gran gigli d’oro,
     2.  care muse, devote a’ miei giacinti:
@@ -141,14 +145,15 @@ VIII.
     7.  son di voi stessi, e saran poi di stelle.
 
 
-
-### Castelvetro’s Opinion <br/><small>On the Previous Canzone</small>   {: data-toc-label="Castelvetro’s Opinion" }
+</details>
+### Castelvetro’s Opinion
+<p class="subtitle">On the Previous Canzone</p>   
 [Lodovico Castelvetro][castelvetro]
 
 
 #### I
 
-<span markdown="1" id="parere-1-en" ana="#cv-s4">[Petrarch][petrarca]{: .persName } would not use:</span> 
+<span markdown="1" id="parere-1-en" ana="#s3">[Petrarch][petrarca]{: .persName } would not use:</span> 
 
 <div markdown="1" class="list gloss">
 «[Cede](#w1-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 10" }»
@@ -195,40 +200,43 @@ VIII.
 [Anonymous (Lodovico Castelvetro)][anon]
 
 [...]
-Someone wrote to him from Rome to know his opinion about this canzone, for there it was esteemed by many not only as beautiful but also as such that, had [Petrarch][petrarca]{: .persName } been presented with a similar occasion in his time, he would not have written it differently. However, he, holding a very different opinion from those fervent Roman admirers, replied that <span markdown="1" ana="#cv-s4">[Petrarch][petrarca]{: .persName } would not have used any of the elements he noted in [Caro][caro]{: .persName }’s canzone</span>. It is up to others to prove that [Petrarch][petrarca]{: .persName } would have used them, if they wish to charge the opponent with ignorance. But since some of these elements are concisely expressed—having no need to be written differently for the questioner, who understands such brevity—and since their conciseness may, by chance, lead some to regard as puerile and vain what in fact is not, it is appropriate that I, who am aware of the opponent’s intention, expand upon them and clarify them in other words.
+Someone wrote to him from Rome to know his opinion about this canzone, for there it was esteemed by many not only as beautiful but also as such that, had [Petrarch][petrarca]{: .persName } been presented with a similar occasion in his time, he would not have written it differently. However, he, holding a very different opinion from those fervent Roman admirers, replied that <span markdown="1" ana="#s3">[Petrarch][petrarca]{: .persName } would not have used any of the elements he noted in [Caro][caro]{: .persName }’s canzone</span>. It is up to others to prove that [Petrarch][petrarca]{: .persName } would have used them, if they wish to charge the opponent with ignorance. But since some of these elements are concisely expressed—having no need to be written differently for the questioner, who understands such brevity—and since their conciseness may, by chance, lead some to regard as puerile and vain what in fact is not, it is appropriate that I, who am aware of the opponent’s intention, expand upon them and clarify them in other words.
 
-First of all, then, the opponent wished to argue that [Petrarch][petrarca]{: .persName } would not use the words «[cede](#w1-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 10" }», «[inviolata](#w6-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 6" }», «[propizia](#w8-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 6" }», «[gesti](#w10-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 1" }», «[inserte](#w11-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 6" }», «[amene](#w12-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 3" }», «[simulacri](#w3-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 15" }», or «[illustri](#w9-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 4" }» outside of rhyme—not because these words were unheard of, <span markdown="1" ana="#cv-s2">since they had perhaps all, or at least most, been used by writers of his time</span>, but for some other reason, whatever it may have been, <span markdown="1" ana="#cv-s1">that led him to set them aside</span>. Nor, similarly, would he use «[ambo](#w2-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> I, 3" }» when referring to two feminine referents without the explicit—and not implied—accompaniment of a noun. Nor would he use «[ancor essa](#w4-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }», since refined usage of the language does not admit «esso» with an explicit noun unless it precedes it. For instance, as an example: «Il Petrarca fa delle rime care, ed esso Caro ne fa ancora». (Petrarch writes precious verses, and Caro himself does so as well.) But one cannot say: «Il Petrarca fa delle rime care, ed il Caro esso ne fa ancora». (Petrarch writes precious verses, and himself Caro does so as well.) Consequently, one also cannot say: «Il Petrarca fa delle rime care, ed il Caro ne fa ancor esso». Nor could one say «[madre ancor essa](#w4-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }».
+First of all, then, the opponent wished to argue that [Petrarch][petrarca]{: .persName } would not use the words «[cede](#w1-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 10" }», «[inviolata](#w6-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 6" }», «[propizia](#w8-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 6" }», «[gesti](#w10-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 1" }», «[inserte](#w11-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VIII, 6" }», «[amene](#w12-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> II, 3" }», «[simulacri](#w3-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 15" }», or «[illustri](#w9-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 4" }» outside of rhyme—not because these words were unheard of, <span markdown="1" ana="#s2">since they had perhaps all, or at least most, been used by writers of his time</span>, but for some other reason, whatever it may have been, <span markdown="1" ana="#s1">that led him to set them aside</span>. Nor, similarly, would he use «[ambo](#w2-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> I, 3" }» when referring to two feminine referents without the explicit—and not implied—accompaniment of a noun. Nor would he use «[ancor essa](#w4-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }», since refined usage of the language does not admit «esso» with an explicit noun unless it precedes it. For instance, as an example: «Il Petrarca fa delle rime care, ed esso Caro ne fa ancora» (Petrarch writes precious verses, and Caro himself does so as well). But one cannot say: «Il Petrarca fa delle rime care, ed il Caro esso ne fa ancora» (Petrarch writes precious verses, and himself Caro does so as well). Consequently, one also cannot say: «Il Petrarca fa delle rime care, ed il Caro ne fa ancor esso». Nor could one say «[madre ancor essa](#w4-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> III, 2" }».
 
 Nor would he use «[suo merto e tuo valore](#w5-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> V, 5" }» without «per», since, as far as I recall from my readings, the omission of «per» occurs only before three nouns: «tempo», «grazia», and «mercé» or «mercede», as in: «E di notte tempo, con iscale ed altri ingegni, entrò nella città di Cortona». (And by night-time, with ladders and other devices, he entered the city of Cortona.) [...] Nor would he use «[tarpato](#w7-en){: .q title="<em>Venite all’ombra de’ gran gigli d’oro</em> VI, 15" }», as it is a plebeian word, never perhaps accepted in any writings except those of [Angelo Poliziano][poliziano]{: .persName }.
 [...]
 
 <div markdown="1" class="note paraphrase">
 
-<div markdown="1" class="list syllogism" id="cv-a1" ana="#disputed-words">
+<div markdown="1" class="list syllogism" id="CV1" ana="#disputed-words">
 
 *  Petrarch never used certain words.
-{: #cv-s1 ana="#premise" }
+{: #s1 label="s1" ana="#premise" }
 
 *  Other authors of his time used those words.
-{: #cv-s2 ana="#premise" }
+{: #s2 label="s2" ana="#premise" }
 
 *  The fact that Petrarch left out words used in the literature of his time is a sign that he did not use them deliberately.
-{: #cv-s3 ana="#premise" }
+{: #r1 label="r1" ana="#rule" }
 
 *  Petrarch wouldn’t have used those words.
-{: #cv-s4 ana="#conclusion" }
+{: #s3 label="s3" ana="#conclusion" }
 </div>
  
-<div markdown="1" class="list syllogism" id="cv-a2" ana="#disputed-words">
+<div markdown="1" class="list syllogism" id="CV2" ana="#disputed-words">
 
-*  [Petrarch wouldn’t have used those words.](#cv-s4){: .ref }
+*  [Petrarch wouldn’t have used those words.](#s3){: .ref label="s3" }
 {: ana="#premise" }
 
-*  In the context of Petrarchist poetry, authors should not use words that Petrarch himself chose not to use.
-{: #cv-s5 ana="#premise" }
+*  Petrarch is an authority in Italian literature.
+{: #s4 label="s4" ana="#premise" }
+
+*  Italian authors should avoid words that an authority like Petrarch chose not to use.
+{: #r2 label="r2" ana="#rule" }
 
 *  Those words should not be used.
-{: #cv-s6 ana="#conclusion" }
+{: #s5 label="s5" ana="#conclusion" }
 </div>
 </div>
 
@@ -237,49 +245,172 @@ Nor would he use «[suo merto e tuo valore](#w5-en){: .q title="<em>Venite all�
 [Predella (Annibal Caro)][predella]
 
 
-[...] But, to answer you point by point, following your order, let us come to what you say in your censure: <span markdown="1" ana="#cv-s4">that [Petrarch][petrarca]{: .persName } would not use «cede» and the other words that follow</span>. [...] <span markdown="1" ana="#cv-s1">If you were to say that [Petrarch][petrarca]{: .persName } had not used them, one might believe you, for you are well-versed in vocabulary</span>. <span markdown="1" ana="#cr-s1">But in saying outright that «[he would not use them](#parere-1-en){: .q title="<em>Castelvetro’s Opinion</em> I, p. 96" }», one must consider whether you have reliable authority on the matter, and what exactly you know of it; whether, by chance, as you so freely dispense the name and wisdom of [Petrarch][petrarca]{: .persName }, his very spirit has entered your body.</span> For in that case—or if you had it by revelation, or by some other demonstration, provided it did not come from your own mind—I am content to accept what you say; and [Caro][caro]{: .persName } will admit he used them poorly, since he holds [Petrarch][petrarca]{: .persName } as the prince of poets in our language, worthy of reverence and admiration above all others. But if it is merely something you say and imagine on your own, I am under no obligation to believe it, and your imagination carries no weight.— Nor should one believe you either — you will say. Very well: on this, we are in agreement. It remains that we must agree to refer the matter (as is necessary) to third parties more knowledgeable than both you and I. And to this end, <span markdown="1" ana="#cr-s2">would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing—the very ones from whom [Petrarch][petrarca]{: .persName } and all other good writers have learned</span>, and who should also have taught you to judge, had you read them, or read them well, or interpreted them soundly?
+[...] But, to answer you point by point, following your order, let us come to what you say in your censure: <span markdown="1" ana="#s3">that [Petrarch][petrarca]{: .persName } would not use «cede» and the other words that follow</span>. [...] <span markdown="1" ana="#s1">If you were to say that [Petrarch][petrarca]{: .persName } had not used them, one might believe you, for you are well-versed in vocabulary</span>. <span markdown="1" ana="#s6 #s7">But in saying outright that «[he would not use them](#parere-1-en){: .q title="<em>Castelvetro’s Opinion</em> I, p. 96" }», one must consider whether you have reliable authority on the matter, and what exactly you know of it; whether, by chance, as you so freely dispense the name and wisdom of [Petrarch][petrarca]{: .persName }, his very spirit has entered your body.</span> For in that case—or if you had it by revelation, or by some other demonstration, provided it did not come from your own mind—I am content to accept what you say; and [Caro][caro]{: .persName } will admit he used them poorly, <span markdown="1" ana="#s4">since he holds [Petrarch][petrarca]{: .persName } as the prince of poets in our language, worthy of reverence and admiration above all others.</span> <span markdown="1" ana="#s8">But if it is merely something you say and imagine on your own, I am under no obligation to believe it, and your imagination carries no weight.</span>— Nor should one believe you either — you will say. Very well: on this, we are in agreement. It remains that we must agree to refer the matter (as is necessary) to third parties more knowledgeable than both you and I. And to this end, <span markdown="1" ana="#s2 #s9">would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing</span>—the very ones from whom [Petrarch][petrarca]{: .persName } and all other good writers have learned, and who should also have taught you to judge, had you read them, or read them well, or interpreted them soundly?
 
 
 <div markdown="1" class="note paraphrase">
 
-<div markdown="1" class="list syllogism" id="cr-a1" ana="#disputed-words">
+<div markdown="1" class="list syllogism" id="CR1" ana="#disputed-words">
 
-*  [Petrarch never used certain words.](#cv-s1){: .ref }
+*  [Petrarch never used certain words.](#s1){: .ref label="s1" }
 {: ana="#premise" }
 
-*  It is not possible to know whether Petrarch would have used those words merely because he did not happen to use them.
-{: #cr-s1 ana="#premise" }
+*  There is no direct knowledge of Petrarch’s intention.
+{: #s6 label="s6" ana="#premise" }
+
+*  Castelvetro is not a reliable interpreter of Petrarch's mind.
+{: #s7 label="s7" ana="#premise" }
+
+*  Although Petrarch did not use the words, it’s impossible to determine whether he would have used them without reliable or direct knowledge of his intentions, which is unavailable.
+{: #r3 label="r3" ana="#rule" }
+
+*  It is not possible to know whether Petrarch would have used those words.
+{: #s8 label="s8" ana="#conclusion" against="r1" }
 </div>
  
-<div markdown="1" class="list syllogism" id="cr-a2" ana="#disputed-words">
+<div markdown="1" class="list syllogism" id="CR2" ana="#disputed-words">
 
-*  [Petrarch never used certain words.](#cv-s1){: .ref }
+*  [Petrarch never used certain words.](#s1){: .ref label="s1" }
 {: ana="#premise" }
 
-*  [Other authors of his time used those words.](#cv-s2){: .ref }
+*  [Other authors of his time used those words.](#s2){: .ref label="s2" }
 {: ana="#premise" }
+
+*  [Petrarch is an authority in Italian literature.](#s4){: .ref label="s4" }
+{: ana="#premise" }
+
+*  Other authors have authority as well.
+{: #s9 label="s9" ana="#premise" }
 
 *  Although Petrarch did not use those words, the authority of other influential authors in Italian literature legitimizes their use.
-{: #cr-s2 ana="#premise" }
+{: #r4 label="r4" ana="#rule" }
 
 *  Those words can be used.
-{: #cr-s3 ana="#conclusion" }
+{: #s10 label="s10" ana="#conclusion" against="s5" }
 </div>
 </div>
 
 
-[...] But how can you expect an author, no matter how much he writes, to put into use every single word of his era, without leaving behind many others that are just as excellent? That writers after him should be deprived both of the words he left aside and of those that had not yet come into use in his time? Beyond this, that [Petrarch][petrarca]{: .persName } has taken away from others what he himself did? That an entire language should reside in a single author? That one alone should judge it? bring it to completion? <span markdown="1" ana="#cr-s4">This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to [Petrarch][petrarca]{: .persName } and [Boccaccio][boccaccio]{: .persName }, just as to claim that sacred Scripture is wholly contained in the Gospels and [Saint Paul][st-paul]{: .persName }.</span> [...] I grant that the perfection of style—though never fully realized in practice—has, up to now, been found in our language particularly in [Petrarch][petrarca]{: .persName } and [Boccaccio][boccaccio]{: .persName }. But for this, I do not wish to destroy the nature of the language itself, denying it the ability, like all others, to grow and decline. I do not wish to strip away entirely the judgment of those who have come after them and those who will come in the future. Nor do I wish to be deprived of the freedom they themselves enjoyed, as did all writers in every language. [...]
+[...] But first one must understand the reason why [Petrarch][petrarca]{: .persName }, according to you, would not use them. <span markdown="1" ana="#s15">Because they are Latin?</span> Is it then not licit for writers of one language to make use of the words of another? Or do you not know that <span markdown="1" ana="#s12 #s14">they are permitted not only to use those that are foreign and common in the country, as these are;</span> but also to admit those that have never before been written? and the new and the newly invented and the Greek and the barbarous ones, and those twisted from their original form and from their proper meaning at times? and not only the words, but also the figures of speech, transferring them from one language to another, against the rules and against common usage? And who says so? [Castelvetro][castelvetro]{: .persName }, perhaps? <span markdown="1" ana="#s11">It is said by all the good authors of the Greek and Latin languages</span>, and by some of our own who write about the art, and it has been put into practice by all those who have written artfully up to now. [...]
 
 
 <div markdown="1" class="note paraphrase">
 
-<div markdown="1" class="list syllogism" id="cr-a3" ana="#disputed-words">
+<div markdown="1" class="list syllogism" id="CR3" ana="#disputed-words">
 
-*  [Petrarch never used certain words.](#cv-s1){: .ref }
+*  Greek and Latin masters of rhetoric endorse the literary use of foreign words.
+{: #s11 label="s11" ana="#premise" }
+
+*  Latin words are foreign, yet intelligible, in Italian.
+{: #s12 label="s12" ana="#premise" }
+
+*  Italian is a literary language whose norms can be guided by classical precedent.
+{: #s13 label="s13" ana="#premise" }
+
+*  If authoritative literary figures legitimize a rhetorical practice, and that practice is relevantly similar in a new context, then that practice is also legitimate in the new context.
+{: #r5 label="r5" ana="#rule" }
+
+*  Italian authors are justified in using Latinisms.
+{: #s14 label="s14" ana="#conclusion" }
+</div>
+ 
+<div markdown="1" class="list syllogism" id="CR4" ana="#disputed-words">
+
+*  [Italian authors are justified in using Latinisms.](#s14){: .ref label="s14" }
 {: ana="#premise" }
 
+*  Those words are Latinisms.
+{: #s15 label="s15" ana="#premise" }
+
+*  If Italian authors are justified in using Latinisms, as those words are, then Italian authors are justified in using those words.
+{: #r6 label="r6" ana="#rule" }
+
+*  [Those words can be used.](#s10){: .ref against="s5" label="s10" }
+{: ana="#conclusion" }
+</div>
+</div>
+
+
+[...] <span markdown="1" ana="#s16">Wouldn’t a man be mad who, wishing to learn how to walk from another, always followed behind him, placing his feet precisely where the other had just lifted his?</span> <span markdown="1" ana="#s17">That is the same kind of madness you speak of, in wanting to make the same steps, and not the same walk, as [Petrarch][petrarca]{: .persName }.</span> <span markdown="1" ana="#s18">To imitate him means to carry oneself and move one's legs as he did, not to place one’s feet in his very footprints. He made judicious use, in all languages, of all worthy words; with the same judgment, anyone may likewise make use of them.</span> What must be taken care of is not to do so without proper consideration. And in this respect, our language owes perpetual gratitude to [Bembo][bembo]{: .persName }, for he taught us how to proceed in this way, and restrained the boldness of those who transgressed too licentiously in this matter. [...]
+
+
+<div markdown="1" class="note paraphrase">
+
+<div markdown="1" class="list syllogism" id="CR5" ana="#disputed-words">
+
+*  Learning involves emulating principles, not mimicking results.
+{: #s16 label="s16" ana="#premise" }
+
+*  Literary imitation is a kind of learning.
+{: #s17 label="s17" ana="#premise" }
+
+*  If learning in a domain requires emulating the method rather than the outcome, then learning in an analogous domain also requires the same.
+{: #r7 label="r7" ana="#rule" }
+
+*  Literary imitation should emulate the author's judgment, not reproduce their words.
+{: #s18 label="s18" ana="#conclusion" against="r2" }
+</div>
+</div>
+
+
+[...] But let us even suppose that [Petrarch][petrarca]{: .persName } did not want to make use of these words because he did not like them. [...] But how can you expect an author, no matter how much he writes, to put into use every single word of his era, without leaving behind many others that are just as excellent? That writers after him should be deprived both of the words he left aside and of those that had not yet come into use in his time? <span markdown="1" ana="#s22">Beyond this, that [Petrarch][petrarca]{: .persName } has taken away from others what he himself did?</span> That an entire language should reside in a single author? That one alone should judge it? bring it to completion? <span markdown="1" ana="#s19">This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to [Petrarch][petrarca]{: .persName } and [Boccaccio][boccaccio]{: .persName }, just as to claim that sacred Scripture is wholly contained in the Gospels and [Saint Paul][st-paul]{: .persName }.</span> [...]
+
+
+<div markdown="1" class="note paraphrase">
+
+<div markdown="1" class="list syllogism" id="CR6" ana="#disputed-words">
+
 *  To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture.
-{: #cr-s4 ana="#premise" }
+{: #s19 label="s19" ana="#premise" }
+
+*  The Church holds the autority to interpret and expand upon sacred Scripture.
+{: #s20 label="s20" ana="#premise" }
+
+*  Since denying authors interpretive authority over language is like denying the Church such authority over Scripture, and the Church has it, authors should have it too.
+{: #r8 label="r8" ana="#rule" }
+
+*  Contemporary authors have the freedom to interpret and develop the language.
+{: #s21 label="s21" ana="#conclusion" }
+</div>
+</div>
+
+
+[...] <span markdown="1" ana="#s4">I grant that the perfection of style—though never fully realized in practice—has, up to now, been found in our language particularly in [Petrarch][petrarca]{: .persName } and [Boccaccio][boccaccio]{: .persName }.</span> But for this, I do not wish to destroy the nature of the language itself, denying it the ability, like all others, to grow and decline. I do not wish to strip away entirely the judgment of those who have come after them and those who will come in the future. <span markdown="1" ana="#s21">Nor do I wish to be deprived of the freedom they themselves enjoyed, as did all writers in every language.</span> [...] <span markdown="1" ana="#s23">For here lies the error you have fallen into: believing that in this language one ought to act as in Greek and Latin—languages which, being dead as regards common speech, must necessarily be written by drawing from the writings of the few and by imitating the best, since we cannot ourselves grasp their native power or beauty.</span> <span markdown="1" ana="#s24">But in this language—which is naturally and commonly spoken and understood by all, and which presents itself to us alive and entirely uncovered in all its parts—</span><span markdown="1" ana="#s25">what kind of judgment is it to think that one must necessarily draw from the writings of a single author, and not also from the many who speak and write it;</span> especially when we are explicitly warned by this precept: <span title="Quintilian, Institutio Oratoria X,2,25">«Quod is qui maxime, non etiam unus imitandus est?»</span> («That he who is greatest is to be imitated, but not he alone.») [...]
+
+
+<div markdown="1" class="note paraphrase">
+
+<div markdown="1" class="list syllogism" id="CR7" ana="#disputed-words">
+
+*  [Petrarch is an authority in Italian literature.](#s4){: .ref label="s4" }
+{: ana="#premise" }
+
+*  [Literary imitation should emulate the author's judgment, not reproduce their words.](#s18){: .ref against="r2" label="s18" }
+{: ana="#premise" }
+
+*  Petrarch exercised authorial freedom in shaping the language.
+{: #s22 label="s22" ana="#premise" }
+
+*  If an exemplar author exercised authorial freedom, then others may follow that example by exercising similar freedom.
+{: #r9 label="r9" ana="#rule" }
+
+*  [Contemporary authors have the freedom to interpret and develop the language.](#s21){: .ref label="s21" }
+{: ana="#conclusion" }
+</div>
+ 
+<div markdown="1" class="list syllogism" id="CR8" ana="#disputed-words">
+
+*  In dead languages like Latin and Greek, one must imitate the best authors.
+{: #s23 label="s23" ana="#premise" }
+
+*  Italian is a living language.
+{: #s24 label="s24" ana="#premise" }
+
+*  Unlike dead languages, a living language must draw from the variety of its speakers and cannot be normed by a single authority.
+{: #r10 label="r10" ana="#rule" }
+
+*  Italian should not be limited to the authority of a single author, such as Petrarch.
+{: #s25 label="s25" ana="#conclusion" }
 </div>
 </div>
 
