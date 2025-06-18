@@ -16,10 +16,12 @@
   box-shadow: var(--md-shadow-z2);
 }
 
-@media screen and (max-width: 720px) {
-  .syllogism {
-    margin: 0 0 1rem;
-  }
+.syllogism:before {
+  content: "Argument " attr(id);
+  color: var(--md-default-fg-color--lighter);
+  font-variant-caps: all-small-caps;
+  font-size: .9rem;
+  font-weight: 600;
 }
 
 /* Argument lists */
@@ -32,7 +34,7 @@
 .md-typeset .syllogism ul li p[label]:before,
 .md-typeset .syllogism ul li p a[label]:before,
 .md-typeset .syllogism ul li p[against]:after,
-.md-typeset .syllogism ul li p a[against]:after {
+.md-typeset .syllogism ul li p[ana="#conclusion"] a[against]:after {
   color: var(--md-default-fg-color--lighter);
   font-style: normal;
   font-variant-caps: all-small-caps;
@@ -49,7 +51,7 @@
 }
 
 .md-typeset .syllogism ul li p[against]:after,
-.md-typeset .syllogism ul li p a[against]:after {
+.md-typeset .syllogism ul li p[ana="#conclusion"] a[against]:after {
   content: "✖ " attr(against);
   padding: 1px 0 0 .3rem;
 }
@@ -105,16 +107,25 @@
   --md-accent-fg-color: var(--md-secondary-fg-color--light-hover);
 }
 
-.md-typeset a {
+.q {
+  color: var(--md-typeset-a-color);
   text-decoration-color: transparent;
+  font-weight: 500;
+}
+
+.q:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.q:not(a) {
+  cursor: help;
 }
 
 /* Related interpretation passages are dynamically highlighted */
 [ana^="#s"],
 [ana="#premise"]:not(.absent),
 [ana="#conclusion"]:not(.absent),
-p:has([href*="#s"]),
-a[href*="#s"] {
+p:has([href*="#s"]):not(.absent) {
   position: relative;
   background-image: linear-gradient(to right, transparent 50%, var(--md-primary-fg-color--light) 50%);
   background-origin: 0;
@@ -269,4 +280,19 @@ li:has(.absent) {
 /* Citations */
 span[title] {
   cursor: help;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 720px) {
+  .syllogism {
+    margin: 0 0 1rem;
+  }
+
+  .note:before {
+    margin-left: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }

@@ -1,564 +1,368 @@
-@prefix : <https://w3id.org/contro/caro-castelvetro#> .
+@prefix : <https://w3id.org/contro/data#> .
 @prefix arg: <https://w3id.org/contro/arg#> .
-@prefix contro: <https://w3id.org/contro/data#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-dul:hasMember a owl:AnnotationProperty .
+<https://w3id.org/contro/data> a owl:Ontology ;
+    owl:imports <https://w3id.org/contro/arg> .
 
-prov:value a owl:AnnotationProperty .
+:AT_caro a owl:NamedIndividual,
+        arg:ArgumentationTheory ;
+    arg:DialogicalAgent :caro ;
+    arg:KnowledgeBase :KB_caro .
 
-arg:Antecedent a owl:ObjectProperty .
+:AT_castelvetro a owl:NamedIndividual,
+        arg:ArgumentationTheory ;
+    arg:DialogicalAgent :castelvetro ;
+    arg:KnowledgeBase :KB_castelvetro .
 
-arg:Author a owl:AnnotationProperty .
-
-arg:Conclusion a owl:ObjectProperty .
-
-arg:Consequent a owl:ObjectProperty .
-
-arg:Premise a owl:ObjectProperty .
-
-arg:contradicts a owl:ObjectProperty .
-
-arg:personaOf a owl:ObjectProperty .
-
-<https://w3id.org/contro/caro-castelvetro> a owl:Ontology ;
-    owl:versionIRI <https://w3id.org/contro/caro-castelvetro/0.3.0> .
-
-:cr-a1 a owl:NamedIndividual,
+:CR1 a owl:NamedIndividual,
         arg:Argument ;
-    arg:Author :predella ;
-    arg:Premise :cr-s1,
-        :cv-s1 ;
-    arg:Topic :disputed-words .
+    arg:Conclusion :s8 ;
+    arg:InferenceRule :r3 ;
+    arg:Premise :s1,
+        :s6,
+        :s7 ;
+    arg:Topic :disputed-words ;
+    arg:by :predella .
 
-:cr-a2 a owl:NamedIndividual,
+:CR2 a owl:NamedIndividual,
         arg:Argument ;
-    arg:Author :predella ;
-    arg:Conclusion :cr-s3 ;
-    arg:Premise :cr-s2,
-        :cv-s1,
-        :cv-s2 ;
-    arg:Topic :disputed-words .
+    arg:Conclusion :s10 ;
+    arg:InferenceRule :r4 ;
+    arg:Premise :s1,
+        :s2,
+        :s4,
+        :s9 ;
+    arg:Topic :disputed-words ;
+    arg:by :predella .
 
-:cr-a3 a owl:NamedIndividual,
+:CR3 a owl:NamedIndividual,
         arg:Argument ;
-    arg:Author :predella ;
-    arg:Premise :cr-s4,
-        :cv-s1 ;
-    arg:Topic :disputed-words .
+    arg:Conclusion :s14 ;
+    arg:InferenceRule :r5 ;
+    arg:Premise :s11,
+        :s12,
+        :s13 ;
+    arg:Topic :disputed-words ;
+    arg:by :predella .
 
-:cv-a1 a owl:NamedIndividual,
+:CR4 a owl:NamedIndividual,
         arg:Argument ;
-    arg:Author :anon ;
-    arg:Conclusion :cv-s4 ;
-    arg:Premise :cv-s1,
-        :cv-s2,
-        :cv-s3 ;
-    arg:Topic :disputed-words .
+    arg:Conclusion :s10 ;
+    arg:InferenceRule :r6 ;
+    arg:Premise :s14,
+        :s15 ;
+    arg:Topic :disputed-words ;
+    arg:by :predella .
 
-:cv-a2 a owl:NamedIndividual,
+:CR5 a owl:NamedIndividual,
         arg:Argument ;
-    arg:Author :anon ;
-    arg:Conclusion :cv-s6 ;
-    arg:Premise :cv-s4,
-        :cv-s5 ;
-    arg:Topic :disputed-words .
+    arg:Conclusion :s18 ;
+    arg:InferenceRule :r7 ;
+    arg:Premise :s16,
+        :s17 ;
+    arg:Topic :disputed-words ;
+    arg:by :predella .
 
-contro: a arg:Argument ;
-    arg:Author contro:predella ;
-    arg:Premise contro:s1 ;
-    arg:Topic contro:disputed-words .
-
-contro:CR1 a arg:Argument ;
-    arg:Author contro:predella ;
-    arg:Conclusion contro:s7,
-        contro:s8 ;
-    arg:Premise contro:cr-s1,
-        contro:r3,
-        contro:s1,
-        contro:s6,
-        contro:s7,
-        contro:s71 ;
-    arg:Topic contro:disputed-words .
-
-contro:CR2 a arg:Argument ;
-    arg:Author contro:predella ;
-    arg:Conclusion contro:cr-s3,
-        contro:s10,
-        contro:s9 ;
-    arg:Premise contro:cr-s2,
-        contro:r4,
-        contro:s1,
-        contro:s2,
-        contro:s4,
-        contro:s8,
-        contro:s9 ;
-    arg:Topic contro:disputed-words .
-
-contro:CR3 a arg:Argument ;
-    arg:Author contro:predella ;
-    arg:Conclusion contro:s12,
-        contro:s13 ;
-    arg:Premise contro:cr-s4,
-        contro:r5,
-        contro:s1,
-        contro:s10,
-        contro:s11,
-        contro:s12 ;
-    arg:Topic contro:disputed-words .
-
-contro:CR4 a arg:Argument ;
-    arg:Author contro:predella ;
-    arg:Conclusion contro:s10 ;
-    arg:Premise contro:r6,
-        contro:s1,
-        contro:s13,
-        contro:s14 ;
-    arg:Topic contro:disputed-words .
-
-contro:CR5 a arg:Argument ;
-    arg:Author contro:predella ;
-    arg:Premise contro:s1 ;
-    arg:Topic contro:disputed-words .
-
-contro:CR6 a arg:Argument ;
-    arg:Author contro:predella ;
-    arg:Conclusion contro:s25 ;
-    arg:Premise contro:r12,
-        contro:s23,
-        contro:s24 ;
-    arg:Topic contro:disputed-words .
-
-contro:CR7 a arg:Argument ;
-    arg:Author contro:predella ;
-    arg:Premise contro:s1 ;
-    arg:Topic contro:disputed-words .
-
-contro:CV1 a arg:Argument ;
-    arg:Author contro:anon ;
-    arg:Conclusion contro:s3,
-        contro:s4 ;
-    arg:Premise contro:r1,
-        contro:s1,
-        contro:s2,
-        contro:s3 ;
-    arg:Topic contro:disputed-words .
-
-contro:CV2 a arg:Argument ;
-    arg:Author contro:anon ;
-    arg:Conclusion contro:cv-s6,
-        contro:s5 ;
-    arg:Premise contro:cv-s5,
-        contro:r2,
-        contro:s3,
-        contro:s4 ;
-    arg:Topic contro:disputed-words .
-
-contro:cr-a1 a owl:NamedIndividual,
+:CR6 a owl:NamedIndividual,
         arg:Argument ;
-    arg:Author contro:predella ;
-    arg:Premise contro:cr-s1,
-        contro:cv-s1 ;
-    arg:Topic contro:disputed-words .
+    arg:Conclusion :s21 ;
+    arg:InferenceRule :r8 ;
+    arg:Premise :s19,
+        :s20 ;
+    arg:Topic :disputed-words ;
+    arg:by :predella .
 
-contro:cr-a2 a owl:NamedIndividual,
+:CR7 a owl:NamedIndividual,
         arg:Argument ;
-    arg:Author contro:predella ;
-    arg:Conclusion contro:cr-s3 ;
-    arg:Premise contro:cr-s2,
-        contro:cv-s1,
-        contro:cv-s2 ;
-    arg:Topic contro:disputed-words .
+    arg:Conclusion :s21 ;
+    arg:InferenceRule :r9 ;
+    arg:Premise :s18,
+        :s22,
+        :s4 ;
+    arg:Topic :disputed-words ;
+    arg:by :predella .
 
-contro:cr-a3 a owl:NamedIndividual,
+:CR8 a owl:NamedIndividual,
         arg:Argument ;
-    arg:Author contro:predella ;
-    arg:Premise contro:cr-s4,
-        contro:cv-s1 ;
-    arg:Topic contro:disputed-words .
+    arg:Conclusion :s25 ;
+    arg:InferenceRule :r10 ;
+    arg:Premise :s23,
+        :s24 ;
+    arg:Topic :disputed-words ;
+    arg:by :predella .
 
-contro:cv-a1 a owl:NamedIndividual,
+:CV1 a owl:NamedIndividual,
         arg:Argument ;
-    arg:Author contro:anon ;
-    arg:Conclusion contro:cv-s4 ;
-    arg:Premise contro:cv-s1,
-        contro:cv-s2,
-        contro:cv-s3 ;
-    arg:Topic contro:disputed-words .
+    arg:Conclusion :s3 ;
+    arg:InferenceRule :r1 ;
+    arg:Premise :s1,
+        :s2 ;
+    arg:Topic :disputed-words ;
+    arg:by :anon .
 
-contro:cv-a2 a owl:NamedIndividual,
+:CV2 a owl:NamedIndividual,
         arg:Argument ;
-    arg:Author contro:anon ;
-    arg:Conclusion contro:cv-s6 ;
-    arg:Premise contro:cv-s4,
-        contro:cv-s5 ;
-    arg:Topic contro:disputed-words .
+    arg:Conclusion :s5 ;
+    arg:InferenceRule :r2 ;
+    arg:Premise :s3,
+        :s4 ;
+    arg:Topic :disputed-words ;
+    arg:by :anon .
 
-<http://viaf.org/viaf/22166452> a owl:NamedIndividual ;
-    owl:sameAs :castelvetro,
-        contro:castelvetro .
+:latinisms a owl:NamedIndividual,
+        arg:Topic ;
+    rdfs:label "Latinisms"@en ;
+    rdfs:comment "Lexical Latinisms are loanwords from written Latin that are artificially introduced into Italian through phonetic and morphological adaptation, as opposed to hereditary words, which result naturally from uninterrupted phonetic evolution. Latinisms are often employed in poetic texts to elevate the stylistic register."@en .
 
-<http://viaf.org/viaf/51714622> a owl:NamedIndividual ;
-    owl:sameAs :caro,
-        contro:caro .
+:KB_caro a owl:NamedIndividual,
+        arg:KnowledgeBase .
 
-:cr-s1 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "It is not possible to know whether Petrarch would have used those words merely because he did not happen to use them."@en ;
-    prov:value "But in saying outright that he would not use them, one must consider whether you have reliable authority on the matter, and what exactly you know of it; whether, by chance, as you so freely dispense the name and wisdom of Petrarch, his very spirit has entered your body."@en,
-        "Ma, dicendo affermativamente non l’userebbe, bisogna intender se l’avete di buon loco, e quel che voi ne sapete; se per aventura spacciando, come fate, il nome e ’l senno del Petrarca, vi fosse entrato il suo spirito in corpo"@it ;
-    arg:contradicts :cv-s3 .
+:KB_castelvetro a owl:NamedIndividual,
+        arg:KnowledgeBase .
 
-:cr-s2 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "Although Petrarch did not use those words, the authority of other influential authors in Italian literature legitimizes their use."@en ;
-    prov:value "would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing—the very ones from whom Petrarch and all other good writers have learned"@en,
-        "non vi contentarete voi del giudizio, dell’autorità e dell’essempio di quelli che sono i maestri dell’arte dello scrivere, dai quali hanno imparato il Petrarca e tutti gli altri buoni scrittori"@it ;
-    arg:Antecedent :cv-s1,
-        :cv-s2 ;
-    arg:Consequent :cr-s3 .
+:r10 a owl:NamedIndividual ;
+    rdfs:comment "Unlike dead languages, a living language must draw from the variety of its speakers and cannot be normed by a single authority."@en ;
+    arg:Antecedent :s23,
+        :s24 ;
+    arg:Consequent :s25 .
 
-:cr-s4 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en ;
-    prov:value "This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to Petrarch and Boccaccio, just as to claim that sacred Scripture is wholly contained in the Gospels and Saint Paul."@en,
-        "Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel Petrarca e nel Boccaccio si termini tutta la favella volgare, come negli Evangeli ed in san Paolo tutta la sacra Scrittura."@it ;
-    arg:contradicts :cv-s5 .
+:r3 a owl:NamedIndividual ;
+    rdfs:comment "Although Petrarch did not use the words, it’s impossible to determine whether he would have used them without reliable or direct knowledge of his intentions, which is unavailable."@en ;
+    arg:Antecedent :s1,
+        :s6,
+        :s7 ;
+    arg:Consequent :s8 .
 
-:w1 rdfs:label "cede"@it .
+:r4 a owl:NamedIndividual ;
+    rdfs:comment "Although Petrarch did not use those words, the authority of other influential authors in Italian literature legitimizes their use."@en ;
+    arg:Antecedent :s1,
+        :s2,
+        :s4,
+        :s9 ;
+    arg:Consequent :s10 .
 
-:w10 rdfs:label "gesti"@it .
+:r5 a owl:NamedIndividual ;
+    rdfs:comment "If authoritative literary figures legitimize a rhetorical practice, and that practice is relevantly similar in a new context, then that practice is also legitimate in the new context."@en ;
+    arg:Antecedent :s11,
+        :s12,
+        :s13 ;
+    arg:Consequent :s14 .
 
-:w11 rdfs:label "inserte"@it .
+:r6 a owl:NamedIndividual ;
+    rdfs:comment "If Italian authors are justified in using Latinisms, as those words are, then Italian authors are justified in using those words."@en ;
+    arg:Antecedent :s14,
+        :s15 ;
+    arg:Consequent :s10 .
 
-:w12 rdfs:label "amene"@it .
+:r7 a owl:NamedIndividual ;
+    rdfs:comment "If learning in a domain requires emulating the method rather than the outcome, then learning in an analogous domain also requires the same."@en ;
+    arg:Antecedent :s16,
+        :s17 ;
+    arg:Consequent :s18 .
 
-:w2 rdfs:label "ambo"@it .
+:r8 a owl:NamedIndividual ;
+    rdfs:comment "Since denying authors interpretive authority over language is like denying the Church such authority over Scripture, and the Church has it, authors should have it too."@en ;
+    arg:Antecedent :s19,
+        :s20 ;
+    arg:Consequent :s21 .
 
-:w3 rdfs:label "simulacri"@it .
+:r9 a owl:NamedIndividual ;
+    rdfs:comment "If an exemplar author exercised authorial freedom, then others may follow that example by exercising similar freedom."@en ;
+    arg:Antecedent :s18,
+        :s22,
+        :s4 ;
+    arg:Consequent :s21 .
 
-:w4 rdfs:label "ancor essa"@it .
+:w1 a owl:NamedIndividual ;
+    prov:value "cede" .
 
-:w5 rdfs:label "Suo merto e tuo valor"@it .
+:w10 a owl:NamedIndividual ;
+    prov:value "gesti" .
 
-:w6 rdfs:label "inviolata"@it .
+:w11 a owl:NamedIndividual ;
+    prov:value "inserte" .
 
-:w7 rdfs:label "tarpato"@it .
+:w12 a owl:NamedIndividual ;
+    prov:value "amene" .
 
-:w8 rdfs:label "propizia"@it .
+:w2 a owl:NamedIndividual ;
+    prov:value "ambo" .
 
-:w9 rdfs:label "illustri"@it .
+:w3 a owl:NamedIndividual ;
+    prov:value "simulacri" .
 
-contro:r12 a arg:Statement ;
-    rdfs:label "Since denying authors interpretive authority over language is like denying the Church such authority over Scripture, and the Church has it, authors should have it too."@en ;
-    arg:Antecedent contro:s23,
-        contro:s24 ;
-    arg:Consequent contro:s25 .
+:w4 a owl:NamedIndividual ;
+    prov:value "ancor essa" .
 
-contro:r3 a arg:Statement ;
-    rdfs:label "Although Petrarch did not use the words, it’s impossible to determine whether he would have used them without reliable or direct knowledge of his intentions, which is unavailable."@en,
-        "Although Petrarch didn't use the words, it's impossible to determine whether he would have used them without a reliable authority or direct knowledge of his intentions."@en,
-        "Although Petrarch didn't use the words, it's impossible to determine whether he would have used them without reliable authority or direct knowledge of his intentions."@en,
-        "Although Petrarch didn’t use the words, it’s impossible to determine whether he would have used them without reliable or direct knowledge of his intentions, which is unavailable."@en,
-        "Although Petrarch didn’t use the words, it’s impossible to determine whether he would have used them without reliable or direct knowledge of his intentions, which we lack."@en,
-        "Since Petrarch didn't use the words and his intention is unknown, it's impossible to determine whether he would have used them."@en ;
-    arg:Antecedent contro:s1,
-        contro:s6,
-        contro:s7,
-        contro:s71 ;
-    arg:Consequent contro:s7,
-        contro:s8 .
+:w5 a owl:NamedIndividual ;
+    prov:value "Suo merto e tuo valor" .
 
-contro:r4 a arg:Statement ;
-    rdfs:label "Although Petrarch did not use those words, the authority of other influential authors in Italian literature legitimizes their use."@en,
-        "Although Petrarch did not use those words, the authority of other influential authors legitimizes their use."@en ;
-    arg:Antecedent contro:s1,
-        contro:s2,
-        contro:s4,
-        contro:s8,
-        contro:s9 ;
-    arg:Consequent contro:s10,
-        contro:s9 .
+:w6 a owl:NamedIndividual ;
+    prov:value "inviolata" .
 
-contro:r5 a arg:Statement ;
-    rdfs:label "Greek and Latin masters support the poetic license of using foreign words, as Latinisms are for Italian."@en,
-        "Since denying authors interpretive authority over language is like denying the Church such authority over Scripture, and the Church has it, authors should have it too."@en ;
-    arg:Antecedent contro:s10,
-        contro:s11,
-        contro:s12 ;
-    arg:Consequent contro:s12,
-        contro:s13 .
+:w7 a owl:NamedIndividual ;
+    prov:value "tarpato" .
 
-contro:r6 a arg:Statement ;
-    rdfs:label "It is licit to use those words as they are Latinisms."@en ;
-    arg:Antecedent contro:s13,
-        contro:s14 ;
-    arg:Consequent contro:s15 .
+:w8 a owl:NamedIndividual ;
+    prov:value "propizia" .
 
-contro:w1 rdfs:label "cede"@it .
-
-contro:w10 rdfs:label "gesti"@it .
-
-contro:w11 rdfs:label "inserte"@it .
-
-contro:w12 rdfs:label "amene"@it .
-
-contro:w2 rdfs:label "ambo"@it .
-
-contro:w3 rdfs:label "simulacri"@it .
-
-contro:w4 rdfs:label "ancor essa"@it .
-
-contro:w5 rdfs:label "Suo merto e tuo valor"@it .
-
-contro:w6 rdfs:label "inviolata"@it .
-
-contro:w7 rdfs:label "tarpato"@it .
-
-contro:w8 rdfs:label "propizia"@it .
-
-contro:w9 rdfs:label "illustri"@it .
-
-dul:Collection a owl:Class .
-
-arg:Topic a owl:AnnotationProperty,
-        owl:Class .
+:w9 a owl:NamedIndividual ;
+    prov:value "illustri" .
 
 :anon a dul:Agent,
         owl:NamedIndividual ;
     rdfs:label "Anonymous" ;
     rdfs:comment "The text is presented as if written by an anonymous figure."@en ;
-    arg:personaOf :castelvetro .
+    arg:isAliasOf :castelvetro .
 
 :caro a dul:Agent,
-        owl:NamedIndividual ;
-    rdfs:label "Annibal Caro" .
-
-:castelvetro a dul:Agent,
-        owl:NamedIndividual ;
-    rdfs:label "Lodovico Castelvetro" .
-
-:cr-s3 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "Those words can be used."@en ;
-    arg:contradicts :cv-s6 .
-
-:cv-s3 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "The fact that Petrarch left out words used in the literature of his time is a sign that he did not use them deliberately."@en ;
-    arg:Antecedent :cv-s1,
-        :cv-s2 ;
-    arg:Consequent :cv-s4 .
-
-:cv-s5 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "In the context of Petrarchist poetry, authors should not use words that Petrarch himself chose not to use."@en ;
-    arg:Antecedent :cv-s4 ;
-    arg:Consequent :cv-s6 .
-
-contro:caro a dul:Agent,
         owl:NamedIndividual ;
     rdfs:label "Annibal Caro" ;
     owl:sameAs <http://viaf.org/viaf/51714622> .
 
-contro:castelvetro a dul:Agent,
+:castelvetro a dul:Agent,
         owl:NamedIndividual ;
     rdfs:label "Lodovico Castelvetro" ;
     owl:sameAs <http://viaf.org/viaf/22166452> .
 
-contro:cr-s1 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "It is not possible to know whether Petrarch would have used those words merely because he did not happen to use them."@en ;
-    prov:value "But in saying outright that he would not use them, one must consider whether you have reliable authority on the matter, and what exactly you know of it; whether, by chance, as you so freely dispense the name and wisdom of Petrarch, his very spirit has entered your body."@en,
-        "Ma, dicendo affermativamente non l’userebbe, bisogna intender se l’avete di buon loco, e quel che voi ne sapete; se per aventura spacciando, come fate, il nome e ’l senno del Petrarca, vi fosse entrato il suo spirito in corpo"@it ;
-    arg:contradicts contro:cv-s3,
-        contro:s3 .
+:r1 a owl:NamedIndividual ;
+    rdfs:comment "The fact that Petrarch left out words used in the literature of his time is a sign that he did not use them deliberately."@en ;
+    arg:Antecedent :s1,
+        :s2 ;
+    arg:Consequent :s3 .
 
-contro:cr-s2 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "Although Petrarch did not use those words, the authority of other influential authors in Italian literature legitimizes their use."@en ;
-    prov:value "would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing—the very ones from whom Petrarch and all other good writers have learned"@en,
-        "non vi contentarete voi del giudizio, dell’autorità e dell’essempio di quelli che sono i maestri dell’arte dello scrivere, dai quali hanno imparato il Petrarca e tutti gli altri buoni scrittori"@it ;
-    arg:Antecedent contro:cv-s1,
-        contro:cv-s2,
-        contro:s1,
-        contro:s2 ;
-    arg:Consequent contro:cr-s3 .
+:r2 a owl:NamedIndividual ;
+    rdfs:comment "Italian authors should avoid words that an authority like Petrarch chose not to use."@en ;
+    arg:Antecedent :s3 ;
+    arg:Consequent :s5 .
 
-contro:cr-s4 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en ;
-    prov:value "This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to Petrarch and Boccaccio, just as to claim that sacred Scripture is wholly contained in the Gospels and Saint Paul."@en,
-        "Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel Petrarca e nel Boccaccio si termini tutta la favella volgare, come negli Evangeli ed in san Paolo tutta la sacra Scrittura."@it ;
-    arg:contradicts contro:cv-s5,
-        contro:r2 .
-
-contro:cv-s3 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "The fact that Petrarch left out words used in the literature of his time is a sign that he did not use them deliberately."@en ;
-    arg:Antecedent contro:cv-s1,
-        contro:cv-s2 ;
-    arg:Consequent contro:cv-s4 .
-
-contro:r2 a arg:Statement ;
-    rdfs:label "Authors should avoid words that an authority like Petrarch chose not to use."@en,
-        "Authors should not use words that Petrarch himself chose not to use."@en,
-        "Authors should not use words that Petrarch himself chose not to use.!!!!!!!!!"@en ;
-    prov:value "That an entire language should reside in a single author? That one alone should judge it? bring it to completion?"@en,
-        "che una lingua sia tutta in uno autor solo? che un solo la giudichi? un solo la finisca?"@it ;
-    arg:Antecedent contro:s3 ;
-    arg:Consequent contro:s5 .
-
-contro:s11 a arg:Statement ;
-    rdfs:label "Greek and Latin masters of rhetoric legitimize the use of foreign words in poetry."@en,
-        "The Church holds the autority to interpret and expand upon sacred Scripture."@en,
-        "The Church holds the autority to interprete and expand upon sacred Scripture."@en,
-        "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en ;
+:s11 a owl:NamedIndividual ;
+    rdfs:comment "Greek and Latin masters of rhetoric endorse the literary use of foreign words."@en ;
     prov:value "It is said by all the good authors of the Greek and Latin languages"@en,
-        "This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to Petrarch and Boccaccio, just as to claim that sacred Scripture is wholly contained in the Gospels and Saint Paul."@en,
-        "Lo dicono tutti i buoni autori della lingua greca e della latina"@it,
-        "Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel Petrarca e nel Boccaccio si termini tutta la favella volgare, come negli Evangeli ed in san Paolo tutta la sacra Scrittura."@it .
+        "Lo dicono tutti i buoni autori della lingua greca e della latina"@it .
 
-contro:s14 a arg:Statement ;
-    rdfs:label "Those words are Latinisms."@en ;
+:s12 a owl:NamedIndividual ;
+    rdfs:comment "Latin words are foreign, yet intelligible, in Italian."@en .
+
+:s13 a owl:NamedIndividual ;
+    rdfs:comment "Italian is a literary language whose norms can be guided by classical precedent."@en .
+
+:s15 a owl:NamedIndividual ;
+    rdfs:comment "Those words are Latinisms."@en ;
     prov:value "Because they are Latin?"@en,
         "Perché sono latine?"@it .
 
-contro:s23 a arg:Statement ;
-    rdfs:label "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en ;
+:s16 a owl:NamedIndividual ;
+    rdfs:comment "Learning involves emulating principles, not mimicking results."@en ;
+    prov:value "Wouldn’t a man be mad who, wishing to learn how to walk from another, always followed behind him, placing his feet precisely where the other had just lifted his?"@en,
+        "Non sarebbe pazzo uno che, volendo imparare di caminare da un altro, gli andasse sempre dietro, mettendo i piedi appunto donde colui gli lieva?"@it .
+
+:s17 a owl:NamedIndividual ;
+    rdfs:comment "Literary imitation is a kind of learning."@en ;
+    prov:value "That is the same kind of madness you speak of, in wanting to make the same steps, and not the same walk, as Petrarch."@en,
+        "La medesima pazzia è quella che dite voi, a voler che si facciano i medesimi passi, e non il medesimo andare del Petrarca."@it .
+
+:s19 a owl:NamedIndividual ;
+    rdfs:comment "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en ;
     prov:value "This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to Petrarch and Boccaccio, just as to claim that sacred Scripture is wholly contained in the Gospels and Saint Paul."@en,
         "Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel Petrarca e nel Boccaccio si termini tutta la favella volgare, come negli Evangeli ed in san Paolo tutta la sacra Scrittura."@it .
 
-contro:s24 a arg:Statement ;
-    rdfs:label "The Church holds the autority to interpret and expand upon sacred Scripture."@en .
+:s20 a owl:NamedIndividual ;
+    rdfs:comment "The Church holds the autority to interpret and expand upon sacred Scripture."@en .
 
-contro:s25 a arg:Statement ;
-    rdfs:label "Contemporary authors have the freedom to interpret and develop the language."@en ;
+:s22 a owl:NamedIndividual ;
+    rdfs:comment "Petrarch exercised authorial freedom in shaping the language."@en ;
+    prov:value "Beyond this, that Petrarch has taken away from others what he himself did?"@en,
+        "Oltre a ciò, che il Petrarca abbia tolto agli altri quel c’ha fatto esso medesimo?"@it .
+
+:s23 a owl:NamedIndividual ;
+    rdfs:comment "In dead languages like Latin and Greek, one must imitate the best authors."@en ;
+    prov:value "For here lies the error you have fallen into: believing that in this language one ought to act as in Greek and Latin—languages which, being dead as regards common speech, must necessarily be written by drawing from the writings of the few and by imitating the best, since we cannot ourselves grasp their native power or beauty."@en,
+        "perché qui sta l’errore che avete preso, di credere che in questa lingua si debba fare come nella greca e nella latina; le quali essendo morte quanto all’uso del parlar commune, è necessario che si scrivano cavando dagli scritti de’ pochi ed imitando i migliori, non potendosi da noi conoscere la forza né la bellezza lor naturale."@it .
+
+:s24 a owl:NamedIndividual ;
+    rdfs:comment "Italian is a living language."@en ;
+    prov:value "But in this language—which is naturally and commonly spoken and understood by all, and which presents itself to us alive and entirely uncovered in all its parts—"@en,
+        "Ma in questa, che naturalmente o communemente si parla e s’intende da tutti e che viva e nuda interamente e in ogni sua parte ci si mostra,"@it .
+
+:s25 a owl:NamedIndividual ;
+    rdfs:comment "Italian should not be limited to the authority of a single author, such as Petrarch."@en ;
+    prov:value "what kind of judgment is it to think that one must necessarily draw from the writings of a single author, and not also from the many who speak and write it;"@en,
+        "che giudizio è il vostro a pensare che necessariamente si debba cavar dagli scritti di un solo, e non anco da molti che la parlano e la scrivono;"@it .
+
+:s6 a owl:NamedIndividual ;
+    rdfs:comment "There is no direct knowledge of Petrarch’s intention."@en .
+
+:s7 a owl:NamedIndividual ;
+    rdfs:comment "Castelvetro is not a reliable interpreter of Petrarch's mind."@en .
+
+:s8 a owl:NamedIndividual ;
+    rdfs:comment "It is not possible to know whether Petrarch would have used those words."@en ;
+    prov:value "But if it is merely something you say and imagine on your own, I am under no obligation to believe it, and your imagination carries no weight."@en,
+        "Ma, quando lo diciate e ve l’imaginiate da voi, al vostro detto non sono obligato di credere, e la vostra imaginazione non fa caso."@it ;
+    arg:contradicts :r1 .
+
+:s9 a owl:NamedIndividual ;
+    rdfs:comment "Other authors have authority as well."@en .
+
+:s5 a owl:NamedIndividual ;
+    rdfs:comment "Those words should not be used."@en .
+
+:s10 a owl:NamedIndividual ;
+    rdfs:comment "Those words can be used."@en ;
+    arg:contradicts :s5 .
+
+:s14 a owl:NamedIndividual ;
+    rdfs:comment "Italian authors are justified in using Latinisms."@en .
+
+:s18 a owl:NamedIndividual ;
+    rdfs:comment "Literary imitation should emulate the author's judgment, not reproduce their words."@en ;
+    prov:value "To imitate him means to carry oneself and move one's legs as he did, not to place one’s feet in his very footprints. He made judicious use, in all languages, of all worthy words; with the same judgment, anyone may likewise make use of them."@en,
+        "Imitar lui vuol dire che si deve portar la persona e le gambe come egli fece; e non porre ’l piedi nelle sue stesse pedate. Egli si valse giudiziosamente, in tutte le lingue, di tutte le buone voci: col medesimo giudizio è lecito di valersene ancora ad ognuno."@it ;
+    arg:contradicts :r2 .
+
+:s2 a owl:NamedIndividual ;
+    rdfs:comment "Other authors of his time used those words."@en ;
+    prov:value "since they had perhaps all, or at least most, been used by writers of his time"@en,
+        "conciofossecosaché al suo tempo fossero state usate forse tutte, ma senza dubbio la maggior parte, dagli scrittori"@it .
+
+:s21 a owl:NamedIndividual ;
+    rdfs:comment "Contemporary authors have the freedom to interpret and develop the language."@en ;
     prov:value "Nor do I wish to be deprived of the freedom they themselves enjoyed, as did all writers in every language."@en,
         "Non voglio esser privo della libertà c’hanno avuto essi e tutti gli scrittori in tutte le lingue."@it .
 
-contro:s6 a arg:Statement ;
-    rdfs:label "Petrarch’s intention is unknown."@en,
-        "There is no direct knowledge of Petrarch’s intention."@en ;
-    prov:value "But in saying outright that he would not use them, one must consider whether you have reliable authority on the matter, and what exactly you know of it; whether, by chance, as you so freely dispense the name and wisdom of Petrarch, his very spirit has entered your body."@en,
-        "Ma, dicendo affermativamente non l’userebbe, bisogna intender se l’avete di buon loco, e quel che voi ne sapete; se per aventura spacciando, come fate, il nome e ’l senno del Petrarca, vi fosse entrato il suo spirito in corpo"@it .
+:s3 a owl:NamedIndividual ;
+    rdfs:comment "Petrarch wouldn’t have used those words."@en ;
+    prov:value "Petrarch would not have used any of the elements he noted in Caro’s canzone"@en,
+        "Petrarch would not use:"@en,
+        "that Petrarch would not use cede and the other words that follow"@en,
+        "Il Petrarca non userebbe:"@it,
+        "che il Petrarca non userebbe cede ed altre voci che seguono"@it,
+        "il Petrarca non avrebbe usata niuna delle cose notate da lui nella canzone del Caro"@it .
 
-contro:s71 a arg:Statement ;
-    rdfs:label "You lack the authority to ascertain Petrarch's mind."@en .
+:s4 a owl:NamedIndividual ;
+    rdfs:comment "Petrarch is an authority in Italian literature."@en ;
+    prov:value "I grant that the perfection of style—though never fully realized in practice—has, up to now, been found in our language particularly in Petrarch and Boccaccio."@en,
+        "since he holds Petrarch as the prince of poets in our language, worthy of reverence and admiration above all others."@en,
+        "Voglio che la perfezion del dire (ancora che non si dia interamente in atto) sia in fino a ora in questa lingua, spezialmente nel Petrarca e nel Boccaccio"@it,
+        "avendo il Petrarca per principe de’ poeti in questa lingua e per degno di riverenza e d’ammirazione a tutte l’altre."@it .
 
-:cv-s6 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "Those words should not be used."@en .
+:s1 a owl:NamedIndividual ;
+    rdfs:comment "Petrarch never used certain words."@en ;
+    prov:value "If you were to say that Petrarch had not used them, one might believe you, for you are well-versed in vocabulary"@en,
+        "that led him to set them aside"@en,
+        "Se voi diceste che ’l Petrarca non l’avesse usate, vi si potrebbe credere, perché siete molto pratico nel vocabolario"@it,
+        "che lo mosse a lasciarle da parte"@it .
 
 :predella a dul:Agent,
         owl:NamedIndividual ;
     rdfs:label "Predella" ;
     rdfs:comment "Fictional author: the text is presented as if written by the janitor of Accademia di Banchi di Roma."@en ;
-    arg:personaOf :caro .
-
-contro:cr-s3 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "Those words can be used."@en ;
-    arg:contradicts contro:cv-s6 .
-
-contro:cv-s5 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "In the context of Petrarchist poetry, authors should not use words that Petrarch himself chose not to use."@en ;
-    arg:Antecedent contro:cv-s4,
-        contro:s4 ;
-    arg:Consequent contro:cv-s6 .
-
-contro:r1 a arg:Statement ;
-    rdfs:label "The fact that Petrarch left out words used in the literature of his time is a sign that he did not use them deliberately."@en ;
-    arg:Antecedent contro:s1,
-        contro:s2 ;
-    arg:Consequent contro:s3 .
-
-:cv-s2 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "Other authors of his time used those words."@en ;
-    prov:value "since they had perhaps all, or at least most, been used by writers of his time"@en,
-        "conciofossecosaché al suo tempo fossero state usate forse tutte, ma senza dubbio la maggior parte, dagli scrittori"@it .
-
-:cv-s4 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "Petrarch wouldn’t have used those words."@en ;
-    prov:value "Petrarch would not have used any of the elements he noted in Caro’s canzone"@en,
-        "Petrarch would not use:"@en,
-        "that Petrarch would not use cede and the other words that follow"@en,
-        "Il Petrarca non userebbe:"@it,
-        "che il Petrarca non userebbe cede ed altre voci che seguono"@it,
-        "il Petrarca non avrebbe usata niuna delle cose notate da lui nella canzone del Caro"@it .
-
-contro:anon a dul:Agent,
-        owl:NamedIndividual ;
-    rdfs:label "Anonymous" ;
-    rdfs:comment "The text is presented as if written by an anonymous figure."@en ;
-    arg:personaOf contro:castelvetro .
-
-contro:cv-s2 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "Other authors of his time used those words."@en ;
-    prov:value "since they had perhaps all, or at least most, been used by writers of his time"@en,
-        "conciofossecosaché al suo tempo fossero state usate forse tutte, ma senza dubbio la maggior parte, dagli scrittori"@it .
-
-contro:cv-s4 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "Petrarch wouldn’t have used those words."@en ;
-    prov:value "Petrarch would not have used any of the elements he noted in Caro’s canzone"@en,
-        "Petrarch would not use:"@en,
-        "that Petrarch would not use cede and the other words that follow"@en,
-        "Il Petrarca non userebbe:"@it,
-        "che il Petrarca non userebbe cede ed altre voci che seguono"@it,
-        "il Petrarca non avrebbe usata niuna delle cose notate da lui nella canzone del Caro"@it .
-
-contro:cv-s6 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "Those words should not be used."@en .
-
-contro:s12 a arg:Statement ;
-    rdfs:label "Contemporary authors have the freedom to interpret and develop the language."@en,
-        "Latin words are foreign but intelligible in Italian."@en,
-        "The Church holds the autority to interpret and expand upon sacred Scripture."@en ;
-    prov:value "Nor do I wish to be deprived of the freedom they themselves enjoyed, as did all writers in every language."@en,
-        "Non voglio esser privo della libertà c’hanno avuto essi e tutti gli scrittori in tutte le lingue."@it .
-
-contro:s13 a arg:Statement ;
-    rdfs:label "Contemporary authors have the freedom to interpret and develop the language."@en,
-        "Italian authors have license to use Latinisms."@en ;
-    prov:value "Nor do I wish to be deprived of the freedom they themselves enjoyed, as did all writers in every language."@en,
-        "Non voglio esser privo della libertà c’hanno avuto essi e tutti gli scrittori in tutte le lingue."@it .
-
-contro:s5 a arg:Statement ;
-    rdfs:label "Those words should not be used."@en .
-
-contro:s7 a arg:Statement ;
-    rdfs:label "Castelvetro is not a reliable interpreter of Petrarch's mind."@en,
-        "Castelvetro lacks the authority to ascertain Petrarch's mind."@en,
-        "It is not possible to know whether Petrarch would have used those words."@en,
-        "You lack the authority to ascertain Petrarch's mind."@en ;
-    prov:value "But if it is merely something you say and imagine on your own, I am under no obligation to believe it, and your imagination carries no weight."@en,
-        "Ma, quando lo diciate e ve l’imaginiate da voi, al vostro detto non sono obligato di credere, e la vostra imaginazione non fa caso."@it ;
-    arg:contradicts contro:r1 .
-
-contro:s8 a arg:Statement ;
-    rdfs:label "It is not possible to know whether Petrarch would have used those words."@en,
-        "Other authors have authority as well."@en ;
-    prov:value "But if it is merely something you say and imagine on your own, I am under no obligation to believe it, and your imagination carries no weight."@en,
-        "would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing"@en,
-        "Ma, quando lo diciate e ve l’imaginiate da voi, al vostro detto non sono obligato di credere, e la vostra imaginazione non fa caso."@it,
-        "non vi contentarete voi del giudizio, dell’autorità e dell’essempio di quelli che sono i maestri dell’arte dello scrivere"@it ;
-    arg:contradicts contro:r1 .
-
-contro:s9 a arg:Statement ;
-    rdfs:label "Other authors have authority as well."@en,
-        "Those words can be used."@en ;
-    prov:value "would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing"@en,
-        "non vi contentarete voi del giudizio, dell’autorità e dell’essempio di quelli che sono i maestri dell’arte dello scrivere"@it ;
-    arg:contradicts contro:s5 .
+    arg:isAliasOf :caro .
 
 :disputed-words a dul:Collection,
         owl:NamedIndividual,
@@ -577,97 +381,4 @@ contro:s9 a arg:Statement ;
         :w8,
         :w9 ;
     rdfs:comment "Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro."@en .
-
-contro:s10 a arg:Statement ;
-    rdfs:label "Those words can be used."@en,
-        "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en ;
-    prov:value "This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to Petrarch and Boccaccio, just as to claim that sacred Scripture is wholly contained in the Gospels and Saint Paul."@en,
-        "Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel Petrarca e nel Boccaccio si termini tutta la favella volgare, come negli Evangeli ed in san Paolo tutta la sacra Scrittura."@it ;
-    arg:contradicts contro:s5 .
-
-:cv-s1 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "Petrarch never used certain words."@en ;
-    prov:value "If you were to say that Petrarch had not used them, one might believe you, for you are well-versed in vocabulary"@en,
-        "that led him to set them aside"@en,
-        "Se voi diceste che ’l Petrarca non l’avesse usate, vi si potrebbe credere, perché siete molto pratico nel vocabolario"@it,
-        "che lo mosse a lasciarle da parte"@it .
-
-contro:cv-s1 a owl:NamedIndividual,
-        arg:Statement ;
-    rdfs:label "Petrarch never used certain words."@en ;
-    prov:value "If you were to say that Petrarch had not used them, one might believe you, for you are well-versed in vocabulary"@en,
-        "that led him to set them aside"@en,
-        "Se voi diceste che ’l Petrarca non l’avesse usate, vi si potrebbe credere, perché siete molto pratico nel vocabolario"@it,
-        "che lo mosse a lasciarle da parte"@it .
-
-contro:s2 a arg:Statement ;
-    rdfs:label "Other authors of his time used those words."@en ;
-    prov:value "since they had perhaps all, or at least most, been used by writers of his time"@en,
-        "conciofossecosaché al suo tempo fossero state usate forse tutte, ma senza dubbio la maggior parte, dagli scrittori"@it .
-
-contro:s3 a arg:Statement ;
-    rdfs:label "Petrarch wouldn’t have used those words."@en,
-        "The fact that Petrarch left out words used in the literature of his time is a sign that he did not use them deliberately."@en ;
-    prov:value "Petrarch would not have used any of the elements he noted in Caro’s canzone"@en,
-        "Petrarch would not use:"@en,
-        "that Petrarch would not use cede and the other words that follow"@en,
-        "Il Petrarca non userebbe:"@it,
-        "che il Petrarca non userebbe cede ed altre voci che seguono"@it,
-        "il Petrarca non avrebbe usata niuna delle cose notate da lui nella canzone del Caro"@it,
-        "non perché egli avesse queste parole per non mai udite; conciofossecosaché al suo tempo fossero state usate forse tutte, ma senza dubbio la maggior parte, dagli scrittori; ma per altra cagione, sia qual si voglia, che lo mosse a lasciarle da parte"@it ;
-    arg:Antecedent contro:s1,
-        contro:s2 ;
-    arg:Consequent contro:s4 .
-
-contro:s4 a arg:Statement ;
-    rdfs:label "Petrarch is an authority in Italian literature."@en,
-        "Petrarch wouldn’t have used those words."@en ;
-    prov:value "I grant that the perfection of style—though never fully realized in practice—has, up to now, been found in our language particularly in Petrarch and Boccaccio."@en,
-        "Petrarch would not have used any of the elements he noted in Caro’s canzone"@en,
-        "Petrarch would not use:"@en,
-        "since he holds Petrarch as the prince of poets in our language, worthy of reverence and admiration above all others."@en,
-        "that Petrarch would not use cede and the other words that follow"@en,
-        "Il Petrarca non userebbe:"@it,
-        "Voglio che la perfezion del dire (ancora che non si dia interamente in atto) sia in fino a ora in questa lingua, spezialmente nel Petrarca e nel Boccaccio"@it,
-        "avendo il Petrarca per principe de’ poeti in questa lingua e per degno di riverenza e d’ammirazione a tutte l’altre."@it,
-        "che il Petrarca non userebbe cede ed altre voci che seguono"@it,
-        "il Petrarca non avrebbe usata niuna delle cose notate da lui nella canzone del Caro"@it .
-
-dul:Agent a owl:Class .
-
-contro:predella a dul:Agent,
-        owl:NamedIndividual ;
-    rdfs:label "Predella" ;
-    rdfs:comment "Fictional author: the text is presented as if written by the janitor of Accademia di Banchi di Roma."@en ;
-    arg:personaOf contro:caro .
-
-contro:s1 a arg:Statement ;
-    rdfs:label "Petrarch never used certain words."@en ;
-    prov:value "If you were to say that Petrarch had not used them, one might believe you, for you are well-versed in vocabulary"@en,
-        "that led him to set them aside"@en,
-        "Se voi diceste che ’l Petrarca non l’avesse usate, vi si potrebbe credere, perché siete molto pratico nel vocabolario"@it,
-        "che lo mosse a lasciarle da parte"@it .
-
-contro:disputed-words a dul:Collection,
-        owl:NamedIndividual,
-        arg:Topic ;
-    rdfs:label "Disputed word"@en ;
-    dul:hasMember contro:w1,
-        contro:w10,
-        contro:w11,
-        contro:w12,
-        contro:w2,
-        contro:w3,
-        contro:w4,
-        contro:w5,
-        contro:w6,
-        contro:w7,
-        contro:w8,
-        contro:w9 ;
-    rdfs:comment "Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro."@en .
-
-arg:Argument a owl:Class .
-
-arg:Statement a owl:Class .
 
