@@ -63,18 +63,6 @@
   } ]
 }, {
   "@id" : "_:genid107",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/contro/arg#Argument"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/contro/arg#Conclusion"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"
-  } ]
-}, {
-  "@id" : "_:genid108",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -88,22 +76,22 @@
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid116"
+      "@id" : "_:genid115"
     }, {
-      "@id" : "_:genid114"
+      "@id" : "_:genid113"
     }, {
-      "@id" : "_:genid112"
+      "@id" : "_:genid111"
     }, {
-      "@id" : "_:genid110"
+      "@id" : "_:genid109"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid118"
+      "@id" : "_:genid117"
     } ]
   } ]
 }, {
-  "@id" : "_:genid110",
+  "@id" : "_:genid109",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "https://w3id.org/contro/arg#rule"
@@ -115,7 +103,7 @@
     "@id" : "https://w3id.org/contro/arg#Consequent"
   } ]
 }, {
-  "@id" : "_:genid112",
+  "@id" : "_:genid111",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "https://w3id.org/contro/arg#rule"
@@ -127,7 +115,7 @@
     "@id" : "https://w3id.org/contro/arg#Antecedent"
   } ]
 }, {
-  "@id" : "_:genid114",
+  "@id" : "_:genid113",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "https://w3id.org/contro/arg#arg"
@@ -139,7 +127,7 @@
     "@id" : "https://w3id.org/contro/arg#Conclusion"
   } ]
 }, {
-  "@id" : "_:genid116",
+  "@id" : "_:genid115",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "https://w3id.org/contro/arg#arg"
@@ -151,7 +139,7 @@
     "@id" : "https://w3id.org/contro/arg#Premise"
   } ]
 }, {
-  "@id" : "_:genid118",
+  "@id" : "_:genid117",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "https://w3id.org/contro/arg#arg"
@@ -291,6 +279,15 @@
 }, {
   "@id" : "_:genid76",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/contro/arg#Conclusion"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"
+  } ]
+}, {
+  "@id" : "_:genid77",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/contro/arg#Argument"
   } ],
@@ -298,19 +295,10 @@
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"
   } ]
 }, {
-  "@id" : "_:genid77",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/contro/arg#ArgumentationTheory"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"
-  } ]
-}, {
   "@id" : "_:genid78",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/contro/arg#Conclusion"
+    "@id" : "https://w3id.org/contro/arg#ArgumentationTheory"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"
@@ -656,8 +644,6 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/contro/arg#ArgumentationTheorySituation"
   }, {
-    "@id" : "_:genid77"
-  }, {
     "@id" : "_:genid78"
   }, {
     "@id" : "_:genid79"
@@ -668,6 +654,8 @@
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid76"
+  }, {
+    "@id" : "_:genid77"
   } ],
   "http://www.w3.org/2002/07/owl#hasKey" : [ {
     "@list" : [ {

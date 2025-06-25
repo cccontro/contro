@@ -5,8 +5,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/contro/data> a owl:Ontology ;
-    owl:imports <https://w3id.org/contro/arg> .
+<https://w3id.org/contro/data> a owl:Ontology .
 
 :AT_caro a owl:NamedIndividual,
         arg:ArgumentationTheory ;
@@ -113,8 +112,7 @@
     arg:Topic :disputed-words ;
     arg:by :anon .
 
-:latinisms a owl:NamedIndividual,
-        arg:Topic ;
+:latinisms a owl:NamedIndividual ;
     rdfs:label "Latinisms"@en ;
     rdfs:comment "Lexical Latinisms are loanwords from written Latin that are artificially introduced into Italian through phonetic and morphological adaptation, as opposed to hereditary words, which result naturally from uninterrupted phonetic evolution. Latinisms are often employed in poetic texts to elevate the stylistic register."@en .
 
@@ -365,8 +363,7 @@
     arg:isAliasOf :caro .
 
 :disputed-words a dul:Collection,
-        owl:NamedIndividual,
-        arg:Topic ;
+        owl:NamedIndividual ;
     rdfs:label "Disputed word"@en ;
     dul:hasMember :w1,
         :w10,

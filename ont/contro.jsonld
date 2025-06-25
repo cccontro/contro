@@ -54,26 +54,31 @@
   } ]
 }, {
   "@id" : "https://w3id.org/contro/arg#Conclusion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/contro/persp#Cut"
   } ]
 }, {
   "@id" : "https://w3id.org/contro/arg#Premise",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/contro/persp#Lens"
   } ]
 }, {
   "@id" : "https://w3id.org/contro/arg#Topic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/contro/persp#Eventuality"
   } ]
 }, {
   "@id" : "https://w3id.org/contro/arg#by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/contro/persp#Conceptualiser"
   } ]
 }, {
   "@id" : "https://w3id.org/contro/persp#Background",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/contro/arg#ArgumentationTheory"
@@ -83,6 +88,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/contro/persp#contrasts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
     "@list" : [ {
       "@id" : "_:genid9"

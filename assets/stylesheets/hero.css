@@ -178,7 +178,7 @@ section > p {
 }
 
 /* Quotes section */
-h1#cits {
+h1#quotations {
   visibility: hidden;
   position: absolute;
 }
@@ -228,7 +228,11 @@ blockquote:before {
 }
 
 #quotes p {
-  display: contents;
+  margin-top: 0;
+}
+
+#quotes li > p {
+ all: unset;
 }
 
 #quotes .grid.cards {

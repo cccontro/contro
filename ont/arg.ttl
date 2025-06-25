@@ -407,16 +407,16 @@ dul:Situation rdf:type owl:Class .
 ###  https://w3id.org/contro/arg#Argument
 :Argument rdf:type owl:Class ;
           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :Conclusion ;
+                                owl:someValuesFrom dul:Situation
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty dul:satisfies ;
                                 owl:hasValue :Argument
                               ] ;
           rdfs:subClassOf :ArgumentationTheorySituation ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :ArgumentationTheory ;
-                            owl:someValuesFrom dul:Situation
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :Conclusion ;
                             owl:someValuesFrom dul:Situation
                           ] ,
                           [ rdf:type owl:Restriction ;
@@ -691,17 +691,6 @@ Inference rules, together with premises, form part of the dialogical agent’s k
 
 :Topic rdfs:comment "What the argument is about, as opposed to what is being said about it. It can be understood as a term that appears in both the premises and the conclusion."@en ;
        rdfs:label "Topic"@en .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:Restriction ;
-  owl:onProperty :Conclusion ;
-  owl:someValuesFrom dul:Situation ;
-  rdfs:subClassOf :Argument
-] .
 
 
 #################################################################

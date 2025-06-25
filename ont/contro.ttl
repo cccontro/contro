@@ -34,29 +34,34 @@
 #################################################################
 
 ###  https://w3id.org/contro/arg#Conclusion
-arg:Conclusion rdfs:subPropertyOf persp:Cut .
-
+arg:Conclusion rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf persp:Cut .
 
 ###  https://w3id.org/contro/arg#Premise
-arg:Premise rdfs:subPropertyOf persp:Lens .
+arg:Premise rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf persp:Lens .
 
 
 ###  https://w3id.org/contro/arg#Topic
-arg:Topic rdfs:subPropertyOf persp:Eventuality .
+arg:Topic rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf persp:Eventuality .
 
 
 ###  https://w3id.org/contro/arg#by
-arg:by rdfs:subPropertyOf persp:Conceptualiser .
+arg:by rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf persp:Conceptualiser .
 
 
 ###  https://w3id.org/contro/persp#Background
-persp:Background owl:propertyChainAxiom ( arg:ArgumentationTheory
+persp:Background rdf:type owl:ObjectProperty ;
+                 owl:propertyChainAxiom ( arg:ArgumentationTheory
                                           arg:KnowledgeBase
                                         ) .
 
 
 ###  https://w3id.org/contro/persp#contrasts
-persp:contrasts owl:propertyChainAxiom ( [ owl:inverseOf persp:Cut
+persp:contrasts rdf:type owl:ObjectProperty ;
+                owl:propertyChainAxiom ( [ owl:inverseOf persp:Cut
                                          ]
                                          arg:Conclusion
                                          arg:contradicts

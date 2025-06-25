@@ -66,6 +66,24 @@
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
     </Annotation>
+    <Declaration>
+        <ObjectProperty IRI="/arg#Conclusion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/arg#Premise"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/arg#Topic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/arg#by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/persp#Background"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/persp#contrasts"/>
+    </Declaration>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/arg#Conclusion"/>
         <ObjectProperty IRI="/persp#Cut"/>

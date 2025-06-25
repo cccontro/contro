@@ -293,6 +293,13 @@ The ontology is designed to function with minimal annotation of Premises and Con
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Argument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Conclusion"/>
+            <Class abbreviatedIRI="dul:Situation"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Argument"/>
         <ObjectHasValue>
             <ObjectProperty abbreviatedIRI="dul:satisfies"/>
             <NamedIndividual IRI="#Argument"/>
@@ -412,13 +419,6 @@ The ontology is designed to function with minimal annotation of Premises and Con
     <SubClassOf>
         <Class IRI="#Argument"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Conclusion"/>
-            <Class abbreviatedIRI="dul:Situation"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Argument"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#InferenceRule"/>
             <Class abbreviatedIRI="dul:Situation"/>
         </ObjectSomeValuesFrom>
@@ -501,13 +501,6 @@ The ontology is designed to function with minimal annotation of Premises and Con
     <SubClassOf>
         <Class IRI="#Undermining"/>
         <Class IRI="#Conflict"/>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Conclusion"/>
-            <Class abbreviatedIRI="dul:Situation"/>
-        </ObjectSomeValuesFrom>
-        <Class IRI="#Argument"/>
     </SubClassOf>
     <ClassAssertion>
         <Class abbreviatedIRI="dul:Description"/>

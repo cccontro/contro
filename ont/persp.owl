@@ -248,6 +248,13 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Perspectivisation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Cut"/>
+            <Class abbreviatedIRI="dul:Situation"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Perspectivisation"/>
         <ObjectHasValue>
             <ObjectProperty abbreviatedIRI="dul:satisfies"/>
             <NamedIndividual IRI="#Perspectivisation"/>
@@ -290,13 +297,6 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
     <SubClassOf>
         <Class IRI="#Perspectivisation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Cut"/>
-            <Class abbreviatedIRI="dul:Situation"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Perspectivisation"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#Eventuality"/>
             <Class abbreviatedIRI="dul:Situation"/>
         </ObjectSomeValuesFrom>
@@ -318,13 +318,6 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
     <SubClassOf>
         <Class IRI="#PerspectivisationTheorySituation"/>
         <Class abbreviatedIRI="dul:Situation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Cut"/>
-            <Class abbreviatedIRI="dul:Situation"/>
-        </ObjectSomeValuesFrom>
-        <Class IRI="#Perspectivisation"/>
     </SubClassOf>
     <ClassAssertion>
         <Class abbreviatedIRI="dul:Description"/>

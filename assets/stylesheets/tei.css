@@ -1,5 +1,14 @@
-/* Notes are rendered inside cards */
-.note div:first-child {
+/* Argument cards */
+.note.paraphrase:before {
+  content: "🅟 = Premise\0009\0009🅡 = Inference Rule\0009🅒 = Conclusion";
+  color: var(--md-default-fg-color--light);
+  font-size: .64rem;
+  margin-left: 1.5rem;
+  white-space: pre;
+  margin-bottom: 0;
+}
+
+.note.paraphrase div:first-child {
   margin-top: 0.3rem;
 }
 
@@ -25,60 +34,52 @@
 }
 
 /* Argument lists */
+.md-typeset .syllogism ul {
+  margin: .625em;
+}
+
+.md-typeset .syllogism ul li {
+  width: fit-content;
+}
+
+.md-typeset .syllogism ul li:has([ana="#premise"]) {
+  list-style-type: "🅟  ";
+}
+
+.md-typeset .syllogism ul li:has([ana="#rule"]) {
+  list-style-type: "🅡  ";
+}
+
+.md-typeset .syllogism ul li:has([ana="#conclusion"]) {
+  list-style-type: "🅒  ";
+}
+
 .md-typeset .syllogism ul li p {
   text-wrap: pretty;
   margin: 0;
   display: inline;
 }
 
-.md-typeset .syllogism ul li p[label]:before,
-.md-typeset .syllogism ul li p a[label]:before,
-.md-typeset .syllogism ul li p[against]:after,
-.md-typeset .syllogism ul li p[ana="#conclusion"] a[against]:after {
+.md-typeset .syllogism ul li [label]:before,
+.md-typeset .syllogism ul li [against]:after {
+  display: block;
+  pointer-events: none;
   color: var(--md-default-fg-color--lighter);
   font-style: normal;
   font-variant-caps: all-small-caps;
   font-weight: 600;
-  text-decoration: none !important;
-  display: inline-block;
-  background: var(--md-default-bg-color);
 }
 
-.md-typeset .syllogism ul li p[label]:before,
-.md-typeset .syllogism ul li p a[label]:before {
+.md-typeset .syllogism ul li [label]:before {
   content: attr(label);
-  padding: 1px .3rem 0 0;
+  padding-right: .3rem;
+  float: inline-start;
 }
 
-.md-typeset .syllogism ul li p[against]:after,
-.md-typeset .syllogism ul li p[ana="#conclusion"] a[against]:after {
+.md-typeset .syllogism ul li:has([ana="#conclusion"]) [against]:after {
   content: "✖ " attr(against);
-  padding: 1px 0 0 .3rem;
-}
-
-.md-typeset .syllogism ul {
-  margin: .625em;
-}
-
-.md-typeset .syllogism ul li:has(p[ana="#premise"]) {
-  list-style-type: "🅟  ";
-}
-
-.md-typeset .syllogism ul li:has(p[ana="#rule"]) {
-  list-style-type: "🅡  ";
-}
-
-.md-typeset .syllogism ul li:has(p[ana="#conclusion"]) {
-  list-style-type: "🅒  ";
-}
-
-.note:before {
-  content: "🅟 = Premise\0009\0009🅡 = Inference Rule\0009🅒 = Conclusion";
-  color: var(--md-default-fg-color--light);
-  font-size: .64rem;
-  margin-left: 1.5rem;
-  white-space: pre;
-  margin-bottom: 0;
+  padding-left: .3rem;
+  float: inline-end;
 }
 
 /* Quoted premises */
@@ -90,9 +91,15 @@
 
 /* In-text glosses */
 :not(.note) > [ana="#disputed-words"] {
-  text-decoration-line: line-through;
-  text-decoration-color: var(--md-secondary-fg-color--transparent);
-  text-decoration-thickness: 1.3em;
+  position: relative;
+}
+
+:not(.note) > [ana="#disputed-words"]:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--md-secondary-fg-color--transparent);
+  border-radius: .2rem;
   cursor: help;
 }
 
@@ -107,18 +114,8 @@
   --md-accent-fg-color: var(--md-secondary-fg-color--light-hover);
 }
 
-.q {
-  color: var(--md-typeset-a-color);
-  text-decoration-color: transparent;
-  font-weight: 500;
-}
-
-.q:hover {
-  color: var(--md-accent-fg-color);
-}
-
 .q:not(a) {
-  cursor: help;
+  color: var(--md-default-fg-color--light);
 }
 
 /* Related interpretation passages are dynamically highlighted */
@@ -128,7 +125,10 @@
 p:has([href*="#s"]):not(.absent) {
   position: relative;
   background-image: linear-gradient(to right, transparent 50%, var(--md-primary-fg-color--light) 50%);
-  background-origin: 0;
+  border-radius: .2rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-clip: content-box;
   background-size: 200% 100%;
   background-repeat: repeat-x;
   background-position: 0 100%;
@@ -136,8 +136,9 @@ p:has([href*="#s"]):not(.absent) {
   cursor: pointer;
   text-decoration-line: underline;
   text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
   text-decoration-color: var(--md-default-fg-color--lighter);
-  text-underline-offset: 5px;
+  text-underline-offset: 5.5px;
 }
 
 a[href*="#s"], p.absent {
@@ -181,14 +182,9 @@ li:has(.absent) {
   color: var(--md-default-fg-color--light);
 }
 
-
 .tabbed-block h3 + p:not(.subtitle), .subtitle + p {
   margin-top: 0;
   font-style: italic;
-}
-
-.tabbed-block a {
-  font-weight: 500;
 }
 
 .tabbed-block ol[type="1"] > li::marker {
@@ -211,7 +207,7 @@ li:has(.absent) {
   margin-bottom: 0;
 }
 
-/* Details element */
+/* Expandable poem */
 [dir="ltr"] .md-typeset details {
   all: unset;
   display: block;
@@ -277,11 +273,36 @@ li:has(.absent) {
   margin-left: .8em;
 }
 
-/* Citations */
-span[title] {
+/* Quotations */
+span[title], blockquote[title] {
   cursor: help;
 }
 
+blockquote {
+  width: fit-content;
+}
+
+.note.translation {
+  padding-left: .8rem;
+  border-left: .2rem solid var(--md-default-fg-color--lighter);
+}
+
+.note.translation p {
+  margin: 0;
+  font-size: smaller;
+}
+
+.note.translation p:first-child {
+  padding-top: .3rem;
+}
+
+.note.translation p:last-child {
+  padding-bottom: .2rem;
+}
+
+.foreign {
+  font-style: italic;
+}
 
 /* Responsive */
 @media screen and (max-width: 720px) {
@@ -289,7 +310,7 @@ span[title] {
     margin: 0 0 1rem;
   }
 
-  .note:before {
+  .note.paraphrase:before {
     margin-left: 0;
     display: block;
     width: 100%;

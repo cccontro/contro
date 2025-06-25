@@ -9,9 +9,9 @@
 <https://w3id.org/contro/inferred> rdf:type owl:Ontology ;
                                     <http://purl.org/dc/elements/1.1/creator> "Alberto Ciarrocca" ,
                                                                               "Francesca Massarenti" ;
-                                    <http://purl.org/dc/terms/created> "12/03/2025" ,
-                                                                       "16/06/2025" ;
-                                    <http://purl.org/dc/terms/description> """An ontology for representing defeasible argumentation based on the ASPIC+ framework.
+                                    <http://purl.org/dc/terms/created> "12/03/2025" ;
+                                    <http://purl.org/dc/terms/description> "An ontology for extracting perspectives from arguments. It builds on the ASPIC+ framework to formalize arguments and maps them to perspectives on the topic under discussion. The mapping is implemented via object property subclassing, preserving the conceptual separation between the argument structure and the perspectival interpretation."@en ,
+                                                                           """An ontology for representing defeasible argumentation based on the ASPIC+ framework.
 
 In this model, each Dialogical Agent participates in discourse with an individual Argumentation Theory, comprising a Knowledge Base and an Acceptance Attitude toward external arguments. From this theory, the agent can construct Arguments, each consisting of a set of Premises, an Inference Rule, and a resulting Conclusion.
 
@@ -23,11 +23,10 @@ The result of perspectivisation is not only a linguistic or rhetorical artifice,
 
 For example, in political talk, when e.g. a democrat says that taxes are investments, the democrat (conceptualiser) holds an attitude towards the current taxation policies (cut from a background), viewed through the generally positive value associated with investments (lens).
 The expected result from the example is that a new entity emerges: an 'investment-blended' meaning of taxes.
-A lot of public discussions, even in formal contexts, shows perspectivisation situations."""@en ,
-                                                                           "Extract perspectives from arguments."@en ;
+A lot of public discussions, even in formal contexts, shows perspectivisation situations."""@en ;
                                     <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                     <http://purl.org/dc/terms/modified> "16/06/2025" ,
-                                                                        "21/05/2025" ;
+                                                                        "17/06/2025" ;
                                     <http://purl.org/dc/terms/source> <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl> ;
                                     <http://purl.org/dc/terms/title> "Argumentation Ontology"@en ,
                                                                      "Controversy Ontology"@en ,
@@ -599,8 +598,12 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
 
 
 ###  https://w3id.org/contro/arg#Argument
-<https://w3id.org/contro/arg#Argument> rdf:type owl:Class ,
-                                                owl:NamedIndividual ;
+<https://w3id.org/contro/arg#Argument> rdf:type owl:Class ;
+                                       owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/contro/arg#Conclusion> ;
+                                                             owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation>
+                                                           ] ;
+                                       rdf:type owl:NamedIndividual ;
                                        owl:equivalentClass [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
                                                              owl:hasValue <https://w3id.org/contro/arg#Argument>
@@ -609,10 +612,6 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                        <https://w3id.org/contro/persp#Perspectivisation> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <https://w3id.org/contro/arg#ArgumentationTheory> ;
-                                                         owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/contro/arg#Conclusion> ;
                                                          owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation>
                                                        ] ,
                                                        [ rdf:type owl:Restriction ;
@@ -626,7 +625,10 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <https://w3id.org/contro/arg#Topic> ;
                                                          owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality>
-                                                       ] .
+                                                       ] ;
+                                       owl:hasKey ( <https://w3id.org/contro/arg#InferenceRule>
+                                                    <https://w3id.org/contro/arg#Topic>
+                                                  ) .
 
 
 ###  https://w3id.org/contro/arg#ArgumentationTheory
@@ -637,6 +639,10 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                         owl:hasValue <https://w3id.org/contro/arg#ArgumentationTheory>
                                                                       ] ;
                                                   rdfs:subClassOf <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://w3id.org/contro/arg#AcceptanceAttitude> ;
+                                                                    owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation>
+                                                                  ] ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <https://w3id.org/contro/arg#DialogicalAgent> ;
                                                                     owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>
@@ -704,7 +710,10 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                   owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
                                                                   owl:hasValue <https://w3id.org/contro/arg#InferenceRule>
                                                                 ] ;
-                                            rdfs:subClassOf <https://w3id.org/contro/arg#ArgumentationTheorySituation> .
+                                            rdfs:subClassOf <https://w3id.org/contro/arg#ArgumentationTheorySituation> ;
+                                            owl:hasKey ( <https://w3id.org/contro/arg#Antecedent>
+                                                         <https://w3id.org/contro/arg#Consequent>
+                                                       ) .
 
 
 ###  https://w3id.org/contro/arg#KnowledgeBase
@@ -777,10 +786,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
                                                                owl:hasValue <https://w3id.org/contro/persp#Attitude>
                                                              ] ;
-                                         rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                         rdf:type owl:ObjectProperty ;
-                                         owl:hasKey ( <https://w3id.org/contro/persp#Attitude>
-                                                    ) .
+                                         rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> .
 
 
 ###  https://w3id.org/contro/persp#Background
@@ -790,10 +796,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
                                                                  owl:hasValue <https://w3id.org/contro/persp#Background>
                                                                ] ;
-                                           rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                           rdf:type owl:ObjectProperty ;
-                                           owl:hasKey ( <https://w3id.org/contro/persp#Background>
-                                                      ) .
+                                           rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> .
 
 
 ###  https://w3id.org/contro/persp#Cut
@@ -803,10 +806,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                           owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
                                                           owl:hasValue <https://w3id.org/contro/persp#Cut>
                                                         ] ;
-                                    rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                    rdf:type owl:ObjectProperty ;
-                                    owl:hasKey ( <https://w3id.org/contro/persp#Cut>
-                                               ) .
+                                    rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> .
 
 
 ###  https://w3id.org/contro/persp#Lens
@@ -816,15 +816,16 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                            owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
                                                            owl:hasValue <https://w3id.org/contro/persp#Lens>
                                                          ] ;
-                                     rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                     rdf:type owl:ObjectProperty ;
-                                     owl:hasKey ( <https://w3id.org/contro/persp#Lens>
-                                                ) .
+                                     rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> .
 
 
 ###  https://w3id.org/contro/persp#Perspectivisation
-<https://w3id.org/contro/persp#Perspectivisation> rdf:type owl:Class ,
-                                                           owl:NamedIndividual ;
+<https://w3id.org/contro/persp#Perspectivisation> rdf:type owl:Class ;
+                                                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://w3id.org/contro/persp#Cut> ;
+                                                                        owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation>
+                                                                      ] ;
+                                                  rdf:type owl:NamedIndividual ;
                                                   owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                         owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
                                                                         owl:hasValue <https://w3id.org/contro/persp#Perspectivisation>
@@ -837,10 +838,6 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <https://w3id.org/contro/persp#Conceptualiser> ;
                                                                     owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>
-                                                                  ] ,
-                                                                  [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <https://w3id.org/contro/persp#Cut> ;
-                                                                    owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation>
                                                                   ] ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <https://w3id.org/contro/persp#Eventuality> ;
@@ -885,8 +882,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
 <http://viaf.org/viaf/51714622> rdf:type owl:NamedIndividual ,
                                          <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
                                 owl:sameAs <https://w3id.org/contro/data#caro> ;
-                                <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> <https://w3id.org/contro/arg#DialogicalAgent> ;
-                                <https://w3id.org/contro/arg#holds> :litigioso .
+                                <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> <https://w3id.org/contro/arg#DialogicalAgent> .
 
 
 ###  https://w3id.org/contro/data#caro
@@ -958,6 +954,38 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> .
 
 
+###  https://w3id.org/contro/data#AT_caro
+<https://w3id.org/contro/data#AT_caro> rdf:type owl:NamedIndividual ,
+                                                <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                                <https://w3id.org/contro/arg#ArgumentationTheory> ,
+                                                <https://w3id.org/contro/arg#ArgumentationTheorySituation> ;
+                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <http://viaf.org/viaf/51714622> ,
+                                                                                                            <https://w3id.org/contro/data#KB_caro> ,
+                                                                                                            <https://w3id.org/contro/data#caro> ,
+                                                                                                            <https://w3id.org/contro/data#predella> ;
+                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#ArgumentationTheory> ;
+                                       <https://w3id.org/contro/arg#DialogicalAgent> <http://viaf.org/viaf/51714622> ,
+                                                                                     <https://w3id.org/contro/data#caro> ,
+                                                                                     <https://w3id.org/contro/data#predella> ;
+                                       <https://w3id.org/contro/arg#KnowledgeBase> <https://w3id.org/contro/data#KB_caro> .
+
+
+###  https://w3id.org/contro/data#AT_castelvetro
+<https://w3id.org/contro/data#AT_castelvetro> rdf:type owl:NamedIndividual ,
+                                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                                       <https://w3id.org/contro/arg#ArgumentationTheory> ,
+                                                       <https://w3id.org/contro/arg#ArgumentationTheorySituation> ;
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <http://viaf.org/viaf/22166452> ,
+                                                                                                                   <https://w3id.org/contro/data#KB_castelvetro> ,
+                                                                                                                   <https://w3id.org/contro/data#anon> ,
+                                                                                                                   <https://w3id.org/contro/data#castelvetro> ;
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#ArgumentationTheory> ;
+                                              <https://w3id.org/contro/arg#DialogicalAgent> <http://viaf.org/viaf/22166452> ,
+                                                                                            <https://w3id.org/contro/data#anon> ,
+                                                                                            <https://w3id.org/contro/data#castelvetro> ;
+                                              <https://w3id.org/contro/arg#KnowledgeBase> <https://w3id.org/contro/data#KB_castelvetro> .
+
+
 ###  https://w3id.org/contro/data#CR1
 <https://w3id.org/contro/data#CR1> rdf:type owl:NamedIndividual ,
                                             <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
@@ -967,9 +995,9 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                             <https://w3id.org/contro/arg#Undercut> ,
                                             <https://w3id.org/contro/persp#Perspectivisation> ,
                                             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#at_caro> ,
+                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#AT_caro> ,
+                                                                                                        <https://w3id.org/contro/data#KB_caro> ,
                                                                                                         <https://w3id.org/contro/data#disputed-words> ,
-                                                                                                        <https://w3id.org/contro/data#kb_caro> ,
                                                                                                         <https://w3id.org/contro/data#predella> ,
                                                                                                         <https://w3id.org/contro/data#r3> ,
                                                                                                         <https://w3id.org/contro/data#s1> ,
@@ -978,7 +1006,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                         <https://w3id.org/contro/data#s8> ;
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ,
                                                                                                      <https://w3id.org/contro/persp#Perspectivisation> ;
-                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#at_caro> ;
+                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#AT_caro> ;
                                    <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/data#s8> ;
                                    <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/data#r3> ;
                                    <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/data#s1> ,
@@ -987,7 +1015,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <https://w3id.org/contro/arg#Topic> <https://w3id.org/contro/data#disputed-words> ;
                                    <https://w3id.org/contro/arg#attacks> <https://w3id.org/contro/data#CV1> ;
                                    <https://w3id.org/contro/arg#by> <https://w3id.org/contro/data#predella> ;
-                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#Conceptualiser> <https://w3id.org/contro/data#predella> ;
                                    <https://w3id.org/contro/persp#Cut> <https://w3id.org/contro/data#s8> ;
                                    <https://w3id.org/contro/persp#Eventuality> <https://w3id.org/contro/data#disputed-words> ;
@@ -1005,9 +1033,9 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                             <https://w3id.org/contro/arg#Rebuttal> ,
                                             <https://w3id.org/contro/persp#Perspectivisation> ,
                                             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#at_caro> ,
+                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#AT_caro> ,
+                                                                                                        <https://w3id.org/contro/data#KB_caro> ,
                                                                                                         <https://w3id.org/contro/data#disputed-words> ,
-                                                                                                        <https://w3id.org/contro/data#kb_caro> ,
                                                                                                         <https://w3id.org/contro/data#predella> ,
                                                                                                         <https://w3id.org/contro/data#r4> ,
                                                                                                         <https://w3id.org/contro/data#s1> ,
@@ -1017,7 +1045,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                         <https://w3id.org/contro/data#s9> ;
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ,
                                                                                                      <https://w3id.org/contro/persp#Perspectivisation> ;
-                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#at_caro> ;
+                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#AT_caro> ;
                                    <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/data#s10> ;
                                    <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/data#r4> ;
                                    <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/data#s1> ,
@@ -1027,7 +1055,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <https://w3id.org/contro/arg#Topic> <https://w3id.org/contro/data#disputed-words> ;
                                    <https://w3id.org/contro/arg#attacks> <https://w3id.org/contro/data#CV2> ;
                                    <https://w3id.org/contro/arg#by> <https://w3id.org/contro/data#predella> ;
-                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#Conceptualiser> <https://w3id.org/contro/data#predella> ;
                                    <https://w3id.org/contro/persp#Cut> <https://w3id.org/contro/data#s10> ;
                                    <https://w3id.org/contro/persp#Eventuality> <https://w3id.org/contro/data#disputed-words> ;
@@ -1044,9 +1072,9 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                             <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
                                             <https://w3id.org/contro/persp#Perspectivisation> ,
                                             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#at_caro> ,
+                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#AT_caro> ,
+                                                                                                        <https://w3id.org/contro/data#KB_caro> ,
                                                                                                         <https://w3id.org/contro/data#disputed-words> ,
-                                                                                                        <https://w3id.org/contro/data#kb_caro> ,
                                                                                                         <https://w3id.org/contro/data#predella> ,
                                                                                                         <https://w3id.org/contro/data#r5> ,
                                                                                                         <https://w3id.org/contro/data#s11> ,
@@ -1055,7 +1083,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                         <https://w3id.org/contro/data#s14> ;
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ,
                                                                                                      <https://w3id.org/contro/persp#Perspectivisation> ;
-                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#at_caro> ;
+                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#AT_caro> ;
                                    <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/data#s14> ;
                                    <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/data#r5> ;
                                    <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/data#s11> ,
@@ -1063,7 +1091,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                          <https://w3id.org/contro/data#s13> ;
                                    <https://w3id.org/contro/arg#Topic> <https://w3id.org/contro/data#disputed-words> ;
                                    <https://w3id.org/contro/arg#by> <https://w3id.org/contro/data#predella> ;
-                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#Conceptualiser> <https://w3id.org/contro/data#predella> ;
                                    <https://w3id.org/contro/persp#Cut> <https://w3id.org/contro/data#s14> ;
                                    <https://w3id.org/contro/persp#Eventuality> <https://w3id.org/contro/data#disputed-words> ;
@@ -1081,9 +1109,9 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                             <https://w3id.org/contro/arg#Rebuttal> ,
                                             <https://w3id.org/contro/persp#Perspectivisation> ,
                                             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#at_caro> ,
+                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#AT_caro> ,
+                                                                                                        <https://w3id.org/contro/data#KB_caro> ,
                                                                                                         <https://w3id.org/contro/data#disputed-words> ,
-                                                                                                        <https://w3id.org/contro/data#kb_caro> ,
                                                                                                         <https://w3id.org/contro/data#predella> ,
                                                                                                         <https://w3id.org/contro/data#r6> ,
                                                                                                         <https://w3id.org/contro/data#s10> ,
@@ -1091,7 +1119,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                         <https://w3id.org/contro/data#s15> ;
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ,
                                                                                                      <https://w3id.org/contro/persp#Perspectivisation> ;
-                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#at_caro> ;
+                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#AT_caro> ;
                                    <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/data#s10> ;
                                    <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/data#r6> ;
                                    <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/data#s14> ,
@@ -1100,7 +1128,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <https://w3id.org/contro/arg#attacks> <https://w3id.org/contro/data#CV2> ;
                                    <https://w3id.org/contro/arg#by> <https://w3id.org/contro/data#predella> ;
                                    <https://w3id.org/contro/arg#hasSubArgument> <https://w3id.org/contro/data#CR3> ;
-                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#Conceptualiser> <https://w3id.org/contro/data#predella> ;
                                    <https://w3id.org/contro/persp#Cut> <https://w3id.org/contro/data#s10> ;
                                    <https://w3id.org/contro/persp#Eventuality> <https://w3id.org/contro/data#disputed-words> ;
@@ -1117,9 +1145,9 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                             <https://w3id.org/contro/arg#Undercut> ,
                                             <https://w3id.org/contro/persp#Perspectivisation> ,
                                             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#at_caro> ,
+                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#AT_caro> ,
+                                                                                                        <https://w3id.org/contro/data#KB_caro> ,
                                                                                                         <https://w3id.org/contro/data#disputed-words> ,
-                                                                                                        <https://w3id.org/contro/data#kb_caro> ,
                                                                                                         <https://w3id.org/contro/data#predella> ,
                                                                                                         <https://w3id.org/contro/data#r7> ,
                                                                                                         <https://w3id.org/contro/data#s16> ,
@@ -1127,7 +1155,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                         <https://w3id.org/contro/data#s18> ;
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ,
                                                                                                      <https://w3id.org/contro/persp#Perspectivisation> ;
-                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#at_caro> ;
+                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#AT_caro> ;
                                    <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/data#s18> ;
                                    <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/data#r7> ;
                                    <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/data#s16> ,
@@ -1135,7 +1163,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <https://w3id.org/contro/arg#Topic> <https://w3id.org/contro/data#disputed-words> ;
                                    <https://w3id.org/contro/arg#attacks> <https://w3id.org/contro/data#CV2> ;
                                    <https://w3id.org/contro/arg#by> <https://w3id.org/contro/data#predella> ;
-                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#Conceptualiser> <https://w3id.org/contro/data#predella> ;
                                    <https://w3id.org/contro/persp#Cut> <https://w3id.org/contro/data#s18> ;
                                    <https://w3id.org/contro/persp#Eventuality> <https://w3id.org/contro/data#disputed-words> ;
@@ -1150,9 +1178,9 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                             <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
                                             <https://w3id.org/contro/persp#Perspectivisation> ,
                                             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#at_caro> ,
+                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#AT_caro> ,
+                                                                                                        <https://w3id.org/contro/data#KB_caro> ,
                                                                                                         <https://w3id.org/contro/data#disputed-words> ,
-                                                                                                        <https://w3id.org/contro/data#kb_caro> ,
                                                                                                         <https://w3id.org/contro/data#predella> ,
                                                                                                         <https://w3id.org/contro/data#r8> ,
                                                                                                         <https://w3id.org/contro/data#s19> ,
@@ -1160,14 +1188,14 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                         <https://w3id.org/contro/data#s21> ;
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ,
                                                                                                      <https://w3id.org/contro/persp#Perspectivisation> ;
-                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#at_caro> ;
+                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#AT_caro> ;
                                    <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/data#s21> ;
                                    <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/data#r8> ;
                                    <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/data#s19> ,
                                                                          <https://w3id.org/contro/data#s20> ;
                                    <https://w3id.org/contro/arg#Topic> <https://w3id.org/contro/data#disputed-words> ;
                                    <https://w3id.org/contro/arg#by> <https://w3id.org/contro/data#predella> ;
-                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#Conceptualiser> <https://w3id.org/contro/data#predella> ;
                                    <https://w3id.org/contro/persp#Cut> <https://w3id.org/contro/data#s21> ;
                                    <https://w3id.org/contro/persp#Eventuality> <https://w3id.org/contro/data#disputed-words> ;
@@ -1182,9 +1210,9 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                             <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
                                             <https://w3id.org/contro/persp#Perspectivisation> ,
                                             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#at_caro> ,
+                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#AT_caro> ,
+                                                                                                        <https://w3id.org/contro/data#KB_caro> ,
                                                                                                         <https://w3id.org/contro/data#disputed-words> ,
-                                                                                                        <https://w3id.org/contro/data#kb_caro> ,
                                                                                                         <https://w3id.org/contro/data#predella> ,
                                                                                                         <https://w3id.org/contro/data#r9> ,
                                                                                                         <https://w3id.org/contro/data#s18> ,
@@ -1193,7 +1221,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                         <https://w3id.org/contro/data#s4> ;
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ,
                                                                                                      <https://w3id.org/contro/persp#Perspectivisation> ;
-                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#at_caro> ;
+                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#AT_caro> ;
                                    <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/data#s21> ;
                                    <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/data#r9> ;
                                    <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/data#s18> ,
@@ -1202,7 +1230,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <https://w3id.org/contro/arg#Topic> <https://w3id.org/contro/data#disputed-words> ;
                                    <https://w3id.org/contro/arg#by> <https://w3id.org/contro/data#predella> ;
                                    <https://w3id.org/contro/arg#hasSubArgument> <https://w3id.org/contro/data#CR5> ;
-                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#Conceptualiser> <https://w3id.org/contro/data#predella> ;
                                    <https://w3id.org/contro/persp#Cut> <https://w3id.org/contro/data#s21> ;
                                    <https://w3id.org/contro/persp#Eventuality> <https://w3id.org/contro/data#disputed-words> ;
@@ -1218,9 +1246,9 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                             <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
                                             <https://w3id.org/contro/persp#Perspectivisation> ,
                                             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#at_caro> ,
+                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#AT_caro> ,
+                                                                                                        <https://w3id.org/contro/data#KB_caro> ,
                                                                                                         <https://w3id.org/contro/data#disputed-words> ,
-                                                                                                        <https://w3id.org/contro/data#kb_caro> ,
                                                                                                         <https://w3id.org/contro/data#predella> ,
                                                                                                         <https://w3id.org/contro/data#r10> ,
                                                                                                         <https://w3id.org/contro/data#s23> ,
@@ -1228,14 +1256,14 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                         <https://w3id.org/contro/data#s25> ;
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ,
                                                                                                      <https://w3id.org/contro/persp#Perspectivisation> ;
-                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#at_caro> ;
+                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#AT_caro> ;
                                    <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/data#s25> ;
                                    <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/data#r10> ;
                                    <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/data#s23> ,
                                                                          <https://w3id.org/contro/data#s24> ;
                                    <https://w3id.org/contro/arg#Topic> <https://w3id.org/contro/data#disputed-words> ;
                                    <https://w3id.org/contro/arg#by> <https://w3id.org/contro/data#predella> ;
-                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#Conceptualiser> <https://w3id.org/contro/data#predella> ;
                                    <https://w3id.org/contro/persp#Cut> <https://w3id.org/contro/data#s25> ;
                                    <https://w3id.org/contro/persp#Eventuality> <https://w3id.org/contro/data#disputed-words> ;
@@ -1250,17 +1278,17 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                             <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
                                             <https://w3id.org/contro/persp#Perspectivisation> ,
                                             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#anon> ,
-                                                                                                        <https://w3id.org/contro/data#at_castelvetro> ,
+                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#AT_castelvetro> ,
+                                                                                                        <https://w3id.org/contro/data#KB_castelvetro> ,
+                                                                                                        <https://w3id.org/contro/data#anon> ,
                                                                                                         <https://w3id.org/contro/data#disputed-words> ,
-                                                                                                        <https://w3id.org/contro/data#kb_castelvetro> ,
                                                                                                         <https://w3id.org/contro/data#r1> ,
                                                                                                         <https://w3id.org/contro/data#s1> ,
                                                                                                         <https://w3id.org/contro/data#s2> ,
                                                                                                         <https://w3id.org/contro/data#s3> ;
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ,
                                                                                                      <https://w3id.org/contro/persp#Perspectivisation> ;
-                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#at_castelvetro> ;
+                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#AT_castelvetro> ;
                                    <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/data#s3> ;
                                    <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/data#r1> ;
                                    <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/data#s1> ,
@@ -1268,7 +1296,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <https://w3id.org/contro/arg#Topic> <https://w3id.org/contro/data#disputed-words> ;
                                    <https://w3id.org/contro/arg#attackedBy> <https://w3id.org/contro/data#CR1> ;
                                    <https://w3id.org/contro/arg#by> <https://w3id.org/contro/data#anon> ;
-                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#kb_castelvetro> ;
+                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#KB_castelvetro> ;
                                    <https://w3id.org/contro/persp#Conceptualiser> <https://w3id.org/contro/data#anon> ;
                                    <https://w3id.org/contro/persp#Cut> <https://w3id.org/contro/data#s3> ;
                                    <https://w3id.org/contro/persp#Eventuality> <https://w3id.org/contro/data#disputed-words> ;
@@ -1283,17 +1311,17 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                             <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
                                             <https://w3id.org/contro/persp#Perspectivisation> ,
                                             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#anon> ,
-                                                                                                        <https://w3id.org/contro/data#at_castelvetro> ,
+                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <https://w3id.org/contro/data#AT_castelvetro> ,
+                                                                                                        <https://w3id.org/contro/data#KB_castelvetro> ,
+                                                                                                        <https://w3id.org/contro/data#anon> ,
                                                                                                         <https://w3id.org/contro/data#disputed-words> ,
-                                                                                                        <https://w3id.org/contro/data#kb_castelvetro> ,
                                                                                                         <https://w3id.org/contro/data#r2> ,
                                                                                                         <https://w3id.org/contro/data#s3> ,
                                                                                                         <https://w3id.org/contro/data#s4> ,
                                                                                                         <https://w3id.org/contro/data#s5> ;
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Argument> ,
                                                                                                      <https://w3id.org/contro/persp#Perspectivisation> ;
-                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#at_castelvetro> ;
+                                   <https://w3id.org/contro/arg#ArgumentationTheory> <https://w3id.org/contro/data#AT_castelvetro> ;
                                    <https://w3id.org/contro/arg#Conclusion> <https://w3id.org/contro/data#s5> ;
                                    <https://w3id.org/contro/arg#InferenceRule> <https://w3id.org/contro/data#r2> ;
                                    <https://w3id.org/contro/arg#Premise> <https://w3id.org/contro/data#s3> ,
@@ -1304,12 +1332,72 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                             <https://w3id.org/contro/data#CR5> ;
                                    <https://w3id.org/contro/arg#by> <https://w3id.org/contro/data#anon> ;
                                    <https://w3id.org/contro/arg#hasSubArgument> <https://w3id.org/contro/data#CV1> ;
-                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#kb_castelvetro> ;
+                                   <https://w3id.org/contro/persp#Background> <https://w3id.org/contro/data#KB_castelvetro> ;
                                    <https://w3id.org/contro/persp#Conceptualiser> <https://w3id.org/contro/data#anon> ;
                                    <https://w3id.org/contro/persp#Cut> <https://w3id.org/contro/data#s5> ;
                                    <https://w3id.org/contro/persp#Eventuality> <https://w3id.org/contro/data#disputed-words> ;
                                    <https://w3id.org/contro/persp#Lens> <https://w3id.org/contro/data#s3> ,
                                                                         <https://w3id.org/contro/data#s4> .
+
+
+###  https://w3id.org/contro/data#KB_caro
+<https://w3id.org/contro/data#KB_caro> rdf:type owl:NamedIndividual ,
+                                                <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                                <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                                <https://w3id.org/contro/arg#KnowledgeBase> ,
+                                                <https://w3id.org/contro/persp#Background> ,
+                                                <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#KnowledgeBase> ,
+                                                                                                         <https://w3id.org/contro/persp#Background> ;
+                                       <https://w3id.org/contro/arg#hasMember> <https://w3id.org/contro/data#r10> ,
+                                                                               <https://w3id.org/contro/data#r3> ,
+                                                                               <https://w3id.org/contro/data#r4> ,
+                                                                               <https://w3id.org/contro/data#r5> ,
+                                                                               <https://w3id.org/contro/data#r6> ,
+                                                                               <https://w3id.org/contro/data#r7> ,
+                                                                               <https://w3id.org/contro/data#r8> ,
+                                                                               <https://w3id.org/contro/data#r9> ,
+                                                                               <https://w3id.org/contro/data#s1> ,
+                                                                               <https://w3id.org/contro/data#s10> ,
+                                                                               <https://w3id.org/contro/data#s11> ,
+                                                                               <https://w3id.org/contro/data#s12> ,
+                                                                               <https://w3id.org/contro/data#s13> ,
+                                                                               <https://w3id.org/contro/data#s14> ,
+                                                                               <https://w3id.org/contro/data#s15> ,
+                                                                               <https://w3id.org/contro/data#s16> ,
+                                                                               <https://w3id.org/contro/data#s17> ,
+                                                                               <https://w3id.org/contro/data#s18> ,
+                                                                               <https://w3id.org/contro/data#s19> ,
+                                                                               <https://w3id.org/contro/data#s2> ,
+                                                                               <https://w3id.org/contro/data#s20> ,
+                                                                               <https://w3id.org/contro/data#s21> ,
+                                                                               <https://w3id.org/contro/data#s22> ,
+                                                                               <https://w3id.org/contro/data#s23> ,
+                                                                               <https://w3id.org/contro/data#s24> ,
+                                                                               <https://w3id.org/contro/data#s25> ,
+                                                                               <https://w3id.org/contro/data#s4> ,
+                                                                               <https://w3id.org/contro/data#s6> ,
+                                                                               <https://w3id.org/contro/data#s7> ,
+                                                                               <https://w3id.org/contro/data#s8> ,
+                                                                               <https://w3id.org/contro/data#s9> .
+
+
+###  https://w3id.org/contro/data#KB_castelvetro
+<https://w3id.org/contro/data#KB_castelvetro> rdf:type owl:NamedIndividual ,
+                                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                                       <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
+                                                       <https://w3id.org/contro/arg#KnowledgeBase> ,
+                                                       <https://w3id.org/contro/persp#Background> ,
+                                                       <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#KnowledgeBase> ,
+                                                                                                                <https://w3id.org/contro/persp#Background> ;
+                                              <https://w3id.org/contro/arg#hasMember> <https://w3id.org/contro/data#r1> ,
+                                                                                      <https://w3id.org/contro/data#r2> ,
+                                                                                      <https://w3id.org/contro/data#s1> ,
+                                                                                      <https://w3id.org/contro/data#s2> ,
+                                                                                      <https://w3id.org/contro/data#s3> ,
+                                                                                      <https://w3id.org/contro/data#s4> ,
+                                                                                      <https://w3id.org/contro/data#s5> .
 
 
 ###  https://w3id.org/contro/data#anon
@@ -1323,45 +1411,10 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                     rdfs:label "Anonymous" .
 
 
-###  https://w3id.org/contro/data#at_caro
-<https://w3id.org/contro/data#at_caro> rdf:type owl:NamedIndividual ,
-                                                <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
-                                                <https://w3id.org/contro/arg#ArgumentationTheory> ,
-                                                <https://w3id.org/contro/arg#ArgumentationTheorySituation> ;
-                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <http://viaf.org/viaf/51714622> ,
-                                                                                                            <https://w3id.org/contro/data#caro> ,
-                                                                                                            <https://w3id.org/contro/data#kb_caro> ,
-                                                                                                            <https://w3id.org/contro/data#predella> ,
-                                                                                                            :litigioso ;
-                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#ArgumentationTheory> ;
-                                       <https://w3id.org/contro/arg#AcceptanceAttitude> :litigioso ;
-                                       <https://w3id.org/contro/arg#DialogicalAgent> <http://viaf.org/viaf/51714622> ,
-                                                                                     <https://w3id.org/contro/data#caro> ,
-                                                                                     <https://w3id.org/contro/data#predella> ;
-                                       <https://w3id.org/contro/arg#KnowledgeBase> <https://w3id.org/contro/data#kb_caro> .
-
-
-###  https://w3id.org/contro/data#at_castelvetro
-<https://w3id.org/contro/data#at_castelvetro> rdf:type owl:NamedIndividual ,
-                                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
-                                                       <https://w3id.org/contro/arg#ArgumentationTheory> ,
-                                                       <https://w3id.org/contro/arg#ArgumentationTheorySituation> ;
-                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <http://viaf.org/viaf/22166452> ,
-                                                                                                                   <https://w3id.org/contro/data#anon> ,
-                                                                                                                   <https://w3id.org/contro/data#castelvetro> ,
-                                                                                                                   <https://w3id.org/contro/data#kb_castelvetro> ;
-                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#ArgumentationTheory> ;
-                                              <https://w3id.org/contro/arg#DialogicalAgent> <http://viaf.org/viaf/22166452> ,
-                                                                                            <https://w3id.org/contro/data#anon> ,
-                                                                                            <https://w3id.org/contro/data#castelvetro> ;
-                                              <https://w3id.org/contro/arg#KnowledgeBase> <https://w3id.org/contro/data#kb_castelvetro> .
-
-
 ###  https://w3id.org/contro/data#caro
 <https://w3id.org/contro/data#caro> rdf:type owl:NamedIndividual ,
                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
                                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> <https://w3id.org/contro/arg#DialogicalAgent> ;
-                                    <https://w3id.org/contro/arg#holds> :litigioso ;
                                     rdfs:label "Annibal Caro" .
 
 
@@ -1380,8 +1433,8 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                        <https://w3id.org/contro/arg#Topic> ;
                                               <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> <https://w3id.org/contro/arg#Topic> ,
                                                                                                               <https://w3id.org/contro/persp#Eventuality> ;
-                                              <https://w3id.org/contro/persp#extractedFrom> <https://w3id.org/contro/data#kb_caro> ,
-                                                                                            <https://w3id.org/contro/data#kb_castelvetro> ;
+                                              <https://w3id.org/contro/persp#extractedFrom> <https://w3id.org/contro/data#KB_caro> ,
+                                                                                            <https://w3id.org/contro/data#KB_castelvetro> ;
                                               <https://w3id.org/contro/persp#perspectivisedAs> <https://w3id.org/contro/data#s10> ,
                                                                                                <https://w3id.org/contro/data#s14> ,
                                                                                                <https://w3id.org/contro/data#s18> ,
@@ -1426,66 +1479,6 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                               rdfs:label "Disputed word"@en .
 
 
-###  https://w3id.org/contro/data#kb_caro
-<https://w3id.org/contro/data#kb_caro> rdf:type owl:NamedIndividual ,
-                                                <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
-                                                <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
-                                                <https://w3id.org/contro/arg#KnowledgeBase> ,
-                                                <https://w3id.org/contro/persp#Background> ,
-                                                <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#KnowledgeBase> ,
-                                                                                                         <https://w3id.org/contro/persp#Background> ;
-                                       <https://w3id.org/contro/arg#hasMember> <https://w3id.org/contro/data#r10> ,
-                                                                               <https://w3id.org/contro/data#r3> ,
-                                                                               <https://w3id.org/contro/data#r4> ,
-                                                                               <https://w3id.org/contro/data#r5> ,
-                                                                               <https://w3id.org/contro/data#r6> ,
-                                                                               <https://w3id.org/contro/data#r7> ,
-                                                                               <https://w3id.org/contro/data#r8> ,
-                                                                               <https://w3id.org/contro/data#r9> ,
-                                                                               <https://w3id.org/contro/data#s1> ,
-                                                                               <https://w3id.org/contro/data#s10> ,
-                                                                               <https://w3id.org/contro/data#s11> ,
-                                                                               <https://w3id.org/contro/data#s12> ,
-                                                                               <https://w3id.org/contro/data#s13> ,
-                                                                               <https://w3id.org/contro/data#s14> ,
-                                                                               <https://w3id.org/contro/data#s15> ,
-                                                                               <https://w3id.org/contro/data#s16> ,
-                                                                               <https://w3id.org/contro/data#s17> ,
-                                                                               <https://w3id.org/contro/data#s18> ,
-                                                                               <https://w3id.org/contro/data#s19> ,
-                                                                               <https://w3id.org/contro/data#s2> ,
-                                                                               <https://w3id.org/contro/data#s20> ,
-                                                                               <https://w3id.org/contro/data#s21> ,
-                                                                               <https://w3id.org/contro/data#s22> ,
-                                                                               <https://w3id.org/contro/data#s23> ,
-                                                                               <https://w3id.org/contro/data#s24> ,
-                                                                               <https://w3id.org/contro/data#s25> ,
-                                                                               <https://w3id.org/contro/data#s4> ,
-                                                                               <https://w3id.org/contro/data#s6> ,
-                                                                               <https://w3id.org/contro/data#s7> ,
-                                                                               <https://w3id.org/contro/data#s8> ,
-                                                                               <https://w3id.org/contro/data#s9> .
-
-
-###  https://w3id.org/contro/data#kb_castelvetro
-<https://w3id.org/contro/data#kb_castelvetro> rdf:type owl:NamedIndividual ,
-                                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
-                                                       <https://w3id.org/contro/arg#ArgumentationTheorySituation> ,
-                                                       <https://w3id.org/contro/arg#KnowledgeBase> ,
-                                                       <https://w3id.org/contro/persp#Background> ,
-                                                       <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-                                              <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#KnowledgeBase> ,
-                                                                                                                <https://w3id.org/contro/persp#Background> ;
-                                              <https://w3id.org/contro/arg#hasMember> <https://w3id.org/contro/data#r1> ,
-                                                                                      <https://w3id.org/contro/data#r2> ,
-                                                                                      <https://w3id.org/contro/data#s1> ,
-                                                                                      <https://w3id.org/contro/data#s2> ,
-                                                                                      <https://w3id.org/contro/data#s3> ,
-                                                                                      <https://w3id.org/contro/data#s4> ,
-                                                                                      <https://w3id.org/contro/data#s5> .
-
-
 ###  https://w3id.org/contro/data#latinisms
 <https://w3id.org/contro/data#latinisms> rdf:type owl:NamedIndividual ,
                                                   <https://w3id.org/contro/arg#Topic> ;
@@ -1498,7 +1491,6 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                  <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
                                         <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> <https://w3id.org/contro/arg#DialogicalAgent> ,
                                                                                                         <https://w3id.org/contro/persp#Conceptualiser> ;
-                                        <https://w3id.org/contro/arg#holds> :litigioso ;
                                         <https://w3id.org/contro/arg#isAliasOf> <http://viaf.org/viaf/51714622> ,
                                                                                 <https://w3id.org/contro/data#caro> ;
                                         rdfs:comment "Fictional author: the text is presented as if written by the janitor of Accademia di Banchi di Roma."@en ;
@@ -1518,7 +1510,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                            <https://w3id.org/contro/data#s2> ;
                                   <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/data#s3> ;
                                   <https://w3id.org/contro/arg#contradictedBy> <https://w3id.org/contro/data#s8> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_castelvetro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_castelvetro> ;
                                   rdfs:comment "The fact that Petrarch left out words used in the literature of his time is a sign that he did not use them deliberately."@en .
 
 
@@ -1534,7 +1526,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <https://w3id.org/contro/arg#Antecedent> <https://w3id.org/contro/data#s23> ,
                                                                             <https://w3id.org/contro/data#s24> ;
                                    <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/data#s25> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    rdfs:comment "Unlike dead languages, a living language must draw from the variety of its speakers and cannot be normed by a single authority."@en .
 
 
@@ -1549,7 +1541,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                   <https://w3id.org/contro/arg#Antecedent> <https://w3id.org/contro/data#s3> ;
                                   <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/data#s5> ;
                                   <https://w3id.org/contro/arg#contradictedBy> <https://w3id.org/contro/data#s18> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_castelvetro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_castelvetro> ;
                                   rdfs:comment "Italian authors should avoid words that an authority like Petrarch chose not to use."@en .
 
 
@@ -1567,7 +1559,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                            <https://w3id.org/contro/data#s6> ,
                                                                            <https://w3id.org/contro/data#s7> ;
                                   <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/data#s8> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                   rdfs:comment "Although Petrarch did not use the words, it’s impossible to determine whether he would have used them without reliable or direct knowledge of his intentions, which is unavailable."@en .
 
 
@@ -1587,7 +1579,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                            <https://w3id.org/contro/data#s4> ,
                                                                            <https://w3id.org/contro/data#s9> ;
                                   <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/data#s10> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                   rdfs:comment "Although Petrarch did not use those words, the authority of other influential authors in Italian literature legitimizes their use."@en .
 
 
@@ -1605,7 +1597,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                            <https://w3id.org/contro/data#s12> ,
                                                                            <https://w3id.org/contro/data#s13> ;
                                   <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/data#s14> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                   rdfs:comment "If authoritative literary figures legitimize a rhetorical practice, and that practice is relevantly similar in a new context, then that practice is also legitimate in the new context."@en .
 
 
@@ -1621,7 +1613,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                   <https://w3id.org/contro/arg#Antecedent> <https://w3id.org/contro/data#s14> ,
                                                                            <https://w3id.org/contro/data#s15> ;
                                   <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/data#s10> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                   rdfs:comment "If Italian authors are justified in using Latinisms, as those words are, then Italian authors are justified in using those words."@en .
 
 
@@ -1637,7 +1629,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                   <https://w3id.org/contro/arg#Antecedent> <https://w3id.org/contro/data#s16> ,
                                                                            <https://w3id.org/contro/data#s17> ;
                                   <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/data#s18> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                   rdfs:comment "If learning in a domain requires emulating the method rather than the outcome, then learning in an analogous domain also requires the same."@en .
 
 
@@ -1653,7 +1645,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                   <https://w3id.org/contro/arg#Antecedent> <https://w3id.org/contro/data#s19> ,
                                                                            <https://w3id.org/contro/data#s20> ;
                                   <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/data#s21> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                   rdfs:comment "Since denying authors interpretive authority over language is like denying the Church such authority over Scripture, and the Church has it, authors should have it too."@en .
 
 
@@ -1671,7 +1663,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                            <https://w3id.org/contro/data#s22> ,
                                                                            <https://w3id.org/contro/data#s4> ;
                                   <https://w3id.org/contro/arg#Consequent> <https://w3id.org/contro/data#s21> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                   rdfs:comment "If an exemplar author exercised authorial freedom, then others may follow that example by exercising similar freedom."@en .
 
 
@@ -1686,8 +1678,8 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                     <https://w3id.org/contro/arg#Premise> ,
                                                                                                     <https://w3id.org/contro/persp#Lens> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ,
-                                                                              <https://w3id.org/contro/data#kb_castelvetro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ,
+                                                                              <https://w3id.org/contro/data#KB_castelvetro> ;
                                   rdfs:comment "Petrarch never used certain words."@en ;
                                   <http://www.w3.org/ns/prov#value> "If you were to say that Petrarch had not used them, one might believe you, for you are well-versed in vocabulary"@en ,
                                                                     "Se voi diceste che ’l Petrarca non l’avesse usate, vi si potrebbe credere, perché siete molto pratico nel vocabolario"@it ,
@@ -1707,7 +1699,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                      <https://w3id.org/contro/arg#Consequent> ,
                                                                                                      <https://w3id.org/contro/persp#Cut> ;
                                    <https://w3id.org/contro/arg#contradicts> <https://w3id.org/contro/data#s5> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#contrasts> <https://w3id.org/contro/data#s5> ;
                                    <https://w3id.org/contro/persp#shotThrough> <https://w3id.org/contro/data#s1> ,
                                                                                <https://w3id.org/contro/data#s14> ,
@@ -1729,7 +1721,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                      <https://w3id.org/contro/arg#Premise> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    rdfs:comment "Greek and Latin masters of rhetoric endorse the literary use of foreign words."@en ;
                                    <http://www.w3.org/ns/prov#value> "It is said by all the good authors of the Greek and Latin languages"@en ,
                                                                      "Lo dicono tutti i buoni autori della lingua greca e della latina"@it .
@@ -1746,7 +1738,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                      <https://w3id.org/contro/arg#Premise> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    rdfs:comment "Latin words are foreign, yet intelligible, in Italian."@en .
 
 
@@ -1761,7 +1753,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                      <https://w3id.org/contro/arg#Premise> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    rdfs:comment "Italian is a literary language whose norms can be guided by classical precedent."@en .
 
 
@@ -1782,7 +1774,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                      <https://w3id.org/contro/arg#Premise> ,
                                                                                                      <https://w3id.org/contro/persp#Cut> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#shotThrough> <https://w3id.org/contro/data#s11> ,
                                                                                <https://w3id.org/contro/data#s12> ,
                                                                                <https://w3id.org/contro/data#s13> ;
@@ -1800,7 +1792,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                      <https://w3id.org/contro/arg#Premise> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    rdfs:comment "Those words are Latinisms."@en ;
                                    <http://www.w3.org/ns/prov#value> "Because they are Latin?"@en ,
                                                                      "Perché sono latine?"@it .
@@ -1817,7 +1809,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                      <https://w3id.org/contro/arg#Premise> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    rdfs:comment "Learning involves emulating principles, not mimicking results."@en ;
                                    <http://www.w3.org/ns/prov#value> "Non sarebbe pazzo uno che, volendo imparare di caminare da un altro, gli andasse sempre dietro, mettendo i piedi appunto donde colui gli lieva?"@it ,
                                                                      "Wouldn’t a man be mad who, wishing to learn how to walk from another, always followed behind him, placing his feet precisely where the other had just lifted his?"@en .
@@ -1834,7 +1826,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                      <https://w3id.org/contro/arg#Premise> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    rdfs:comment "Literary imitation is a kind of learning."@en ;
                                    <http://www.w3.org/ns/prov#value> "La medesima pazzia è quella che dite voi, a voler che si facciano i medesimi passi, e non il medesimo andare del Petrarca."@it ,
                                                                      "That is the same kind of madness you speak of, in wanting to make the same steps, and not the same walk, as Petrarch."@en .
@@ -1858,7 +1850,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                      <https://w3id.org/contro/persp#Cut> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
                                    <https://w3id.org/contro/arg#contradicts> <https://w3id.org/contro/data#r2> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#shotThrough> <https://w3id.org/contro/data#s16> ,
                                                                                <https://w3id.org/contro/data#s17> ;
                                    rdfs:comment "Literary imitation should emulate the author's judgment, not reproduce their words."@en ;
@@ -1877,7 +1869,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                      <https://w3id.org/contro/arg#Premise> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    rdfs:comment "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en ;
                                    <http://www.w3.org/ns/prov#value> "Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel Petrarca e nel Boccaccio si termini tutta la favella volgare, come negli Evangeli ed in san Paolo tutta la sacra Scrittura."@it ,
                                                                      "This is to hold in matters of language the very same belief one holds in matters of faith: to claim that vernacular Italian should be confined to Petrarch and Boccaccio, just as to claim that sacred Scripture is wholly contained in the Gospels and Saint Paul."@en .
@@ -1894,8 +1886,8 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                     <https://w3id.org/contro/arg#Premise> ,
                                                                                                     <https://w3id.org/contro/persp#Lens> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ,
-                                                                              <https://w3id.org/contro/data#kb_castelvetro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ,
+                                                                              <https://w3id.org/contro/data#KB_castelvetro> ;
                                   rdfs:comment "Other authors of his time used those words."@en ;
                                   <http://www.w3.org/ns/prov#value> "conciofossecosaché al suo tempo fossero state usate forse tutte, ma senza dubbio la maggior parte, dagli scrittori"@it ,
                                                                     "since they had perhaps all, or at least most, been used by writers of his time"@en .
@@ -1912,7 +1904,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                      <https://w3id.org/contro/arg#Premise> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    rdfs:comment "The Church holds the autority to interpret and expand upon sacred Scripture."@en .
 
 
@@ -1927,7 +1919,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Conclusion> ,
                                                                                                      <https://w3id.org/contro/arg#Consequent> ,
                                                                                                      <https://w3id.org/contro/persp#Cut> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#shotThrough> <https://w3id.org/contro/data#s18> ,
                                                                                <https://w3id.org/contro/data#s19> ,
                                                                                <https://w3id.org/contro/data#s20> ,
@@ -1949,7 +1941,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                      <https://w3id.org/contro/arg#Premise> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    rdfs:comment "Petrarch exercised authorial freedom in shaping the language."@en ;
                                    <http://www.w3.org/ns/prov#value> "Beyond this, that Petrarch has taken away from others what he himself did?"@en ,
                                                                      "Oltre a ciò, che il Petrarca abbia tolto agli altri quel c’ha fatto esso medesimo?"@it .
@@ -1966,7 +1958,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                      <https://w3id.org/contro/arg#Premise> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    rdfs:comment "In dead languages like Latin and Greek, one must imitate the best authors."@en ;
                                    <http://www.w3.org/ns/prov#value> "For here lies the error you have fallen into: believing that in this language one ought to act as in Greek and Latin—languages which, being dead as regards common speech, must necessarily be written by drawing from the writings of the few and by imitating the best, since we cannot ourselves grasp their native power or beauty."@en ,
                                                                      "perché qui sta l’errore che avete preso, di credere che in questa lingua si debba fare come nella greca e nella latina; le quali essendo morte quanto all’uso del parlar commune, è necessario che si scrivano cavando dagli scritti de’ pochi ed imitando i migliori, non potendosi da noi conoscere la forza né la bellezza lor naturale."@it .
@@ -1983,7 +1975,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                      <https://w3id.org/contro/arg#Premise> ,
                                                                                                      <https://w3id.org/contro/persp#Lens> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    rdfs:comment "Italian is a living language."@en ;
                                    <http://www.w3.org/ns/prov#value> "But in this language—which is naturally and commonly spoken and understood by all, and which presents itself to us alive and entirely uncovered in all its parts—"@en ,
                                                                      "Ma in questa, che naturalmente o communemente si parla e s’intende da tutti e che viva e nuda interamente e in ogni sua parte ci si mostra,"@it .
@@ -2000,7 +1992,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Conclusion> ,
                                                                                                      <https://w3id.org/contro/arg#Consequent> ,
                                                                                                      <https://w3id.org/contro/persp#Cut> ;
-                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                   <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                    <https://w3id.org/contro/persp#shotThrough> <https://w3id.org/contro/data#s23> ,
                                                                                <https://w3id.org/contro/data#s24> ;
                                    rdfs:comment "Italian should not be limited to the authority of a single author, such as Petrarch."@en ;
@@ -2025,7 +2017,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                     <https://w3id.org/contro/arg#Premise> ,
                                                                                                     <https://w3id.org/contro/persp#Cut> ,
                                                                                                     <https://w3id.org/contro/persp#Lens> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_castelvetro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_castelvetro> ;
                                   <https://w3id.org/contro/persp#shotThrough> <https://w3id.org/contro/data#s1> ,
                                                                               <https://w3id.org/contro/data#s2> ;
                                   rdfs:comment "Petrarch wouldn’t have used those words."@en ;
@@ -2048,8 +2040,8 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                     <https://w3id.org/contro/arg#Premise> ,
                                                                                                     <https://w3id.org/contro/persp#Lens> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ,
-                                                                              <https://w3id.org/contro/data#kb_castelvetro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ,
+                                                                              <https://w3id.org/contro/data#KB_castelvetro> ;
                                   rdfs:comment "Petrarch is an authority in Italian literature."@en ;
                                   <http://www.w3.org/ns/prov#value> "I grant that the perfection of style—though never fully realized in practice—has, up to now, been found in our language particularly in Petrarch and Boccaccio."@en ,
                                                                     "Voglio che la perfezion del dire (ancora che non si dia interamente in atto) sia in fino a ora in questa lingua, spezialmente nel Petrarca e nel Boccaccio"@it ,
@@ -2069,7 +2061,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                     <https://w3id.org/contro/arg#Consequent> ,
                                                                                                     <https://w3id.org/contro/persp#Cut> ;
                                   <https://w3id.org/contro/arg#contradictedBy> <https://w3id.org/contro/data#s10> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_castelvetro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_castelvetro> ;
                                   <https://w3id.org/contro/persp#contrasts> <https://w3id.org/contro/data#s10> ;
                                   <https://w3id.org/contro/persp#shotThrough> <https://w3id.org/contro/data#s3> ,
                                                                               <https://w3id.org/contro/data#s4> ;
@@ -2087,7 +2079,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                     <https://w3id.org/contro/arg#Premise> ,
                                                                                                     <https://w3id.org/contro/persp#Lens> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                   rdfs:comment "There is no direct knowledge of Petrarch’s intention."@en .
 
 
@@ -2102,7 +2094,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                     <https://w3id.org/contro/arg#Premise> ,
                                                                                                     <https://w3id.org/contro/persp#Lens> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                   rdfs:comment "Castelvetro is not a reliable interpreter of Petrarch's mind."@en .
 
 
@@ -2118,7 +2110,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                                                                                     <https://w3id.org/contro/arg#Consequent> ,
                                                                                                     <https://w3id.org/contro/persp#Cut> ;
                                   <https://w3id.org/contro/arg#contradicts> <https://w3id.org/contro/data#r1> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                   <https://w3id.org/contro/persp#shotThrough> <https://w3id.org/contro/data#s1> ,
                                                                               <https://w3id.org/contro/data#s6> ,
                                                                               <https://w3id.org/contro/data#s7> ;
@@ -2138,18 +2130,8 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
                                   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#Antecedent> ,
                                                                                                     <https://w3id.org/contro/arg#Premise> ,
                                                                                                     <https://w3id.org/contro/persp#Lens> ;
-                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#kb_caro> ;
+                                  <https://w3id.org/contro/arg#extractedFrom> <https://w3id.org/contro/data#KB_caro> ;
                                   rdfs:comment "Other authors have authority as well."@en .
-
-
-###  https://w3id.org/contro/inferred#litigioso
-:litigioso rdf:type owl:NamedIndividual ,
-                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
-                    <https://w3id.org/contro/arg#AcceptanceAttitude> ,
-                    <https://w3id.org/contro/arg#ArgumentationTheorySituation> ;
-           <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <https://w3id.org/contro/arg#AcceptanceAttitude> ;
-           <https://w3id.org/contro/arg#toward> <https://w3id.org/contro/data#s3> ,
-                                                <https://w3id.org/contro/data#s5> .
 
 
 ###  https://w3id.org/contro/persp#Attitude
@@ -2243,76 +2225,40 @@ Inference rules, together with premises, form part of the dialogical agent’s k
                                     rdfs:label "Topic"@en .
 
 
-<https://w3id.org/contro/caro-castelvetro#w1> rdfs:label "cede"@it .
+<https://w3id.org/contro/data#w1> <http://www.w3.org/ns/prov#value> "cede" .
 
 
-<https://w3id.org/contro/caro-castelvetro#w10> rdfs:label "gesti"@it .
+<https://w3id.org/contro/data#w10> <http://www.w3.org/ns/prov#value> "gesti" .
 
 
-<https://w3id.org/contro/caro-castelvetro#w11> rdfs:label "inserte"@it .
+<https://w3id.org/contro/data#w11> <http://www.w3.org/ns/prov#value> "inserte" .
 
 
-<https://w3id.org/contro/caro-castelvetro#w12> rdfs:label "amene"@it .
+<https://w3id.org/contro/data#w12> <http://www.w3.org/ns/prov#value> "amene" .
 
 
-<https://w3id.org/contro/caro-castelvetro#w2> rdfs:label "ambo"@it .
+<https://w3id.org/contro/data#w2> <http://www.w3.org/ns/prov#value> "ambo" .
 
 
-<https://w3id.org/contro/caro-castelvetro#w3> rdfs:label "simulacri"@it .
+<https://w3id.org/contro/data#w3> <http://www.w3.org/ns/prov#value> "simulacri" .
 
 
-<https://w3id.org/contro/caro-castelvetro#w4> rdfs:label "ancor essa"@it .
+<https://w3id.org/contro/data#w4> <http://www.w3.org/ns/prov#value> "ancor essa" .
 
 
-<https://w3id.org/contro/caro-castelvetro#w5> rdfs:label "Suo merto e tuo valor"@it .
+<https://w3id.org/contro/data#w5> <http://www.w3.org/ns/prov#value> "Suo merto e tuo valor" .
 
 
-<https://w3id.org/contro/caro-castelvetro#w6> rdfs:label "inviolata"@it .
+<https://w3id.org/contro/data#w6> <http://www.w3.org/ns/prov#value> "inviolata" .
 
 
-<https://w3id.org/contro/caro-castelvetro#w7> rdfs:label "tarpato"@it .
+<https://w3id.org/contro/data#w7> <http://www.w3.org/ns/prov#value> "tarpato" .
 
 
-<https://w3id.org/contro/caro-castelvetro#w8> rdfs:label "propizia"@it .
+<https://w3id.org/contro/data#w8> <http://www.w3.org/ns/prov#value> "propizia" .
 
 
-<https://w3id.org/contro/caro-castelvetro#w9> rdfs:label "illustri"@it .
-
-
-<https://w3id.org/contro/data#w1> rdfs:label "cede"@it .
-
-
-<https://w3id.org/contro/data#w10> rdfs:label "gesti"@it .
-
-
-<https://w3id.org/contro/data#w11> rdfs:label "inserte"@it .
-
-
-<https://w3id.org/contro/data#w12> rdfs:label "amene"@it .
-
-
-<https://w3id.org/contro/data#w2> rdfs:label "ambo"@it .
-
-
-<https://w3id.org/contro/data#w3> rdfs:label "simulacri"@it .
-
-
-<https://w3id.org/contro/data#w4> rdfs:label "ancor essa"@it .
-
-
-<https://w3id.org/contro/data#w5> rdfs:label "Suo merto e tuo valor"@it .
-
-
-<https://w3id.org/contro/data#w6> rdfs:label "inviolata"@it .
-
-
-<https://w3id.org/contro/data#w7> rdfs:label "tarpato"@it .
-
-
-<https://w3id.org/contro/data#w8> rdfs:label "propizia"@it .
-
-
-<https://w3id.org/contro/data#w9> rdfs:label "illustri"@it .
+<https://w3id.org/contro/data#w9> <http://www.w3.org/ns/prov#value> "illustri" .
 
 
 <https://w3id.org/contro/persp#Attitude> rdfs:comment "The attitude of a conceptualiser towards an eventuality, perspectivised through the application of a lens, e.g., positive attitude towards taxation policies, reinforced by a positive value such as 'investment' in 'taxes are investiments'." .
@@ -2330,17 +2276,6 @@ Inference rules, together with premises, form part of the dialogical agent’s k
 <https://w3id.org/contro/persp#Perspectivisation> rdfs:comment """A compositional frame for situations that provide a redescription of an eventuality by using a lens, with an attitude. It usually requires background knowledge for the eventuality (and possibly the lens), as well as one or more agents conceptualising it. 
 A 'cut' (in the cinematic sense) emerges from a perspectivisation, which composes an eventuality with a lens, as in the example 'taxes are investments', where current taxation policies (the eventuality) is cut by shooting through the investment lens.
 The OWL representation of this frame includes heavy punning: each aspect of a perspectivisation is in fact modeled as a semantic role (holding between perspectivisation situations and the things involved in them, as an individual (the frame projections), as well as classes (the intensional components of the frame), since almost all aspects are frames on their turn.""" .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:Restriction ;
-  owl:onProperty <https://w3id.org/contro/persp#Cut> ;
-  owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
-  rdfs:subClassOf <https://w3id.org/contro/persp#Perspectivisation>
-] .
 
 
 #################################################################
