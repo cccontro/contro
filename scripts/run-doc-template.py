@@ -1,17 +1,10 @@
 import os
 import argparse
-from jinja2 import Environment, FileSystemLoader
-import ontdoc as od
 
-def write_if_changed(new, path):
-  if os.path.exists(path):
-    with open(path, 'r', encoding='utf-8') as f:
-      old = f.read()
-    if old == new:
-      return False
-  with open(path, 'w', encoding='utf-8') as f:
-    f.write(new)
-  return True
+from jinja2 import Environment, FileSystemLoader
+
+import ontdoc as od
+import write_if_changed
 
 def main():
     parser = argparse.ArgumentParser(description='Render ontology documentation with template.')

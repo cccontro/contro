@@ -1,21 +1,14 @@
 import os
 import argparse
+
 from saxonche import PySaxonProcessor
 
-def write_if_changed(new, path):
-  if os.path.exists(path):
-    with open(path, 'r', encoding='utf-8') as f:
-      old = f.read()
-    if old == new:
-      return False
-  with open(path, 'w', encoding='utf-8') as f:
-    f.write(new)
-  return True
+import write_if_changed
 
 def main():
   parser = argparse.ArgumentParser(description='Convert a XML-TEI file to HTML-in-Markdown.')
-  parser.add_argument('xml_path', help='Path to the input .xml file.')
   parser.add_argument('xslt_path', help='Path to the input .xsl file.')
+  parser.add_argument('xml_path', help='Path to the input .xml file.')
 
   args = parser.parse_args()
 
