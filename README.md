@@ -1,23 +1,47 @@
 # CONTRO: A Controversy-Oriented Model of Dialectical Perspectives
-The **CONTRO ontology** was developed as a final project for the [*Knowledge Representation and Knowledge Extraction* course](https://www.unibo.it/en/study/course-units-transferable-skills-moocs/course-unit-catalogue/course-unit/2023/490896), taught by Professor Aldo Gangemi during the 2023/2024 academic year at the University of Bologna. The course was part of the Master's program in Digital Humanities and Digital Knowledge.
 
-## The ontology
-CONTRO is designed to extract both explicit and implicit opinions as they emerge through dialectical discourse. Its focus is on reconstructing argumentative structures in text from minimal annotation of premises and conclusions, leveraging the inferential power of OWL reasoners.
+**CONTRO** is an ontology for extracting dialectical perspectives from argumentative discourse. It was developed as the final project for the [*Knowledge Representation and Knowledge Extraction* course](https://www.unibo.it/en/study/course-units-transferable-skills-moocs/course-unit-catalogue/course-unit/2023/490896) (2023–2024) at the University of Bologna, part of the Master’s in Digital Humanities and Digital Knowledge.
 
-The ontology integrates two core approaches:
+## Vision
 
-- It adopts the **ASPIC<sup>+</sup> framework**, a widely used formalism for structured argumentation, to model the internal components of argumentation within discourse.
-- It then reinterprets these elements through the **perspectivization ontology design pattern**, which allows for a synchronic representation of argumentative positions, flattening their diachronic development into coexisting perspectives.
+CONTRO models how opinions emerge through opposition, reconstructing arguments from minimal annotations of premises and conclusions. Its goal is to **bridge structured argumentation and perspective modeling**, enabling OWL reasoners to infer conflicting viewpoints from discursive evidence.
 
-CONTRO adopts the **Descriptions and Situations (DnS)** model from the DOLCE foundational ontology. This choice supports domain-agnostic modeling, treating argumentative roles and structures as context-dependent descriptions instantiated by discourse situations.  As a result, CONTRO can be applied independently of any specific domain conceptualization, making it adaptable to a wide range of argumentative genres and subject matters.
+## Ontological Approach
 
-## About this documentation
-This website is built with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), customized for ontology documentation through a combination of plugins, CSS, and JavaScript. We treat the ontology as a programming module, and believe that tight integration between documentation and ontology is essential for the kind of reuse the Semantic Web is meant to foster.
+CONTRO combines two paradigms:
 
-To support this vision, we developed a build [pipeline](hook.py) that automates several tasks: extracting ontology instances from the source text ([`conversion.py`](https://github.com/cccontro/contro/blob/main/docs/ont/conversion.py)), generating element descriptions via integration with [Widoco](https://github.com/dgarijo/Widoco), and converting the XML-TEI source file to Markdown ([`transformation.py`](https://github.com/cccontro/contro/blob/main/docs/tei/transformation.py)). All outputs are incorporated into the site with a consistent presentation.
+- The **ASPIC+ framework**, to model the internal structure of arguments and their interactions.
+- The **perspectivisation ontology design pattern**, to reframe argumentation as a conceptualiser’s construal of a situation.
 
-While ensuring a coherent human-readable documentation, we also preserved machine accessibility for ontology elements, using a custom [`.htaccess`](https://github.com/cccontro/w3id.org/blob/ee15a85c1808daf4680f02fe1437d4882c0380f7/contro/.htaccess) redirection protocol that supports Semantic Web resolution practices.
+It builds on the **Descriptions and Situations (DnS)** module of DOLCE, treating ontology classes not as definitions of what an instance *is*, but of what it can be *described as*. This ensures principled conceptual commitments that support domain-agnostic modeling.
+
+## Reference Scenario
+
+To develop and test the ontology, we annotated a major Renaissance controversy between Annibal Caro and Lodovico Castelvetro over Petrarchism. TEI markup and manual extraction of arguments from their treatises helped expose both the potential and limitations of the model.
+
+## Documentation Pipeline
+
+This site is built with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and treats ontologies as source code: extraction, reasoning, serialization, and documentation are integrated into a reproducible build process.
+
+The pipeline includes:
+
+1. **TEI to Markdown**  
+   [`tei-to-markdown.py`](scripts/tei-to-markdown.py) converts TEI files via a custom [XSLT stylesheet](tei/stylesheets/tei-to-markdown-custom.xsl), generating Markdown with embedded argument outlines for interactive reading.
+
+2. **TEI to RDF**  
+   [`tei-to-turtle.py`](scripts/tei-to-turtle.py) extracts argument instances into [data.ttl](docs/ont/data.ttl), aligning them with the ontology.
+
+3. **Ontology Export and Reasoning**  
+   [`OntExport.kt`](ontexport/app/src/main/kotlin/OntExport.kt) serializes the TBox in TTL, RDF/XML, and JSON-LD formats, and runs HermiT over the ABoxes (`example.ttl`, `data.ttl`) to output inferred ontologies. It is compiled as a standalone [JAR](ontexport/app/build/libs/ontexport.jar) with no Java runtime dependencies.
+
+4. **Ontology Documentation**  
+   The [`ontdoc`](scripts/ontdoc/) module maps ontology elements to Python objects and handles their representation: it resolves punning, links terms across submodules, and additionally documents the extension of imported classes and properties. A Jinja2 [template](templates/doc-template.md) then generates Markdown descriptions for each submodule.
+
+## Machine Accessibility
+
+All ontology terms are dereferenceable through a custom [`.htaccess`](https://github.com/cccontro/w3id.org/blob/master/contro/.htaccess) setup registered with w3id.org, ensuring long-term stable URIs for both human and machine consumption.
 
 ## Contributors
+
 - [Francesca Massarenti](https://github.com/frammenti) - francesca.massarent2@studio.unibo.it
 - [Alberto Ciarrocca](https://github.com/vattelalberto) - alberto.ciarrocca@studio.unibo.it
