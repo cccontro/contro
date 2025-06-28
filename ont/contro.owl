@@ -1,129 +1,113 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="https://w3id.org/contro#"
      xml:base="https://w3id.org/contro"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://w3id.org/contro">
-    <Prefix name="" IRI="https://w3id.org/contro#"/>
-    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
-    <Prefix name="arg" IRI="https://w3id.org/contro/arg#"/>
-    <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
-    <Prefix name="dul" IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
-    <Prefix name="persp" IRI="https://w3id.org/contro/persp#"/>
-    <Prefix name="contro" IRI="https://w3id.org/contro/caro-castelvetro#"/>
-    <Import>https://w3id.org/contro/arg</Import>
-    <Import>https://w3id.org/contro/persp</Import>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Alberto Ciarrocca</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Francesca Massarenti</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dct:created"/>
-        <Literal>12/03/2025</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dct:description"/>
-        <Literal xml:lang="en">An ontology for extracting perspectives from arguments. It builds on the ASPIC+ framework to formalize arguments and maps them to perspectives on the topic under discussion. The mapping is implemented via object property subclassing, preserving the conceptual separation between the argument structure and the perspectival interpretation.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dct:license"/>
-        <IRI>https://creativecommons.org/licenses/by/4.0/</IRI>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dct:modified"/>
-        <Literal>17/06/2025</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dct:title"/>
-        <Literal xml:lang="en">Controversy Ontology</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
-        <Literal>contro</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
-        <IRI>#</IRI>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal xml:lang="en">Contro</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
-    </Annotation>
-    <Declaration>
-        <ObjectProperty IRI="/arg#Conclusion"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/arg#Premise"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/arg#Topic"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/arg#by"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/persp#Background"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/persp#contrasts"/>
-    </Declaration>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="/arg#Conclusion"/>
-        <ObjectProperty IRI="/persp#Cut"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="/arg#Premise"/>
-        <ObjectProperty IRI="/persp#Lens"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="/arg#Topic"/>
-        <ObjectProperty IRI="/persp#Eventuality"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="/arg#by"/>
-        <ObjectProperty IRI="/persp#Conceptualiser"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectPropertyChain>
-            <ObjectProperty IRI="/arg#ArgumentationTheory"/>
-            <ObjectProperty IRI="/arg#KnowledgeBase"/>
-        </ObjectPropertyChain>
-        <ObjectProperty IRI="/persp#Background"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectPropertyChain>
-            <ObjectInverseOf>
-                <ObjectProperty IRI="/persp#Cut"/>
-            </ObjectInverseOf>
-            <ObjectProperty IRI="/arg#Conclusion"/>
-            <ObjectProperty IRI="/arg#contradicts"/>
-            <ObjectInverseOf>
-                <ObjectProperty IRI="/arg#Conclusion"/>
-            </ObjectInverseOf>
-            <ObjectProperty IRI="/persp#Cut"/>
-        </ObjectPropertyChain>
-        <ObjectProperty IRI="/persp#contrasts"/>
-    </SubObjectPropertyOf>
-</Ontology>
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/contro">
+        <owl:imports rdf:resource="https://w3id.org/contro/arg"/>
+        <owl:imports rdf:resource="https://w3id.org/contro/persp"/>
+        <dc:creator>Alberto Ciarrocca</dc:creator>
+        <dc:creator>Francesca Massarenti</dc:creator>
+        <terms:created>12/03/2025</terms:created>
+        <terms:description xml:lang="en">An ontology for extracting perspectives from arguments. It builds on the ASPIC+ framework to formalize arguments and maps them to perspectives on the topic under discussion. The mapping is implemented via object property subclassing, preserving the conceptual separation between the argument structure and the perspectival interpretation.</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified>17/06/2025</terms:modified>
+        <terms:title xml:lang="en">Controversy Ontology</terms:title>
+        <vann:preferredNamespacePrefix>contro</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/contro#"/>
+        <rdfs:label xml:lang="en">Contro</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/contro/arg#Conclusion -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/contro/arg#Conclusion">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/contro/persp#Cut"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/contro/arg#Premise -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/contro/arg#Premise">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/contro/persp#Lens"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/contro/arg#Topic -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/contro/arg#Topic">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/contro/persp#Eventuality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/contro/arg#by -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/contro/arg#by">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/contro/persp#Conceptualiser"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/contro/persp#Background -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/contro/persp#Background">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/contro/arg#ArgumentationTheory"/>
+            <rdf:Description rdf:about="https://w3id.org/contro/arg#KnowledgeBase"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/contro/persp#contrasts -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/contro/persp#contrasts">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/contro/persp#Cut"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="https://w3id.org/contro/arg#Conclusion"/>
+            <rdf:Description rdf:about="https://w3id.org/contro/arg#contradicts"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/contro/arg#Conclusion"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="https://w3id.org/contro/persp#Cut"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+</rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.5.1) https://github.com/owlcs/owlapi/ -->
+
 
