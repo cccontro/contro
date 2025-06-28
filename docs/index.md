@@ -8,27 +8,19 @@ extra_css:
   - assets/stylesheets/hero.css
 ---
 
-<div id="hero-bg" aria-hidden="true" role="presentation" data-search-exclude markdown="span">
-![Calligram of Castelvetro](assets/images/Castelvetro.svg)
-![Calligram of Caro](assets/images/Caro.svg)
-</div>
-
-<section class="hero">
-  <h1>A <span class="emph">Contro</span>versy-Oriented Model of Dialectical Perspectives</h1>
-  <div class="md-button" aria-hidden="true" role="presentation" onclick='document.getElementById("quotes").scrollIntoView({ block: "center", behavior: "smooth"})' data-search-exclude>Let's argue</div>
-</section>
-
 <section id="quotes" markdown>
+
+# Quotations
 
 <div class="grid cards no-border" markdown hidden>
 
 - > Not even this is left to words, namely, that at any rate they express the mind of the speaker, since a speaker may indeed not know the things about which he speaks.
 
-    ==Augustine of Hippo, *De Magistro*, XIII 42==
+    Augustine of Hippo, <cite>De Magistro</cite>, XIII 42
 
 - > The reasons (motives) people may have for holding a&nbsp;belief are not always the same as the reasons (grounds) they will offer and accept in defense of a&nbsp;claim.
 
-    ==Frans H. van Eemeren, *Reconstructing Argumentative Discourse*, p. 12==
+    Frans H. van Eemeren, <cite>Reconstructing Argumentative Discourse</cite>, p. 12
 
 </div>
 </section>
@@ -41,7 +33,7 @@ extra_css:
 
     Our project aims to formalize how personal perspectives are externalized through argumentation in dialectical contexts. What we are interested in is the *shape* of an argument: when discourse is reconstructed in terms of argumentation structures, the communicative intent of the agents involved emerges with greater clarity.
 
-- ![Opinion distiller](assets/images/distiller.svg)
+- ![Opinion distiller](assets/images/distiller.svg){: role="presentation" aria-hidden="true" }
 
 </div>
 
@@ -67,7 +59,7 @@ Given a dialogical agent, we can ask the following questions:
 <div class="grid cards no-border" markdown hidden>
 
 - :custom-wind:{ .lg .middle }
-
+    
     **Lean and expressive**
     We developed a lightweight ontology capable of reconstructing argumentative structures in text from minimal annotation of premises and conclusions, leveraging the inferential power of OWL reasoners.
 
@@ -89,3 +81,6 @@ Given a dialogical agent, we can ask the following questions:
 </div>
 
 </section>
+
+![Three caricature figurines by Faustino Bocchi](assets/images/faustino-bocchi-light.svg#only-light){: role="presentation" aria-hidden="true" }
+![Three caricature figurines by Faustino Bocchi](assets/images/faustino-bocchi-dark.svg#only-dark){: role="presentation" aria-hidden="true" }

@@ -4,7 +4,9 @@ subtitle: Argumentation theory
 icon: octicons/book-16
 ---
 
-> In large measure dialectic is to our *factual* knowledge what logic is to our *formal* knowledge: a mechanism of rational validation. ==Nicholas Rescher, *Dialectics. A Controversy-Oriented Approach to the Theory of Knowledge*, p. xiii==
+> In large measure dialectic is to our *factual* knowledge what logic is to our *formal* knowledge: a mechanism of rational validation.
+
+Nicholas Rescher, <cite>Dialectics. A Controversy-Oriented Approach to the Theory of Knowledge</cite>, p. xiii
 
 Argumentation theory studies how conclusions can be justified through structured reasoning, particularly in the presence of conflicting views. To achieve this, it must account for:
 
@@ -235,4 +237,4 @@ ASPIC^+^ argument schemes define a notion of consequence based on a fixed body o
 
 In [@Prakken2011], ASPIC^+^ is adapted to dialogue by assigning each agent their own knowledge base within a shared argumentation system that enables communication. Dialogical agents evaluate incoming arguments relative to their internal argumentation theory and the arguments it can generate. Depending on their **assertion and acceptance attitudes** [@Prakken2006], they may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise.
 
-The practical application of ASPIC^+^ is illustrated with useful examples in [@Modgil2014]. For details on our instantiation of ASPIC^+^ in Description Logic, see [Model](model.md#adapting-aspic-structures). For a broader overview of argumentation theory, see [@Prakken2018].
+The practical application of ASPIC^+^ is illustrated with useful examples in [@Modgil2014]. For details on our instantiation of ASPIC^+^ in Description Logic, see [Model](model.md#argumentation). For a broader overview of argumentation theory, see [@Prakken2018].

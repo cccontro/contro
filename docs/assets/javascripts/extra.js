@@ -1,15 +1,15 @@
-// In view observer
+// In view observer (make headerlinks appear on scroll)
 const intersectionObserver = new IntersectionObserver(entries => {
 entries.forEach(entry => {
   if (entry.isIntersecting) {
-    entry.target.classList.add("shown"); // Highlight when in view
+    entry.target.classList.add("shown"); // Show when in view
   } else {
-    entry.target.classList.remove("shown"); // Remove highlight
+    entry.target.classList.remove("shown"); // Hide
   }
 });
 }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
 
-// First-seen observer
+// First-seen observer (homepage animation)
 const intersectionObserver2 = new IntersectionObserver((entries, obs) => {
 entries.forEach(entry => {
   if (entry.isIntersecting) {
@@ -21,7 +21,7 @@ entries.forEach(entry => {
 });
 }, { threshold: 0.3 });
 
-// Active tab observer
+// Active tab observer (hide inactive tabs in nav)
 const resizeObserver = new ResizeObserver(visibilityChange);
 
 function visibilityChange() {
@@ -35,14 +35,20 @@ function visibilityChange() {
 
         if (visibility.display === "none") {
             // Extract all headings (h2, h3, h4, h5, h6) from the hidden tabbed-block
-            const headings = Array.from(block.querySelectorAll("h2, h3, h4, h5, h6"))
-                .map(h => h.firstChild.textContent.trim());
+            const headings = new Set(
+                Array.from(block.querySelectorAll("h2, h3, h4, h5, h6"))
+                    .map(h => h.getAttribute("id"))
+                    .filter(id => id !== null)
+            );
 
             // Find matching navigation items
-            document.querySelectorAll(".md-nav__list .md-nav__item span").forEach(span => {
-                if (headings.includes(span.textContent.trim())) {
-                    // Hide the ancestor .md-nav__item
-                    let navItem = span.closest(".md-nav__item");
+            document.querySelectorAll(".md-nav__list .md-nav__item a.md-nav__link").forEach(a => {
+                const url = new URL(a.href);
+                const frag = url.hash.slice(1); // Remove the #
+
+                // Hide the ancestor .md-nav__item
+                if (headings.has(frag)) {
+                    const navItem = a.closest(".md-nav__item");
                     if (navItem) {
                         navItem.style.display = "none";
                     }
@@ -52,8 +58,88 @@ function visibilityChange() {
     });
 };
 
+// Function to set the vh variable
+function setHeroHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
 // On page load
 document$.subscribe(function () {
+
+    // Hero height adjustment
+    if (location.pathname === "/contro/") {
+
+        requestAnimationFrame(() => {
+            setHeroHeight();
+            const hero = document.getElementById('hero-container');
+            if (hero) {
+                hero.classList.add('ready');
+            }
+        });
+
+    // Dynamic higlight analysis spans
+    } else if (location.pathname === "/contro/examples/") {
+
+        // Add global click listener to clear highlights
+        document.addEventListener("click", function () {
+            document.querySelectorAll(".shown").forEach(el => el.classList.remove("shown"));
+        });
+
+        document.querySelectorAll("[id^='s'], [ana^='#s'], p:has([href*='#s'])").forEach(element => {
+            element.addEventListener("click", function () {
+
+                event.stopPropagation();  // prevent global cleaner from running
+
+                const targets = new Set();
+
+                if (this.id) {
+                    targets.add(this.id);
+                }
+
+                // Extract any referenced ID
+                const link = this.querySelector('a');
+                if (link && link.href.includes('#')) {
+                    const href = link.href.split('#')[1];
+                    if (href) targets.add(href);
+                }
+
+                // Extract IDs from multi-valued analysis attribute
+                const analysis = this.getAttribute('ana');
+                if (analysis) {
+                    analysis.trim().split(/\s+/).forEach(ref => {
+                        if (ref.startsWith('#')) ref = ref.slice(1);
+                        if (/^(s|r)\d+$/.test(ref)) {
+                            targets.add(ref);
+                        }
+                    });
+                }
+
+                // Clear current highlights
+                document.querySelectorAll(".shown").forEach(el => el.classList.remove("shown"));
+
+                // Highlight matching elements
+                targets.forEach(id => {
+                    document.querySelectorAll(
+                        `[id="${id}"], [ana~="#${id}"], p:has([href$="#${id}"])`
+                    ).forEach(el => el.classList.add("shown"));
+                });
+            }, true);
+        });
+
+        // Mark spans with no in-text referent
+        document.querySelectorAll("[id^='s']").forEach(element => {
+            const id = element.id;
+            const hasText = document.querySelector(`span[ana~="#${id}"]`);
+            if (!hasText) {
+                element.classList.add("absent");
+                document.querySelectorAll(`p:has([href$='#${id}'])`).forEach(cited => {
+                    cited.classList.add("absent");
+                });
+            }
+        });
+    }
+
     // Header transition from background to theme color on scroll
     const header = document.querySelector(".md-header");
 
@@ -73,34 +159,13 @@ document$.subscribe(function () {
         getHeaderHeight();
     });
 
-    // Observe titles and other elements to highlight when viewed on scroll
+    // Observe titles to show headerlinks when viewed on scroll
     const titles = document.querySelectorAll("h1, h2, h3");
     titles.forEach(el => intersectionObserver.observe(el));
 
-    // Landing page animation
+    // Homepage animation
     const animated = document.querySelectorAll('[hidden]');
     animated.forEach(el => intersectionObserver2.observe(el));
-
-    // Highlight selected analysis spans
-    document.querySelectorAll("[id*='cv-s'], [id*='cr-s'], [ana*='#cv'], [ana*='#cr'], p:has([href*='cv-s']), p:has([href*='cr-s'])").forEach(element => {
-
-        element.addEventListener("click", function () {
-            const anaId = this.id;
-            let anaRef = "";
-            if (this.querySelector('a')) {
-                anaRef = this.querySelector('a').href.split('#')[1];
-            }
-            let anaAna = "";
-            if (/cv|cr/.test(this.getAttribute('ana'))) {
-                anaAna = this.getAttribute('ana').slice(1);
-            }            
-            document.querySelectorAll(".shown").forEach(el => el.classList.remove("shown"));
-
-            const matchingElements = document.querySelectorAll(`[id*="${anaId}"], [ana*="${anaId}"], p:has([href*="${anaId}"]), [id*="${anaAna}"], [ana*="${anaAna}"], p:has([href*="${anaAna}"]), [id*="${anaRef}"], [ana*="${anaRef}"], p:has([href*="${anaRef}"])`);
-
-            matchingElements.forEach(el => el.classList.add("shown"));
-        }, true);
-    });
 
     // Observe all .tabbed-block elements for changes in display style
     document.querySelectorAll(".tabbed-block").forEach(block => {
