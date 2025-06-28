@@ -17,82 +17,6 @@ so as to initialize it.
 
     <xsl:import href="official/common/common.xsl" />
 
-    <xsl:strip-space elements="additional address adminInfo
-                altGrp altIdentifier analytic
-                app appInfo application
-                arc argument attDef
-                attList availability back
-                biblFull biblStruct bicond
-                binding bindingDesc body
-                broadcast cRefPattern calendar
-                calendarDesc castGroup
-                castList category certainty
-                char charDecl charProp
-                choice cit classDecl
-                classSpec classes climate
-                cond constraintSpec correction
-                custodialHist decoDesc
-                dimensions div div1 div2
-                div3 div4 div5 div6
-                div7 divGen docTitle eLeaf
-                eTree editionStmt
-                editorialDecl elementSpec
-                encodingDesc entry epigraph
-                epilogue equipment event
-                exemplum fDecl fLib
-                facsimile figure fileDesc
-                floatingText forest front
-                fs fsConstraints fsDecl
-                fsdDecl fvLib gap glyph
-                graph graphic group
-                handDesc handNotes history
-                hom hyphenation iNode if
-                imprint incident index
-                interpGrp interpretation join
-                joinGrp keywords kinesic
-                langKnowledge langUsage
-                layoutDesc leaf lg linkGrp
-                list listBibl listChange
-                listEvent listForest listNym
-                listOrg listPerson listPlace
-                listRef listRelation
-                listTranspose listWit location
-                locusGrp macroSpec metDecl
-                moduleRef moduleSpec monogr
-                msContents msDesc msIdentifier
-                msItem msItemStruct msPart
-                namespace node normalization
-                notatedMusic notesStmt nym
-                objectDesc org particDesc
-                performance person personGrp
-                physDesc place population
-                postscript precision
-                profileDesc projectDesc
-                prologue publicationStmt
-                quotation rdgGrp recordHist
-                recording recordingStmt
-                refsDecl relatedItem relation
-                relationGrp remarks respStmt
-                respons revisionDesc root
-                row samplingDecl schemaSpec
-                scriptDesc scriptStmt seal
-                sealDesc segmentation
-                seriesStmt set setting
-                settingDesc sourceDesc
-                sourceDoc sp spGrp space
-                spanGrp specGrp specList
-                state stdVals subst
-                substJoin superEntry
-                supportDesc surface surfaceGrp
-                table tagsDecl taxonomy
-                teiCorpus teiHeader terrain
-                text textClass textDesc
-                timeline titlePage titleStmt
-                trait transpose tree
-                triangle typeDesc vAlt
-                vColl vDefault vLabel
-                vMerge vNot vRange valItem
-                valList vocal" />
 
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet" type="stylesheet">
         <desc>
@@ -146,6 +70,8 @@ so as to initialize it.
     <!-- Match only titles, character list and text, avoid all other metadata -->
     <xsl:template match="/">
         <xsl:apply-templates select="//titleStmt" />
+        <xsl:call-template name="newline" />
+        <xsl:call-template name="newline" />
         <xsl:apply-templates select="//particDesc" />
         <xsl:apply-templates select="//text" />
     </xsl:template>
@@ -155,10 +81,11 @@ so as to initialize it.
     <!-- Base templates -->
     <xsl:template name="makeBlock">
         <xsl:param name="style" />
-        <xsl:param name="element" />
+        <xsl:param name="title" select="()" />
+        <xsl:param name="element" select="()" />
 
         <xsl:call-template name="newline" />
-        <xsl:element name="{if ($element = 'p') then 'p' else 'div'}">
+        <xsl:element name="{if ($element) then $element else 'div'}">
             <xsl:attribute name="markdown">1</xsl:attribute>
             <xsl:attribute name="class">
                 <xsl:value-of select="name()" />
@@ -173,6 +100,11 @@ so as to initialize it.
             <xsl:if test="@ana">
                 <xsl:attribute name="ana">
                     <xsl:value-of select="@ana" />
+                </xsl:attribute>
+            </xsl:if>
+            <xsl:if test="$title">
+                <xsl:attribute name="title">
+                    <xsl:value-of select="$title" />
                 </xsl:attribute>
             </xsl:if>
             <xsl:call-template name="newline" />
@@ -218,27 +150,6 @@ so as to initialize it.
         <xsl:call-template name="newline" />
     </xsl:template>
 
-    <!-- Main title rendered without anchor link -->
-    <xsl:template match="titleStmt">
-        <h1>
-            <xsl:apply-templates select="title" />
-        </h1>
-        <xsl:call-template name="newline" />
-    </xsl:template>
-
-    <xsl:template match="title">
-        <xsl:value-of select="." />
-    </xsl:template>
-
-    <!-- Subtitles smaller and on new line -->
-    <xsl:template match="title[@type = 'sub']">
-        <xsl:text xml:space="preserve"> </xsl:text>
-        <br />
-        <small>
-            <xsl:apply-templates />
-        </small>
-    </xsl:template>
-
     <!-- Analysis reference as attribute in a div/span -->
     <xsl:template match="*[@ana]">
         <xsl:choose>
@@ -247,11 +158,21 @@ so as to initialize it.
             </xsl:when>
             <xsl:otherwise>
                 <xsl:call-template name="makeBlock">
-                    <xsl:with-param name="element" select="name()" />
+                    <xsl:with-param name="element" select="if (name() = 'p') then 'p' else 'div'" />
                 </xsl:call-template>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+
+    <!-- Block quotes -->
+    <xsl:template match="quote">
+        <xsl:call-template name="makeBlock">
+            <xsl:with-param name="element" select="'blockquote'" />
+            <xsl:with-param name="title" select="parent::cit/bibl" />
+        </xsl:call-template>
+    </xsl:template>
+
+    <xsl:template match="bibl" />
 
     <!-- Markdown -->
 
@@ -266,6 +187,18 @@ so as to initialize it.
         <xsl:text>**</xsl:text>
     </xsl:template>
 
+    <xsl:template match="foreign">
+        <xsl:text xml:space="preserve">*</xsl:text>
+        <xsl:apply-templates />
+        <xsl:text xml:space="preserve">*</xsl:text>
+    </xsl:template>
+
+    <xsl:template match="mentioned">
+        <xsl:text>“</xsl:text>
+        <xsl:apply-templates />
+        <xsl:text>”</xsl:text>
+    </xsl:template>
+
     <xsl:template match="p|trailer">
         <xsl:call-template name="newline" />
         <xsl:apply-templates />
@@ -276,7 +209,52 @@ so as to initialize it.
         <xsl:apply-templates />
     </xsl:template>
 
+    <!-- Main title -->
+    <xsl:template match="titleStmt">
+        <xsl:apply-templates select="title[@type = 'main' and @xml:lang!= $lang]" mode="main"/>
+        <xsl:apply-templates select="title[@type = 'sub']" />
+    </xsl:template>
+
+
+    <xsl:template match="title" mode="main">
+        <xsl:text xml:space="preserve">## </xsl:text>
+        <xsl:apply-templates />
+        <xsl:text xml:space="preserve"> {: #</xsl:text>
+        <xsl:value-of select="substring-before(., ' ')" />
+        <xsl:text xml:space="preserve"> data-toc-label="</xsl:text>
+        <xsl:value-of select="substring-before(., ' ')" />
+        <xsl:text xml:space="preserve">" }&#10;</xsl:text>
+    </xsl:template>
+
+    <xsl:template match="title">
+        <xsl:apply-templates />
+    </xsl:template>
+
+    <!-- Subtitles smaller and on new line -->
+    <xsl:template match="title[@type = 'sub']">
+        <xsl:call-template name="newline" />
+        <p class="subtitle" markdown="span">
+            <xsl:apply-templates />
+        </p>
+    </xsl:template>
+
+    <!-- Inline notes -->
+    <xsl:template match="note[@place = 'inline']">
+        <xsl:text>[</xsl:text>
+        <xsl:apply-templates />
+        <xsl:text>]</xsl:text>
+    </xsl:template>
+
     <!-- Poetry -->
+    <xsl:template match="*[@rendition = 'expandable']" priority="2">
+        <details markdown="block">
+            <summary></summary>
+            <xsl:call-template name="newline" />
+            <xsl:apply-templates />
+            <xsl:call-template name="newline" />
+        </details>
+    </xsl:template>
+
     <xsl:template match="lg">
         <xsl:if test="@n">
             <xsl:value-of select="@n" />
@@ -288,11 +266,16 @@ so as to initialize it.
     </xsl:template>
 
     <xsl:template match="l">
-        <xsl:text xml:space="preserve">    </xsl:text>
-        <xsl:if test="@n">
-            <xsl:number value="@n" format="1." />
-            <xsl:text xml:space="preserve">  </xsl:text>
-        </xsl:if>
+        <xsl:choose>
+            <xsl:when test="@n">
+                <xsl:text xml:space="preserve">    </xsl:text>
+                <xsl:number value="@n" format="1." />
+                <xsl:text xml:space="preserve">  </xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="newline" />
+            </xsl:otherwise>
+        </xsl:choose>
         <xsl:apply-templates />
         <xsl:call-template name="newline" />
     </xsl:template>
@@ -355,11 +338,16 @@ so as to initialize it.
         <xsl:param name="class" select="()" />
         <xsl:param name="title" select="()" />
         <xsl:param name="ana" select="()" />
+        <xsl:param name="against" select="()" />
+        <xsl:param name="label" select="()" />
 
         <xsl:text>{:</xsl:text>
         <xsl:if test="exists($id)">
             <xsl:text xml:space="preserve"> #</xsl:text>
             <xsl:value-of select="$id" />
+            <xsl:text xml:space="preserve"> label="</xsl:text>
+            <xsl:value-of select="$id" />
+            <xsl:text>"</xsl:text>
         </xsl:if>
         <xsl:if test="exists($class)">
             <xsl:text xml:space="preserve"> .</xsl:text>
@@ -368,12 +356,22 @@ so as to initialize it.
         <xsl:if test="exists($title)">
             <xsl:text xml:space="preserve"> title="</xsl:text>
             <xsl:value-of disable-output-escaping="yes" select="$title" />
-            <xsl:text xml:space="preserve">"</xsl:text>
+            <xsl:text>"</xsl:text>
         </xsl:if>
         <xsl:if test="exists($ana)">
             <xsl:text xml:space="preserve"> ana="</xsl:text>
             <xsl:value-of disable-output-escaping="yes" select="$ana" />
-            <xsl:text xml:space="preserve">"</xsl:text>
+            <xsl:text>"</xsl:text>
+        </xsl:if>
+        <xsl:if test="exists($against)">
+            <xsl:text xml:space="preserve"> against="</xsl:text>
+            <xsl:value-of disable-output-escaping="yes" select="substring($against, 2)" />
+            <xsl:text>"</xsl:text>
+        </xsl:if>
+        <xsl:if test="exists($label)">
+            <xsl:text xml:space="preserve"> label="</xsl:text>
+            <xsl:value-of select="$label" />
+            <xsl:text>"</xsl:text>
         </xsl:if>
         <xsl:text xml:space="preserve"> }</xsl:text>
     </xsl:template>
@@ -381,32 +379,50 @@ so as to initialize it.
     <!-- Links to external resources are rendered in markdown reference syntax -->
     <xsl:template match="*[@ref]">
         <xsl:value-of select="tei:mkLink(.,substring(@ref, 2),'reference')" />
-        <xsl:call-template name="mkLinkAttrs">
-            <xsl:with-param name="class" select="name()" />
-        </xsl:call-template>
     </xsl:template>
 
     <!-- Pointers are rendered as regular markdown links with the text content of the target -->
     <xsl:template match="ptr">
-        <xsl:variable name="target-text" select="id(substring(@target, 2))" />
+        <xsl:variable name="target-id" select="substring(@target, 2)" />
+        <xsl:variable name="target-text" select="id($target-id)" />
+
+    <xsl:variable name="target-element" select="//*[@xml:id=$target-id]" />
+    <xsl:variable name="exclude-id" select="$target-element/@exclude" />
 
         <xsl:value-of select="tei:mkLink($target-text,@target,'')" />
         <xsl:call-template name="mkLinkAttrs">
             <xsl:with-param name="class" select="'ref'" />
+            <xsl:with-param name="label" select="$target-id" />
+            <xsl:with-param name="against" select="$exclude-id" />
         </xsl:call-template>
     </xsl:template>
 
     <!-- In-line quotes call the link template if a corresp id is given -->
     <xsl:template match="q" priority="2">
         <xsl:text>«</xsl:text>
+        <xsl:if test="@type = 'foreign'">
+            <xsl:text>*</xsl:text>
+        </xsl:if>
         <xsl:choose>
             <xsl:when test="@corresp">
                 <xsl:call-template name="corresp" />
+            </xsl:when>
+            <xsl:when test="parent::cit">
+                <xsl:element name="span">
+                    <xsl:attribute name="title">
+                        <xsl:value-of select="parent::cit/bibl" />
+                    </xsl:attribute>
+                    <xsl:attribute name="class" select="'q'" />
+                    <xsl:apply-templates />
+                </xsl:element>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates />
             </xsl:otherwise>
         </xsl:choose>
+        <xsl:if test="@type = 'foreign'">
+            <xsl:text>*</xsl:text>
+        </xsl:if>
         <xsl:text>»</xsl:text>
     </xsl:template>
 
@@ -507,9 +523,6 @@ so as to initialize it.
         <xsl:text xml:space="preserve"> </xsl:text>
         <xsl:apply-templates select="title" />
         <xsl:apply-templates select="text()" />
-        <xsl:if test="title[@type='sub']">
-            <xsl:call-template name="shortToc" />
-        </xsl:if>
         <xsl:call-template name="newline" />
         <xsl:if test="parent::div/@resp">
             <xsl:variable name="resp" select="substring(parent::div/@resp, 2)" />
@@ -525,12 +538,6 @@ so as to initialize it.
             <xsl:call-template name="newline" />
             <xsl:call-template name="newline" />
         </xsl:if>
-    </xsl:template>
-
-    <xsl:template name="shortToc">
-        <xsl:text xml:space="preserve">{: data-toc-label="</xsl:text>
-        <xsl:value-of select="title[not(@type='sub' or @xml:lang = $lang)]" separator=", " />
-        <xsl:text xml:space="preserve">" }</xsl:text>
     </xsl:template>
 
     <!-- Lists -->
@@ -564,6 +571,7 @@ so as to initialize it.
             <xsl:call-template name="mkLinkAttrs">
                 <xsl:with-param name="id" select="@xml:id" />
                 <xsl:with-param name="ana" select="@ana" />
+                <xsl:with-param name="against" select="@exclude" />
             </xsl:call-template>
         </xsl:if>
     </xsl:template>

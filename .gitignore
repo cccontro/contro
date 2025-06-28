@@ -4,3 +4,4 @@ catalog*.xml
 controEnv
 common/
 .vscode
+bib/sources
