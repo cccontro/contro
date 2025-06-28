@@ -83,7 +83,7 @@ document$.subscribe(function () {
 
         // Add global click listener to clear highlights
         document.addEventListener("click", function () {
-            document.querySelectorAll(".shown").forEach(el => el.classList.remove("shown"));
+            document.querySelectorAll(".marked").forEach(el => el.classList.remove("marked"));
         });
 
         document.querySelectorAll("[id^='s'], [ana^='#s'], p:has([href*='#s'])").forEach(element => {
@@ -116,18 +116,18 @@ document$.subscribe(function () {
                 }
 
                 // Clear current highlights
-                document.querySelectorAll(".shown").forEach(el => el.classList.remove("shown"));
+                document.querySelectorAll(".marked").forEach(el => el.classList.remove("marked"));
 
                 // Highlight matching elements
                 targets.forEach(id => {
                     document.querySelectorAll(
                         `[id="${id}"], [ana~="#${id}"], p:has([href$="#${id}"])`
-                    ).forEach(el => el.classList.add("shown"));
+                    ).forEach(el => el.classList.add("marked"));
                 });
             }, true);
         });
 
-        // Mark spans with no in-text referent
+        // Disable spans with no in-text referent
         document.querySelectorAll("[id^='s']").forEach(element => {
             const id = element.id;
             const hasText = document.querySelector(`span[ana~="#${id}"]`);
