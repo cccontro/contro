@@ -10,7 +10,7 @@
 
 **Release:** 12/03/2025
 
-**Last update:** 21/05/2025
+**Last update:** 16/06/2025
 
 **Authors:** Alberto Ciarrocca, Francesca Massarenti
 
@@ -34,6 +34,7 @@ A lot of public discussions, even in formal contexts, shows perspectivisation si
 
 #### Bibliography
 A. Gangemi and V. Presutti, “Formal representation and extraction of perspectives,” in *Creating a more transparent internet*. Cambridge: Cambridge University Press, 2022, pp. 208–228, doi: [10.1017/9781108641104.016](https://doi.org/10.1017/9781108641104.016).
+
 
 ### Namespaces
 
@@ -67,7 +68,7 @@ A. Gangemi and V. Presutti, “Formal representation and extraction of perspecti
   <ul>
     <h4>Subclass of</h4>
     <li>
-      <a class="class" href="#PerspectivisationTheorySituation_c" title="https://w3id.org/contro/persp#PerspectivisationTheorySituation">Perspectivisation theory situation</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="#PerspectivisationTheorySituation_c" title="https://w3id.org/contro/persp#PerspectivisationTheorySituation">Perspectivisation Theory Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -108,7 +109,7 @@ A. Gangemi and V. Presutti, “Formal representation and extraction of perspecti
   <ul>
     <h4>Subclass of</h4>
     <li>
-      <a class="class" href="#PerspectivisationTheorySituation_c" title="https://w3id.org/contro/persp#PerspectivisationTheorySituation">Perspectivisation theory situation</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="#PerspectivisationTheorySituation_c" title="https://w3id.org/contro/persp#PerspectivisationTheorySituation">Perspectivisation Theory Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -149,7 +150,7 @@ A. Gangemi and V. Presutti, “Formal representation and extraction of perspecti
   <ul>
     <h4>Subclass of</h4>
     <li>
-      <a class="class" href="#PerspectivisationTheorySituation_c" title="https://w3id.org/contro/persp#PerspectivisationTheorySituation">Perspectivisation theory situation</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="#PerspectivisationTheorySituation_c" title="https://w3id.org/contro/persp#PerspectivisationTheorySituation">Perspectivisation Theory Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -178,50 +179,6 @@ A. Gangemi and V. Presutti, “Formal representation and extraction of perspecti
   <summary>
   <div class="overview">
     <div class="label">
-      <h3 id="Eventuality_c">Eventuality</h3>
-      <a class="class" href="#Eventuality_c">https://w3id.org/contro/persp#Eventuality</a>
-    </div>
-  <ul>
-    <h4>Equivalent to</h4>
-    <li>
-      <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies">satisfies</a><span class="sup" data-text="op" title="Object Property"></span> value <a class="individual" href="#Eventuality_i" title="https://w3id.org/contro/persp#Eventuality">Eventuality</a><span class="sup" data-text="i" title="Individual"></span>
-    </li>
-  </ul>
-  <ul>
-    <h4>Subclass of</h4>
-    <li>
-      <a class="class" href="http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality" title="http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality">Eventuality</a><span class="sup" data-text="c" title="Class"></span>
-    </li>
-    <li>
-      <a class="class" href="#PerspectivisationTheorySituation_c" title="https://w3id.org/contro/persp#PerspectivisationTheorySituation">Perspectivisation theory situation</a><span class="sup" data-text="c" title="Class"></span>
-    </li>
-  </ul>
-  </div>
-  <p class="description">The eventuality targeted by perspectivisation, explicitly or implicitly extracted from its background knowledge (e.g., current taxation policies in 'taxes are investiments').</p>
-  </summary>
-  <div class="extra">
-    <ul>
-      <h4>In range of</h4>
-      <li>
-        <a class="object_property" href="#Eventuality_op" title="https://w3id.org/contro/persp#Eventuality">Eventuality</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
-    </ul>
-    <ul>
-      <h4>Also defined as</h4>
-      <li>
-        <a class="object_property" href="#Eventuality_op" title="https://w3id.org/contro/persp#Eventuality">Object Property</a>
-      </li>
-      <li>
-        <a class="individual" href="#Eventuality_i" title="https://w3id.org/contro/persp#Eventuality">Individual</a>
-      </li>
-    </ul>
-  </div>
-</details>
-
-<details class="class" name="element" markdown>
-  <summary>
-  <div class="overview">
-    <div class="label">
       <h3 id="Lens_c">Lens</h3>
       <a class="class" href="#Lens_c">https://w3id.org/contro/persp#Lens</a>
     </div>
@@ -234,7 +191,7 @@ A. Gangemi and V. Presutti, “Formal representation and extraction of perspecti
   <ul>
     <h4>Subclass of</h4>
     <li>
-      <a class="class" href="#PerspectivisationTheorySituation_c" title="https://w3id.org/contro/persp#PerspectivisationTheorySituation">Perspectivisation theory situation</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="#PerspectivisationTheorySituation_c" title="https://w3id.org/contro/persp#PerspectivisationTheorySituation">Perspectivisation Theory Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -269,6 +226,9 @@ A. Gangemi and V. Presutti, “Formal representation and extraction of perspecti
   <ul>
     <h4>Equivalent to</h4>
     <li>
+      <a class="object_property" href="#Cut_op" title="https://w3id.org/contro/persp#Cut">Cut</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+    <li>
       <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies">satisfies</a><span class="sup" data-text="op" title="Object Property"></span> value <a class="individual" href="#Perspectivisation_i" title="https://w3id.org/contro/persp#Perspectivisation">Perspectivisation</a><span class="sup" data-text="i" title="Individual"></span>
     </li>
   </ul>
@@ -284,16 +244,13 @@ A. Gangemi and V. Presutti, “Formal representation and extraction of perspecti
       <a class="object_property" href="#Conceptualiser_op" title="https://w3id.org/contro/persp#Conceptualiser">Conceptualiser</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">Agent</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
-      <a class="object_property" href="#Cut_op" title="https://w3id.org/contro/persp#Cut">Cut</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
-    </li>
-    <li>
       <a class="object_property" href="#Eventuality_op" title="https://w3id.org/contro/persp#Eventuality">Eventuality</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
       <a class="object_property" href="#Lens_op" title="https://w3id.org/contro/persp#Lens">Lens</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
-      <a class="class" href="#PerspectivisationTheorySituation_c" title="https://w3id.org/contro/persp#PerspectivisationTheorySituation">Perspectivisation theory situation</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="#PerspectivisationTheorySituation_c" title="https://w3id.org/contro/persp#PerspectivisationTheorySituation">Perspectivisation Theory Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -303,15 +260,9 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
   </summary>
   <div class="extra">
     <ul>
-      <h4>In range of</h4>
+      <h4>Key properties</h4>
       <li>
-        <a class="object_property" href="#composedWith_op" title="https://w3id.org/contro/persp#composedWith">composed with</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
-    </ul>
-    <ul>
-      <h4>In domain of</h4>
-      <li>
-        <a class="object_property" href="#composedWith_op" title="https://w3id.org/contro/persp#composedWith">composed with</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="#Attitude_op" title="https://w3id.org/contro/persp#Attitude">Attitude</a><span class="sup" data-text="op" title="Object Property"></span></li><li><a class="object_property" href="#Eventuality_op" title="https://w3id.org/contro/persp#Eventuality">Eventuality</a><span class="sup" data-text="op" title="Object Property"></span></li><li><a class="object_property" href="#Lens_op" title="https://w3id.org/contro/persp#Lens">Lens</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -327,7 +278,7 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
   <summary>
   <div class="overview">
     <div class="label">
-      <h3 id="PerspectivisationTheorySituation_c">Perspectivisation theory situation</h3>
+      <h3 id="PerspectivisationTheorySituation_c">Perspectivisation Theory Situation</h3>
       <a class="class" href="#PerspectivisationTheorySituation_c">https://w3id.org/contro/persp#PerspectivisationTheorySituation</a>
     </div>
   <ul>
@@ -349,9 +300,6 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
       </li>
       <li>
         <a class="class" href="#Cut_c" title="https://w3id.org/contro/persp#Cut">Cut</a><span class="sup" data-text="c" title="Class"></span>
-      </li>
-      <li>
-        <a class="class" href="#Eventuality_c" title="https://w3id.org/contro/persp#Eventuality">Eventuality</a><span class="sup" data-text="c" title="Class"></span>
       </li>
       <li>
         <a class="class" href="#Lens_c" title="https://w3id.org/contro/persp#Lens">Lens</a><span class="sup" data-text="c" title="Class"></span>
@@ -391,7 +339,7 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -432,7 +380,7 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -450,19 +398,19 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
 <div class="admonition object_property" markdown>
   <div class="admonition-title overview">
     <div class="label">
-      <h3 id="composedWith_op">composed with</h3>
+      <h3 id="composedWith_op">composed With</h3>
       <a class="object_property" href="#composedWith_op">https://w3id.org/contro/persp#composedWith</a>
     </div>
   <ul>
     <h4>Domain</h4>
     <li>
-      <a class="class" href="#Perspectivisation_c" title="https://w3id.org/contro/persp#Perspectivisation">Perspectivisation</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   <ul>
     <h4>Range</h4>
     <li>
-      <a class="class" href="#Perspectivisation_c" title="https://w3id.org/contro/persp#Perspectivisation">Perspectivisation</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -486,6 +434,9 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
     <li>
       <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">Agent</a><span class="sup" data-text="c" title="Class"></span>
     </li>
+    <li>
+      <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">has Role</a><span class="sup" data-text="op" title="Object Property"></span> value <a class="individual" href="#Conceptualiser_i" title="https://w3id.org/contro/persp#Conceptualiser">Conceptualiser</a><span class="sup" data-text="i" title="Individual"></span>
+    </li>
   </ul>
   </div>
   </summary>
@@ -493,7 +444,7 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -583,7 +534,7 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -614,24 +565,23 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
   <ul>
     <h4>Range</h4>
     <li>
-      <a class="class" href="#Eventuality_c" title="https://w3id.org/contro/persp#Eventuality">Eventuality</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality" title="http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality">Eventuality</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+    <li>
+      <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">has Role</a><span class="sup" data-text="op" title="Object Property"></span> value <a class="individual" href="#Eventuality_i" title="https://w3id.org/contro/persp#Eventuality">Eventuality</a><span class="sup" data-text="i" title="Individual"></span>
     </li>
   </ul>
   </div>
-  <p class="description">The eventuality targeted by perspectivisation, explicitly or implicitly extracted from its background knowledge (e.g., current taxation policies in 'taxes are investiments').</p>
   </summary>
   <div class="extra">
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
       <h4>Also defined as</h4>
-      <li>
-        <a class="class" href="#Eventuality_c" title="https://w3id.org/contro/persp#Eventuality">Class</a>
-      </li>
       <li>
         <a class="individual" href="#Eventuality_i" title="https://w3id.org/contro/persp#Eventuality">Individual</a>
       </li>
@@ -643,7 +593,7 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
   <summary>
   <div class="overview">
     <div class="label">
-      <h3 id="extractedFrom_op">extracted from</h3>
+      <h3 id="extractedFrom_op">extracted From</h3>
       <a class="object_property" href="#extractedFrom_op">https://w3id.org/contro/persp#extractedFrom</a>
     </div>
   <ul>
@@ -727,7 +677,7 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -746,7 +696,7 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
   <summary>
   <div class="overview">
     <div class="label">
-      <h3 id="perspectivisedAs_op">perspectivised as</h3>
+      <h3 id="perspectivisedAs_op">perspectivised As</h3>
       <a class="object_property" href="#perspectivisedAs_op">https://w3id.org/contro/persp#perspectivisedAs</a>
     </div>
   <ul>
@@ -777,7 +727,7 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
   <summary>
   <div class="overview">
     <div class="label">
-      <h3 id="perspectivisedThrough_op">perspectivised through</h3>
+      <h3 id="perspectivisedThrough_op">perspectivised Through</h3>
       <a class="object_property" href="#perspectivisedThrough_op">https://w3id.org/contro/persp#perspectivisedThrough</a>
     </div>
   <ul>
@@ -808,7 +758,7 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
   <summary>
   <div class="overview">
     <div class="label">
-      <h3 id="shotThrough_op">shot through</h3>
+      <h3 id="shotThrough_op">shot Through</h3>
       <a class="object_property" href="#shotThrough_op">https://w3id.org/contro/persp#shotThrough</a>
     </div>
   <ul>
@@ -938,7 +888,7 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
   <ul>
     <h4>Class</h4>
     <li>
-      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description">Description</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role">Role</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -992,20 +942,16 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
   <ul>
     <h4>Class</h4>
     <li>
-      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description">Description</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role">Role</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
-  <p class="description">The eventuality targeted by perspectivisation, explicitly or implicitly extracted from its background knowledge (e.g., current taxation policies in 'taxes are investiments').</p>
   </summary>
   <div class="extra">
     <ul>
       <h4>Also defined as</h4>
       <li>
         <a class="object_property" href="#Eventuality_op" title="https://w3id.org/contro/persp#Eventuality">Object Property</a>
-      </li>
-      <li>
-        <a class="class" href="#Eventuality_c" title="https://w3id.org/contro/persp#Eventuality">Class</a>
       </li>
     </ul>
   </div>
@@ -1062,22 +1008,22 @@ The OWL representation of this frame includes heavy punning: each aspect of a pe
     <ul>
       <h4>Assertions</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Attitude_i" title="https://w3id.org/contro/persp#Attitude">Attitude</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole">defines Role</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Conceptualiser_i" title="https://w3id.org/contro/persp#Conceptualiser">Conceptualiser</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Background_i" title="https://w3id.org/contro/persp#Background">Background</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole">defines Role</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Eventuality_i" title="https://w3id.org/contro/persp#Eventuality">Eventuality</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Conceptualiser_i" title="https://w3id.org/contro/persp#Conceptualiser">Conceptualiser</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has Component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Attitude_i" title="https://w3id.org/contro/persp#Attitude">Attitude</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Cut_i" title="https://w3id.org/contro/persp#Cut">Cut</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has Component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Background_i" title="https://w3id.org/contro/persp#Background">Background</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Eventuality_i" title="https://w3id.org/contro/persp#Eventuality">Eventuality</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has Component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Cut_i" title="https://w3id.org/contro/persp#Cut">Cut</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Lens_i" title="https://w3id.org/contro/persp#Lens">Lens</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has Component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Lens_i" title="https://w3id.org/contro/persp#Lens">Lens</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
     </ul>
     <ul>

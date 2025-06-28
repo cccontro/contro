@@ -6,11 +6,11 @@
 
 **IRI:** <https://w3id.org/contro/arg>
 
-**Version:** 0.6
+**Version:** 0.7
 
 **Release:** 12/03/2025
 
-**Last update:** 03/06/2025
+**Last update:** 16/06/2025
 
 **Authors:** Alberto Ciarrocca, Francesca Massarenti
 
@@ -29,10 +29,11 @@ In this model, each Dialogical Agent participates in discourse with an individua
 
 The Conclusion of an Argument may Contradict another's Premise, Inference Rule, or Conclusion, giving rise to an Attack relation. These are classified respectively as Undermining, Undercut, and Rebuttal Conflicts.
 
-The ontology is designed to function with minimal annotation of Premises and Conclusions, and is compatible with the HermiT 1.4+ reasoner. An [example instance](http://www.w3id.org/contro/example.ttl) is available for demonstration purposes.
+The ontology is designed to function with minimal annotation of Premises and Conclusions, and is compatible with the HermiT 1.4+ reasoner. A [sample instance](http://www.w3id.org/contro/example.ttl) is available for demonstration purposes.
 
 #### Bibliography
 S. Modgil and H. Prakken. “A general account of argumentation with preferences.” *Artificial Intelligence*, vol. 195, 1 Feb. 2013, pp. 361–97, doi: [10.1016/j.artint.2012.10.008](https://doi.org/10.1016/j.artint.2012.10.008).
+
 
 ### Namespaces
 
@@ -72,7 +73,7 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
     </li>
   </ul>
   </div>
-  <p class="description">The attitude a dialogical agent holds toward the argument of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise.</p>
+  <p class="description">The attitude a dialogical agent holds toward the statement of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise.</p>
   </summary>
   <div class="extra">
     <ul>
@@ -150,7 +151,7 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
   <ul>
     <h4>Equivalent to</h4>
     <li>
-      <a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#Conclusion_c" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="c" title="Class"></span> and <br/><a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#InferenceRule_c" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="c" title="Class"></span> and <br/><a class="object_property" href="#Premise_op" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#Premise_c" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
       <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies">satisfies</a><span class="sup" data-text="op" title="Object Property"></span> value <a class="individual" href="#Argument_i" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="i" title="Individual"></span>
@@ -159,19 +160,16 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
   <ul>
     <h4>Subclass of</h4>
     <li>
-      <a class="object_property" href="#ArgumentationTheory_op" title="https://w3id.org/contro/arg#ArgumentationTheory">Argumentation Theory</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#ArgumentationTheory_c" title="https://w3id.org/contro/arg#ArgumentationTheory">Argumentation Theory</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="object_property" href="#ArgumentationTheory_op" title="https://w3id.org/contro/arg#ArgumentationTheory">Argumentation Theory</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
       <a class="class" href="#ArgumentationTheorySituation_c" title="https://w3id.org/contro/arg#ArgumentationTheorySituation">Argumentation Theory Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
-      <a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#Conclusion_c" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
-      <a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#InferenceRule_c" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="c" title="Class"></span>
-    </li>
-    <li>
-      <a class="object_property" href="#Premise_op" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#Premise_c" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="object_property" href="#Premise_op" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
       <a class="object_property" href="#Topic_op" title="https://w3id.org/contro/arg#Topic">Topic</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality" title="http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality">Eventuality</a><span class="sup" data-text="c" title="Class"></span>
@@ -188,24 +186,9 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
       </li>
     </ul>
     <ul>
-      <h4>In range of</h4>
+      <h4>Key properties</h4>
       <li>
-        <a class="object_property" href="#attacks_op" title="https://w3id.org/contro/arg#attacks">attacks</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
-      <li>
-        <a class="object_property" href="#defends_op" title="https://w3id.org/contro/arg#defends">defends</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
-      <li>
-        <a class="object_property" href="#hasSubArgument_op" title="https://w3id.org/contro/arg#hasSubArgument">has sub-argument</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
-    </ul>
-    <ul>
-      <h4>In domain of</h4>
-      <li>
-        <a class="object_property" href="#defends_op" title="https://w3id.org/contro/arg#defends">defends</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
-      <li>
-        <a class="object_property" href="#hasSubArgument_op" title="https://w3id.org/contro/arg#hasSubArgument">has sub-argument</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span></li><li><a class="object_property" href="#Topic_op" title="https://w3id.org/contro/arg#Topic">Topic</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -233,13 +216,16 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
   <ul>
     <h4>Subclass of</h4>
     <li>
+      <a class="object_property" href="#AcceptanceAttitude_op" title="https://w3id.org/contro/arg#AcceptanceAttitude">Acceptance Attitude</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+    <li>
       <a class="class" href="#ArgumentationTheorySituation_c" title="https://w3id.org/contro/arg#ArgumentationTheorySituation">Argumentation Theory Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
       <a class="object_property" href="#DialogicalAgent_op" title="https://w3id.org/contro/arg#DialogicalAgent">Dialogical Agent</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">Agent</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
-      <a class="object_property" href="#KnowledgeBase_op" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="op" title="Object Property"></span> min 0 <a class="class" href="#KnowledgeBase_c" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="object_property" href="#KnowledgeBase_op" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="op" title="Object Property"></span> min 0 <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -356,12 +342,15 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
       <a class="class" href="#Conflict_c">https://w3id.org/contro/arg#Conflict</a>
     </div>
   <ul>
+    <h4>Equivalent to</h4>
+    <li>
+      <a class="object_property" href="#attacks_op" title="https://w3id.org/contro/arg#attacks">attacks</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+  </ul>
+  <ul>
     <h4>Subclass of</h4>
     <li>
       <a class="class" href="#Argument_c" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="c" title="Class"></span>
-    </li>
-    <li>
-      <a class="object_property" href="#attacks_op" title="https://w3id.org/contro/arg#attacks">attacks</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#Argument_c" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -378,12 +367,6 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
       </li>
       <li>
         <a class="class" href="#Undermining_c" title="https://w3id.org/contro/arg#Undermining">Undermining</a><span class="sup" data-text="c" title="Class"></span>
-      </li>
-    </ul>
-    <ul>
-      <h4>In domain of</h4>
-      <li>
-        <a class="object_property" href="#attacks_op" title="https://w3id.org/contro/arg#attacks">attacks</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
   </div>
@@ -446,7 +429,7 @@ S. Modgil and H. Prakken. “A general account of argumentation with preferences
   <ul>
     <h4>Equivalent to</h4>
     <li>
-      <a class="object_property" href="#Consequent_op" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="#Consequent_c" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="c" title="Class"></span> and <br/><a class="object_property" href="#Antecedent_op" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="op" title="Object Property"></span> min 0 <a class="class" href="#Antecedent_c" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="object_property" href="#Consequent_op" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="op" title="Object Property"></span> some <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span> and <br/><a class="object_property" href="#Antecedent_op" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="op" title="Object Property"></span> min 0 <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
       <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies">satisfies</a><span class="sup" data-text="op" title="Object Property"></span> value <a class="individual" href="#InferenceRule_i" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="i" title="Individual"></span>
@@ -468,6 +451,12 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <h4>In range of</h4>
       <li>
         <a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span>
+      </li>
+    </ul>
+    <ul>
+      <h4>Key properties</h4>
+      <li>
+        <a class="object_property" href="#Antecedent_op" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="op" title="Object Property"></span></li><li><a class="object_property" href="#Consequent_op" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -507,9 +496,6 @@ Inference rules, together with premises, form part of the dialogical agent’s k
   <div class="extra">
     <ul>
       <h4>In range of</h4>
-      <li>
-        <a class="object_property" href="#extractedFrom_op" title="https://w3id.org/contro/arg#extractedFrom">extracted from</a><span class="sup" data-text="op" title="Object Property"></span>
-      </li>
       <li>
         <a class="object_property" href="#KnowledgeBase_op" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
@@ -655,13 +641,13 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     </li>
   </ul>
   </div>
-  <p class="description">The attitude a dialogical agent holds toward the argument of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise.</p>
+  <p class="description">The attitude a dialogical agent holds toward the statement of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise.</p>
   </summary>
   <div class="extra">
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -702,7 +688,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -743,7 +729,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -793,13 +779,13 @@ Inference rules, together with premises, form part of the dialogical agent’s k
   <ul>
     <h4>Domain</h4>
     <li>
-      <a class="class" href="#Conflict_c" title="https://w3id.org/contro/arg#Conflict">Conflict</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   <ul>
     <h4>Range</h4>
     <li>
-      <a class="class" href="#Argument_c" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -815,25 +801,13 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Superproperty of chain</h4>
       <li>
-        <a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span> o <a class="object_property" href="#contradicts_op" title="https://w3id.org/contro/arg#contradicts">contradicts</a><span class="sup" data-text="op" title="Object Property"></span> o inverse(<a class="object_property" href="#Antecedent_op" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="op" title="Object Property"></span>) o inverse(<a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span>)
-      </li>
-      <li>
         <a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span> o <a class="object_property" href="#contradicts_op" title="https://w3id.org/contro/arg#contradicts">contradicts</a><span class="sup" data-text="op" title="Object Property"></span> o inverse(<a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span>)
-      </li>
-      <li>
-        <a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span> o <a class="object_property" href="#contradicts_op" title="https://w3id.org/contro/arg#contradicts">contradicts</a><span class="sup" data-text="op" title="Object Property"></span> o inverse(<a class="object_property" href="#Consequent_op" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="op" title="Object Property"></span>) o inverse(<a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span>)
       </li>
       <li>
         <a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span> o <a class="object_property" href="#contradicts_op" title="https://w3id.org/contro/arg#contradicts">contradicts</a><span class="sup" data-text="op" title="Object Property"></span> o inverse(<a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span>)
       </li>
       <li>
         <a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span> o <a class="object_property" href="#contradicts_op" title="https://w3id.org/contro/arg#contradicts">contradicts</a><span class="sup" data-text="op" title="Object Property"></span> o inverse(<a class="object_property" href="#Premise_op" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="op" title="Object Property"></span>)
-      </li>
-      <li>
-        <a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span> o <a class="object_property" href="#Consequent_op" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="op" title="Object Property"></span> o <a class="object_property" href="#contradicts_op" title="https://w3id.org/contro/arg#contradicts">contradicts</a><span class="sup" data-text="op" title="Object Property"></span> o inverse(<a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span>)
-      </li>
-      <li>
-        <a class="object_property" href="#InferenceRule_op" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="op" title="Object Property"></span> o <a class="object_property" href="#Consequent_op" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="op" title="Object Property"></span> o <a class="object_property" href="#contradicts_op" title="https://w3id.org/contro/arg#contradicts">contradicts</a><span class="sup" data-text="op" title="Object Property"></span> o inverse(<a class="object_property" href="#Premise_op" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="op" title="Object Property"></span>)
       </li>
     </ul>
   </div>
@@ -845,6 +819,12 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <h3 id="by_op">by</h3>
       <a class="object_property" href="#by_op">https://w3id.org/contro/arg#by</a>
     </div>
+  <ul>
+    <h4>Domain</h4>
+    <li>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+  </ul>
   <ul>
     <h4>Range</h4>
     <li>
@@ -881,7 +861,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -928,7 +908,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -969,8 +949,20 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <h3 id="contradicts_op">contradicts</h3>
       <a class="object_property" href="#contradicts_op">https://w3id.org/contro/arg#contradicts</a>
     </div>
+  <ul>
+    <h4>Domain</h4>
+    <li>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+  </ul>
+  <ul>
+    <h4>Range</h4>
+    <li>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+  </ul>
   </div>
-  <p class="description">A non symmetric relation between two entities, where the first is logically incompatible with the second. When the contradicting entity is the Conclusion of an Argument, it gives rise to an Attack against any other Argument in which the contradicted entity appears as a Premise, an Inference Rule, or a Conclusion.</p>
+  <p class="description">A non symmetric relation between two situations, where the first is logically incompatible with the second. When the contradicting situation is the Conclusion of an Argument, it gives rise to an Attack against any other Argument in which the contradicted entity appears as a Premise, an Inference Rule, or a Conclusion.</p>
   </summary>
   <div class="extra">
     <ul>
@@ -992,13 +984,13 @@ Inference rules, together with premises, form part of the dialogical agent’s k
   <ul>
     <h4>Domain</h4>
     <li>
-      <a class="class" href="#Argument_c" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   <ul>
     <h4>Range</h4>
     <li>
-      <a class="class" href="#Argument_c" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -1033,7 +1025,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">Agent</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
-      <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">has role</a><span class="sup" data-text="op" title="Object Property"></span> value <a class="individual" href="#DialogicalAgent_i" title="https://w3id.org/contro/arg#DialogicalAgent">Dialogical Agent</a><span class="sup" data-text="i" title="Individual"></span>
+      <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">has Role</a><span class="sup" data-text="op" title="Object Property"></span> value <a class="individual" href="#DialogicalAgent_i" title="https://w3id.org/contro/arg#DialogicalAgent">Dialogical Agent</a><span class="sup" data-text="i" title="Individual"></span>
     </li>
   </ul>
   </div>
@@ -1043,7 +1035,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -1077,7 +1069,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
   <ul>
     <h4>Range</h4>
     <li>
-      <a class="class" href="#KnowledgeBase_c" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -1119,7 +1111,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>See also</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has member</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">has Member</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
   </div>
@@ -1135,13 +1127,13 @@ Inference rules, together with premises, form part of the dialogical agent’s k
   <ul>
     <h4>Domain</h4>
     <li>
-      <a class="class" href="#Argument_c" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   <ul>
     <h4>Range</h4>
     <li>
-      <a class="class" href="#Argument_c" title="https://w3id.org/contro/arg#Argument">Argument</a><span class="sup" data-text="c" title="Class"></span>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
     </li>
   </ul>
   </div>
@@ -1152,6 +1144,38 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <h4>Superproperty of chain</h4>
       <li>
         <a class="object_property" href="#Premise_op" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="op" title="Object Property"></span> o inverse(<a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span>)
+      </li>
+    </ul>
+  </div>
+</details>
+
+<details class="object_property" name="element" markdown>
+  <summary>
+  <div class="overview">
+    <div class="label">
+      <h3 id="holds_op">holds</h3>
+      <a class="object_property" href="#holds_op">https://w3id.org/contro/arg#holds</a>
+    </div>
+  <ul>
+    <h4>Domain</h4>
+    <li>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">Agent</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+  </ul>
+  <ul>
+    <h4>Range</h4>
+    <li>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+  </ul>
+  </div>
+  <p class="description">An agent may hold a credulous, cautious or skeptical attitude depending on the degree of support they require to concede an opponent's statement.</p>
+  </summary>
+  <div class="extra">
+    <ul>
+      <h4>Superproperty of chain</h4>
+      <li>
+        inverse(<a class="object_property" href="#DialogicalAgent_op" title="https://w3id.org/contro/arg#DialogicalAgent">Dialogical Agent</a><span class="sup" data-text="op" title="Object Property"></span>) o <a class="object_property" href="#AcceptanceAttitude_op" title="https://w3id.org/contro/arg#AcceptanceAttitude">Acceptance Attitude</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
   </div>
@@ -1185,7 +1209,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -1248,7 +1272,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -1289,7 +1313,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
@@ -1329,7 +1353,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
       <a class="class" href="http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality" title="http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality">Eventuality</a><span class="sup" data-text="c" title="Class"></span>
     </li>
     <li>
-      <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">has role</a><span class="sup" data-text="op" title="Object Property"></span> value <a class="individual" href="#Topic_i" title="https://w3id.org/contro/arg#Topic">Topic</a><span class="sup" data-text="i" title="Individual"></span>
+      <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">has Role</a><span class="sup" data-text="op" title="Object Property"></span> value <a class="individual" href="#Topic_i" title="https://w3id.org/contro/arg#Topic">Topic</a><span class="sup" data-text="i" title="Individual"></span>
     </li>
   </ul>
   </div>
@@ -1339,13 +1363,45 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Subproperty of</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</a><span class="sup" data-text="op" title="Object Property"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is Setting For</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
     <ul>
       <h4>Also defined as</h4>
       <li>
         <a class="individual" href="#Topic_i" title="https://w3id.org/contro/arg#Topic">Individual</a>
+      </li>
+    </ul>
+  </div>
+</details>
+
+<details class="object_property" name="element" markdown>
+  <summary>
+  <div class="overview">
+    <div class="label">
+      <h3 id="toward_op">toward</h3>
+      <a class="object_property" href="#toward_op">https://w3id.org/contro/arg#toward</a>
+    </div>
+  <ul>
+    <h4>Domain</h4>
+    <li>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+  </ul>
+  <ul>
+    <h4>Range</h4>
+    <li>
+      <a class="class" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a><span class="sup" data-text="c" title="Class"></span>
+    </li>
+  </ul>
+  </div>
+  <p class="description">An agent holds a certain acceptance attitude toward an opponent's statement depending on the conditions they require to not attack it.</p>
+  </summary>
+  <div class="extra">
+    <ul>
+      <h4>Superproperty of chain</h4>
+      <li>
+        inverse(<a class="object_property" href="#AcceptanceAttitude_op" title="https://w3id.org/contro/arg#AcceptanceAttitude">Acceptance Attitude</a><span class="sup" data-text="op" title="Object Property"></span>) o inverse(<a class="object_property" href="#ArgumentationTheory_op" title="https://w3id.org/contro/arg#ArgumentationTheory">Argumentation Theory</a><span class="sup" data-text="op" title="Object Property"></span>) o <a class="object_property" href="#attacks_op" title="https://w3id.org/contro/arg#attacks">attacks</a><span class="sup" data-text="op" title="Object Property"></span> o <a class="object_property" href="#Conclusion_op" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="op" title="Object Property"></span>
       </li>
     </ul>
   </div>
@@ -1369,7 +1425,7 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     </li>
   </ul>
   </div>
-  <p class="description">The attitude a dialogical agent holds toward the argument of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise.</p>
+  <p class="description">The attitude a dialogical agent holds toward the statement of another agent. Depending on their acceptance attitude, an agent may accept the premises and/or conclusion, respond with a counterargument, or ask for further grounds for a premise.</p>
   </summary>
   <div class="extra">
     <ul>
@@ -1433,19 +1489,19 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Assertions</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole">defines role</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Topic_i" title="https://w3id.org/contro/arg#Topic">Topic</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole">defines Role</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Topic_i" title="https://w3id.org/contro/arg#Topic">Topic</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#ArgumentationTheory_i" title="https://w3id.org/contro/arg#ArgumentationTheory">Argumentation Theory</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has Component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#ArgumentationTheory_i" title="https://w3id.org/contro/arg#ArgumentationTheory">Argumentation Theory</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Conclusion_i" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has Component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Conclusion_i" title="https://w3id.org/contro/arg#Conclusion">Conclusion</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#InferenceRule_i" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has Component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#InferenceRule_i" title="https://w3id.org/contro/arg#InferenceRule">Inference Rule</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Premise_i" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has Component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Premise_i" title="https://w3id.org/contro/arg#Premise">Premise</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
     </ul>
     <ul>
@@ -1477,13 +1533,13 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Assertions</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole">defines role</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#DialogicalAgent_i" title="https://w3id.org/contro/arg#DialogicalAgent">Dialogical Agent</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole">defines Role</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#DialogicalAgent_i" title="https://w3id.org/contro/arg#DialogicalAgent">Dialogical Agent</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#AcceptanceAttitude_i" title="https://w3id.org/contro/arg#AcceptanceAttitude">Acceptance Attitude</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has Component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#AcceptanceAttitude_i" title="https://w3id.org/contro/arg#AcceptanceAttitude">Acceptance Attitude</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#KnowledgeBase_i" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has Component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#KnowledgeBase_i" title="https://w3id.org/contro/arg#KnowledgeBase">Knowledge Base</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
     </ul>
     <ul>
@@ -1604,10 +1660,10 @@ Inference rules, together with premises, form part of the dialogical agent’s k
     <ul>
       <h4>Assertions</h4>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Antecedent_i" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has Component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Antecedent_i" title="https://w3id.org/contro/arg#Antecedent">Antecedent</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
       <li>
-        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Consequent_i" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="i" title="Individual"></span>
+        <a class="object_property" href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has Component</a><span class="sup" data-text="op" title="Object Property"></span> <a class="individual" href="#Consequent_i" title="https://w3id.org/contro/arg#Consequent">Consequent</a><span class="sup" data-text="i" title="Individual"></span>
       </li>
     </ul>
     <ul>
