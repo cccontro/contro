@@ -91,9 +91,15 @@
 
 **Available:**
 
+{% if '.ttl' in doc.formats %}
 [![Format: TTL](https://img.shields.io/badge/Format-TTL-green.svg?style=for-the-badge)]({{ doc.uri }}.ttl)
+{% endif %}
+{% if '.owl' in doc.formats %}
 [![Format: XML/RDF](https://img.shields.io/badge/Format-XML/RDF-red.svg?style=for-the-badge)]({{ doc.uri }}.owl)
+{% endif %}
+{% if '.jsonld' in doc.formats %}
 [![Format: JSON-LD](https://img.shields.io/badge/Format-JSON--LD-blue.svg?style=for-the-badge)]({{ doc.uri }}.jsonld)
+{% endif %}
 
 {% if doc.description %}
 ### Description
@@ -103,6 +109,14 @@
 {% if doc.bib %}
 #### Bibliography
 {{ doc.bib }}
+{% endif %}
+
+{% if doc.imports %}
+### Imported Ontologies
+{% for uri in (doc.imports if doc.imports is not string else [doc.imports]) %}
+<{{ uri }}>
+
+{% endfor %}
 {% endif %}
 
 ### Namespaces

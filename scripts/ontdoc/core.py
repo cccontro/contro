@@ -13,12 +13,14 @@ from ontdoc.elements import (
     Chain,
     Atom,
     AtomList,
+    RDFList,
     Complement,
     Inverse,
     SWRL
 )
 from ontdoc.utils import is_schema_predicate
 
+import os
 from typing import Union, Dict, List, Tuple
 from rdflib import Graph, URIRef, Literal, BNode, RDF, RDFS, OWL, DC, DCTERMS, VANN
 from rdflib.namespace import split_uri
@@ -74,18 +76,25 @@ class OntDoc:
         self.prefix = self.meta(VANN.preferredNamespacePrefix)
         self.bib = self.meta(RDFS.seeAlso)
         self.source = self.meta(DCTERMS.source) or self.meta(DC.source)
+        self.imports = self.meta(OWL.imports)
+
+        self.formats = set()
+        for fformat in ['.ttl', '.owl', '.jsonld']:
+            fname = path.rsplit('.')[0] + fformat
+            if os.path.isfile(fname):
+                self.formats.add(fformat)
 
         # Ontology elements
-        self.classes = self.get_properties(OWL.Class)
-        self.object_properties = self.get_properties(OWL.ObjectProperty)
-        self.data_properties = self.get_properties(OWL.DatatypeProperty)
-        self.annotation_properties = self.get_properties(OWL.AnnotationProperty)
-        self.individuals = self.get_properties(OWL.NamedIndividual)
-        self.rules = self.get_properties(SWRL.Imp)
+        self.classes = self.get_entities(OWL.Class)
+        self.object_properties = self.get_entities(OWL.ObjectProperty)
+        self.data_properties = self.get_entities(OWL.DatatypeProperty)
+        self.annotation_properties = self.get_entities(OWL.AnnotationProperty)
+        self.individuals = self.get_entities(OWL.NamedIndividual)
+        self.rules = self.get_entities(SWRL.Imp)
 
 
     # Methods 
-    def get_properties(self, owl_type: URIRef) -> List['OntoElement']:
+    def get_entities(self, owl_type: URIRef) -> List['OntoElement']:
         entities = []
 
         for s in self.g.subjects(RDF.type, owl_type):
@@ -124,7 +133,8 @@ class OntDoc:
                             predicate = self.format_node(p, OWL.ObjectProperty)
                         else:
                             predicate = self.format_node(p, OWL.DatatypeProperty)
-                        data.append(BNodeElement(predicate, object))
+                        if object:
+                            data.append(BNodeElement(predicate, object))
             case 'type': # Exclude OWL types
                 data = [
                     self.format_node(o, OWL.Class) for o in g.objects(entity, pred) if o not in self.owl_types
@@ -162,7 +172,8 @@ class OntDoc:
             # Exclude other languages
             if s.language == self.lang or s.language is None:
                 return str(s)
-            
+            else:
+                return None
         else:
             return str(s)
         
@@ -218,6 +229,9 @@ class OntDoc:
         
         elif (None, OWL.disjointUnionOf, s) in g:
             return Disjunction(self.format_node(m, OWL.Class) for m in self.parse_list(s))
+
+        elif (None, OWL.hasKey, s) in g:
+            return RDFList(self.format_node(m, OWL.ObjectProperty) for m in self.parse_list(s))
 
         else: # Chain
             return Chain(self.format_node(m, OWL.ObjectProperty) for m in self.parse_list(s))

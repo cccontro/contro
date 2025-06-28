@@ -1,4 +1,4 @@
-from ontdoc.utils import split_camel_case
+from ontdoc.utils import split_camel_case, get_relative_uri
 
 from collections.abc import Iterable
 from rdflib import URIRef, Namespace, RDF, RDFS, OWL
@@ -23,15 +23,15 @@ class OntoElement:
     _base = {}
     _extra = {}
 
-    def __init__(el, uri: URIRef, owl_type: URIRef, sup: str, context):
+    def __init__(el, uri: URIRef, owl_type: URIRef, suffix: str, context):
         # IMPORTANT! Cache the pointer to the element to avoid loop references
         context.entities[(uri, owl_type)] = el
         el.label = context.meta(RDFS.label, uri) or split_camel_case(split_uri(uri)[1])
         el.desc = context.meta(RDFS.comment, uri)
-        el.href = f"#{split_uri(uri)[1]}_{sup}" if context.uri in uri else str(uri)
+        el.href = get_relative_uri(context.uri, uri, suffix)
         el.uri = str(uri)
         el.owl_type = labels.get(owl_type)
-        el.sup = sup
+        el.suffix = suffix
         el.also_defined_as = [
             context.format_node(uri, o) for o in context.g.objects(uri, RDF.type) if o != owl_type and o in labels
         ]
@@ -64,7 +64,7 @@ class OntoElement:
         return el.has_extras or bool(el.also_defined_as)
     
     def html(el) -> str:
-        return f'<a class="{el.owl_type.lower().replace(' ', '_')}" href="{el.href}" title="{el.uri}">{el.label}</a><span class="sup" data-text="{el.sup}" title="{el.owl_type}"></span>'
+        return f'<a class="{el.owl_type.lower().replace(' ', '_')}" href="{el.href}" title="{el.uri}">{el.label}</a><span class="sup" data-text="{el.suffix}" title="{el.owl_type}"></span>'
 
 
 class Class(OntoElement):
@@ -75,6 +75,7 @@ class Class(OntoElement):
         'in_domain': 'In domain of',
         'disjoint': 'Disjoint with',
         'disjoint_union': 'Disjoint union',
+        'keys': 'Key properties',
         'instances': 'Instances',
         'see_also': 'See also'
     }
@@ -88,6 +89,7 @@ class Class(OntoElement):
         el.in_domain = context.meta(RDFS.domain, uri, 'subject', OWL.ObjectProperty)
         el.disjoint = context.meta(OWL.disjointWith, uri, 'both', OWL.Class)
         el.disjoint_union = context.meta(OWL.disjointUnionOf, uri, 'object', OWL.Class)
+        el.keys = context.meta(OWL.hasKey, uri, 'object', None)
         el.instances = context.meta(RDF.type, uri, 'subject', OWL.NamedIndividual)
 
 
@@ -100,8 +102,8 @@ class Property(OntoElement):
         'see_also': 'See also'
     }
 
-    def __init__(el, uri: URIRef, owl_type: URIRef, sup: str, context):
-        super().__init__(uri, owl_type, sup, context)
+    def __init__(el, uri: URIRef, owl_type: URIRef, suffix: str, context):
+        super().__init__(uri, owl_type, suffix, context)
         el.equivalent = context.meta(OWL.equivalentProperty, uri, 'object', owl_type)
         el.subproperty_of = context.meta(RDFS.subPropertyOf, uri, 'object', owl_type)
         el.superproperty_of = context.meta(RDFS.subPropertyOf, uri, 'subject', owl_type)
@@ -183,7 +185,7 @@ class BNodeElement:
         return False
 
     def html(el) -> str:
-        return ' '.join(m.html() if isinstance(m, (OntoElement, BNodeElement)) else str(m) for m in el.members) 
+        return ' '.join(m.html() if isinstance(m, (OntoElement, BNodeElement)) else str(m) for m in el.members)
     
     def parens(el, m: Union['OntoElement', 'BNodeElement']) -> str:
         return f'({m.html()})' if isinstance(m, el.__class__) else m.html()
@@ -206,6 +208,10 @@ class Intersection(BNodeElement):
 class Disjunction(BNodeElement):
     def html(el) -> str:
         return ' or '.join(el.parens(m) for m in el.members)
+
+class RDFList(BNodeElement):
+    def html(el) -> str:
+        return '</li><li>'.join(m.html() for m in el.members)
     
 class Chain(BNodeElement):
     def html(el) -> str:
