@@ -137,12 +137,18 @@ p:has([href*="#s"]):not(.absent) {
   background-position: 0 100%;
   transition: background-position 0.5s ease-out;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
   text-decoration-line: underline;
   text-decoration-style: dotted;
   text-decoration-thickness: 1px;
   text-decoration-color: var(--md-default-fg-color--lighter);
   text-underline-offset: 5.5px;
+}
+
+[ana^="#s"]:focus,
+[ana="#premise"]:not(.absent):focus,
+[ana="#conclusion"]:not(.absent):focus,
+p:has([href*="#s"]):not(.absent):focus {
+  outline: none;
 }
 
 a[href*="#s"], p.absent {
