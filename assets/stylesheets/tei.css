@@ -1,6 +1,6 @@
 /* Argument cards */
-.note.paraphrase:before {
-  content: "🅟 = Premise\0009\0009🅡 = Inference Rule\0009🅒 = Conclusion";
+.paraphrase:before {
+  content: "🅟 = Premise        🅡 = Inference Rule        🅒 = Conclusion";
   color: var(--md-default-fg-color--light);
   font-size: .64rem;
   margin-left: 1.5rem;
@@ -8,7 +8,7 @@
   margin-bottom: 0;
 }
 
-.note.paraphrase div:first-child {
+.paraphrase div:first-child {
   margin-top: 0.3rem;
 }
 
@@ -94,11 +94,11 @@
 }
 
 /* In-text glosses */
-:not(.note) > [ana="#disputed-words"] {
+:not(.syllogism) > [ana="#disputed-words"] {
   position: relative;
 }
 
-:not(.note) > [ana="#disputed-words"]:before {
+:not(.syllogism) > [ana="#disputed-words"]:before {
   content: "";
   position: absolute;
   inset: 0;
@@ -127,7 +127,6 @@
 [ana="#premise"]:not(.absent),
 [ana="#conclusion"]:not(.absent),
 p:has([href*="#s"]):not(.absent) {
-  position: relative;
   background-image: linear-gradient(to right, transparent 50%, var(--md-primary-fg-color--light) 50%);
   border-radius: .2rem;
   -webkit-box-decoration-break: clone;
@@ -282,21 +281,21 @@ blockquote {
   width: fit-content;
 }
 
-.note.translation {
+.translation {
   padding-left: .8rem;
   border-left: .2rem solid var(--md-default-fg-color--lighter);
 }
 
-.note.translation p {
+.translation p {
   margin: 0;
   font-size: smaller;
 }
 
-.note.translation p:first-child {
+.translation p:first-child {
   padding-top: .3rem;
 }
 
-.note.translation p:last-child {
+.translation p:last-child {
   padding-bottom: .2rem;
 }
 
@@ -310,7 +309,15 @@ blockquote {
     margin: 0 0 1rem;
   }
 
-  .note.paraphrase:before {
+  [ana^="#s"],
+  [ana="#premise"]:not(.absent),
+  [ana="#conclusion"]:not(.absent),
+  p:has([href*="#s"]):not(.absent) {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .paraphrase:before {
     margin-left: 0;
     display: block;
     width: 100%;

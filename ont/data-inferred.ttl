@@ -401,7 +401,8 @@ arg:Undermining rdf:type owl:Class ;
                                          dul:Agent ,
                                          owl:Thing ;
                                 owl:sameAs :castelvetro ;
-                                dul:hasRole arg:DialogicalAgent .
+                                dul:hasRole arg:DialogicalAgent ,
+                                            <https://w3id.org/contro/persp#Conceptualiser> .
 
 
 ###  https://w3id.org/contro/data#castelvetro
@@ -633,6 +634,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                  :s12 ,
                  :s13 ;
      arg:Topic :disputed-words ;
+     arg:attackedBy :CV3 ;
      arg:by :predella ;
      <https://w3id.org/contro/persp#Background> :KB_caro ;
      <https://w3id.org/contro/persp#Conceptualiser> :predella ;
@@ -890,6 +892,45 @@ arg:Topic rdf:type owl:NamedIndividual ,
                                           :s4 .
 
 
+###  https://w3id.org/contro/data#CV3
+:CV3 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Argument ,
+              arg:ArgumentationTheorySituation ,
+              arg:Conflict ,
+              arg:Undermining ,
+              <https://w3id.org/contro/persp#Perspectivisation> ,
+              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+     dul:isSettingFor <http://viaf.org/viaf/22166452> ,
+                      :AT_castelvetro ,
+                      :KB_castelvetro ,
+                      :castelvetro ,
+                      :disputed-words ,
+                      :r11 ,
+                      :s26 ,
+                      :s27 ,
+                      :s28 ;
+     dul:satisfies arg:Argument ,
+                   <https://w3id.org/contro/persp#Perspectivisation> ;
+     arg:ArgumentationTheory :AT_castelvetro ;
+     arg:Conclusion :s28 ;
+     arg:InferenceRule :r11 ;
+     arg:Premise :s26 ,
+                 :s27 ;
+     arg:Topic :disputed-words ;
+     arg:attacks :CR3 ;
+     arg:by <http://viaf.org/viaf/22166452> ,
+            :castelvetro ;
+     <https://w3id.org/contro/persp#Background> :KB_castelvetro ;
+     <https://w3id.org/contro/persp#Conceptualiser> <http://viaf.org/viaf/22166452> ,
+                                                    :castelvetro ;
+     <https://w3id.org/contro/persp#Cut> :s28 ;
+     <https://w3id.org/contro/persp#Eventuality> :disputed-words ;
+     <https://w3id.org/contro/persp#Lens> :s26 ,
+                                          :s27 .
+
+
 ###  https://w3id.org/contro/data#KB_caro
 :KB_caro rdf:type owl:NamedIndividual ,
                   dul:Situation ,
@@ -944,9 +985,13 @@ arg:Topic rdf:type owl:NamedIndividual ,
                 dul:satisfies arg:KnowledgeBase ,
                               <https://w3id.org/contro/persp#Background> ;
                 arg:hasMember :r1 ,
+                              :r11 ,
                               :r2 ,
                               :s1 ,
                               :s2 ,
+                              :s26 ,
+                              :s27 ,
+                              :s28 ,
                               :s3 ,
                               :s4 ,
                               :s5 .
@@ -976,7 +1021,8 @@ arg:Topic rdf:type owl:NamedIndividual ,
 :castelvetro rdf:type owl:NamedIndividual ,
                       dul:Agent ,
                       owl:Thing ;
-             dul:hasRole arg:DialogicalAgent ;
+             dul:hasRole arg:DialogicalAgent ,
+                         <https://w3id.org/contro/persp#Conceptualiser> ;
              rdfs:label "Lodovico Castelvetro" .
 
 
@@ -995,6 +1041,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                                                                  :s18 ,
                                                                  :s21 ,
                                                                  :s25 ,
+                                                                 :s28 ,
                                                                  :s3 ,
                                                                  :s5 ,
                                                                  :s8 ;
@@ -1013,6 +1060,8 @@ arg:Topic rdf:type owl:NamedIndividual ,
                                                                       :s22 ,
                                                                       :s23 ,
                                                                       :s24 ,
+                                                                      :s26 ,
+                                                                      :s27 ,
                                                                       :s3 ,
                                                                       :s4 ,
                                                                       :s6 ,
@@ -1086,6 +1135,23 @@ arg:Topic rdf:type owl:NamedIndividual ,
      arg:Consequent :s25 ;
      arg:extractedFrom :KB_caro ;
      rdfs:comment "Unlike dead languages, a living language must draw from the variety of its speakers and cannot be normed by a single authority."@en .
+
+
+###  https://w3id.org/contro/data#r11
+:r11 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:ArgumentationTheorySituation ,
+              arg:InferenceRule ;
+     dul:isSettingFor :s26 ,
+                      :s27 ,
+                      :s28 ;
+     dul:satisfies arg:InferenceRule ;
+     arg:Antecedent :s26 ,
+                    :s27 ;
+     arg:Consequent :s28 ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Boh"@en .
 
 
 ###  https://w3id.org/contro/data#r2
@@ -1290,6 +1356,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
      dul:satisfies arg:Antecedent ,
                    arg:Premise ,
                    <https://w3id.org/contro/persp#Lens> ;
+     arg:contradictedBy :s28 ;
      arg:extractedFrom :KB_caro ;
      rdfs:comment "Greek and Latin masters of rhetoric endorse the literary use of foreign words."@en ;
      prov:value "It is said by all the good authors of the Greek and Latin languages"@en ,
@@ -1582,6 +1649,63 @@ arg:Topic rdf:type owl:NamedIndividual ,
      rdfs:comment "Italian should not be limited to the authority of a single author, such as Petrarch."@en ;
      prov:value "che giudizio è il vostro a pensare che necessariamente si debba cavar dagli scritti di un solo, e non anco da molti che la parlano e la scrivono;"@it ,
                 "what kind of judgment is it to think that one must necessarily draw from the writings of a single author, and not also from the many who speak and write it;"@en .
+
+
+###  https://w3id.org/contro/data#s26
+:s26 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              <https://w3id.org/contro/persp#Lens> ,
+              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   <https://w3id.org/contro/persp#Lens> ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Quintilian supports the formation of Latin words after the model of Greek ones."@en ;
+     prov:value "he does not mean it universally of words from every kind of foreign language, but specifically of words newly coined by the speaker following the manner of a foreign  tongue."@en ,
+                "he means his daring as fortunate only within the bounds of the Latin language, as far as vocabulary is concerned;"@en ,
+                "he refers to the formation of Latin words after the model of Greek ones, and not to the importing of foreign words  into another language,"@en ,
+                "intende dell’arditezza di lui aventurosa solamente dentro da termini della lingua latina quanto appartiene alle voci;"@it ,
+                "intende egli della formazione delle parole latine a similitudine delle greche, e non del portare le forestiere  in un’altra lingua,"@it ,
+                "non intende universalmente delle voci d’ogni maniera di lingua forestiera, ma particolarmente delle voci formate di nuovo dal favellatore secondo la maniera della lingua  straniera."@it .
+
+
+###  https://w3id.org/contro/data#s27
+:s27 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              <https://w3id.org/contro/persp#Lens> ,
+              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   <https://w3id.org/contro/persp#Lens> ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Varro limits poetic license to analogy use."@en .
+
+
+###  https://w3id.org/contro/data#s28
+:s28 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:ArgumentationTheorySituation ,
+              arg:Conclusion ,
+              arg:Consequent ,
+              <https://w3id.org/contro/persp#Cut> ,
+              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+     dul:satisfies arg:Conclusion ,
+                   arg:Consequent ,
+                   <https://w3id.org/contro/persp#Cut> ;
+     arg:contradicts :s11 ;
+     arg:extractedFrom :KB_castelvetro ;
+     <https://w3id.org/contro/persp#shotThrough> :s26 ,
+                                                 :s27 ;
+     rdfs:comment "Rethoric masters endorse new word formation after the model of foreign words, not the usage of foreign words themselves."@en .
 
 
 ###  https://w3id.org/contro/data#s3

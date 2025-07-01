@@ -179,6 +179,17 @@ dul:Collection rdf:type owl:Class .
      arg:by :anon .
 
 
+###  https://w3id.org/contro/data#CV3
+:CV3 rdf:type owl:NamedIndividual ,
+              arg:Argument ;
+     arg:Conclusion :s28 ;
+     arg:InferenceRule :r11 ;
+     arg:Premise :s26 ,
+                 :s27 ;
+     arg:Topic :disputed-words ;
+     arg:by :castelvetro .
+
+
 ###  https://w3id.org/contro/data#KB_caro
 :KB_caro rdf:type owl:NamedIndividual ,
                   arg:KnowledgeBase .
@@ -256,6 +267,14 @@ dul:Collection rdf:type owl:Class .
                     :s24 ;
      arg:Consequent :s25 ;
      rdfs:comment "Unlike dead languages, a living language must draw from the variety of its speakers and cannot be normed by a single authority."@en .
+
+
+###  https://w3id.org/contro/data#r11
+:r11 rdf:type owl:NamedIndividual ;
+     arg:Antecedent :s26 ,
+                    :s27 ;
+     arg:Consequent :s28 ;
+     rdfs:comment "Boh"@en .
 
 
 ###  https://w3id.org/contro/data#r2
@@ -444,6 +463,28 @@ dul:Collection rdf:type owl:Class .
      rdfs:comment "Italian should not be limited to the authority of a single author, such as Petrarch."@en ;
      prov:value "che giudizio è il vostro a pensare che necessariamente si debba cavar dagli scritti di un solo, e non anco da molti che la parlano e la scrivono;"@it ,
                 "what kind of judgment is it to think that one must necessarily draw from the writings of a single author, and not also from the many who speak and write it;"@en .
+
+
+###  https://w3id.org/contro/data#s26
+:s26 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Quintilian supports the formation of Latin words after the model of Greek ones."@en ;
+     prov:value "he does not mean it universally of words from every kind of foreign language, but specifically of words newly coined by the speaker following the manner of a foreign  tongue."@en ,
+                "he means his daring as fortunate only within the bounds of the Latin language, as far as vocabulary is concerned;"@en ,
+                "he refers to the formation of Latin words after the model of Greek ones, and not to the importing of foreign words  into another language,"@en ,
+                "intende dell’arditezza di lui aventurosa solamente dentro da termini della lingua latina quanto appartiene alle voci;"@it ,
+                "intende egli della formazione delle parole latine a similitudine delle greche, e non del portare le forestiere  in un’altra lingua,"@it ,
+                "non intende universalmente delle voci d’ogni maniera di lingua forestiera, ma particolarmente delle voci formate di nuovo dal favellatore secondo la maniera della lingua  straniera."@it .
+
+
+###  https://w3id.org/contro/data#s27
+:s27 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Varro limits poetic license to analogy use."@en .
+
+
+###  https://w3id.org/contro/data#s28
+:s28 rdf:type owl:NamedIndividual ;
+     arg:contradicts :s11 ;
+     rdfs:comment "Rethoric masters endorse new word formation after the model of foreign words, not the usage of foreign words themselves."@en .
 
 
 ###  https://w3id.org/contro/data#s3
