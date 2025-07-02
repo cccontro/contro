@@ -1,6 +1,6 @@
 /* Argument cards */
-.note.paraphrase:before {
-  content: "🅟 = Premise\0009\0009🅡 = Inference Rule\0009🅒 = Conclusion";
+.paraphrase:before {
+  content: "🅟 = Premise        🅡 = Inference Rule        🅒 = Conclusion";
   color: var(--md-default-fg-color--light);
   font-size: .64rem;
   margin-left: 1.5rem;
@@ -8,7 +8,7 @@
   margin-bottom: 0;
 }
 
-.note.paraphrase div:first-child {
+.paraphrase div:first-child {
   margin-top: 0.3rem;
 }
 
@@ -38,8 +38,8 @@
   margin: .625em;
 }
 
-.md-typeset .syllogism ul li {
-  width: fit-content;
+[dir="ltr"] .md-typeset .syllogism ul li {
+  margin-left: .8em;
 }
 
 .md-typeset .syllogism ul li:has([ana="#premise"]) {
@@ -57,48 +57,42 @@
 .md-typeset .syllogism ul li p {
   text-wrap: pretty;
   margin: 0;
-  display: inline;
 }
 
-.md-typeset .syllogism ul li [label]:before,
-.md-typeset .syllogism ul li [against]:after {
-  display: block;
-  pointer-events: none;
+.md-typeset .syllogism .label,
+.md-typeset .syllogism .against {
   color: var(--md-default-fg-color--lighter);
   font-style: normal;
   font-variant-caps: all-small-caps;
   font-weight: 600;
 }
 
-.md-typeset .syllogism ul li [label]:before {
-  content: attr(label);
-  padding-right: .3rem;
-  float: inline-start;
+.md-typeset .syllogism .label {
+  padding-right: .1rem;
 }
 
-.md-typeset .syllogism ul li:has([ana="#conclusion"]) [against]:after {
-  content: "✖ " attr(against);
-  padding-left: .3rem;
-  float: inline-end;
+.md-typeset .syllogism .against {
+  padding-left: .1rem;
+}
+
+.md-typeset .syllogism [ana="#premise"] .against,
+.md-typeset .syllogism [ana="#rule"] .against {
+  display: none;
 }
 
 /* Quoted premises */
-.md-typeset .syllogism li p a {
+.md-typeset .syllogism a.prop {
   --md-typeset-a-color: var(--md-default-fg-color--light);
   font-weight: 400;
   font-style: italic;
 }
 
-[dir="ltr"] .md-typeset .syllogism ol li, [dir="ltr"] .md-typeset .syllogism ul li {
-  margin-left: .8em;
-}
-
 /* In-text glosses */
-:not(.note) > [ana="#disputed-words"] {
+span[ana="#disputed-words"] {
   position: relative;
 }
 
-:not(.note) > [ana="#disputed-words"]:before {
+span[ana="#disputed-words"]:before {
   content: "";
   position: absolute;
   inset: 0;
@@ -123,11 +117,7 @@
 }
 
 /* Related interpretation passages are dynamically highlighted */
-[ana^="#s"],
-[ana="#premise"]:not(.absent),
-[ana="#conclusion"]:not(.absent),
-p:has([href*="#s"]):not(.absent) {
-  position: relative;
+span[ana^="#s"], p:not(.absent, [ana="#rule"]) > .prop {
   background-image: linear-gradient(to right, transparent 50%, var(--md-primary-fg-color--light) 50%);
   border-radius: .2rem;
   -webkit-box-decoration-break: clone;
@@ -137,7 +127,6 @@ p:has([href*="#s"]):not(.absent) {
   background-repeat: repeat-x;
   background-position: 0 100%;
   transition: background-position 0.5s ease-out;
-  cursor: pointer;
   text-decoration-line: underline;
   text-decoration-style: dotted;
   text-decoration-thickness: 1px;
@@ -145,15 +134,19 @@ p:has([href*="#s"]):not(.absent) {
   text-underline-offset: 5.5px;
 }
 
-a[href*="#s"], p.absent {
+span[ana^="#s"]:focus, p:not(.absent) .prop:focus {
+  outline: none;
+}
+
+span[ana^="#s"], .syllogism p:not(.absent, [ana="#rule"]) {
+  cursor: pointer;
+}
+
+a.prop {
   pointer-events: none;
 }
 
-li:has(.absent) {
-  cursor: text;
-}
-
-.marked {
+span.marked, p.marked > .prop {
   background-position: -100% 100% !important;
 }
 
@@ -274,7 +267,7 @@ li:has(.absent) {
 }
 
 /* Quotations */
-span[title], blockquote[title] {
+span[title], span[aria-describedby], blockquote[title], blockquote[aria-describedby] {
   cursor: help;
 }
 
@@ -282,21 +275,21 @@ blockquote {
   width: fit-content;
 }
 
-.note.translation {
+.translation {
   padding-left: .8rem;
   border-left: .2rem solid var(--md-default-fg-color--lighter);
 }
 
-.note.translation p {
+.translation p {
   margin: 0;
   font-size: smaller;
 }
 
-.note.translation p:first-child {
+.translation p:first-child {
   padding-top: .3rem;
 }
 
-.note.translation p:last-child {
+.translation p:last-child {
   padding-bottom: .2rem;
 }
 
@@ -310,7 +303,7 @@ blockquote {
     margin: 0 0 1rem;
   }
 
-  .note.paraphrase:before {
+  .paraphrase:before {
     margin-left: 0;
     display: block;
     width: 100%;

@@ -13,6 +13,10 @@ body {
   --md-serif-font-family: var(--md-serif-font), "Georgia", "Noto Serif", "Times New Roman", serif;
 }
 
+.md-typeset {
+  orphans: 2;
+}
+
 
 /* Anchor links */
 .headerlink:after {

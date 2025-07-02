@@ -27,7 +27,7 @@ For instance, an argument that **negates a premise** and **proposes an alternati
 This pattern is at play in [Caro’s response](#predellas-resentment) (under the pseudonym Predella) to the first point of Castelvetro’s critique. Our formalization of this reply also illustrates how Walton’s [scheme from expert opinion](background.md#contextual-approaches) is abstracted within the ASPIC^+^ framework: critical questions targeting the credibility of the expert or the validity of their claims function as undercutters, while the appeal to alternative expert opinions gives rise to a rebuttal [@Prakken2011; pp. 14--15]. Caro employs both moves, consistent with his rhetorical method of overwhelming the opponent through a multiplicity of attacks.
 
 /// tab | English
---8<-- "tei/Apologia-TEI.md"
+--8<-- "tei/Apologia-TEI-en.md"
 ///
 
 /// tab | Italian
@@ -37,7 +37,7 @@ This pattern is at play in [Caro’s response](#predellas-resentment) (under the
 
 /// tab | English
     new: true
---8<-- "tei/Ragione-TEI.md"
+--8<-- "tei/Ragione-TEI-en.md"
 ///
 
 /// tab | Italian

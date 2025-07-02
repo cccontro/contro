@@ -130,11 +130,16 @@ def main():
         g.add((persona_uri, ARG.isAliasOf, person_uri))
 
     # Arguments
-    for context in root.findall(".//tei:note[@type='paraphrase']/..", ns): # Get parent div with responsability info
-      author_ref = context.get('resp')
-      author = author_ref[1:] if author_ref else None
+    for note in root.findall(".//tei:note[@type='paraphrase']", ns):
 
-      for arg in context.findall("./tei:note[@type='paraphrase']/tei:list[@type='syllogism']", ns):
+      # Get ancestor div with responsability info
+      ancestor = par.get(note)
+      while ancestor is not None and 'resp' not in ancestor.attrib:
+        ancestor = par.get(ancestor)
+
+      author = ancestor.get('resp')[1:] if ancestor is not None else None
+
+      for arg in note.findall("./tei:list[@type='syllogism']", ns):
         arg_id = arg.get(id)
         arg_uri = DATA[arg_id]
         g.add((arg_uri, RDF.type, OWL.NamedIndividual))

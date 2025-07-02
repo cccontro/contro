@@ -12,19 +12,18 @@ def main():
 
   args = parser.parse_args()
 
-  for excluded_lang, output_lang in [('it', 'en'), ('en', 'it')]:
-    filename = os.path.basename(args.xml_path).split('.')[0]
-    output_name = f'{filename}.md' if output_lang == 'en' else f'{filename}-{output_lang}.md'
-    output_path = os.path.join(os.path.dirname(args.xml_path), output_name)
+  for lang in ['en', 'it']:
+    name = os.path.basename(args.xml_path).split('.')[0]
+    md_path = os.path.join(os.path.dirname(args.xml_path), f'{name}-{lang}.md')
 
     with PySaxonProcessor(license=False) as proc:
       xslt_proc = proc.new_xslt30_processor()
-      xslt_proc.set_parameter('lang', proc.make_string_value(excluded_lang))
+      xslt_proc.set_parameter('lang', proc.make_string_value(lang))
       result = xslt_proc.transform_to_string(
         source_file=args.xml_path,
         stylesheet_file=args.xslt_path
       )
-      write_if_changed(result, output_path)
+      write_if_changed(result, md_path)
 
 if __name__ == '__main__':
   main()
