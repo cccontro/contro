@@ -137,12 +137,9 @@
   user-select: text;
 }
 
-.md-typeset span:focus,
-.md-typeset .syllogism ul li:focus,
-.md-typeset .syllogism ul li p:focus,
-.md-typeset .syllogism ul li p span:focus,
-.md-typeset .syllogism ul li p:has(span:focus) {
-  outline: none !important;
+.md-typeset span[ana^="#s"],
+.md-typeset .syllogism ul li p {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .md-typeset span[ana^="#s"], .md-typeset .syllogism ul li p:not(.absent, [ana="#rule"]) {
