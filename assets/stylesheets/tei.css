@@ -135,8 +135,10 @@
   text-underline-offset: 5.5px;
 }
 
-.md-typeset span[ana^="#s"]:focus,
-.md-typeset .syllogism ul li p:focus {
+.md-typeset span:focus,
+.md-typeset .syllogism ul li:focus,
+.md-typeset .syllogism ul li p:focus,
+.md-typeset .syllogism ul li p span:focus {
   outline: none !important;
 }
 
