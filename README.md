@@ -26,7 +26,7 @@ This site is built with [Material for MkDocs](https://squidfunk.github.io/mkdocs
 The pipeline includes:
 
 1. **TEI to Markdown**  
-   [`tei-to-markdown.py`](scripts/tei-to-markdown.py) converts TEI files via a custom [XSLT stylesheet](tei/stylesheets/tei-to-markdown-custom.xsl), generating Markdown with embedded argument outlines for interactive reading.
+   [`tei-to-markdown.py`](scripts/tei-to-markdown.py) converts TEI files via custom [XSLT stylesheets](tei/stylesheets/), generating Markdown with embedded argument outlines for interactive reading.
 
 2. **TEI to RDF**  
    [`tei-to-turtle.py`](scripts/tei-to-turtle.py) extracts argument instances into [data.ttl](docs/ont/data.ttl), aligning them with the ontology.
@@ -39,7 +39,7 @@ The pipeline includes:
 
 ## Machine Accessibility
 
-All ontology terms are dereferenceable through a custom [`.htaccess`](https://github.com/cccontro/w3id.org/blob/master/contro/.htaccess) setup registered with w3id.org, ensuring long-term stable URIs for both human and machine consumption.
+All ontology terms are dereferenceable through a custom [`.htaccess`](https://github.com/cccontro/w3id.org/blob/master/contro/.htaccess) setup registered with w3id.org, ensuring long-term stable URIs.
 
 ## Contributors
 
