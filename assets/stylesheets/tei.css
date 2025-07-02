@@ -133,12 +133,14 @@
   text-decoration-thickness: 1px;
   text-decoration-color: var(--md-default-fg-color--lighter);
   text-underline-offset: 5.5px;
+  user-select: text;
 }
 
 .md-typeset span:focus,
 .md-typeset .syllogism ul li:focus,
 .md-typeset .syllogism ul li p:focus,
-.md-typeset .syllogism ul li p span:focus {
+.md-typeset .syllogism ul li p span:focus,
+.md-typeset .syllogism ul li p:has(span:focus) {
   outline: none !important;
 }
 
