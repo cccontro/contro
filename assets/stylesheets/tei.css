@@ -57,6 +57,7 @@
 .md-typeset .syllogism ul li p {
   text-wrap: pretty;
   margin: 0;
+  user-select: text;
 }
 
 .md-typeset .syllogism ul li p > .label,
