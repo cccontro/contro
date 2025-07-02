@@ -103,6 +103,7 @@ plugins:
           - examples.md#risentimento-del-predella
 
 markdown_extensions:
+  - scripts.inline_attr
   - admonition
   - pymdownx.details
   - pymdownx.tabbed:

@@ -1,6 +1,6 @@
 [project]
 name = "contro"
-version = "0.3.0"
+version = "0.7.0"
 description = "A Controversy-Oriented Model of Dialectical Perspectives"
 authors = [
     {name = "Francesca Massarenti",email = "146438454+frammenti@users.noreply.github.com"},
@@ -22,7 +22,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-package-mode = false
+packages = [{ include = "scripts" }]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
