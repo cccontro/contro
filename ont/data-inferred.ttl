@@ -1151,7 +1151,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                     :s27 ;
      arg:Consequent :s28 ;
      arg:extractedFrom :KB_castelvetro ;
-     rdfs:comment "Boh"@en .
+     rdfs:comment "Rule"@en .
 
 
 ###  https://w3id.org/contro/data#r2

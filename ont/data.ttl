@@ -274,7 +274,7 @@ dul:Collection rdf:type owl:Class .
      arg:Antecedent :s26 ,
                     :s27 ;
      arg:Consequent :s28 ;
-     rdfs:comment "Boh"@en .
+     rdfs:comment "Rule"@en .
 
 
 ###  https://w3id.org/contro/data#r2
