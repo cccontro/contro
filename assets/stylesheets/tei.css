@@ -139,7 +139,7 @@
 
 .md-typeset span[ana^="#s"], .md-typeset .syllogism ul li p:not(.absent, [ana="#rule"]) {
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .md-typeset a.prop {
@@ -209,7 +209,8 @@
 [dir="ltr"] .md-typeset details {
   all: unset;
   display: block;
-  position: relative
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
 }
 
 [dir="ltr"] .md-typeset summary {
