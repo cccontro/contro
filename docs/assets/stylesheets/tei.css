@@ -59,24 +59,24 @@
   margin: 0;
 }
 
-.md-typeset .syllogism .label,
-.md-typeset .syllogism .against {
+.md-typeset .syllogism ul li p > .label,
+.md-typeset .syllogism ul li p > .against {
   color: var(--md-default-fg-color--lighter);
   font-style: normal;
   font-variant-caps: all-small-caps;
   font-weight: 600;
 }
 
-.md-typeset .syllogism .label {
+.md-typeset .syllogism ul li p > .label {
   padding-right: .1rem;
 }
 
-.md-typeset .syllogism .against {
+.md-typeset .syllogism ul li p > .against {
   padding-left: .1rem;
 }
 
-.md-typeset .syllogism [ana="#premise"] .against,
-.md-typeset .syllogism [ana="#rule"] .against {
+.md-typeset .syllogism ul li p[ana="#premise"] > .against,
+.md-typeset .syllogism ul li p[ana="#rule"] > .against {
   display: none;
 }
 
@@ -88,11 +88,11 @@
 }
 
 /* In-text glosses */
-span[ana="#disputed-words"] {
+.md-typeset span[ana="#disputed-words"] {
   position: relative;
 }
 
-span[ana="#disputed-words"]:before {
+.md-typeset span[ana="#disputed-words"]:before {
   content: "";
   position: absolute;
   inset: 0;
@@ -112,41 +112,36 @@ span[ana="#disputed-words"]:before {
   --md-accent-fg-color: var(--md-secondary-fg-color--light-hover);
 }
 
-.q:not(a) {
+.md-typeset .q:not(a) {
   color: var(--md-default-fg-color--light);
 }
 
 /* Related interpretation passages are dynamically highlighted */
-span[ana^="#s"], p:not(.absent, [ana="#rule"]) > .prop {
+.md-typeset span[ana^="#s"],
+.md-typeset .syllogism ul li p:not(.absent, [ana="#rule"]) > .prop {
   background-image: linear-gradient(to right, transparent 50%, var(--md-primary-fg-color--light) 50%);
   border-radius: .2rem;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  background-clip: content-box;
   background-size: 200% 100%;
   background-repeat: repeat-x;
   background-position: 0 100%;
   transition: background-position 0.5s ease-out;
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--md-default-fg-color--lighter);
-  text-underline-offset: 5.5px;
+  text-decoration: underline dotted .05rem var(--md-default-fg-color--lighter);
+  text-underline-offset: 6.5px;
 }
 
-span[ana^="#s"]:focus, p:not(.absent) .prop:focus {
-  outline: none;
-}
-
-span[ana^="#s"], .syllogism p:not(.absent, [ana="#rule"]) {
+.md-typeset span[ana^="#s"], .md-typeset .syllogism ul li p:not(.absent, [ana="#rule"]) {
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
-a.prop {
+.md-typeset a.prop {
   pointer-events: none;
 }
 
-span.marked, p.marked > .prop {
+.md-typeset span.marked,
+.md-typeset ul li p.marked > .prop {
   background-position: -100% 100% !important;
 }
 
@@ -208,7 +203,8 @@ span.marked, p.marked > .prop {
 [dir="ltr"] .md-typeset details {
   all: unset;
   display: block;
-  position: relative
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
 }
 
 [dir="ltr"] .md-typeset summary {

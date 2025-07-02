@@ -64,6 +64,54 @@ function setHeroHeight() {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
+
+// Custom highlight handler
+const HighlightRegistry = {
+    className: "marked",
+    selector: ".marked",
+
+    clear() {
+        document.querySelectorAll(this.selector).forEach(el =>
+            el.classList.remove(this.className)
+        );
+    },
+
+    highlight(ids) {
+        this.clear();
+        ids.forEach(id => {
+            document.querySelectorAll(
+                `[id="${id}"], [ana~="#${id}"], p:has([href$="#${id}"])`
+            ).forEach(el => el.classList.add(this.className));
+        });
+    },
+
+    getTargets(el) {
+        const targets = new Set();
+
+        if (el.id) {
+            targets.add(el.id);
+        }
+
+        const link = el.querySelector('a');
+        if (link && link.href.includes('#')) {
+            const href = link.href.split('#')[1];
+            if (href) targets.add(href);
+        }
+
+        const analysis = el.getAttribute('ana');
+        if (analysis) {
+            analysis.trim().split(/\s+/).forEach(ref => {
+                if (ref.startsWith('#')) ref = ref.slice(1);
+                if (/^(s|r)\d+$/.test(ref)) {
+                    targets.add(ref);
+                }
+            });
+        }
+
+        return [...targets];
+    }
+};
+
 // On page load
 document$.subscribe(function () {
 
@@ -81,49 +129,15 @@ document$.subscribe(function () {
     // Dynamic higlight analysis spans
     } else if (location.pathname === "/contro/examples/") {
 
-        // Add global click listener to clear highlights
-        document.addEventListener("click", function () {
-            document.querySelectorAll(".marked").forEach(el => el.classList.remove("marked"));
-        });
+        // Global listener to clear highlights
+        document.addEventListener("click", () => HighlightRegistry.clear());
 
+        // Highlight matching elements
         document.querySelectorAll("[id^='s'], [ana^='#s'], p:has([href*='#s'])").forEach(element => {
-            element.addEventListener("click", function () {
-
-                event.stopPropagation();  // prevent global cleaner from running
-
-                const targets = new Set();
-
-                if (this.id) {
-                    targets.add(this.id);
-                }
-
-                // Extract any referenced ID
-                const link = this.querySelector('a');
-                if (link && link.href.includes('#')) {
-                    const href = link.href.split('#')[1];
-                    if (href) targets.add(href);
-                }
-
-                // Extract IDs from multi-valued analysis attribute
-                const analysis = this.getAttribute('ana');
-                if (analysis) {
-                    analysis.trim().split(/\s+/).forEach(ref => {
-                        if (ref.startsWith('#')) ref = ref.slice(1);
-                        if (/^(s|r)\d+$/.test(ref)) {
-                            targets.add(ref);
-                        }
-                    });
-                }
-
-                // Clear current highlights
-                document.querySelectorAll(".marked").forEach(el => el.classList.remove("marked"));
-
-                // Highlight matching elements
-                targets.forEach(id => {
-                    document.querySelectorAll(
-                        `[id="${id}"], [ana~="#${id}"], p:has([href$="#${id}"])`
-                    ).forEach(el => el.classList.add("marked"));
-                });
+            element.addEventListener("click", function (event) {
+                event.stopPropagation(); // prevent global listener
+                const targets = HighlightRegistry.getTargets(this);
+                HighlightRegistry.highlight(targets);
             }, true);
         });
 
