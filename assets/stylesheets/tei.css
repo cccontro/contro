@@ -136,8 +136,8 @@
 }
 
 .md-typeset span[ana^="#s"]:focus,
-.md-typeset .syllogism ul li p > .prop:focus {
-  outline: none;
+.md-typeset .syllogism ul li p:focus {
+  outline: none !important;
 }
 
 .md-typeset span[ana^="#s"], .md-typeset .syllogism ul li p:not(.absent, [ana="#rule"]) {
