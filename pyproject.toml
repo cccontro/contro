@@ -7,23 +7,20 @@ authors = [
     {name = "Alberto Ciarrocca",email = "99617159+vattelalberto@users.noreply.github.com"}
 ]
 readme = "README.md"
-license = { text = "MIT" }
+license = "GPL-3.0-or-later"
 requires-python = ">=3.12,<4.0.0"
 dependencies = [
-    "mkdocs-material (>=9.6.9,<10.0.0)",
-    "rdflib (>=7.1.3,<8.0.0)",
-    "saxonche (>=12.5.0,<13.0.0)",
-    "mkdocs-open-in-new-tab (>=1.0.8,<2.0.0)",
-    "mkdocs-exclude-search (>=0.6.6,<0.7.0)",
-    "mkdocs-bibtex (>=4.2.3,<5.0.0)",
-    "mkdocs-minify-plugin (>=0.8.0,<0.9.0)",
-    "mkdocs-git-revision-date-localized-plugin (>=1.4.5,<2.0.0)",
-    "mkdocs-git-committers-plugin-2 (>=2.5.0,<3.0.0)",
+    "mkdocs-material >=9.6.9",
+    "rdflib >=7.1.3",
+    "saxonche (>=12.5.0,<12.8.0)",
+    "mkdocs-open-in-new-tab >=1.0.8",
+    "mkdocs-exclude-search >=0.6.6",
+    "mkdocs-bibtex >=4.2.3",
+    "mkdocs-minify-plugin >=0.8.0",
+    "mkdocs-git-revision-date-localized-plugin >=1.4.5",
+    "mkdocs-git-committers-plugin-2 >=2.5.0",
+    "markdown-span-attr >=0.3.0",
 ]
 
 [tool.poetry]
-packages = [{ include = "scripts" }]
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+package-mode = false

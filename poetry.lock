@@ -323,6 +323,21 @@ docs = ["mdx_gh_links (>=0.2)", "mkdocs (>=1.6)", "mkdocs-gen-files", "mkdocs-li
 testing = ["coverage", "pyyaml"]
 
 [[package]]
+name = "markdown-span-attr"
+version = "0.3.0"
+description = "Span attribute extension for Python-Markdown"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "markdown_span_attr-0.3.0-py3-none-any.whl", hash = "sha256:186d05edb2b8e9bccf1757bae987720612212237e8ce895759c08ba381d6ffa5"},
+    {file = "markdown_span_attr-0.3.0.tar.gz", hash = "sha256:da885e27cb1f715fc02c7ad567dabe88af8f7c36f911776e64f2d2c386017acf"},
+]
+
+[package.dependencies]
+markdown = ">=3.4"
+
+[[package]]
 name = "markupsafe"
 version = "3.0.2"
 description = "Safely add untrusted strings to HTML/XML markup."
@@ -438,14 +453,14 @@ min-versions = ["babel (==2.9.0)", "click (==7.0)", "colorama (==0.4) ; platform
 
 [[package]]
 name = "mkdocs-bibtex"
-version = "4.2.10"
+version = "4.4.0"
 description = "An MkDocs plugin that enables managing citations with BibTex"
 optional = false
 python-versions = ">=3.6"
 groups = ["main"]
 files = [
-    {file = "mkdocs_bibtex-4.2.10-py3-none-any.whl", hash = "sha256:ab71952d259ce913db48dbcfa3bbd9a68e7dc32bb7f50564ea26355cc2de61b1"},
-    {file = "mkdocs_bibtex-4.2.10.tar.gz", hash = "sha256:5d36520a5b7827e89dbaa95ba783ff0705057c322559577bb1a2265df19e321a"},
+    {file = "mkdocs_bibtex-4.4.0-py3-none-any.whl", hash = "sha256:fc0ce0f9641b63f900585a48cc09f5817345bbaba1435abf361e21fafe279723"},
+    {file = "mkdocs_bibtex-4.4.0.tar.gz", hash = "sha256:32a1e0624ab0e0edc3539a90a5ffe0a2cb965f03ad5df8746a9fc9e049b6778b"},
 ]
 
 [package.dependencies]
@@ -526,14 +541,14 @@ pytz = ">=2025.1"
 
 [[package]]
 name = "mkdocs-material"
-version = "9.6.14"
+version = "9.6.15"
 description = "Documentation that simply works"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "mkdocs_material-9.6.14-py3-none-any.whl", hash = "sha256:3b9cee6d3688551bf7a8e8f41afda97a3c39a12f0325436d76c86706114b721b"},
-    {file = "mkdocs_material-9.6.14.tar.gz", hash = "sha256:39d795e90dce6b531387c255bd07e866e027828b7346d3eba5ac3de265053754"},
+    {file = "mkdocs_material-9.6.15-py3-none-any.whl", hash = "sha256:ac969c94d4fe5eb7c924b6d2f43d7db41159ea91553d18a9afc4780c34f2717a"},
+    {file = "mkdocs_material-9.6.15.tar.gz", hash = "sha256:64adf8fa8dba1a17905b6aee1894a5aafd966d4aeb44a11088519b0f5ca4f1b5"},
 ]
 
 [package.dependencies]
@@ -1068,4 +1083,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<4.0.0"
-content-hash = "4f5ea40413bd4e4d5ef5e89844c7c9dd387afe0cfeb961b3e7b80fbac58fe6e4"
+content-hash = "aa8817cbe9d4b2199bcef1af33db2d1a3dca874006d92ed66e9650a7595d7e9a"
