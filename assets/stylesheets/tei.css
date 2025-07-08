@@ -57,7 +57,6 @@
 .md-typeset .syllogism ul li p {
   text-wrap: pretty;
   margin: 0;
-  user-select: text;
 }
 
 .md-typeset .syllogism ul li p > .label,
@@ -124,17 +123,12 @@
   border-radius: .2rem;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  background-clip: content-box;
   background-size: 200% 100%;
   background-repeat: repeat-x;
   background-position: 0 100%;
   transition: background-position 0.5s ease-out;
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--md-default-fg-color--lighter);
-  text-underline-offset: 5.5px;
-  user-select: text;
+  text-decoration: underline dotted .05rem var(--md-default-fg-color--lighter);
+  text-underline-offset: 6.5px;
 }
 
 .md-typeset span[ana^="#s"], .md-typeset .syllogism ul li p:not(.absent, [ana="#rule"]) {
