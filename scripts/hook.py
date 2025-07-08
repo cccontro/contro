@@ -11,12 +11,14 @@ def on_startup(command, dirty):
   start = time.monotonic()
   log.info('Converting ontologies...')
 
-  tei_files = ['Apologia-TEI', 'Ragione-TEI']
   tboxes = ['arg', 'persp', 'contro', 'data']
   aboxes = ['example', 'data']
+  langs = ['en', 'it']
+  text_lang = 'it'
+  ann_lang = 'en'
 
   docs_dir = os.path.join(os.getcwd(), 'docs')
-  tei_paths = [os.path.join('tei', f'{name}.xml') for name in tei_files]
+  tei_path = os.path.join('tei', 'Apologia-Ragione-TEI.xml')
   xslt_path = os.path.join('tei', 'stylesheets', 'tei-to-markdown-custom.xsl')
   jar_path = os.path.join('ontexport', 'app', 'build', 'libs', 'ontexport.jar')
   template = os.path.join('templates', 'doc-template.md')
@@ -24,18 +26,18 @@ def on_startup(command, dirty):
   def ont(name):
     return os.path.join(docs_dir, 'ont', f'{name}.ttl')
 
-  # 1. Convert XML/TEI texts to Markdown
-  for tei_path in tei_paths:
-    subprocess.run(['python', os.path.join('scripts', 'tei-to-markdown.py'), xslt_path, tei_path], check=True)
+  # 1. Convert the XML/TEI text to Markdown
+  subprocess.run(['python', os.path.join('scripts', 'tei-to-markdown.py'), tei_path, xslt_path, '--lang', *langs], check=True)
 
   # 2. Populate data.ttl with argument instances extracted from the texts
-  subprocess.run(['python', os.path.join('scripts', 'tei-to-turtle.py'), ont('data'), *tei_paths], check=True)
+  subprocess.run(['python', os.path.join('scripts', 'tei-to-turtle.py'), tei_path, ont('data'), '--text', text_lang, '--ann', ann_lang], check=True)
 
   # 3. Serialize XML/RDF and JSONLD from TTL files and export inferred axioms for ABoxes
   subprocess.run(
     ['java', '-jar', jar_path, os.path.join(docs_dir, 'ont'), '--abox'] + \
     [f'{abox}.ttl' for abox in aboxes],
-  check=True)
+    check=True
+  )
 
   # 4. Generate ontology documentation
   for tbox in tboxes:

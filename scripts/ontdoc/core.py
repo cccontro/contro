@@ -28,7 +28,7 @@ from rdflib.namespace import split_uri
 
 # Interface
 class OntDoc:
-    def __init__(self, path: str, lang: str = 'en'):
+    def __init__(self, path: str, lang: str | None = None):
         # Set the language for literals
         self.lang = lang
 
@@ -169,11 +169,14 @@ class OntDoc:
             return self.owl_types[owl_type](s, context=self) # Call the appropriate class constructor
         
         elif isinstance(s, Literal):
-            # Exclude other languages
-            if s.language == self.lang or s.language is None:
-                return str(s)
+            if self.lang:
+                # Exclude other languages
+                if s.language == self.lang or s.language is None:
+                    return str(s)
+                else:
+                    return None
             else:
-                return None
+                return str(s)
         else:
             return str(s)
         

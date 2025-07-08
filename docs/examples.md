@@ -11,7 +11,7 @@ toc_depth: 3
 
 CONTRO’s aim is to extract opinions—both implicit and explicit—as they emerge within dialectical discourse through its structure. In this section, we demonstrate how illuminating this formal interpretation can be, using the first point of contention between Caro and Castelvetro as a case study.
 
-We begin by reconstructing the arguments directly from the text. Then, we show how these arguments are formalized in the ontology, both as arguments and as persepctives. If you prefer to skip the textual excerpts, you can go directly to the [last section](#from-tree-to-graph). In the project’s repository you can consult the annotated texts in [`Apologia-TEI.xml`](https://github.com/cccontro/contro/blob/main/tei/Apologia-TEI.xml) and [`Ragione-TEI.xml`](https://github.com/cccontro/contro/blob/main/tei/Ragione-TEI.xml).
+We begin by reconstructing the arguments directly from the text. Then, we show how these arguments are formalized in the ontology, both as arguments and as persepctives. If you prefer to skip the textual excerpts, you can go directly to the [last section](#from-tree-to-graph). In the project’s repository you can consult the annotated texts in [`Apologia-Ragione-TEI.xml`](https://github.com/cccontro/contro/blob/main/tei/Apologia-Ragione-TEI.xml).
 
 ## Argument analysis in text
 
@@ -27,21 +27,11 @@ For instance, an argument that **negates a premise** and **proposes an alternati
 This pattern is at play in [Caro’s response](#predellas-resentment) (under the pseudonym Predella) to the first point of Castelvetro’s critique. Our formalization of this reply also illustrates how Walton’s [scheme from expert opinion](background.md#contextual-approaches) is abstracted within the ASPIC^+^ framework: critical questions targeting the credibility of the expert or the validity of their claims function as undercutters, while the appeal to alternative expert opinions gives rise to a rebuttal [@Prakken2011; pp. 14--15]. Caro employs both moves, consistent with his rhetorical method of overwhelming the opponent through a multiplicity of attacks.
 
 /// tab | English
---8<-- "tei/Apologia-TEI-en.md"
+--8<-- "tei/Apologia-Ragione-TEI-en.md"
 ///
 
 /// tab | Italian
---8<-- "tei/Apologia-TEI-it.md"
-///
-
-
-/// tab | English
-    new: true
---8<-- "tei/Ragione-TEI-en.md"
-///
-
-/// tab | Italian
---8<-- "tei/Ragione-TEI-it.md"
+--8<-- "tei/Apologia-Ragione-TEI-it.md"
 ///
 
 

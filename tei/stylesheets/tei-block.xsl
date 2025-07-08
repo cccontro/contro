@@ -86,8 +86,16 @@
   </xsl:template>
 
   <!-- Titles and subtitles -->
+  <xsl:template match="teiCorpus">
+    <xsl:apply-templates select="TEI"/>
+  </xsl:template>
+
+  <xsl:template match="teiHeader">
+    <xsl:apply-templates select="fileDesc/titleStmt"/>
+  </xsl:template>
+
   <xsl:template match="titleStmt">
-    <xsl:text>## </xsl:text>
+    <xsl:text>&#10;## </xsl:text>
     <xsl:apply-templates select="title"/>
   </xsl:template>
 
@@ -112,9 +120,8 @@
   </xsl:template>
 
   <!-- Character list as reference targets -->
-  <xsl:template match="particDesc">
-    <xsl:text>&#10;</xsl:text>
-    <xsl:apply-templates select="listPerson/person"/>
+  <xsl:template match="listPerson">
+    <xsl:apply-templates select="person"/>
     <xsl:text>&#10;</xsl:text>
   </xsl:template>
 

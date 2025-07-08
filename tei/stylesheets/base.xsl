@@ -37,9 +37,8 @@
 
   <!-- Driver -->
   <xsl:template match="/">
-    <xsl:apply-templates select="//titleStmt" mode="block"/>
-    <xsl:apply-templates select="//particDesc" mode="block"/>
-    <xsl:apply-templates select="//text" mode="block"/>
+    <xsl:apply-templates select="//standOff/listPerson" mode="block"/>
+    <xsl:apply-templates select="//TEI" mode="block"/>
   </xsl:template>
 
 </xsl:stylesheet>
