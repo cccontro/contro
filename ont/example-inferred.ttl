@@ -1,4 +1,5 @@
 @prefix : <https://w3id.org/contro/example#> .
+@prefix d0: <http://www.ontologydesignpatterns.org/ont/d0.owl#> .
 @prefix arg: <https://w3id.org/contro/arg#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -161,8 +162,8 @@ arg:toward rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality
-<http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality> rdf:type owl:Class ;
-                                                               rdfs:subClassOf owl:Thing .
+d0:Eventuality rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing .
 
 
 ###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent
@@ -388,12 +389,12 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:Conflict ,
              arg:Undermining ;
     dul:isSettingFor :d5 ,
+                     :not_s ,
                      :t ,
-                     :theoryA ,
-                     <https://w3id.org/contro/example#¬s> ;
+                     :theoryA ;
     dul:satisfies arg:Argument ;
     arg:ArgumentationTheory :theoryA ;
-    arg:Conclusion <https://w3id.org/contro/example#¬s> ;
+    arg:Conclusion :not_s ;
     arg:InferenceRule :d5 ;
     arg:Premise :t ;
     arg:by :agentA .
@@ -407,11 +408,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:ArgumentationTheorySituation ,
              arg:Conflict ,
              arg:Undercut ;
-    dul:isSettingFor :theoryB ,
-                     <https://w3id.org/contro/example#¬d1> ;
+    dul:isSettingFor :not_d1 ,
+                     :theoryB ;
     dul:satisfies arg:Argument ;
     arg:ArgumentationTheory :theoryB ;
-    arg:Conclusion <https://w3id.org/contro/example#¬d1> ;
+    arg:Conclusion :not_d1 ;
     arg:attacks :A1 ;
     arg:by :agentB_alias .
 
@@ -425,13 +426,13 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:Conflict ,
              arg:Rebuttal ;
     dul:isSettingFor :d4 ,
+                     :not_r ,
                      :p ,
                      :s ,
-                     :theoryB ,
-                     <https://w3id.org/contro/example#¬r> ;
+                     :theoryB ;
     dul:satisfies arg:Argument ;
     arg:ArgumentationTheory :theoryB ;
-    arg:Conclusion <https://w3id.org/contro/example#¬r> ;
+    arg:Conclusion :not_r ;
     arg:InferenceRule :d4 ;
     arg:Premise :p ,
                 :s ;
@@ -480,7 +481,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
     dul:satisfies arg:InferenceRule ;
     arg:Antecedent :p ;
     arg:Consequent :q ;
-    arg:contradictedBy <https://w3id.org/contro/example#¬d1> ;
+    arg:contradictedBy :not_d1 ;
     arg:extractedFrom :knowledgeA .
 
 
@@ -504,9 +505,9 @@ arg:Topic rdf:type owl:NamedIndividual ,
              owl:Thing ,
              arg:ArgumentationTheorySituation ,
              arg:InferenceRule ;
-    dul:isSettingFor <https://w3id.org/contro/example#¬d1> ;
+    dul:isSettingFor :not_d1 ;
     dul:satisfies arg:InferenceRule ;
-    arg:Consequent <https://w3id.org/contro/example#¬d1> .
+    arg:Consequent :not_d1 .
 
 
 ###  https://w3id.org/contro/example#d4
@@ -515,13 +516,13 @@ arg:Topic rdf:type owl:NamedIndividual ,
              owl:Thing ,
              arg:ArgumentationTheorySituation ,
              arg:InferenceRule ;
-    dul:isSettingFor :p ,
-                     :s ,
-                     <https://w3id.org/contro/example#¬r> ;
+    dul:isSettingFor :not_r ,
+                     :p ,
+                     :s ;
     dul:satisfies arg:InferenceRule ;
     arg:Antecedent :p ,
                    :s ;
-    arg:Consequent <https://w3id.org/contro/example#¬r> ;
+    arg:Consequent :not_r ;
     arg:extractedFrom :knowledgeB .
 
 
@@ -531,11 +532,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
              owl:Thing ,
              arg:ArgumentationTheorySituation ,
              arg:InferenceRule ;
-    dul:isSettingFor :t ,
-                     <https://w3id.org/contro/example#¬s> ;
+    dul:isSettingFor :not_s ,
+                     :t ;
     dul:satisfies arg:InferenceRule ;
     arg:Antecedent :t ;
-    arg:Consequent <https://w3id.org/contro/example#¬s> ;
+    arg:Consequent :not_s ;
     arg:extractedFrom :knowledgeA .
 
 
@@ -549,11 +550,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
             arg:hasMember :d1 ,
                           :d2 ,
                           :d5 ,
+                          :not_s ,
                           :p ,
                           :q ,
                           :r ,
-                          :t ,
-                          <https://w3id.org/contro/example#¬s> .
+                          :t .
 
 
 ###  https://w3id.org/contro/example#knowledgeB
@@ -564,10 +565,49 @@ arg:Topic rdf:type owl:NamedIndividual ,
                      arg:KnowledgeBase ;
             dul:satisfies arg:KnowledgeBase ;
             arg:hasMember :d4 ,
+                          :not_d1 ,
+                          :not_r ,
                           :p ,
-                          :s ,
-                          <https://w3id.org/contro/example#¬d1> ,
-                          <https://w3id.org/contro/example#¬r> .
+                          :s .
+
+
+###  https://w3id.org/contro/example#not_d1
+:not_d1 rdf:type owl:NamedIndividual ,
+                 dul:Situation ,
+                 owl:Thing ,
+                 arg:ArgumentationTheorySituation ,
+                 arg:Conclusion ,
+                 arg:Consequent ;
+        dul:satisfies arg:Conclusion ,
+                      arg:Consequent ;
+        arg:contradicts :d1 ;
+        arg:extractedFrom :knowledgeB .
+
+
+###  https://w3id.org/contro/example#not_r
+:not_r rdf:type owl:NamedIndividual ,
+                dul:Situation ,
+                owl:Thing ,
+                arg:ArgumentationTheorySituation ,
+                arg:Conclusion ,
+                arg:Consequent ;
+       dul:satisfies arg:Conclusion ,
+                     arg:Consequent ;
+       arg:contradicts :r ;
+       arg:extractedFrom :knowledgeB .
+
+
+###  https://w3id.org/contro/example#not_s
+:not_s rdf:type owl:NamedIndividual ,
+                dul:Situation ,
+                owl:Thing ,
+                arg:ArgumentationTheorySituation ,
+                arg:Conclusion ,
+                arg:Consequent ;
+       dul:satisfies arg:Conclusion ,
+                     arg:Consequent ;
+       arg:contradicts :s ;
+       arg:extractedFrom :knowledgeA .
 
 
 ###  https://w3id.org/contro/example#p
@@ -608,7 +648,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
             arg:Consequent ;
    dul:satisfies arg:Conclusion ,
                  arg:Consequent ;
-   arg:contradictedBy <https://w3id.org/contro/example#¬r> ;
+   arg:contradictedBy :not_r ;
    arg:extractedFrom :knowledgeA .
 
 
@@ -621,7 +661,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
             arg:Premise ;
    dul:satisfies arg:Antecedent ,
                  arg:Premise ;
-   arg:contradictedBy <https://w3id.org/contro/example#¬s> ;
+   arg:contradictedBy :not_s ;
    arg:extractedFrom :knowledgeB .
 
 
@@ -665,45 +705,6 @@ arg:Topic rdf:type owl:NamedIndividual ,
          arg:DialogicalAgent :agentB ,
                              :agentB_alias ;
          arg:KnowledgeBase :knowledgeB .
-
-
-###  https://w3id.org/contro/example#¬d1
-<https://w3id.org/contro/example#¬d1> rdf:type owl:NamedIndividual ,
-                                               dul:Situation ,
-                                               owl:Thing ,
-                                               arg:ArgumentationTheorySituation ,
-                                               arg:Conclusion ,
-                                               arg:Consequent ;
-                                      dul:satisfies arg:Conclusion ,
-                                                    arg:Consequent ;
-                                      arg:contradicts :d1 ;
-                                      arg:extractedFrom :knowledgeB .
-
-
-###  https://w3id.org/contro/example#¬r
-<https://w3id.org/contro/example#¬r> rdf:type owl:NamedIndividual ,
-                                              dul:Situation ,
-                                              owl:Thing ,
-                                              arg:ArgumentationTheorySituation ,
-                                              arg:Conclusion ,
-                                              arg:Consequent ;
-                                     dul:satisfies arg:Conclusion ,
-                                                   arg:Consequent ;
-                                     arg:contradicts :r ;
-                                     arg:extractedFrom :knowledgeB .
-
-
-###  https://w3id.org/contro/example#¬s
-<https://w3id.org/contro/example#¬s> rdf:type owl:NamedIndividual ,
-                                              dul:Situation ,
-                                              owl:Thing ,
-                                              arg:ArgumentationTheorySituation ,
-                                              arg:Conclusion ,
-                                              arg:Consequent ;
-                                     dul:satisfies arg:Conclusion ,
-                                                   arg:Consequent ;
-                                     arg:contradicts :s ;
-                                     arg:extractedFrom :knowledgeA .
 
 
 ###  Generated by the OWL API (version 5.5.1) https://github.com/owlcs/owlapi/

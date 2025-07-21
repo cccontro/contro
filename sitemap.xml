@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://w3id.org/contro/</loc>
-         <lastmod>2025-07-12</lastmod>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://w3id.org/contro/background/</loc>
-         <lastmod>2025-07-12</lastmod>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://w3id.org/contro/examples/</loc>
-         <lastmod>2025-07-12</lastmod>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://w3id.org/contro/model/</loc>
-         <lastmod>2025-07-12</lastmod>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://w3id.org/contro/scenario/</loc>
-         <lastmod>2025-07-12</lastmod>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://w3id.org/contro/elements/</loc>
-         <lastmod>2025-07-12</lastmod>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://w3id.org/contro/elements/arg/</loc>
-         <lastmod>2025-07-12</lastmod>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://w3id.org/contro/elements/data/</loc>
-         <lastmod>2025-07-12</lastmod>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://w3id.org/contro/elements/persp/</loc>
-         <lastmod>2025-07-12</lastmod>
+         <lastmod>2025-07-21</lastmod>
+    </url>
+    <url>
+         <loc>https://w3id.org/contro/tei/ns/1.0/</loc>
+         <lastmod>2025-07-21</lastmod>
     </url>
 </urlset>
