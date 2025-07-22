@@ -61,13 +61,13 @@
 
 .md-typeset .argument ul li p > .label,
 .md-typeset .argument ul li p > .against {
-  color: var(--md-default-fg-color--lighter);
   font-style: normal;
   font-variant-caps: all-small-caps;
   font-weight: 600;
 }
 
 .md-typeset .argument ul li p > .label {
+  color: var(--md-default-fg-color--lighter);
   padding-right: .1rem;
 }
 

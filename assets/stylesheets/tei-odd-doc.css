@@ -16,13 +16,21 @@ div.stdfooter {
   display: none;
 }
 
-pre {
-  white-space: pre-wrap;
-  word-break: break-all;
+.md-typeset pre {
+  display: block;
+  max-width: 100%;
+  contain: inline-size;
+  overflow-x: auto;
+  padding: .7720588235em 1.1764705882em;
+  scrollbar-color: var(--md-default-fg-color--lighter) #0000;
+  scrollbar-width: thin;
   border-radius: .1rem;
   font-size: .65rem;
-  padding: .7720588235em 1.1764705882em;
   background-color: var(--md-code-bg-color);
+}
+
+.md-typeset pre:hover {
+  scrollbar-color: var(--md-accent-fg-color) #0000;
 }
 
 pre.egXML_valid {

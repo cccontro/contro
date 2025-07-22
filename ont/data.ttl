@@ -98,7 +98,7 @@ dul:Collection rdf:type owl:Class .
      arg:Premise :s11 ,
                  :s12 ,
                  :s13 ;
-     arg:Topic :disputed-words ;
+     arg:Topic :latinisms ;
      arg:by :predella .
 
 
@@ -109,7 +109,8 @@ dul:Collection rdf:type owl:Class .
      arg:InferenceRule :r6 ;
      arg:Premise :s14 ,
                  :s15 ;
-     arg:Topic :disputed-words ;
+     arg:Topic :disputed-words ,
+               :latinisms ;
      arg:by :predella .
 
 
@@ -150,10 +151,11 @@ dul:Collection rdf:type owl:Class .
 ###  https://w3id.org/contro/data#CR8
 :CR8 rdf:type owl:NamedIndividual ,
               arg:Argument ;
-     arg:Conclusion :s25 ;
+     arg:Conclusion :s26 ;
      arg:InferenceRule :r10 ;
      arg:Premise :s23 ,
-                 :s24 ;
+                 :s24 ,
+                 :s25 ;
      arg:Topic :disputed-words ;
      arg:by :predella .
 
@@ -183,32 +185,11 @@ dul:Collection rdf:type owl:Class .
 ###  https://w3id.org/contro/data#CV3
 :CV3 rdf:type owl:NamedIndividual ,
               arg:Argument ;
-     arg:Conclusion :s5 ;
-     arg:InferenceRule :r11 ;
-     arg:Premise :s12 ,
-                 :s15 ;
-     arg:Topic :disputed-words ,
-               :latinisms ;
-     arg:by :castelvetro .
-
-
-###  https://w3id.org/contro/data#CV4
-:CV4 rdf:type owl:NamedIndividual ,
-              arg:Argument ;
-     arg:Conclusion :s28 ;
-     arg:InferenceRule :r12 ;
-     arg:Premise :s26 ,
-                 :s27 ;
-     arg:Topic :disputed-words ;
-     arg:by :castelvetro .
-
-
-###  https://w3id.org/contro/data#CV5
-:CV5 rdf:type owl:NamedIndividual ,
-              arg:Argument ;
      arg:Conclusion :s30 ;
-     arg:InferenceRule :r13 ;
-     arg:Premise :s29 ;
+     arg:InferenceRule :r11 ;
+     arg:Premise :s27 ,
+                 :s28 ,
+                 :s29 ;
      arg:Topic :disputed-words ;
      arg:by :castelvetro .
 
@@ -287,32 +268,18 @@ dul:Collection rdf:type owl:Class .
 ###  https://w3id.org/contro/data#r10
 :r10 rdf:type owl:NamedIndividual ;
      arg:Antecedent :s23 ,
-                    :s24 ;
-     arg:Consequent :s25 ;
-     rdfs:comment "Unlike dead languages, a living language must draw from the variety of its speakers and cannot be normed by a single authority."@en .
+                    :s25 ;
+     arg:Consequent :s26 ;
+     rdfs:comment "Unlike dead languages, a living language such as Italian must draw from the variety of its speakers and cannot be normed by a single authority."@en .
 
 
 ###  https://w3id.org/contro/data#r11
 :r11 rdf:type owl:NamedIndividual ;
-     arg:Antecedent :s12 ,
-                    :s15 ;
-     arg:Consequent :s10 ;
-     rdfs:comment "Latinisms are harsh and should be used very sparingly in poetry."@en .
-
-
-###  https://w3id.org/contro/data#r12
-:r12 rdf:type owl:NamedIndividual ;
-     arg:Antecedent :s26 ,
-                    :s27 ;
-     arg:Consequent :s28 ;
-     rdfs:comment "Rule"@en .
-
-
-###  https://w3id.org/contro/data#r13
-:r13 rdf:type owl:NamedIndividual ;
-     arg:Antecedent :s29 ;
+     arg:Antecedent :s27 ,
+                    :s28 ,
+                    :s29 ;
      arg:Consequent :s30 ;
-     rdfs:comment "Rule"@en .
+     rdfs:comment "According to rhetoric masters such as Quintilian and Varro, poetic license consists of morphological innovation on the model of foreign words, but not in the use of the foreign words themselves."@en .
 
 
 ###  https://w3id.org/contro/data#r2
@@ -452,8 +419,8 @@ dul:Collection rdf:type owl:Class .
 :s18 rdf:type owl:NamedIndividual ;
      arg:contradicts :r2 ;
      rdfs:comment "Literary imitation should emulate the author’s judgment, not reproduce their words."@en ;
-     prov:value "Imitar lui vuol dire che si deve portar la persona e le gambe come egli fece; e non porre ’l piedi nelle sue stesse pedate. Egli si valse giudiziosamente, in tutte le lingue, di tutte le buone voci: col medesimo giudizio è lecito di valersene ancora ad ognuno."@it ,
-                "To imitate him means to carry oneself and move one’s legs as he did, not to place one’s feet in his very footprints. He made judicious use, in all languages, of all worthy words; with the same judgment, anyone may likewise make use of them."@en .
+     prov:value "Imitar lui vuol dire che si deve portar la persona e le gambe come egli fece; e non porre ’l piedi nelle sue stesse pedate"@it ,
+                "To imitate him means to carry oneself and move one’s legs as he did, not to place one’s feet in his very footprints"@en .
 
 
 ###  https://w3id.org/contro/data#s19
@@ -494,27 +461,34 @@ dul:Collection rdf:type owl:Class .
 ###  https://w3id.org/contro/data#s23
 :s23 rdf:type owl:NamedIndividual ;
      rdfs:comment "In dead languages like Latin and Greek, one must imitate the best authors."@en ;
-     prov:value "For here lies the error you have fallen into: believing that in this language one ought to act as in Greek and Latin—languages which, being dead as regards common speech, must necessarily be written by drawing from the writings of the few and by imitating the best, since we cannot ourselves grasp their native power or beauty."@en ,
-                "perché qui sta l’errore che avete preso, di credere che in questa lingua si debba fare come nella greca e nella latina; le quali essendo morte quanto all’uso del parlar commune, è necessario che si scrivano cavando dagli scritti de’ pochi ed imitando i migliori, non potendosi da noi conoscere la forza né la bellezza lor naturale."@it .
+     prov:value "being dead as regards common speech, must necessarily be written by drawing from the writings of the few and by imitating the best"@en ,
+                "le quali essendo morte quanto all’uso del parlar commune, è necessario che si scrivano cavando dagli scritti de’ pochi ed imitando i migliori"@it .
 
 
 ###  https://w3id.org/contro/data#s24
 :s24 rdf:type owl:NamedIndividual ;
-     rdfs:comment "Italian is a living language."@en ;
-     prov:value "But in this language—which is naturally and commonly spoken and understood by all, and which presents itself to us alive and entirely uncovered in all its parts—"@en ,
-                "Ma in questa, che naturalmente o communemente si parla e s’intende da tutti e che viva e nuda interamente e in ogni sua parte ci si mostra,"@it .
+     rdfs:comment "Living languages are naturally modified by the variety of their speakers."@en ;
+     prov:value "la natura d’essa lingua, che non possa, come l’altre, crescere e scemare"@it ,
+                "the nature of the language itself, denying it the ability, like all others, to grow and decline"@en .
 
 
 ###  https://w3id.org/contro/data#s25
 :s25 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Italian is a living language."@en ;
+     prov:value "But in this language—which is naturally and commonly spoken and understood by all, and which presents itself to us alive and entirely uncovered in all its parts"@en ,
+                "Ma in questa, che naturalmente o communemente si parla e s’intende da tutti e che viva e nuda interamente e in ogni sua parte ci si mostra"@it .
+
+
+###  https://w3id.org/contro/data#s26
+:s26 rdf:type owl:NamedIndividual ;
      rdfs:comment "Italian should not be limited to the authority of a single author, such as Petrarch."@en ;
      prov:value "che giudizio è il vostro a pensare che necessariamente si debba cavar dagli scritti di un solo, e non anco da molti che la parlano e la scrivono;"@it ,
                 "what kind of judgment is it to think that one must necessarily draw from the writings of a single author, and not also from the many who speak and write it;"@en .
 
 
-###  https://w3id.org/contro/data#s26
-:s26 rdf:type owl:NamedIndividual ;
-     rdfs:comment "Quintilian supports the formation of Latin words after the model of Greek ones."@en ;
+###  https://w3id.org/contro/data#s27
+:s27 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Quintilian supports the formation of Latin words after the model of Greek ones, not the adoption of Greek words themselves."@en ;
      prov:value "he does not mean it universally of words from every kind of foreign language, but specifically of words newly coined by the orator following the manner of a foreign  tongue."@en ,
                 "he means his daring as fortunate only within the bounds of the Latin language, as far as vocabulary is concerned;"@en ,
                 "he refers to the formation of Latin words after the model of Greek ones, and not to the importing of foreign words  into another language,"@en ,
@@ -523,24 +497,16 @@ dul:Collection rdf:type owl:Class .
                 "non intende universalmente delle voci d’ogni maniera di lingua forestiera, ma particolarmente delle voci formate di nuovo dal favellatore secondo la maniera della lingua  straniera."@it .
 
 
-###  https://w3id.org/contro/data#s27
-:s27 rdf:type owl:NamedIndividual ;
-     rdfs:comment "Varro speaks of poetic license in terms of a freedom to follow morphological analogy rather than common usage in word formation."@en ;
+###  https://w3id.org/contro/data#s28
+:s28 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Varro allows poets greater freedom than orators in forming words by morphological analogy rather than by common usage, but does not endorse the use of foreign words."@en ;
      prov:value "potendo il poeta «transilire lineas impune», cioè passare il segno, il che è interpretato da Varrone medesimo che il poeta può più liberamente seguire l’analogia nelle parole che non può il favellatore;"@it ,
                 "the poet is allowed to «transilire lineas impune», or pass the mark, which Varro himself interprets to mean that the poet may follow analogy in words more freely than the orator can;"@en .
 
 
-###  https://w3id.org/contro/data#s28
-:s28 rdf:type owl:NamedIndividual ;
-     arg:contradicts :s11 ;
-     rdfs:comment "Rethoric masters endorse new word formation after the model of foreign words, not the usage of foreign words themselves."@en ;
-     prov:value "in vain does Caro bring forth the authority of the eminent masters of rhetoric and poetry in their support, some of whom do not speak of this kind of foreign words, and some do speak of them, but deny their use or do not allow it in this case"@en ,
-                "vanamente si producono dal Caro per sostegno loro l’autorità de’ valenti maestri di ritorica e di poesia, alcuni de’ quali non parlano di questa maniera di parole strane e alcuni ne parlano sì, ma niegano l’uso loro o non lo concedono in questo caso"@it .
-
-
 ###  https://w3id.org/contro/data#s29
 :s29 rdf:type owl:NamedIndividual ;
-     rdfs:comment "None"@en .
+     rdfs:comment "Quintilian and Varro represent the consensus of rhetoric masters on linguistic matters."@en .
 
 
 ###  https://w3id.org/contro/data#s3
@@ -556,7 +522,10 @@ dul:Collection rdf:type owl:Class .
 
 ###  https://w3id.org/contro/data#s30
 :s30 rdf:type owl:NamedIndividual ;
-     rdfs:comment "None"@en .
+     arg:contradicts :s11 ;
+     rdfs:comment "Rhetoric masters endorse new word formation after the model of foreign words, not the usage of foreign words themselves."@en ;
+     prov:value "in vain does Caro bring forth the authority of the eminent masters of rhetoric and poetry in their support, some of whom do not speak of this kind of foreign words, and some do speak of them, but deny their use or do not allow it in this case"@en ,
+                "vanamente si producono dal Caro per sostegno loro l’autorità de’ valenti maestri di ritorica e di poesia, alcuni de’ quali non parlano di questa maniera di parole strane e alcuni ne parlano sì, ma niegano l’uso loro o non lo concedono in questo caso"@it .
 
 
 ###  https://w3id.org/contro/data#s4
