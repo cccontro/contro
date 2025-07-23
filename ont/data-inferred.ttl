@@ -1177,7 +1177,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                     :s29 ;
      arg:Consequent :s30 ;
      arg:extractedFrom :KB_castelvetro ;
-     rdfs:comment "According to rhetoric masters such as Quintilian and Varro, poetic license consists of morphological innovation on the model of foreign words, but not in the use of the foreign words themselves."@en .
+     rdfs:comment "If rhetorical masters explicitly discuss certain linguistic practices under poetic license and omit others, then only the discussed practices are to be considered endorsed."@en .
 
 
 ###  https://w3id.org/contro/data#r2
@@ -1719,7 +1719,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                    arg:Premise ,
                    persp:Lens ;
      arg:extractedFrom :KB_castelvetro ;
-     rdfs:comment "Quintilian supports the formation of Latin words after the model of Greek ones, not the adoption of Greek words themselves."@en ;
+     rdfs:comment "Quintilian supports the formation of Latin words after the model of Greek ones."@en ;
      prov:value "he does not mean it universally of words from every kind of foreign language, but specifically of words newly coined by the orator following the manner of a foreign  tongue."@en ,
                 "he means his daring as fortunate only within the bounds of the Latin language, as far as vocabulary is concerned;"@en ,
                 "he refers to the formation of Latin words after the model of Greek ones, and not to the importing of foreign words  into another language,"@en ,
@@ -1741,7 +1741,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                    arg:Premise ,
                    persp:Lens ;
      arg:extractedFrom :KB_castelvetro ;
-     rdfs:comment "Varro allows poets greater freedom than orators in forming words by morphological analogy rather than by common usage, but does not endorse the use of foreign words."@en ;
+     rdfs:comment "Varro allows poets greater freedom than orators in forming words by morphological analogy rather than by common usage."@en ;
      prov:value "potendo il poeta «transilire lineas impune», cioè passare il segno, il che è interpretato da Varrone medesimo che il poeta può più liberamente seguire l’analogia nelle parole che non può il favellatore;"@it ,
                 "the poet is allowed to «transilire lineas impune», or pass the mark, which Varro himself interprets to mean that the poet may follow analogy in words more freely than the orator can;"@en .
 
