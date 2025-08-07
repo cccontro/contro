@@ -25,12 +25,23 @@
   box-shadow: var(--md-shadow-z2);
 }
 
-.argument:before {
-  content: "Argument " attr(id);
+.argument h4 {
   color: var(--md-default-fg-color--lighter);
   font-variant-caps: all-small-caps;
   font-size: .9rem;
   font-weight: 600;
+  display: inline;
+}
+
+.argument h4 + p {
+  display: inline;
+  color: var(--md-default-fg-color--lighter);
+  text-transform: lowercase;
+}
+
+.argument h4 + p:before {
+  content: " · ";
+  font-weight: 700;
 }
 
 /* Argument lists */
