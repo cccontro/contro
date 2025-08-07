@@ -28,7 +28,7 @@ In lode della Casa di Francia
 I.  
     1.  Venite all’ombra de’ gran gigli d’oro,
     2.  care muse, devote a’ miei giacinti:
-    3.  e d’[ambo]{: #w2-it ana="#disputed-words" } insieme avinti
+    3.  e d’[ambo]{: #w2-it ana="#disputed-words" title="Disputed words<br/>Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." } insieme avinti
     4.  tessiam ghirlande a’ nostri idoli, e fregi.
     5.  E tu, signor, ch’io per mio sole adoro,
     6.  perché non sian dall’altro sole estinti,
@@ -45,14 +45,14 @@ I.
 II.  
     1.  Giace, quasi gran conca, infra due mari
     2.  e due monti famosi, Alpe e Pirene,
-    3.  parte delle più [amene]{: #w12-it ana="#disputed-words" }
+    3.  parte delle più [amene]{: #w12-it ana="#disputed-words" title="Disputed words<br/>Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }
     4.  d’Europa, e di quant’anco il sol circonda:
     5.  di tesori e di popoli e d’altari,
     6.  ch’al nostro vero nume erge e mantene,
     7.  di preziose vene,
     8.  d’arti e d’armi e d’amor madre feconda.
     9.  Novella Berecintia, a cui gioconda
-    10.  [cede]{: #w1-it ana="#disputed-words" } l’altra il suo carro e i suoi leoni:
+    10.  [cede]{: #w1-it ana="#disputed-words" title="Disputed words<br/>Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." } l’altra il suo carro e i suoi leoni:
     11.  e sol par ch’incoroni
     12.  di tutte le sue torri Italia e lei:
     13.  e dica: — Ite, miei Galli, or Galli interi,
@@ -61,7 +61,7 @@ II.
 
 III.  
     1.  Di questa madre generosa e chiara,
-    2.  madre [ancor essa]{: #w4-it ana="#disputed-words" } di celesti eroi,
+    2.  madre [ancor essa]{: #w4-it ana="#disputed-words" title="Disputed words<br/>Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." } di celesti eroi,
     3.  regnano oggi fra noi
     4.  d’altri Giovi altri figli ed altre suore;
     5.  e vie più degni ancor d’incenso e d’ara,
@@ -74,7 +74,7 @@ III.
     12.  con la pietà, con l’onestà, con l’armi,
     13.  col sollevar gli oppressi e punir gli empi,
     14.  non coi bronzi o coi marmi,
-    15.  si va sacrando i [simulacri]{: #w3-it ana="#disputed-words" } e i tempi.
+    15.  si va sacrando i [simulacri]{: #w3-it ana="#disputed-words" title="Disputed words<br/>Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." } e i tempi.
 
 IV.  
     1.  Mirate, come placido e severo
@@ -98,8 +98,8 @@ V.
     2.  gode dell’amor suo, lieta e sicura;
     3.  e non è sdegno o cura
     4.  che ’l cor le punga, o di Calisto o d’Io.
-    5.  [Suo merto e tuo valor]{: #w5-it ana="#disputed-words" }, donna gentile,
-    6.  di nome e d’alma [inviolata]{: #w6-it ana="#disputed-words" } e pura.
+    5.  [Suo merto e tuo valor]{: #w5-it ana="#disputed-words" title="Disputed words<br/>Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }, donna gentile,
+    6.  di nome e d’alma [inviolata]{: #w6-it ana="#disputed-words" title="Disputed words<br/>Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." } e pura.
     7.  E fu nostra ventura,
     8.  e providenza del superno Iddio,
     9.  ch’in sì gran regno, a sì gran re t’unio,
@@ -114,9 +114,9 @@ VI.
     1.  Vera Minerva, e veramente nata
     2.  di Giove stesso e del suo senno è quella
     3.  ch’ora è figlia e sorella
-    4.  di regi [illustri]{: #w9-it ana="#disputed-words" }, e ne fia madre e sposa.
+    4.  di regi [illustri]{: #w9-it ana="#disputed-words" title="Disputed words<br/>Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }, e ne fia madre e sposa.
     5.  Vergine, che di gloria incoronata,
-    6.  quasi lunge dal sol [propizia]{: #w8-it ana="#disputed-words" } stella,
+    6.  quasi lunge dal sol [propizia]{: #w8-it ana="#disputed-words" title="Disputed words<br/>Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." } stella,
     7.  ti stai d’amor rubella,
     8.  per dar più luce a questa notte ombrosa.
     9.  Viva perla, serena e preziosa,
@@ -125,7 +125,7 @@ VI.
     12.  col tuo sfavilla il suo bel lume tanto
     13.  ch’ogni cor arde, e ’l mio ne sente un foco
     14.  tal, ch’io ne volo e canto
-    15.  infra i tuoi cigni, e son [tarpato]{: #w7-it ana="#disputed-words" } e roco.
+    15.  infra i tuoi cigni, e son [tarpato]{: #w7-it ana="#disputed-words" title="Disputed words<br/>Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." } e roco.
 
 VII.  
     1.  Evvi ancor Cintia, e v’era Endimione:
@@ -145,12 +145,12 @@ VII.
     15.  o di clava o di tirso o di tridente?
 
 VIII.  
-    1.  Canzon, se la virtù, se i chiari [gesti]{: #w10-it ana="#disputed-words" }
+    1.  Canzon, se la virtù, se i chiari [gesti]{: #w10-it ana="#disputed-words" title="Disputed words<br/>Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }
     2.  ne fan celesti, del ciel degne sono
     3.  l’alme di ch’io ragiono.
     4.  Tu lor queste di fiori umìli offerte
     5.  porgi in mia vece, e di’: — Se non son elle
-    6.  d’oro e di gemme [inserte]{: #w11-it ana="#disputed-words" },
+    6.  d’oro e di gemme [inserte]{: #w11-it ana="#disputed-words" title="Disputed words<br/>Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." },
     7.  son di voi stessi, e saran poi di stelle.
 
 
@@ -220,36 +220,40 @@ Né userebbe «[suo merto e tuo valore](#w5-it){: .q title="<em>Venite all’omb
 
 <div class="paraphrase" markdown>
 
-<div class="syllogism" id="CV1" markdown>
+<div class="argument" id="CV1" markdown>
+#### Argument CV1
+[Disputed words]{: title="Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }
 
 *  [s1 ]{: .label }[Petrarch never used certain words.]{: .prop }
-{: #s1 ana="#premise" }
+{: #s1 .premise }
 
 *  [s2 ]{: .label }[Other authors of his time used those words.]{: .prop }
-{: #s2 ana="#premise" }
+{: #s2 .premise }
 
 *  [r1 ]{: .label }[The fact that Petrarch left out words used in the literature of his time is a sign that he did not use them deliberately.]{: .prop }
-{: #r1 ana="#rule" }
+{: #r1 .rule }
 
 *  [s3 ]{: .label }[Petrarch wouldn’t have used those words.]{: .prop }
-{: #s3 ana="#conclusion" }
+{: #s3 .conclusion }
 
 
 </div>
 
-<div class="syllogism" id="CV2" markdown>
+<div class="argument" id="CV2" markdown>
+#### Argument CV2
+[Disputed words]{: title="Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }
 
 *  [s3 ]{: .label }[Petrarch wouldn’t have used those words.](#s3){: .prop }
-{: ana="#premise" }
+{: .premise }
 
 *  [s4 ]{: .label }[Petrarch is an authority in Italian literature.]{: .prop }
-{: #s4 ana="#premise" }
+{: #s4 .premise }
 
 *  [r2 ]{: .label }[Italian authors should avoid words that an authority like Petrarch chose not to use.]{: .prop }
-{: #r2 ana="#rule" }
+{: #r2 .rule }
 
 *  [s5 ]{: .label }[Those words should not be used.]{: .prop }
-{: #s5 ana="#conclusion" }
+{: #s5 .conclusion }
 
 
 </div>
@@ -265,45 +269,49 @@ Né userebbe «[suo merto e tuo valore](#w5-it){: .q title="<em>Venite all’omb
 
 <div class="paraphrase" markdown>
 
-<div class="syllogism" id="CR1" markdown>
+<div class="argument" id="CR1" markdown>
+#### Argument CR1
+[Disputed words]{: title="Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }
 
 *  [s1 ]{: .label }[Petrarch never used certain words.](#s1){: .prop }
-{: ana="#premise" }
+{: .premise }
 
 *  [s6 ]{: .label }[There is no direct knowledge of Petrarch’s intention.]{: .prop }
-{: #s6 ana="#premise" }
+{: #s6 .premise }
 
 *  [s7 ]{: .label }[Castelvetro is not a reliable interpreter of Petrarch’s mind.]{: .prop }
-{: #s7 ana="#premise" }
+{: #s7 .premise }
 
 *  [r3 ]{: .label }[Although Petrarch did not use the words, it’s impossible to determine whether he would have used them without reliable or direct knowledge of his intentions, which is unavailable.]{: .prop }
-{: #r3 ana="#rule" }
+{: #r3 .rule }
 
-*  [s8 ]{: .label }[It is not possible to know whether Petrarch would have used those words.]{: .prop }[ ✖ r1]{: .against }
-{: #s8 ana="#conclusion" }
+*  [s8 ]{: .label }[It is not possible to know whether Petrarch would have used those words.]{: .prop }[ ✖ r1](#r1){: .against }
+{: #s8 .conclusion }
 
 
 </div>
 
-<div class="syllogism" id="CR2" markdown>
+<div class="argument" id="CR2" markdown>
+#### Argument CR2
+[Disputed words]{: title="Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }
 
 *  [s1 ]{: .label }[Petrarch never used certain words.](#s1){: .prop }
-{: ana="#premise" }
+{: .premise }
 
 *  [s2 ]{: .label }[Other authors of his time used those words.](#s2){: .prop }
-{: ana="#premise" }
+{: .premise }
 
 *  [s4 ]{: .label }[Petrarch is an authority in Italian literature.](#s4){: .prop }
-{: ana="#premise" }
+{: .premise }
 
 *  [s9 ]{: .label }[Other authors have authority as well.]{: .prop }
-{: #s9 ana="#premise" }
+{: #s9 .premise }
 
 *  [r4 ]{: .label }[Although Petrarch did not use those words, the authority of other influential authors in Italian literature legitimizes their use.]{: .prop }
-{: #r4 ana="#rule" }
+{: #r4 .rule }
 
-*  [s10 ]{: .label }[Those words can be used.]{: .prop }[ ✖ s5]{: .against }
-{: #s10 ana="#conclusion" }
+*  [s10 ]{: .label }[Those words can be used.]{: .prop }[ ✖ s5](#s5){: .against }
+{: #s10 .conclusion }
 
 
 </div>
@@ -315,63 +323,69 @@ Né userebbe «[suo merto e tuo valore](#w5-it){: .q title="<em>Venite all’omb
 
 <div class="paraphrase" markdown>
 
-<div class="syllogism" id="CR3" markdown>
+<div class="argument" id="CR3" markdown>
+#### Argument CR3
+[Latinisms]{: title="Loanwords from written Latin that are artificially introduced into Italian through phonetic and morphological adaptation, as opposed to hereditary words, which result naturally from uninterrupted phonetic evolution. Latinisms are often employed in poetic texts to elevate the stylistic register." }
 
 *  [s11 ]{: .label }[Greek and Latin masters of rhetoric endorse the literary use of foreign words.]{: .prop }
-{: #s11 ana="#premise" }
+{: #s11 .premise }
 
-*  [s12 ]{: .label }[Latin words are foreign, yet intelligible, in Italian.]{: .prop }
-{: #s12 ana="#premise" }
+*  [s12 ]{: .label }[Latin words are foreign to Italian speakers.]{: .prop }
+{: #s12 .premise }
 
 *  [s13 ]{: .label }[Italian is a literary language whose norms can be guided by classical precedent.]{: .prop }
-{: #s13 ana="#premise" }
+{: #s13 .premise }
 
 *  [r5 ]{: .label }[If authoritative literary figures legitimize a rhetorical practice, and that practice is relevantly similar in a new context, then that practice is also legitimate in the new context.]{: .prop }
-{: #r5 ana="#rule" }
+{: #r5 .rule }
 
 *  [s14 ]{: .label }[Italian authors are justified in using Latinisms.]{: .prop }
-{: #s14 ana="#conclusion" }
+{: #s14 .conclusion }
 
 
 </div>
 
-<div class="syllogism" id="CR4" markdown>
+<div class="argument" id="CR4" markdown>
+#### Argument CR4
+[Disputed words]{: title="Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }, [Latinisms]{: title="Loanwords from written Latin that are artificially introduced into Italian through phonetic and morphological adaptation, as opposed to hereditary words, which result naturally from uninterrupted phonetic evolution. Latinisms are often employed in poetic texts to elevate the stylistic register." }
 
 *  [s14 ]{: .label }[Italian authors are justified in using Latinisms.](#s14){: .prop }
-{: ana="#premise" }
+{: .premise }
 
 *  [s15 ]{: .label }[Those words are Latinisms.]{: .prop }
-{: #s15 ana="#premise" }
+{: #s15 .premise }
 
 *  [r6 ]{: .label }[If Italian authors are justified in using Latinisms, as those words are, then Italian authors are justified in using those words.]{: .prop }
-{: #r6 ana="#rule" }
+{: #r6 .rule }
 
-*  [s10 ]{: .label }[Those words can be used.](#s10){: .prop }[ ✖ s5]{: .against }
-{: ana="#conclusion" }
-
-
-</div>
+*  [s10 ]{: .label }[Those words can be used.](#s10){: .prop }[ ✖ s5](#s5){: .against }
+{: .conclusion }
 
 
 </div>
 
-\[…\] [Non sarebbe pazzo uno che, volendo imparare di caminare da un altro, gli andasse sempre dietro, mettendo i piedi appunto donde colui gli lieva?]{: ana="#s16" } [La medesima pazzia è quella che dite voi, a voler che si facciano i medesimi passi, e non il medesimo andare del [Petrarca][petrarca].]{: ana="#s17" } [Imitar lui vuol dire che si deve portar la persona e le gambe come egli fece; e non porre ’l piedi nelle sue stesse pedate. Egli si valse giudiziosamente, in tutte le lingue, di tutte le buone voci: col medesimo giudizio è lecito di valersene ancora ad ognuno.]{: ana="#s18" } Quel che si deve avertire è che non si faccia senza debita considerazione. E in questo ha spezialmente la nostra favella perpetuo obligo col [Bembo][bembo], perché n’insegnò la via di così fare, e raffrenò l’audacia di coloro che troppo licenziosamente in ciò trascorrevano. \[…\]
+
+</div>
+
+\[…\] [Non sarebbe pazzo uno che, volendo imparare di caminare da un altro, gli andasse sempre dietro, mettendo i piedi appunto donde colui gli lieva?]{: ana="#s16" } [La medesima pazzia è quella che dite voi, a voler che si facciano i medesimi passi, e non il medesimo andare del [Petrarca][petrarca].]{: ana="#s17" } [Imitar lui vuol dire che si deve portar la persona e le gambe come egli fece; e non porre ’l piedi nelle sue stesse pedate]{: ana="#s18" }. Egli si valse giudiziosamente, in tutte le lingue, di tutte le buone voci: col medesimo giudizio è lecito di valersene ancora ad ognuno. Quel che si deve avertire è che non si faccia senza debita considerazione. [E in questo ha spezialmente la nostra favella perpetuo obligo col [Bembo][bembo], perché n’insegnò la via di così fare, e raffrenò l’audacia di coloro che troppo licenziosamente in ciò trascorrevano]{: ana="#s40" }. \[…\]
 
 <div class="paraphrase" markdown>
 
-<div class="syllogism" id="CR5" markdown>
+<div class="argument" id="CR5" markdown>
+#### Argument CR5
+[Imitation]{: title="The practice of poets and prose-writers reworking the words, stylistic features, and themes of the authors who preceded them as a way of expressing awareness of their literary heritage. In the Renaissance period, it was not regarded as plagiarism but as essential to the creation of an original literary work." }
 
 *  [s16 ]{: .label }[Learning involves emulating principles, not mimicking results.]{: .prop }
-{: #s16 ana="#premise" }
+{: #s16 .premise }
 
 *  [s17 ]{: .label }[Literary imitation is a kind of learning.]{: .prop }
-{: #s17 ana="#premise" }
+{: #s17 .premise }
 
 *  [r7 ]{: .label }[If learning in a domain requires emulating the method rather than the outcome, then learning in an analogous domain also requires the same.]{: .prop }
-{: #r7 ana="#rule" }
+{: #r7 .rule }
 
-*  [s18 ]{: .label }[Literary imitation should emulate the author’s judgment, not reproduce their words.]{: .prop }[ ✖ r2]{: .against }
-{: #s18 ana="#conclusion" }
+*  [s18 ]{: .label }[Literary imitation should emulate the author’s judgment, not reproduce their words.]{: .prop }[ ✖ r2](#r2){: .against }
+{: #s18 .conclusion }
 
 
 </div>
@@ -381,65 +395,69 @@ Né userebbe «[suo merto e tuo valore](#w5-it){: .q title="<em>Venite all’omb
 
 \[…\] Ma pogniamo ancora che ’I [Petrarca][petrarca] non si volesse valere di queste voci perché non gli piacessero. \[…\] Ma come è possibile che voi vogliate che un autore, per molto che scriva, possa mettere in opera tutti i vocaboli dell’età sua, che non ne lasci indietro ancora molti di quelli che sono ottimi? Che gli scrittori dopo loro siano privi e di quelli che essi hanno lasciati, e di quelli che non erano ancora a tempo loro? [Oltre a ciò, che il [Petrarca][petrarca] abbia tolto agli altri quel c’ha fatto esso medesimo?]{: ana="#s22" } che una lingua sia tutta in uno autor solo? che un solo la giudichi? un solo la finisca? [Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel [Petrarca][petrarca] e nel [Boccaccio][boccaccio] si termini tutta la favella volgare, come negli Evangeli ed in [san Paolo][st-paul] tutta la sacra Scrittura.]{: ana="#s19" } \[…\]
 
+[Voglio che la perfezion del dire (ancora che non si dia interamente in atto) sia in fino a ora in questa lingua, spezialmente nel [Petrarca][petrarca] e nel [Boccaccio][boccaccio]]{: ana="#s4" }: ma non voglio per questo distrugger [la natura d’essa lingua, che non possa, come l’altre, crescere e scemare]{: ana="#s24" }; non voglio togliere in tutto i giudizi degli altri, che son venuti e che verranno dopo loro. [Non voglio esser privo della libertà c’hanno avuto essi e tutti gli scrittori in tutte le lingue.]{: ana="#s21" } \[…\] perché qui sta l’errore che avete preso, di credere che in questa lingua si debba fare come nella greca e nella latina; [le quali essendo morte quanto all’uso del parlar commune, è necessario che si scrivano cavando dagli scritti de’ pochi ed imitando i migliori]{: ana="#s23" }, non potendosi da noi conoscere la forza né la bellezza lor naturale. [Ma in questa, che naturalmente o communemente si parla e s’intende da tutti e che viva e nuda interamente e in ogni sua parte ci si mostra]{: ana="#s25" }, [che giudizio è il vostro a pensare che necessariamente si debba cavar dagli scritti di un solo, e non anco da molti che la parlano e la scrivono;]{: ana="#s26" } essendo per assoluto precetto avertiti: «[*Quod is qui maxime, non etiam unus imitandus est?*]{: .q title="Quintilian, <em>Institutio Oratoria</em> X 2,24" }» \[Ma l’autore che deve essere imitato di preferenza non deve essere anche l’unico a essere imitato.\] \[…\]
+
 <div class="paraphrase" markdown>
 
-<div class="syllogism" id="CR6" markdown>
+<div class="argument" id="CR6" markdown>
+#### Argument CR6
+[Disputed words]{: title="Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }
 
 *  [s19 ]{: .label }[To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture.]{: .prop }
-{: #s19 ana="#premise" }
+{: #s19 .premise }
 
 *  [s20 ]{: .label }[The Church holds the autority to interpret and expand upon sacred Scripture.]{: .prop }
-{: #s20 ana="#premise" }
+{: #s20 .premise }
 
 *  [r8 ]{: .label }[Since denying authors interpretive authority over language is like denying the Church such authority over Scripture, and the Church has it, authors should have it too.]{: .prop }
-{: #r8 ana="#rule" }
+{: #r8 .rule }
 
 *  [s21 ]{: .label }[Contemporary authors have the freedom to interpret and develop the language.]{: .prop }
-{: #s21 ana="#conclusion" }
+{: #s21 .conclusion }
 
 
 </div>
 
-
-</div>
-
-\[…\] [Voglio che la perfezion del dire (ancora che non si dia interamente in atto) sia in fino a ora in questa lingua, spezialmente nel [Petrarca][petrarca] e nel [Boccaccio][boccaccio]]{: ana="#s4" }: ma non voglio per questo distrugger la natura d’essa lingua, che non possa, come l’altre, crescere e scemare; non voglio togliere in tutto i giudizi degli altri, che son venuti e che verranno dopo loro. [Non voglio esser privo della libertà c’hanno avuto essi e tutti gli scrittori in tutte le lingue.]{: ana="#s21" } \[…\] [perché qui sta l’errore che avete preso, di credere che in questa lingua si debba fare come nella greca e nella latina; le quali essendo morte quanto all’uso del parlar commune, è necessario che si scrivano cavando dagli scritti de’ pochi ed imitando i migliori, non potendosi da noi conoscere la forza né la bellezza lor naturale.]{: ana="#s23" } [Ma in questa, che naturalmente o communemente si parla e s’intende da tutti e che viva e nuda interamente e in ogni sua parte ci si mostra,]{: ana="#s24" } [che giudizio è il vostro a pensare che necessariamente si debba cavar dagli scritti di un solo, e non anco da molti che la parlano e la scrivono;]{: ana="#s25" } essendo per assoluto precetto avertiti: «[*Quod is qui maxime, non etiam unus imitandus est?*]{: .q title="Quintilian, <em>Institutio Oratoria</em> X 2,24" }» \[Ma l’autore che deve essere imitato di preferenza non deve essere anche l’unico a essere imitato.\] \[…\]
-
-<div class="paraphrase" markdown>
-
-<div class="syllogism" id="CR7" markdown>
+<div class="argument" id="CR7" markdown>
+#### Argument CR7
+[Disputed words]{: title="Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }
 
 *  [s4 ]{: .label }[Petrarch is an authority in Italian literature.](#s4){: .prop }
-{: ana="#premise" }
+{: .premise }
 
-*  [s18 ]{: .label }[Literary imitation should emulate the author’s judgment, not reproduce their words.](#s18){: .prop }[ ✖ r2]{: .against }
-{: ana="#premise" }
+*  [s18 ]{: .label }[Literary imitation should emulate the author’s judgment, not reproduce their words.](#s18){: .prop }[ ✖ r2](#r2){: .against }
+{: .premise }
 
 *  [s22 ]{: .label }[Petrarch exercised authorial freedom in shaping the language.]{: .prop }
-{: #s22 ana="#premise" }
+{: #s22 .premise }
 
 *  [r9 ]{: .label }[If an exemplar author exercised authorial freedom, then others may follow that example by exercising similar freedom.]{: .prop }
-{: #r9 ana="#rule" }
+{: #r9 .rule }
 
 *  [s21 ]{: .label }[Contemporary authors have the freedom to interpret and develop the language.](#s21){: .prop }
-{: ana="#conclusion" }
+{: .conclusion }
 
 
 </div>
 
-<div class="syllogism" id="CR8" markdown>
+<div class="argument" id="CR8" markdown>
+#### Argument CR8
+[Disputed words]{: title="Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }
 
 *  [s23 ]{: .label }[In dead languages like Latin and Greek, one must imitate the best authors.]{: .prop }
-{: #s23 ana="#premise" }
+{: #s23 .premise }
 
-*  [s24 ]{: .label }[Italian is a living language.]{: .prop }
-{: #s24 ana="#premise" }
+*  [s24 ]{: .label }[Living languages are naturally modified by the variety of their speakers.]{: .prop }
+{: #s24 .premise }
 
-*  [r10 ]{: .label }[Unlike dead languages, a living language must draw from the variety of its speakers and cannot be normed by a single authority.]{: .prop }
-{: #r10 ana="#rule" }
+*  [s25 ]{: .label }[Italian is a living language.]{: .prop }
+{: #s25 .premise }
 
-*  [s25 ]{: .label }[Italian should not be limited to the authority of a single author, such as Petrarch.]{: .prop }
-{: #s25 ana="#conclusion" }
+*  [r10 ]{: .label }[Unlike dead languages, a living language such as Italian must draw from the variety of its speakers and cannot be normed by a single authority.]{: .prop }
+{: #r10 .rule }
+
+*  [s26 ]{: .label }[Italian should not be limited to the authority of a single author, such as Petrarch.]{: .prop }
+{: #s26 .conclusion }
 
 
 </div>
@@ -457,9 +475,9 @@ Venite a’ l’ombra de’ gran gigli d’oro
 
 #### Mala elezione di parole forestiere
 
-\[…\] Poiché le parole latine sono straniere a’ vulgari, \[…\] sì come non acconcie ad essere adoperate in questa canzone sono state da me segnate, e vanamente si producono dal [Caro][caro] per sostegno loro l’autorità de’ valenti maestri di ritorica e di poesia, alcuni de’ quali non parlano di questa maniera di parole strane e alcuni ne parlano sì, ma niegano l’uso loro o non lo concedono in questo caso; sì come ancora s’adducono certi essempi di scrittori e alcune ragioni che non appertengono alla disputa nostra. \[…\]
+\[…\] [Poiché le parole latine sono straniere a’ vulgari]{: ana="#s12" }, \[…\] e [le parole latine segnate da me non sono state messe dal Caro in questa canzone per beffarsi dell'aversario]{: ana="#s28" }, [né perché mancassero le vulgari da riporre in suo luogo]{: ana="#s29" }, come si mostrerà, [né perché quelle sieno state ricevute e dimesticate tra vulgari]{: ana="#s30" }. Adunque [sì come non acconcie ad essere adoperate in questa canzone sono state da me segnate]{: ana="#s5" }, e [vanamente si producono dal [Caro][caro] per sostegno loro l’autorità de’ valenti maestri di ritorica e di poesia, alcuni de’ quali non parlano di questa maniera di parole strane e alcuni ne parlano sì, ma niegano l’uso loro o non lo concedono in questo caso]{: ana="#s35" }; sì come ancora s’adducono certi essempi di scrittori e alcune ragioni che non appertengono alla disputa nostra. \[…\]
 
-Il qual [Quintiliano][quintilian], dicendo che [Orazio][horace] è «[*et varius figuris et verbis felicissime audax*]{: .q title="Quintilian, <em>Institutio Oratoria</em> X 1,96" }» \[variegato nelle forme del discorso e felicissimo innovatore nei vocaboli\], [intende dell’arditezza di lui aventurosa solamente dentro da termini della lingua latina quanto appartiene alle voci;]{: ana="#s26" } e dicendo
+Il qual [Quintiliano][quintilian], dicendo che [Orazio][horace] è «[*et varius figuris et verbis felicissime audax*]{: .q title="Quintilian, <em>Institutio Oratoria</em> X 1,96" }» \[variegato nelle forme del discorso e felicissimo innovatore nei vocaboli\], [intende dell’arditezza di lui aventurosa solamente dentro da termini della lingua latina quanto appartiene alle voci;]{: ana="#s32" } e dicendo
 <blockquote class="foreign" title="Quintilian, <em>Institutio Oratoria</em> VIII 3,33" markdown>
 nisi quod iniqui iudices adversus nos sumus, ideoque paupertate sermonis laboramus
 
@@ -469,9 +487,9 @@ nisi quod iniqui iudices adversus nos sumus, ideoque paupertate sermonis laboram
 se non per il fatto che siamo troppo autocritici, ed è perciò che siamo afflitti dalla povertà del nostro lessico
 
 </div>
-[intende egli della formazione delle parole latine a similitudine delle greche, e non del portare le forestiere \[…\] in un’altra lingua,]{: ana="#s26" } come mostra d’avere il [Caro][caro] per costante che intenda; e dicendo in due luoghi «*audendum*» \[bisogna osare\] [non intende universalmente delle voci d’ogni maniera di lingua forestiera, ma particolarmente delle voci formate di nuovo dal favellatore secondo la maniera della lingua \[…\] straniera.]{: ana="#s26" } \[…\]
+[intende egli della formazione delle parole latine a similitudine delle greche, e non del portare le forestiere \[…\] in un’altra lingua,]{: ana="#s32" } come mostra d’avere il [Caro][caro] per costante che intenda; e dicendo in due luoghi «*audendum*» \[bisogna osare\] [non intende universalmente delle voci d’ogni maniera di lingua forestiera, ma particolarmente delle voci formate di nuovo dal favellatore secondo la maniera della lingua \[…\] straniera.]{: ana="#s32" } \[…\]
 
-Ora, perché non sia una persona medesima secondo [Varrone][varro] quella del favellatore e quella del poeta nell’usare l’analogia o la proporzione nelle parole; né perché non sia la ragione loro pari; né quella stessa [potendo il poeta «[*transilire lineas impune*]{: .q title="Varro, <em>De Lingua Latina</em> IX 5" }», cioè passare il segno, il che è interpretato da [Varrone][varro] medesimo che il poeta può più liberamente seguire l’analogia nelle parole che non può il favellatore;]{: ana="#s27" } non si concede miga per lui, secondo che presuppone il [Caro][caro], che si conceda che il poeta possa mescolare voci strane \[…\] nel suo poema, sì come altresì non si concede ciò per [Orazio][horace] perché egli chiami l’uso generator delle parole, o perché dica che molte parole già morte rinasceranno, e molte, che sono in pregio, cadranno con questa condizione
+Ora, perché non sia una persona medesima secondo [Varrone][varro] quella del favellatore e quella del poeta nell’usare l’analogia o la proporzione nelle parole; né perché non sia la ragione loro pari; né quella stessa [potendo il poeta «[*transilire lineas impune*]{: .q title="Varro, <em>De Lingua Latina</em> IX 5" }», cioè passare il segno, il che è interpretato da [Varrone][varro] medesimo che il poeta può più liberamente seguire l’analogia nelle parole che non può il favellatore;]{: ana="#s33" } non si concede miga per lui, secondo che presuppone il [Caro][caro], che si conceda che il poeta possa mescolare voci strane \[…\] nel suo poema, sì come altresì [non si concede ciò per [Orazio][horace] perché egli chiami l’uso generator delle parole, o perché dica che molte parole già morte rinasceranno, e molte, che sono in pregio, cadranno con questa condizione]{: ana="#s36" }
 <blockquote class="foreign" title="Horace, <em>Ars Poetica</em> 71–72" markdown>
 
 si volet usus
@@ -491,7 +509,7 @@ che è il solo a essere legge, norma e diritto del nostro parlare
 
 
 </div>
-secondo che presupone il [Caro][caro] che si conceda. La podestà del quale uso è molto grande nel generar vocaboli e nel ravivare i già morti e nell’abbattere gli onorati, sì come dice [Orazio][horace], ma è picciola o nulla nel producere voci artificiose per significazione o per formazione, delle quali sole si parla in quelle parole oraziane
+secondo che presupone il [Caro][caro] che si conceda. [[La podestà del quale uso è molto grande nel generar vocaboli e nel ravivare i già morti e nell’abbattere gli onorati, sì come dice [Orazio][horace]]{: ana="#s36" }, ma è picciola o nulla nel producere voci artificiose per significazione o per formazione]{: ana="#s39" }, delle quali sole si parla in quelle parole oraziane
 <blockquote class="foreign" title="Horace, <em>Ars Poetica</em> 58–59" markdown>
 
 Licuit semperque licebit
@@ -511,23 +529,100 @@ imprimere nel nostro linguaggio il sigillo dell’oggi
 
 
 </div>
-pendendo del tutto questo lecito coniamento de’ vocaboli dall’ardire ingegnoso dello scrittore e non dalla forza del potente uso, come ingannandosi crede il [Caro][caro]. \[…\]
+[[pendendo del tutto questo lecito coniamento de’ vocaboli dall’ardire ingegnoso dello scrittore]{: ana="#s37" } e non dalla forza del potente uso]{: ana="#s39" }, come ingannandosi crede il [Caro][caro]. \[…\]
 
 <div class="paraphrase" markdown>
 
-<div class="syllogism" id="CV3" markdown>
+<div class="argument" id="CV3" markdown>
+#### Argument CV3
+[Disputed words]{: title="Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }
 
-*  [s26 ]{: .label }[Quintilian supports the formation of Latin words after the model of Greek ones.]{: .prop }
-{: #s26 ana="#premise" }
+*  [s27 ]{: .label }[Foreign words in poetry require rhetorical purpose, lexical necessity, or established usage to be justified.]{: .prop }
+{: #s27 .premise }
 
-*  [s27 ]{: .label }[Varro speaks of poetic license in terms of a freedom to follow morphological analogy rather than common usage in word formation.]{: .prop }
-{: #s27 ana="#premise" }
+*  [s28 ]{: .label }[Caro did not use those words ironically.]{: .prop }
+{: #s28 .premise }
 
-*  [r11 ]{: .label }[Rule]{: .prop }
-{: #r11 ana="#rule" }
+*  [s29 ]{: .label }[Caro was not forced to use those words by lack of Italian equivalents.]{: .prop }
+{: #s29 .premise }
 
-*  [s28 ]{: .label }[Rethoric masters endorse new word formation after the model of foreign words, not the usage of foreign words themselves.]{: .prop }[ ✖ s11]{: .against }
-{: #s28 ana="#conclusion" }
+*  [s30 ]{: .label }[The words Caro used were not legitimized by common usage.]{: .prop }
+{: #s30 .premise }
+
+*  [r11 ]{: .label }[A poet who introduces foreign words without rhetorical, lexical, or customary justification fails in poetic judgment.]{: .prop }
+{: #r11 .rule }
+
+*  [s31 ]{: .label }[Caro inserted those words gratuitously, revealing a failure of poetic judgment.]{: .prop }
+{: #s31 .conclusion }
+
+
+</div>
+
+<div class="argument" id="CV4" markdown>
+#### Argument CV4
+[Latinisms]{: title="Loanwords from written Latin that are artificially introduced into Italian through phonetic and morphological adaptation, as opposed to hereditary words, which result naturally from uninterrupted phonetic evolution. Latinisms are often employed in poetic texts to elevate the stylistic register." }
+
+*  [s32 ]{: .label }[Quintilian supports the formation of Latin words after the model of Greek ones.]{: .prop }
+{: #s32 .premise }
+
+*  [s33 ]{: .label }[Varro allows poets greater freedom than orators in forming words by morphological analogy rather than by common usage.]{: .prop }
+{: #s33 .premise }
+
+*  [s34 ]{: .label }[Quintilian and Varro represent the consensus of the masters of rhetoric on linguistic matters.]{: .prop }
+{: #s34 .premise }
+
+*  [r12 ]{: .label }[If the masters of rhetoric include some linguistic practices under poetic license and omit others, then only the discussed practices are to be considered endorsed.]{: .prop }
+{: #r12 .rule }
+
+*  [s35 ]{: .label }[The masters of rhetoric endorse new word formation after the model of foreign words, not the usage of foreign words themselves.]{: .prop }[ ✖ s11](#s11){: .against }
+{: #s35 .conclusion }
+
+
+</div>
+
+<div class="argument" id="CV5" markdown>
+#### Argument CV5
+[Latinisms]{: title="Loanwords from written Latin that are artificially introduced into Italian through phonetic and morphological adaptation, as opposed to hereditary words, which result naturally from uninterrupted phonetic evolution. Latinisms are often employed in poetic texts to elevate the stylistic register." }
+
+*  [s36 ]{: .label }[Horace teaches that usage is the arbiter of the survival and demise of words within a language.]{: .prop }
+{: #s36 .premise }
+
+*  [s37 ]{: .label }[Horace acknowledges the writer’s license to coin new words through individual ingenuity.]{: .prop }
+{: #s37 .premise }
+
+*  [s38 ]{: .label }[Latinisms are not products of usage but artificial formations introduced by the author.]{: .prop }
+{: #s38 .premise }
+
+*  [r13 ]{: .label }[Horace distinguishes between words that evolve through usage and words created by authorial invention; Latinisms fall into the latter.]{: .prop }
+{: #r13 .rule }
+
+*  [s39 ]{: .label }[The legitimacy of Latinisms in Italian poetry depends solely on the ingenuity of the author.]{: .prop }[ ✖ s14](#s14){: .against }
+{: #s39 .conclusion }
+
+
+</div>
+
+<div class="argument" id="CV6" markdown>
+#### Argument CV6
+[Disputed words]{: title="Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro." }, [Latinisms]{: title="Loanwords from written Latin that are artificially introduced into Italian through phonetic and morphological adaptation, as opposed to hereditary words, which result naturally from uninterrupted phonetic evolution. Latinisms are often employed in poetic texts to elevate the stylistic register." }
+
+*  [s12 ]{: .label }[Latin words are foreign to Italian speakers.](#s12){: .prop }
+{: .premise }
+
+*  [s15 ]{: .label }[Those words are Latinisms.](#s15){: .prop }
+{: .premise }
+
+*  [s39 ]{: .label }[The legitimacy of Latinisms in Italian poetry depends solely on the ingenuity of the author.](#s39){: .prop }[ ✖ s14](#s14){: .against }
+{: .premise }
+
+*  [s31 ]{: .label }[Caro inserted those words gratuitously, revealing a failure of poetic judgment.](#s31){: .prop }
+{: .premise }
+
+*  [r14 ]{: .label }[Unjustified latinisms should not be used in Italian poetry.]{: .prop }
+{: #r14 .rule }
+
+*  [s5 ]{: .label }[Those words should not be used.](#s5){: .prop }[ ✖ s10](#s10){: .against }
+{: .conclusion }
 
 
 </div>
@@ -537,15 +632,30 @@ pendendo del tutto questo lecito coniamento de’ vocaboli dall’ardire ingegno
 
 Perché resta che veggiamo se, accostandoci noi all’opinione di messer [Pietro Bembo][bembo], che solo ha tenuto sermone di simiglianti voci, e all’essempio de’ poeti della lingua vulgare, le possiamo mantenere con lode nella canzone dove sono state poste dal [Caro][caro].
 
-Ma per apprender pienamente l’opinione di così riverendo scrittore intorno a ciò, e per sapere sicuramente dove e quando si permetta l’uso delle voci latine in canzone ad essempio de’ poeti vulgari, dico prima che sono da sciegliere certi scrittori d’autorità a quali si possa prestar fede nell’elezione delle parole; o più tosto sono da riconoscere i già scielti da messer [Pietro Bembo][bembo], e nominati da lui ne’ suoi libri della lingua vulgare, e citati a confermazione delle cose insegnateci, tra quali giudica essere il [Boccaccio][boccaccio] l’ottimo prosatore e ’l [Petrarca][petrarca] l’ottimo rimatore, e amenduni gli ultimi in tempo da essere creduti.
+Ma per apprender pienamente l’opinione di così riverendo scrittore intorno a ciò, e per sapere sicuramente dove e quando si permetta l’uso delle voci latine in canzone ad essempio de’ poeti vulgari, dico prima che [sono da sciegliere certi scrittori d’autorità a quali si possa prestar fede nell’elezione delle parole; o più tosto sono da riconoscere i già scielti da messer [Pietro Bembo][bembo]]{: ana="#s40" }, e nominati da lui ne’ suoi libri della lingua vulgare, e citati a confermazione delle cose insegnateci, tra quali [giudica essere il [Boccaccio][boccaccio] l’ottimo prosatore e ’l [Petrarca][petrarca] l’ottimo rimatore, e amenduni gli ultimi in tempo da essere creduti]{: ana="#s41" }.
 
-Ora il [Caro][caro] non si dovrebbe maravigliare se, dicendo egli che la lingua nostra è tenuta molto alla dottrina del [Bembo][bembo] nella scielta delle parole, io mi ritrarrò da dar molta credenza in questa parte a [Lorenzo de’ Medici][lorenzo-medici], o ad [Angelo Poliziano][poliziano], o ad alcun altro più moderno, poi che lo farò consigliato da esso [Bembo][bembo] approvato per buon consigliatore da esso [Caro][caro]. \[…\]
+Ora il [Caro][caro] non si dovrebbe maravigliare se, dicendo egli che la lingua nostra è tenuta molto alla dottrina del [Bembo][bembo] nella scielta delle parole, [io mi ritrarrò da dar molta credenza in questa parte a [Lorenzo de’ Medici][lorenzo-medici], o ad [Angelo Poliziano][poliziano], o ad alcun altro più moderno, poi che lo farò consigliato da esso [Bembo][bembo]]{: ana="#s41" } approvato per buon consigliatore da esso [Caro][caro]. \[…\]
 
-I volumi adunque riprovati da gli loro quantunque degni scrittori, o lasciatici imperfetti, o ripresi liberamente dal [Bembo][bembo] quanto è alla lingua, o trapassati per lui sotto taciturnità non ci possono rendere sicuri da biasimo se riempieremo i nostri scritti delle loro voci che non sieno altrove in volumi a quali non manchi né il fine, né il compiacimento del suo autore, né l’approvamento del [Bembo][bembo].
+[I volumi adunque riprovati da gli loro quantunque degni scrittori, o lasciatici imperfetti, o ripresi liberamente dal [Bembo][bembo] quanto è alla lingua, o trapassati per lui sotto taciturnità non ci possono rendere sicuri da biasimo se riempieremo i nostri scritti delle loro voci]{: ana="#s41" } che non sieno altrove in volumi a quali non manchi né il fine, né il compiacimento del suo autore, né l’approvamento del [Bembo][bembo].
 
-Ma non per tanto, oltre al predetto fine de’ volumi, e compiacimento de’ suoi autori, e approvamento del [Bembo][bembo], è consiglio di [Quintiliano][quintilian], in questa materia d’usar le voci latine o altre ad essempio altrui, che si debba riguardare attentamente, ancora che non faccia errore chi usa le voci le quali hanno poste gli autori nobili ne’ suoi volumi, non tanto se que’ cotali abbiano poste quelle cotali voci, quanto se essi abbiano tirati de gli altri nel loro parere e avuti in ciò de’ seguaci.
+Ma non per tanto, oltre al predetto fine de’ volumi, e compiacimento de’ suoi autori, e approvamento del [Bembo][bembo], è consiglio di [Quintiliano][quintilian], in questa materia d’usar le voci latine o altre ad essempio altrui, che si debba riguardare attentamente, ancora che non faccia errore chi usa le voci le quali hanno poste gli autori nobili ne’ suoi volumi, non tanto se que’ cotali abbiano poste quelle cotali voci, quanto se essi abbiano tirati de gli altri nel loro parere e avuti in ciò de’ seguaci. \[…\]
+
+Ultimamente, è da fermarci nella memoria che né autorità di scrittori, né approvamento loro di libri \[…\] ci deono poter difendere da chi avrà volontà di biasimarci, se cercheremo molte voci latine sparse e seminate o in molti e diversi buon volumi, o in un solo buon volume grande, e, raccogliendole insieme, le riporremo in una brieve compositione, quale sarebbe un sonetto o una canzone; conciosia cosa che l'uso di queste parole latine, ne’ luoghi ne’ quali è permesso, debba esser molto ristretto: sì perché i dottori dell'arte del favellare non concedono quello delle parole straniere \[…\] se non di rado e con risparmio; sì perché i poeti vulgari sono stati scarsissimi in adoperar simili parole ne’ sonetti e nelle canzoni, e più quelli che sono lodati per migliori rimatori.
 
 <div class="paraphrase" markdown>
+
+<div class="argument" id="CV7" markdown>
+#### Argument CV7
+[Imitation]{: title="The practice of poets and prose-writers reworking the words, stylistic features, and themes of the authors who preceded them as a way of expressing awareness of their literary heritage. In the Renaissance period, it was not regarded as plagiarism but as essential to the creation of an original literary work." }
+
+*  [s40 ]{: .label }[Pietro Bembo is a master of discernment in imitation for Italian literature.]{: .prop }
+{: #s40 .premise }
+
+*  [s41 ]{: .label }[Bembo argues that only the best authors of the 14th century, in their finished and approved works, are worthy of imitation.]{: .prop }
+{: #s41 .premise }
+
+
+</div>
 
 
 </div>

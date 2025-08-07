@@ -23,16 +23,16 @@ To develop and test the ontology, we annotated a major Renaissance controversy b
 
 This site is built with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and treats ontologies as source code: extraction, reasoning, serialization, and documentation are integrated into a reproducible build process.
 
-The pipeline includes:
+The [pipeline](scripts/hook.py) includes:
 
 1. **TEI to Markdown**  
-   [`tei-to-markdown.py`](scripts/tei-to-markdown.py) converts TEI files via custom [XSLT stylesheets](tei/stylesheets/), generating Markdown with embedded argument outlines for interactive reading.
+   [`tei-to-markdown.py`](scripts/tei-to-markdown.py) converts TEI files via custom [XSLT stylesheets](tei/stylesheets/tei-to-markdown/), generating Markdown with embedded argument outlines for interactive reading.
 
 2. **TEI to RDF**  
    [`tei-to-turtle.py`](scripts/tei-to-turtle.py) extracts argument instances into [data.ttl](docs/ont/data.ttl), aligning them with the ontology.
 
 3. **Ontology Export and Reasoning**  
-   [`OntExport.kt`](ontexport/app/src/main/kotlin/OntExport.kt) serializes the TBox in TTL, RDF/XML, and JSON-LD formats, and runs HermiT over the ABoxes (`example.ttl`, `data.ttl`) to output inferred ontologies. It is compiled as a standalone [JAR](ontexport/app/build/libs/ontexport.jar) with no Java runtime dependencies.
+   [`OntExport.kt`](tools/ontexport/app/src/main/kotlin/OntExport.kt) serializes the TBox in TTL, RDF/XML, and JSON-LD formats, and runs HermiT over the ABoxes (`example.ttl`, `data.ttl`) to output inferred ontologies. It is compiled as a standalone [JAR](tools/ontexport/app/build/libs/ontexport.jar) with no Java runtime dependencies.
 
 4. **Ontology Documentation**  
    The [`ontdoc`](scripts/ontdoc/) module maps ontology elements to Python objects and handles their representation: it resolves punning, links terms across submodules, and additionally documents the extension of imported classes and properties. A Jinja2 [template](templates/doc-template.md) then generates Markdown descriptions for each submodule.

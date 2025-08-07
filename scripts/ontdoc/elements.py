@@ -162,7 +162,7 @@ class Rule(OntoElement):
 # Blank Node classes
 class BNodeElement:
     def __init__(el, *members: Union['OntoElement', 'BNodeElement']):
-        if members and isinstance(members[0], Iterable):
+        if members and all(isinstance(m, Iterable) for m in members):
             el.members = [e for m in members for e in m]
         else:
             el.members = members

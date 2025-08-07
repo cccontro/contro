@@ -10,7 +10,7 @@ def main():
     parser.add_argument(
         '--lang',
         nargs='*',
-        help='languages to filter the document by, leave empty for no filter'
+        help='languages to filter the document by to output separate language versions, leave empty for no filter'
     )
 
     args = parser.parse_args()

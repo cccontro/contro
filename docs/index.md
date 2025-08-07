@@ -1,9 +1,8 @@
 ---
-hide:
-  - navigation
-description:
 subtitle: About the project
 icon: material/earth
+hide:
+  - navigation
 extra_css:
   - assets/stylesheets/hero.css
 ---

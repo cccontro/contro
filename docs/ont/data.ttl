@@ -7,6 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix viaf: <http://viaf.org/viaf/> .
 @base <https://w3id.org/contro/data#> .
 
 <https://w3id.org/contro/data> rdf:type owl:Ontology ;
@@ -97,7 +98,7 @@ dul:Collection rdf:type owl:Class .
      arg:Premise :s11 ,
                  :s12 ,
                  :s13 ;
-     arg:Topic :disputed-words ;
+     arg:Topic :latinisms ;
      arg:by :predella .
 
 
@@ -108,7 +109,8 @@ dul:Collection rdf:type owl:Class .
      arg:InferenceRule :r6 ;
      arg:Premise :s14 ,
                  :s15 ;
-     arg:Topic :disputed-words ;
+     arg:Topic :disputed-words ,
+               :latinisms ;
      arg:by :predella .
 
 
@@ -119,7 +121,7 @@ dul:Collection rdf:type owl:Class .
      arg:InferenceRule :r7 ;
      arg:Premise :s16 ,
                  :s17 ;
-     arg:Topic :disputed-words ;
+     arg:Topic :imitation ;
      arg:by :predella .
 
 
@@ -149,10 +151,11 @@ dul:Collection rdf:type owl:Class .
 ###  https://w3id.org/contro/data#CR8
 :CR8 rdf:type owl:NamedIndividual ,
               arg:Argument ;
-     arg:Conclusion :s25 ;
+     arg:Conclusion :s26 ;
      arg:InferenceRule :r10 ;
      arg:Premise :s23 ,
-                 :s24 ;
+                 :s24 ,
+                 :s25 ;
      arg:Topic :disputed-words ;
      arg:by :predella .
 
@@ -177,6 +180,66 @@ dul:Collection rdf:type owl:Class .
                  :s4 ;
      arg:Topic :disputed-words ;
      arg:by :anon .
+
+
+###  https://w3id.org/contro/data#CV3
+:CV3 rdf:type owl:NamedIndividual ,
+              arg:Argument ;
+     arg:Conclusion :s31 ;
+     arg:InferenceRule :r11 ;
+     arg:Premise :s27 ,
+                 :s28 ,
+                 :s29 ,
+                 :s30 ;
+     arg:Topic :disputed-words ;
+     arg:by :castelvetro .
+
+
+###  https://w3id.org/contro/data#CV4
+:CV4 rdf:type owl:NamedIndividual ,
+              arg:Argument ;
+     arg:Conclusion :s35 ;
+     arg:InferenceRule :r12 ;
+     arg:Premise :s32 ,
+                 :s33 ,
+                 :s34 ;
+     arg:Topic :latinisms ;
+     arg:by :castelvetro .
+
+
+###  https://w3id.org/contro/data#CV5
+:CV5 rdf:type owl:NamedIndividual ,
+              arg:Argument ;
+     arg:Conclusion :s39 ;
+     arg:InferenceRule :r13 ;
+     arg:Premise :s36 ,
+                 :s37 ,
+                 :s38 ;
+     arg:Topic :latinisms ;
+     arg:by :castelvetro .
+
+
+###  https://w3id.org/contro/data#CV6
+:CV6 rdf:type owl:NamedIndividual ,
+              arg:Argument ;
+     arg:Conclusion :s5 ;
+     arg:InferenceRule :r14 ;
+     arg:Premise :s12 ,
+                 :s15 ,
+                 :s31 ,
+                 :s39 ;
+     arg:Topic :disputed-words ,
+               :latinisms ;
+     arg:by :castelvetro .
+
+
+###  https://w3id.org/contro/data#CV7
+:CV7 rdf:type owl:NamedIndividual ,
+              arg:Argument ;
+     arg:Premise :s40 ,
+                 :s41 ;
+     arg:Topic :imitation ;
+     arg:by :castelvetro .
 
 
 ###  https://w3id.org/contro/data#KB_caro
@@ -224,13 +287,19 @@ dul:Collection rdf:type owl:Class .
                               :w7 ,
                               :w8 ,
                               :w9 ;
-                rdfs:comment "Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro."@en ;
-                rdfs:label "Disputed word"@en .
+                rdfs:comment "Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro."@en ;
+                rdfs:label "Disputed words"@en .
+
+
+###  https://w3id.org/contro/data#imitation
+:imitation rdf:type owl:NamedIndividual ;
+           rdfs:comment "The practice of poets and prose-writers reworking the words, stylistic features, and themes of the authors who preceded them as a way of expressing awareness of their literary heritage. In the Renaissance period, it was not regarded as plagiarism but as essential to the creation of an original literary work."@en ;
+           rdfs:label "Imitation"@en .
 
 
 ###  https://w3id.org/contro/data#latinisms
 :latinisms rdf:type owl:NamedIndividual ;
-           rdfs:comment "Lexical Latinisms are loanwords from written Latin that are artificially introduced into Italian through phonetic and morphological adaptation, as opposed to hereditary words, which result naturally from uninterrupted phonetic evolution. Latinisms are often employed in poetic texts to elevate the stylistic register."@en ;
+           rdfs:comment "Loanwords from written Latin that are artificially introduced into Italian through phonetic and morphological adaptation, as opposed to hereditary words, which result naturally from uninterrupted phonetic evolution. Latinisms are often employed in poetic texts to elevate the stylistic register."@en ;
            rdfs:label "Latinisms"@en .
 
 
@@ -253,14 +322,53 @@ dul:Collection rdf:type owl:Class .
 ###  https://w3id.org/contro/data#r10
 :r10 rdf:type owl:NamedIndividual ;
      arg:Antecedent :s23 ,
-                    :s24 ;
-     arg:Consequent :s25 ;
-     rdfs:comment "Unlike dead languages, a living language must draw from the variety of its speakers and cannot be normed by a single authority."@en .
+                    :s25 ;
+     arg:Consequent :s26 ;
+     rdfs:comment "Unlike dead languages, a living language such as Italian must draw from the variety of its speakers and cannot be normed by a single authority."@en .
+
+
+###  https://w3id.org/contro/data#r11
+:r11 rdf:type owl:NamedIndividual ;
+     arg:Antecedent :s27 ,
+                    :s28 ,
+                    :s29 ,
+                    :s30 ;
+     arg:Consequent :s31 ;
+     rdfs:comment "A poet who introduces foreign words without rhetorical, lexical, or customary justification fails in poetic judgment."@en .
+
+
+###  https://w3id.org/contro/data#r12
+:r12 rdf:type owl:NamedIndividual ;
+     arg:Antecedent :s32 ,
+                    :s33 ,
+                    :s34 ;
+     arg:Consequent :s35 ;
+     rdfs:comment "If the masters of rhetoric include some linguistic practices under poetic license and omit others, then only the discussed practices are to be considered endorsed."@en .
+
+
+###  https://w3id.org/contro/data#r13
+:r13 rdf:type owl:NamedIndividual ;
+     arg:Antecedent :s36 ,
+                    :s37 ,
+                    :s38 ;
+     arg:Consequent :s39 ;
+     rdfs:comment "Horace distinguishes between words that evolve through usage and words created by authorial invention; Latinisms fall into the latter."@en .
+
+
+###  https://w3id.org/contro/data#r14
+:r14 rdf:type owl:NamedIndividual ;
+     arg:Antecedent :s12 ,
+                    :s15 ,
+                    :s31 ,
+                    :s39 ;
+     arg:Consequent :s10 ;
+     rdfs:comment "Unjustified latinisms should not be used in Italian poetry."@en .
 
 
 ###  https://w3id.org/contro/data#r2
 :r2 rdf:type owl:NamedIndividual ;
-    arg:Antecedent :s3 ;
+    arg:Antecedent :s3 ,
+                   :s4 ;
     arg:Consequent :s5 ;
     rdfs:comment "Italian authors should avoid words that an authority like Petrarch chose not to use."@en .
 
@@ -350,7 +458,11 @@ dul:Collection rdf:type owl:Class .
 
 ###  https://w3id.org/contro/data#s12
 :s12 rdf:type owl:NamedIndividual ;
-     rdfs:comment "Latin words are foreign, yet intelligible, in Italian."@en .
+     rdfs:comment "Latin words are foreign to Italian speakers."@en ;
+     prov:value "Poiché le parole latine sono straniere a’ vulgari"@it ,
+                "Since Latin words are foreign to vernacular speakers"@en ,
+                "they are permitted not only to use those that are foreign and common in the country, as these are"@en ,
+                "è lor concesso d’usar quelle che son forestiere e pratiche del paese, come son queste"@it .
 
 
 ###  https://w3id.org/contro/data#s13
@@ -360,7 +472,9 @@ dul:Collection rdf:type owl:Class .
 
 ###  https://w3id.org/contro/data#s14
 :s14 rdf:type owl:NamedIndividual ;
-     rdfs:comment "Italian authors are justified in using Latinisms."@en .
+     rdfs:comment "Italian authors are justified in using Latinisms."@en ;
+     prov:value "they are permitted not only to use those that are foreign and common in the country, as these are"@en ,
+                "è lor concesso d’usar quelle che son forestiere e pratiche del paese, come son queste"@it .
 
 
 ###  https://w3id.org/contro/data#s15
@@ -388,8 +502,8 @@ dul:Collection rdf:type owl:Class .
 :s18 rdf:type owl:NamedIndividual ;
      arg:contradicts :r2 ;
      rdfs:comment "Literary imitation should emulate the author’s judgment, not reproduce their words."@en ;
-     prov:value "Imitar lui vuol dire che si deve portar la persona e le gambe come egli fece; e non porre ’l piedi nelle sue stesse pedate. Egli si valse giudiziosamente, in tutte le lingue, di tutte le buone voci: col medesimo giudizio è lecito di valersene ancora ad ognuno."@it ,
-                "To imitate him means to carry oneself and move one’s legs as he did, not to place one’s feet in his very footprints. He made judicious use, in all languages, of all worthy words; with the same judgment, anyone may likewise make use of them."@en .
+     prov:value "Imitar lui vuol dire che si deve portar la persona e le gambe come egli fece; e non porre ’l piedi nelle sue stesse pedate"@it ,
+                "To imitate him means to carry oneself and move one’s legs as he did, not to place one’s feet in his very footprints"@en .
 
 
 ###  https://w3id.org/contro/data#s19
@@ -403,7 +517,9 @@ dul:Collection rdf:type owl:Class .
 :s2 rdf:type owl:NamedIndividual ;
     rdfs:comment "Other authors of his time used those words."@en ;
     prov:value "conciofossecosaché al suo tempo fossero state usate forse tutte, ma senza dubbio la maggior parte, dagli scrittori"@it ,
-               "since they had perhaps all, or at least most, been used by writers of his time"@en .
+               "non vi contentarete voi del giudizio, dell’autorità e dell’essempio di quelli che sono i maestri dell’arte dello scrivere, dai quali hanno imparato il Petrarca e tutti gli altri buoni scrittori"@it ,
+               "since they had perhaps all, or at least most, been used by writers of his time"@en ,
+               "would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing, the very ones from whom Petrarch and all other good writers have learned"@en .
 
 
 ###  https://w3id.org/contro/data#s20
@@ -428,22 +544,48 @@ dul:Collection rdf:type owl:Class .
 ###  https://w3id.org/contro/data#s23
 :s23 rdf:type owl:NamedIndividual ;
      rdfs:comment "In dead languages like Latin and Greek, one must imitate the best authors."@en ;
-     prov:value "For here lies the error you have fallen into: believing that in this language one ought to act as in Greek and Latin—languages which, being dead as regards common speech, must necessarily be written by drawing from the writings of the few and by imitating the best, since we cannot ourselves grasp their native power or beauty."@en ,
-                "perché qui sta l’errore che avete preso, di credere che in questa lingua si debba fare come nella greca e nella latina; le quali essendo morte quanto all’uso del parlar commune, è necessario che si scrivano cavando dagli scritti de’ pochi ed imitando i migliori, non potendosi da noi conoscere la forza né la bellezza lor naturale."@it .
+     prov:value "being dead as regards common speech, must necessarily be written by drawing from the writings of the few and by imitating the best"@en ,
+                "le quali essendo morte quanto all’uso del parlar commune, è necessario che si scrivano cavando dagli scritti de’ pochi ed imitando i migliori"@it .
 
 
 ###  https://w3id.org/contro/data#s24
 :s24 rdf:type owl:NamedIndividual ;
-     rdfs:comment "Italian is a living language."@en ;
-     prov:value "But in this language—which is naturally and commonly spoken and understood by all, and which presents itself to us alive and entirely uncovered in all its parts—"@en ,
-                "Ma in questa, che naturalmente o communemente si parla e s’intende da tutti e che viva e nuda interamente e in ogni sua parte ci si mostra,"@it .
+     rdfs:comment "Living languages are naturally modified by the variety of their speakers."@en ;
+     prov:value "la natura d’essa lingua, che non possa, come l’altre, crescere e scemare"@it ,
+                "the nature of the language itself, denying it the ability, like all others, to grow and decline"@en .
 
 
 ###  https://w3id.org/contro/data#s25
 :s25 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Italian is a living language."@en ;
+     prov:value "But in this language—which is naturally and commonly spoken and understood by all, and which presents itself to us alive and entirely uncovered in all its parts"@en ,
+                "Ma in questa, che naturalmente o communemente si parla e s’intende da tutti e che viva e nuda interamente e in ogni sua parte ci si mostra"@it .
+
+
+###  https://w3id.org/contro/data#s26
+:s26 rdf:type owl:NamedIndividual ;
      rdfs:comment "Italian should not be limited to the authority of a single author, such as Petrarch."@en ;
      prov:value "che giudizio è il vostro a pensare che necessariamente si debba cavar dagli scritti di un solo, e non anco da molti che la parlano e la scrivono;"@it ,
                 "what kind of judgment is it to think that one must necessarily draw from the writings of a single author, and not also from the many who speak and write it;"@en .
+
+
+###  https://w3id.org/contro/data#s27
+:s27 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Foreign words in poetry require rhetorical purpose, lexical necessity, or established usage to be justified."@en .
+
+
+###  https://w3id.org/contro/data#s28
+:s28 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Caro did not use those words ironically."@en ;
+     prov:value "le parole latine segnate da me non sono state messe dal Caro in questa canzone per beffarsi dell'aversario"@it ,
+                "the Latin words marked by me were not placed by Caro in this canzone to mock his adversary"@en .
+
+
+###  https://w3id.org/contro/data#s29
+:s29 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Caro was not forced to use those words by lack of Italian equivalents."@en ;
+     prov:value "nor because there were no vernacular words to put in their place"@en ,
+                "né perché mancassero le vulgari da riporre in suo luogo"@it .
 
 
 ###  https://w3id.org/contro/data#s3
@@ -452,9 +594,83 @@ dul:Collection rdf:type owl:Class .
     prov:value "Il Petrarca non userebbe:"@it ,
                "Petrarch would not have used any of the elements he noted in Caro’s canzone"@en ,
                "Petrarch would not use:"@en ,
-               "che il Petrarca non userebbe cede ed altre voci che seguono"@it ,
+               "che il Petrarca non userebbe «cede» ed altre voci che seguono"@it ,
                "il Petrarca non avrebbe usata niuna delle cose notate da lui nella canzone del Caro"@it ,
-               "that Petrarch would not use cede and the other words that follow"@en .
+               "that Petrarch would not use «cede» and the other words that follow"@en .
+
+
+###  https://w3id.org/contro/data#s30
+:s30 rdf:type owl:NamedIndividual ;
+     rdfs:comment "The words Caro used were not legitimized by common usage."@en ;
+     prov:value "nor because those words have been received and made familiar among vernacular speakers"@en ,
+                "né perché quelle sieno state ricevute e dimesticate tra vulgari"@it .
+
+
+###  https://w3id.org/contro/data#s31
+:s31 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Caro inserted those words gratuitously, revealing a failure of poetic judgment."@en .
+
+
+###  https://w3id.org/contro/data#s32
+:s32 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Quintilian supports the formation of Latin words after the model of Greek ones."@en ;
+     prov:value "he does not mean it universally of words from every kind of foreign language, but specifically of words newly coined by the orator following the manner of a foreign  tongue."@en ,
+                "he means his daring as fortunate only within the bounds of the Latin language, as far as vocabulary is concerned;"@en ,
+                "he refers to the formation of Latin words after the model of Greek ones, and not to the importing of foreign words  into another language,"@en ,
+                "intende dell’arditezza di lui aventurosa solamente dentro da termini della lingua latina quanto appartiene alle voci;"@it ,
+                "intende egli della formazione delle parole latine a similitudine delle greche, e non del portare le forestiere  in un’altra lingua,"@it ,
+                "non intende universalmente delle voci d’ogni maniera di lingua forestiera, ma particolarmente delle voci formate di nuovo dal favellatore secondo la maniera della lingua  straniera."@it .
+
+
+###  https://w3id.org/contro/data#s33
+:s33 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Varro allows poets greater freedom than orators in forming words by morphological analogy rather than by common usage."@en ;
+     prov:value "potendo il poeta «transilire lineas impune», cioè passare il segno, il che è interpretato da Varrone medesimo che il poeta può più liberamente seguire l’analogia nelle parole che non può il favellatore;"@it ,
+                "the poet is allowed to «transilire lineas impune», or pass the mark, which Varro himself interprets to mean that the poet may follow analogy in words more freely than the orator can;"@en .
+
+
+###  https://w3id.org/contro/data#s34
+:s34 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Quintilian and Varro represent the consensus of the masters of rhetoric on linguistic matters."@en .
+
+
+###  https://w3id.org/contro/data#s35
+:s35 rdf:type owl:NamedIndividual ;
+     arg:contradicts :s11 ;
+     rdfs:comment "The masters of rhetoric endorse new word formation after the model of foreign words, not the usage of foreign words themselves."@en ;
+     prov:value "in vain does Caro bring forth the authority of the eminent masters of rhetoric and poetry in their support, some of whom do not speak of this kind of foreign words, and some do speak of them, but deny their use or do not allow it in this case"@en ,
+                "vanamente si producono dal Caro per sostegno loro l’autorità de’ valenti maestri di ritorica e di poesia, alcuni de’ quali non parlano di questa maniera di parole strane e alcuni ne parlano sì, ma niegano l’uso loro o non lo concedono in questo caso"@it .
+
+
+###  https://w3id.org/contro/data#s36
+:s36 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Horace teaches that usage is the arbiter of the survival and demise of words within a language."@en ;
+     prov:value "La podestà del quale uso è molto grande nel generar vocaboli e nel ravivare i già morti e nell’abbattere gli onorati, sì come dice Orazio"@it ,
+                "The power of usage is indeed great in generating new words, in reviving the dead, and in bringing down those that are honored, as Horace says"@en ,
+                "it does not follow in the case of Horace because he calls usage the begetter of words, or because he says that many words now dead will be reborn, and many that are esteemed will fall into this condition"@en ,
+                "non si concede ciò per Orazio perché egli chiami l’uso generator delle parole, o perché dica che molte parole già morte rinasceranno, e molte, che sono in pregio, cadranno con questa condizione"@it .
+
+
+###  https://w3id.org/contro/data#s37
+:s37 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Horace acknowledges the writer’s license to coin new words through individual ingenuity."@en ;
+     prov:value "as all this liberty in coining words depends entirely on the ingenious daring of the writer"@en ,
+                "pendendo del tutto questo lecito coniamento de’ vocaboli dall’ardire ingegnoso dello scrittore"@it .
+
+
+###  https://w3id.org/contro/data#s38
+:s38 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Latinisms are not products of usage but artificial formations introduced by the author."@en .
+
+
+###  https://w3id.org/contro/data#s39
+:s39 rdf:type owl:NamedIndividual ;
+     arg:contradicts :s14 ;
+     rdfs:comment "The legitimacy of Latinisms in Italian poetry depends solely on the ingenuity of the author."@en ;
+     prov:value "La podestà del quale uso è molto grande nel generar vocaboli e nel ravivare i già morti e nell’abbattere gli onorati, sì come dice Orazio, ma è picciola o nulla nel producere voci artificiose per significazione o per formazione"@it ,
+                "The power of usage is indeed great in generating new words, in reviving the dead, and in bringing down those that are honored, as Horace says, but it is slight or null when it comes to producing artificial words either by signification or by formation"@en ,
+                "as all this liberty in coining words depends entirely on the ingenious daring of the writer, and not on the force of prevailing usage"@en ,
+                "pendendo del tutto questo lecito coniamento de’ vocaboli dall’ardire ingegnoso dello scrittore e non dalla forza del potente uso"@it .
 
 
 ###  https://w3id.org/contro/data#s4
@@ -466,19 +682,45 @@ dul:Collection rdf:type owl:Class .
                "since he holds Petrarch as the prince of poets in our language, worthy of reverence and admiration above all others."@en .
 
 
+###  https://w3id.org/contro/data#s40
+:s40 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Pietro Bembo is a master of discernment in imitation for Italian literature."@en ;
+     prov:value "And in this respect, our language owes perpetual gratitude to Bembo, for he taught us how to proceed in this way, and restrained the boldness of those who transgressed too licentiously in this matter"@en ,
+                "E in questo ha spezialmente la nostra favella perpetuo obligo col Bembo, perché n’insegnò la via di così fare, e raffrenò l’audacia di coloro che troppo licenziosamente in ciò trascorrevano"@it ,
+                "one must select certain authoritative writers to trust regarding the choice of words; or rather, one should acknowledge those that Messer Pietro Bembo has already selected"@en ,
+                "sono da sciegliere certi scrittori d’autorità a quali si possa prestar fede nell’elezione delle parole; o più tosto sono da riconoscere i già scielti da messer Pietro Bembo"@it .
+
+
+###  https://w3id.org/contro/data#s41
+:s41 rdf:type owl:NamedIndividual ;
+     rdfs:comment "Bembo argues that only the best authors of the 14th century, in their finished and approved works, are worthy of imitation."@en ;
+     prov:value "I refrain from placing much trust in this regard in Lorenzo de’ Medici, in Angelo Poliziano, or in any other more recent author, since I do so on the advice of Bembo himself"@en ,
+                "I volumi adunque riprovati da gli loro quantunque degni scrittori, o lasciatici imperfetti, o ripresi liberamente dal Bembo quanto è alla lingua, o trapassati per lui sotto taciturnità non ci possono rendere sicuri da biasimo se riempieremo i nostri scritti delle loro voci"@it ,
+                "Volumes, then, disavowed by their authors, however worthy, left to us incomplete, freely criticized by Bembo with regard to their language, or passed over by him in silence, cannot shield us from reproach if we fill our writings with their words"@en ,
+                "giudica essere il Boccaccio l’ottimo prosatore e ’l Petrarca l’ottimo rimatore, e amenduni gli ultimi in tempo da essere creduti"@it ,
+                "he judges Boccaccio to be the finest prose writer, Petrarch the finest poet, and both the most recent in time to be worthy of consideration"@en ,
+                "io mi ritrarrò da dar molta credenza in questa parte a Lorenzo de’ Medici, o ad Angelo Poliziano, o ad alcun altro più moderno, poi che lo farò consigliato da esso Bembo"@it .
+
+
 ###  https://w3id.org/contro/data#s5
 :s5 rdf:type owl:NamedIndividual ;
-    rdfs:comment "Those words should not be used."@en .
+    rdfs:comment "Those words should not be used."@en ;
+    prov:value "I have marked them as not suited to be employed in this canzone"@en ,
+               "sì come non acconcie ad essere adoperate in questa canzone sono state da me segnate"@it .
 
 
 ###  https://w3id.org/contro/data#s6
 :s6 rdf:type owl:NamedIndividual ;
-    rdfs:comment "There is no direct knowledge of Petrarch’s intention."@en .
+    rdfs:comment "There is no direct knowledge of Petrarch’s intention."@en ;
+    prov:value "But in saying outright that «he would not use them», one must consider whether you have reliable authority on the matter, and what exactly you know of it; whether, by chance, as you so freely dispense the name and wisdom of Petrarch, his very spirit has entered your body."@en ,
+               "Ma, dicendo affermativamente «non l’userebbe», bisogna intender se l’avete di buon loco, e quel che voi ne sapete; se per aventura spacciando, come fate, il nome e ’l senno del Petrarca, vi fosse entrato il suo spirito in corpo"@it .
 
 
 ###  https://w3id.org/contro/data#s7
 :s7 rdf:type owl:NamedIndividual ;
-    rdfs:comment "Castelvetro is not a reliable interpreter of Petrarch’s mind."@en .
+    rdfs:comment "Castelvetro is not a reliable interpreter of Petrarch’s mind."@en ;
+    prov:value "But in saying outright that «he would not use them», one must consider whether you have reliable authority on the matter, and what exactly you know of it; whether, by chance, as you so freely dispense the name and wisdom of Petrarch, his very spirit has entered your body."@en ,
+               "Ma, dicendo affermativamente «non l’userebbe», bisogna intender se l’avete di buon loco, e quel che voi ne sapete; se per aventura spacciando, come fate, il nome e ’l senno del Petrarca, vi fosse entrato il suo spirito in corpo"@it .
 
 
 ###  https://w3id.org/contro/data#s8
@@ -491,67 +733,69 @@ dul:Collection rdf:type owl:Class .
 
 ###  https://w3id.org/contro/data#s9
 :s9 rdf:type owl:NamedIndividual ;
-    rdfs:comment "Other authors have authority as well."@en .
+    rdfs:comment "Other authors have authority as well."@en ;
+    prov:value "non vi contentarete voi del giudizio, dell’autorità e dell’essempio di quelli che sono i maestri dell’arte dello scrivere, dai quali hanno imparato il Petrarca e tutti gli altri buoni scrittori"@it ,
+               "would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing, the very ones from whom Petrarch and all other good writers have learned"@en .
 
 
 ###  https://w3id.org/contro/data#w1
 :w1 rdf:type owl:NamedIndividual ;
-    prov:value "cede" .
+    prov:value "cede"@it .
 
 
 ###  https://w3id.org/contro/data#w10
 :w10 rdf:type owl:NamedIndividual ;
-     prov:value "gesti" .
+     prov:value "gesti"@it .
 
 
 ###  https://w3id.org/contro/data#w11
 :w11 rdf:type owl:NamedIndividual ;
-     prov:value "inserte" .
+     prov:value "inserte"@it .
 
 
 ###  https://w3id.org/contro/data#w12
 :w12 rdf:type owl:NamedIndividual ;
-     prov:value "amene" .
+     prov:value "amene"@it .
 
 
 ###  https://w3id.org/contro/data#w2
 :w2 rdf:type owl:NamedIndividual ;
-    prov:value "ambo" .
+    prov:value "ambo"@it .
 
 
 ###  https://w3id.org/contro/data#w3
 :w3 rdf:type owl:NamedIndividual ;
-    prov:value "simulacri" .
+    prov:value "simulacri"@it .
 
 
 ###  https://w3id.org/contro/data#w4
 :w4 rdf:type owl:NamedIndividual ;
-    prov:value "ancor essa" .
+    prov:value "ancor essa"@it .
 
 
 ###  https://w3id.org/contro/data#w5
 :w5 rdf:type owl:NamedIndividual ;
-    prov:value "Suo merto e tuo valor" .
+    prov:value "Suo merto e tuo valor"@it .
 
 
 ###  https://w3id.org/contro/data#w6
 :w6 rdf:type owl:NamedIndividual ;
-    prov:value "inviolata" .
+    prov:value "inviolata"@it .
 
 
 ###  https://w3id.org/contro/data#w7
 :w7 rdf:type owl:NamedIndividual ;
-    prov:value "tarpato" .
+    prov:value "tarpato"@it .
 
 
 ###  https://w3id.org/contro/data#w8
 :w8 rdf:type owl:NamedIndividual ;
-    prov:value "propizia" .
+    prov:value "propizia"@it .
 
 
 ###  https://w3id.org/contro/data#w9
 :w9 rdf:type owl:NamedIndividual ;
-    prov:value "illustri" .
+    prov:value "illustri"@it .
 
 
 ###  Generated by the OWL API (version 5.5.1) https://github.com/owlcs/owlapi/

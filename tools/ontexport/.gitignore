@@ -1,0 +1,11 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+.kotlin
+
+# Ignore Gradle build output directory
+build
+
+# Keep the JAR file
+!app/build
+app/build/*
+!app/build/libs

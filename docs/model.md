@@ -1,5 +1,4 @@
 ---
-description:
 subtitle: Our design choices
 icon: octicons/ai-model-16
 ---

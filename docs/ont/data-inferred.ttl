@@ -1,4 +1,5 @@
 @prefix : <https://w3id.org/contro/data#> .
+@prefix d0: <http://www.ontologydesignpatterns.org/ont/d0.owl#> .
 @prefix arg: <https://w3id.org/contro/arg#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -7,6 +8,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix viaf: <http://viaf.org/viaf/> .
+@prefix persp: <https://w3id.org/contro/persp#> .
 @base <https://w3id.org/contro/data#> .
 
 <https://w3id.org/contro/data-inferred> rdf:type owl:Ontology .
@@ -69,7 +72,7 @@ arg:ArgumentationTheory rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/contro/arg#Conclusion
 arg:Conclusion rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf <https://w3id.org/contro/persp#Cut> .
+               rdfs:subPropertyOf persp:Cut .
 
 
 ###  https://w3id.org/contro/arg#Consequent
@@ -94,12 +97,12 @@ arg:KnowledgeBase rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/contro/arg#Premise
 arg:Premise rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf <https://w3id.org/contro/persp#Lens> .
+            rdfs:subPropertyOf persp:Lens .
 
 
 ###  https://w3id.org/contro/arg#Topic
 arg:Topic rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf <https://w3id.org/contro/persp#Eventuality> .
+          rdfs:subPropertyOf persp:Eventuality .
 
 
 ###  https://w3id.org/contro/arg#attackedBy
@@ -117,7 +120,7 @@ arg:attacks rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/contro/arg#by
 arg:by rdf:type owl:ObjectProperty ;
-       rdfs:subPropertyOf <https://w3id.org/contro/persp#Conceptualiser> .
+       rdfs:subPropertyOf persp:Conceptualiser .
 
 
 ###  https://w3id.org/contro/arg#contradictedBy
@@ -170,86 +173,86 @@ arg:toward rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/contro/persp#Attitude
-<https://w3id.org/contro/persp#Attitude> rdf:type owl:ObjectProperty ;
-                                         rdfs:subPropertyOf dul:isSettingFor .
+persp:Attitude rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dul:isSettingFor .
 
 
 ###  https://w3id.org/contro/persp#Background
-<https://w3id.org/contro/persp#Background> rdf:type owl:ObjectProperty ;
-                                           rdfs:subPropertyOf dul:isSettingFor .
+persp:Background rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dul:isSettingFor .
 
 
 ###  https://w3id.org/contro/persp#Conceptualiser
-<https://w3id.org/contro/persp#Conceptualiser> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf dul:isSettingFor .
+persp:Conceptualiser rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf dul:isSettingFor .
 
 
 ###  https://w3id.org/contro/persp#Cut
-<https://w3id.org/contro/persp#Cut> rdf:type owl:ObjectProperty ;
-                                    rdfs:subPropertyOf dul:isSettingFor .
+persp:Cut rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf dul:isSettingFor .
 
 
 ###  https://w3id.org/contro/persp#Eventuality
-<https://w3id.org/contro/persp#Eventuality> rdf:type owl:ObjectProperty ;
-                                            rdfs:subPropertyOf dul:isSettingFor .
+persp:Eventuality rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dul:isSettingFor .
 
 
 ###  https://w3id.org/contro/persp#Lens
-<https://w3id.org/contro/persp#Lens> rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf dul:isSettingFor .
+persp:Lens rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf dul:isSettingFor .
 
 
 ###  https://w3id.org/contro/persp#composedWith
-<https://w3id.org/contro/persp#composedWith> rdf:type owl:ObjectProperty ;
-                                             owl:equivalentProperty [ owl:inverseOf <https://w3id.org/contro/persp#composedWith>
-                                                                    ] ;
-                                             rdfs:subPropertyOf owl:topObjectProperty ;
-                                             owl:inverseOf <https://w3id.org/contro/persp#composedWith> ;
-                                             rdf:type owl:SymmetricProperty .
+persp:composedWith rdf:type owl:ObjectProperty ;
+                   owl:equivalentProperty [ owl:inverseOf persp:composedWith
+                                          ] ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   owl:inverseOf persp:composedWith ;
+                   rdf:type owl:SymmetricProperty .
 
 
 ###  https://w3id.org/contro/persp#contrasts
-<https://w3id.org/contro/persp#contrasts> rdf:type owl:ObjectProperty ;
-                                          owl:equivalentProperty [ owl:inverseOf <https://w3id.org/contro/persp#contrasts>
-                                                                 ] ;
-                                          rdfs:subPropertyOf owl:topObjectProperty ;
-                                          owl:inverseOf <https://w3id.org/contro/persp#contrasts> ;
-                                          rdf:type owl:SymmetricProperty .
+persp:contrasts rdf:type owl:ObjectProperty ;
+                owl:equivalentProperty [ owl:inverseOf persp:contrasts
+                                       ] ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                owl:inverseOf persp:contrasts ;
+                rdf:type owl:SymmetricProperty .
 
 
 ###  https://w3id.org/contro/persp#creates
-<https://w3id.org/contro/persp#creates> rdf:type owl:ObjectProperty ;
-                                        rdfs:subPropertyOf owl:topObjectProperty .
+persp:creates rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  https://w3id.org/contro/persp#extractedFrom
-<https://w3id.org/contro/persp#extractedFrom> rdf:type owl:ObjectProperty ;
-                                              rdfs:subPropertyOf owl:topObjectProperty .
+persp:extractedFrom rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  https://w3id.org/contro/persp#holds
-<https://w3id.org/contro/persp#holds> rdf:type owl:ObjectProperty ;
-                                      rdfs:subPropertyOf owl:topObjectProperty .
+persp:holds rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  https://w3id.org/contro/persp#perspectivisedAs
-<https://w3id.org/contro/persp#perspectivisedAs> rdf:type owl:ObjectProperty ;
-                                                 rdfs:subPropertyOf owl:topObjectProperty .
+persp:perspectivisedAs rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  https://w3id.org/contro/persp#perspectivisedThrough
-<https://w3id.org/contro/persp#perspectivisedThrough> rdf:type owl:ObjectProperty ;
-                                                      rdfs:subPropertyOf owl:topObjectProperty .
+persp:perspectivisedThrough rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  https://w3id.org/contro/persp#shotThrough
-<https://w3id.org/contro/persp#shotThrough> rdf:type owl:ObjectProperty ;
-                                            rdfs:subPropertyOf owl:topObjectProperty .
+persp:shotThrough rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  https://w3id.org/contro/persp#toward
-<https://w3id.org/contro/persp#toward> rdf:type owl:ObjectProperty ;
-                                       rdfs:subPropertyOf owl:topObjectProperty .
+persp:toward rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty .
 
 
 #################################################################
@@ -257,8 +260,8 @@ arg:toward rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality
-<http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality> rdf:type owl:Class ;
-                                                               rdfs:subClassOf owl:Thing .
+d0:Eventuality rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing .
 
 
 ###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent
@@ -304,7 +307,7 @@ arg:Antecedent rdf:type owl:Class ;
 ###  https://w3id.org/contro/arg#Argument
 arg:Argument rdf:type owl:Class ;
              rdfs:subClassOf arg:ArgumentationTheorySituation ,
-                             <https://w3id.org/contro/persp#Perspectivisation> .
+                             persp:Perspectivisation .
 
 
 ###  https://w3id.org/contro/arg#ArgumentationTheory
@@ -363,33 +366,33 @@ arg:Undermining rdf:type owl:Class ;
 
 
 ###  https://w3id.org/contro/persp#Attitude
-<https://w3id.org/contro/persp#Attitude> rdf:type owl:Class ;
-                                         rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> .
+persp:Attitude rdf:type owl:Class ;
+               rdfs:subClassOf persp:PerspectivisationTheorySituation .
 
 
 ###  https://w3id.org/contro/persp#Background
-<https://w3id.org/contro/persp#Background> rdf:type owl:Class ;
-                                           rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> .
+persp:Background rdf:type owl:Class ;
+                 rdfs:subClassOf persp:PerspectivisationTheorySituation .
 
 
 ###  https://w3id.org/contro/persp#Cut
-<https://w3id.org/contro/persp#Cut> rdf:type owl:Class ;
-                                    rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> .
+persp:Cut rdf:type owl:Class ;
+          rdfs:subClassOf persp:PerspectivisationTheorySituation .
 
 
 ###  https://w3id.org/contro/persp#Lens
-<https://w3id.org/contro/persp#Lens> rdf:type owl:Class ;
-                                     rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> .
+persp:Lens rdf:type owl:Class ;
+           rdfs:subClassOf persp:PerspectivisationTheorySituation .
 
 
 ###  https://w3id.org/contro/persp#Perspectivisation
-<https://w3id.org/contro/persp#Perspectivisation> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <https://w3id.org/contro/persp#PerspectivisationTheorySituation> .
+persp:Perspectivisation rdf:type owl:Class ;
+                        rdfs:subClassOf persp:PerspectivisationTheorySituation .
 
 
 ###  https://w3id.org/contro/persp#PerspectivisationTheorySituation
-<https://w3id.org/contro/persp#PerspectivisationTheorySituation> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf dul:Situation .
+persp:PerspectivisationTheorySituation rdf:type owl:Class ;
+                                       rdfs:subClassOf dul:Situation .
 
 
 #################################################################
@@ -401,7 +404,8 @@ arg:Undermining rdf:type owl:Class ;
                                          dul:Agent ,
                                          owl:Thing ;
                                 owl:sameAs :castelvetro ;
-                                dul:hasRole arg:DialogicalAgent .
+                                dul:hasRole arg:DialogicalAgent ,
+                                            persp:Conceptualiser .
 
 
 ###  https://w3id.org/contro/data#castelvetro
@@ -534,8 +538,8 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:ArgumentationTheorySituation ,
               arg:Conflict ,
               arg:Undercut ,
-              <https://w3id.org/contro/persp#Perspectivisation> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
      dul:isSettingFor :AT_caro ,
                       :KB_caro ,
                       :disputed-words ,
@@ -546,7 +550,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                       :s7 ,
                       :s8 ;
      dul:satisfies arg:Argument ,
-                   <https://w3id.org/contro/persp#Perspectivisation> ;
+                   persp:Perspectivisation ;
      arg:ArgumentationTheory :AT_caro ;
      arg:Conclusion :s8 ;
      arg:InferenceRule :r3 ;
@@ -556,13 +560,13 @@ arg:Topic rdf:type owl:NamedIndividual ,
      arg:Topic :disputed-words ;
      arg:attacks :CV1 ;
      arg:by :predella ;
-     <https://w3id.org/contro/persp#Background> :KB_caro ;
-     <https://w3id.org/contro/persp#Conceptualiser> :predella ;
-     <https://w3id.org/contro/persp#Cut> :s8 ;
-     <https://w3id.org/contro/persp#Eventuality> :disputed-words ;
-     <https://w3id.org/contro/persp#Lens> :s1 ,
-                                          :s6 ,
-                                          :s7 .
+     persp:Background :KB_caro ;
+     persp:Conceptualiser :predella ;
+     persp:Cut :s8 ;
+     persp:Eventuality :disputed-words ;
+     persp:Lens :s1 ,
+                :s6 ,
+                :s7 .
 
 
 ###  https://w3id.org/contro/data#CR2
@@ -573,8 +577,8 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:ArgumentationTheorySituation ,
               arg:Conflict ,
               arg:Rebuttal ,
-              <https://w3id.org/contro/persp#Perspectivisation> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
      dul:isSettingFor :AT_caro ,
                       :KB_caro ,
                       :disputed-words ,
@@ -586,7 +590,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                       :s4 ,
                       :s9 ;
      dul:satisfies arg:Argument ,
-                   <https://w3id.org/contro/persp#Perspectivisation> ;
+                   persp:Perspectivisation ;
      arg:ArgumentationTheory :AT_caro ;
      arg:Conclusion :s10 ;
      arg:InferenceRule :r4 ;
@@ -595,16 +599,21 @@ arg:Topic rdf:type owl:NamedIndividual ,
                  :s4 ,
                  :s9 ;
      arg:Topic :disputed-words ;
-     arg:attacks :CV2 ;
+     arg:attacks :CR4 ,
+                 :CV2 ,
+                 :CV6 ;
      arg:by :predella ;
-     <https://w3id.org/contro/persp#Background> :KB_caro ;
-     <https://w3id.org/contro/persp#Conceptualiser> :predella ;
-     <https://w3id.org/contro/persp#Cut> :s10 ;
-     <https://w3id.org/contro/persp#Eventuality> :disputed-words ;
-     <https://w3id.org/contro/persp#Lens> :s1 ,
-                                          :s2 ,
-                                          :s4 ,
-                                          :s9 .
+     arg:defends :CR4 ,
+                 :CV2 ,
+                 :CV6 ;
+     persp:Background :KB_caro ;
+     persp:Conceptualiser :predella ;
+     persp:Cut :s10 ;
+     persp:Eventuality :disputed-words ;
+     persp:Lens :s1 ,
+                :s2 ,
+                :s4 ,
+                :s9 .
 
 
 ###  https://w3id.org/contro/data#CR3
@@ -613,11 +622,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
               owl:Thing ,
               arg:Argument ,
               arg:ArgumentationTheorySituation ,
-              <https://w3id.org/contro/persp#Perspectivisation> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
      dul:isSettingFor :AT_caro ,
                       :KB_caro ,
-                      :disputed-words ,
+                      :latinisms ,
                       :predella ,
                       :r5 ,
                       :s11 ,
@@ -625,22 +634,24 @@ arg:Topic rdf:type owl:NamedIndividual ,
                       :s13 ,
                       :s14 ;
      dul:satisfies arg:Argument ,
-                   <https://w3id.org/contro/persp#Perspectivisation> ;
+                   persp:Perspectivisation ;
      arg:ArgumentationTheory :AT_caro ;
      arg:Conclusion :s14 ;
      arg:InferenceRule :r5 ;
      arg:Premise :s11 ,
                  :s12 ,
                  :s13 ;
-     arg:Topic :disputed-words ;
+     arg:Topic :latinisms ;
+     arg:attackedBy :CV4 ,
+                    :CV5 ;
      arg:by :predella ;
-     <https://w3id.org/contro/persp#Background> :KB_caro ;
-     <https://w3id.org/contro/persp#Conceptualiser> :predella ;
-     <https://w3id.org/contro/persp#Cut> :s14 ;
-     <https://w3id.org/contro/persp#Eventuality> :disputed-words ;
-     <https://w3id.org/contro/persp#Lens> :s11 ,
-                                          :s12 ,
-                                          :s13 .
+     persp:Background :KB_caro ;
+     persp:Conceptualiser :predella ;
+     persp:Cut :s14 ;
+     persp:Eventuality :latinisms ;
+     persp:Lens :s11 ,
+                :s12 ,
+                :s13 .
 
 
 ###  https://w3id.org/contro/data#CR4
@@ -651,33 +662,71 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:ArgumentationTheorySituation ,
               arg:Conflict ,
               arg:Rebuttal ,
-              <https://w3id.org/contro/persp#Perspectivisation> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
-     dul:isSettingFor :AT_caro ,
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
+     dul:isSettingFor <http://viaf.org/viaf/22166452> ,
+                      :AT_caro ,
+                      :AT_castelvetro ,
                       :KB_caro ,
+                      :KB_castelvetro ,
+                      :castelvetro ,
                       :disputed-words ,
+                      :latinisms ,
                       :predella ,
+                      :r14 ,
                       :r6 ,
                       :s10 ,
+                      :s12 ,
                       :s14 ,
-                      :s15 ;
+                      :s15 ,
+                      :s31 ,
+                      :s39 ,
+                      :s5 ;
      dul:satisfies arg:Argument ,
-                   <https://w3id.org/contro/persp#Perspectivisation> ;
-     arg:ArgumentationTheory :AT_caro ;
-     arg:Conclusion :s10 ;
-     arg:InferenceRule :r6 ;
-     arg:Premise :s14 ,
-                 :s15 ;
-     arg:Topic :disputed-words ;
-     arg:attacks :CV2 ;
-     arg:by :predella ;
-     arg:hasSubArgument :CR3 ;
-     <https://w3id.org/contro/persp#Background> :KB_caro ;
-     <https://w3id.org/contro/persp#Conceptualiser> :predella ;
-     <https://w3id.org/contro/persp#Cut> :s10 ;
-     <https://w3id.org/contro/persp#Eventuality> :disputed-words ;
-     <https://w3id.org/contro/persp#Lens> :s14 ,
-                                          :s15 .
+                   persp:Perspectivisation ;
+     arg:ArgumentationTheory :AT_caro ,
+                             :AT_castelvetro ;
+     arg:Conclusion :s10 ,
+                    :s5 ;
+     arg:InferenceRule :r14 ,
+                       :r6 ;
+     arg:Premise :s12 ,
+                 :s14 ,
+                 :s15 ,
+                 :s31 ,
+                 :s39 ;
+     arg:Topic :disputed-words ,
+               :latinisms ;
+     arg:attackedBy :CR2 ,
+                    :CR4 ,
+                    :CV5 ,
+                    :CV6 ;
+     arg:attacks :CR4 ,
+                 :CV2 ,
+                 :CV6 ;
+     arg:by <http://viaf.org/viaf/22166452> ,
+            :castelvetro ,
+            :predella ;
+     arg:defends :CR4 ,
+                 :CV2 ,
+                 :CV6 ;
+     arg:hasSubArgument :CR3 ,
+                        :CV3 ,
+                        :CV5 ;
+     persp:Background :KB_caro ,
+                      :KB_castelvetro ;
+     persp:Conceptualiser <http://viaf.org/viaf/22166452> ,
+                          :castelvetro ,
+                          :predella ;
+     persp:Cut :s10 ,
+               :s5 ;
+     persp:Eventuality :disputed-words ,
+                       :latinisms ;
+     persp:Lens :s12 ,
+                :s14 ,
+                :s15 ,
+                :s31 ,
+                :s39 .
 
 
 ###  https://w3id.org/contro/data#CR5
@@ -688,32 +737,32 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:ArgumentationTheorySituation ,
               arg:Conflict ,
               arg:Undercut ,
-              <https://w3id.org/contro/persp#Perspectivisation> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
      dul:isSettingFor :AT_caro ,
                       :KB_caro ,
-                      :disputed-words ,
+                      :imitation ,
                       :predella ,
                       :r7 ,
                       :s16 ,
                       :s17 ,
                       :s18 ;
      dul:satisfies arg:Argument ,
-                   <https://w3id.org/contro/persp#Perspectivisation> ;
+                   persp:Perspectivisation ;
      arg:ArgumentationTheory :AT_caro ;
      arg:Conclusion :s18 ;
      arg:InferenceRule :r7 ;
      arg:Premise :s16 ,
                  :s17 ;
-     arg:Topic :disputed-words ;
+     arg:Topic :imitation ;
      arg:attacks :CV2 ;
      arg:by :predella ;
-     <https://w3id.org/contro/persp#Background> :KB_caro ;
-     <https://w3id.org/contro/persp#Conceptualiser> :predella ;
-     <https://w3id.org/contro/persp#Cut> :s18 ;
-     <https://w3id.org/contro/persp#Eventuality> :disputed-words ;
-     <https://w3id.org/contro/persp#Lens> :s16 ,
-                                          :s17 .
+     persp:Background :KB_caro ;
+     persp:Conceptualiser :predella ;
+     persp:Cut :s18 ;
+     persp:Eventuality :imitation ;
+     persp:Lens :s16 ,
+                :s17 .
 
 
 ###  https://w3id.org/contro/data#CR6
@@ -722,8 +771,8 @@ arg:Topic rdf:type owl:NamedIndividual ,
               owl:Thing ,
               arg:Argument ,
               arg:ArgumentationTheorySituation ,
-              <https://w3id.org/contro/persp#Perspectivisation> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
      dul:isSettingFor :AT_caro ,
                       :KB_caro ,
                       :disputed-words ,
@@ -733,7 +782,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                       :s20 ,
                       :s21 ;
      dul:satisfies arg:Argument ,
-                   <https://w3id.org/contro/persp#Perspectivisation> ;
+                   persp:Perspectivisation ;
      arg:ArgumentationTheory :AT_caro ;
      arg:Conclusion :s21 ;
      arg:InferenceRule :r8 ;
@@ -741,12 +790,12 @@ arg:Topic rdf:type owl:NamedIndividual ,
                  :s20 ;
      arg:Topic :disputed-words ;
      arg:by :predella ;
-     <https://w3id.org/contro/persp#Background> :KB_caro ;
-     <https://w3id.org/contro/persp#Conceptualiser> :predella ;
-     <https://w3id.org/contro/persp#Cut> :s21 ;
-     <https://w3id.org/contro/persp#Eventuality> :disputed-words ;
-     <https://w3id.org/contro/persp#Lens> :s19 ,
-                                          :s20 .
+     persp:Background :KB_caro ;
+     persp:Conceptualiser :predella ;
+     persp:Cut :s21 ;
+     persp:Eventuality :disputed-words ;
+     persp:Lens :s19 ,
+                :s20 .
 
 
 ###  https://w3id.org/contro/data#CR7
@@ -755,8 +804,8 @@ arg:Topic rdf:type owl:NamedIndividual ,
               owl:Thing ,
               arg:Argument ,
               arg:ArgumentationTheorySituation ,
-              <https://w3id.org/contro/persp#Perspectivisation> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
      dul:isSettingFor :AT_caro ,
                       :KB_caro ,
                       :disputed-words ,
@@ -767,7 +816,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                       :s22 ,
                       :s4 ;
      dul:satisfies arg:Argument ,
-                   <https://w3id.org/contro/persp#Perspectivisation> ;
+                   persp:Perspectivisation ;
      arg:ArgumentationTheory :AT_caro ;
      arg:Conclusion :s21 ;
      arg:InferenceRule :r9 ;
@@ -777,13 +826,13 @@ arg:Topic rdf:type owl:NamedIndividual ,
      arg:Topic :disputed-words ;
      arg:by :predella ;
      arg:hasSubArgument :CR5 ;
-     <https://w3id.org/contro/persp#Background> :KB_caro ;
-     <https://w3id.org/contro/persp#Conceptualiser> :predella ;
-     <https://w3id.org/contro/persp#Cut> :s21 ;
-     <https://w3id.org/contro/persp#Eventuality> :disputed-words ;
-     <https://w3id.org/contro/persp#Lens> :s18 ,
-                                          :s22 ,
-                                          :s4 .
+     persp:Background :KB_caro ;
+     persp:Conceptualiser :predella ;
+     persp:Cut :s21 ;
+     persp:Eventuality :disputed-words ;
+     persp:Lens :s18 ,
+                :s22 ,
+                :s4 .
 
 
 ###  https://w3id.org/contro/data#CR8
@@ -792,8 +841,8 @@ arg:Topic rdf:type owl:NamedIndividual ,
               owl:Thing ,
               arg:Argument ,
               arg:ArgumentationTheorySituation ,
-              <https://w3id.org/contro/persp#Perspectivisation> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
      dul:isSettingFor :AT_caro ,
                       :KB_caro ,
                       :disputed-words ,
@@ -801,22 +850,25 @@ arg:Topic rdf:type owl:NamedIndividual ,
                       :r10 ,
                       :s23 ,
                       :s24 ,
-                      :s25 ;
+                      :s25 ,
+                      :s26 ;
      dul:satisfies arg:Argument ,
-                   <https://w3id.org/contro/persp#Perspectivisation> ;
+                   persp:Perspectivisation ;
      arg:ArgumentationTheory :AT_caro ;
-     arg:Conclusion :s25 ;
+     arg:Conclusion :s26 ;
      arg:InferenceRule :r10 ;
      arg:Premise :s23 ,
-                 :s24 ;
+                 :s24 ,
+                 :s25 ;
      arg:Topic :disputed-words ;
      arg:by :predella ;
-     <https://w3id.org/contro/persp#Background> :KB_caro ;
-     <https://w3id.org/contro/persp#Conceptualiser> :predella ;
-     <https://w3id.org/contro/persp#Cut> :s25 ;
-     <https://w3id.org/contro/persp#Eventuality> :disputed-words ;
-     <https://w3id.org/contro/persp#Lens> :s23 ,
-                                          :s24 .
+     persp:Background :KB_caro ;
+     persp:Conceptualiser :predella ;
+     persp:Cut :s26 ;
+     persp:Eventuality :disputed-words ;
+     persp:Lens :s23 ,
+                :s24 ,
+                :s25 .
 
 
 ###  https://w3id.org/contro/data#CV1
@@ -825,8 +877,8 @@ arg:Topic rdf:type owl:NamedIndividual ,
               owl:Thing ,
               arg:Argument ,
               arg:ArgumentationTheorySituation ,
-              <https://w3id.org/contro/persp#Perspectivisation> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
      dul:isSettingFor :AT_castelvetro ,
                       :KB_castelvetro ,
                       :anon ,
@@ -836,7 +888,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                       :s2 ,
                       :s3 ;
      dul:satisfies arg:Argument ,
-                   <https://w3id.org/contro/persp#Perspectivisation> ;
+                   persp:Perspectivisation ;
      arg:ArgumentationTheory :AT_castelvetro ;
      arg:Conclusion :s3 ;
      arg:InferenceRule :r1 ;
@@ -845,12 +897,12 @@ arg:Topic rdf:type owl:NamedIndividual ,
      arg:Topic :disputed-words ;
      arg:attackedBy :CR1 ;
      arg:by :anon ;
-     <https://w3id.org/contro/persp#Background> :KB_castelvetro ;
-     <https://w3id.org/contro/persp#Conceptualiser> :anon ;
-     <https://w3id.org/contro/persp#Cut> :s3 ;
-     <https://w3id.org/contro/persp#Eventuality> :disputed-words ;
-     <https://w3id.org/contro/persp#Lens> :s1 ,
-                                          :s2 .
+     persp:Background :KB_castelvetro ;
+     persp:Conceptualiser :anon ;
+     persp:Cut :s3 ;
+     persp:Eventuality :disputed-words ;
+     persp:Lens :s1 ,
+                :s2 .
 
 
 ###  https://w3id.org/contro/data#CV2
@@ -859,8 +911,8 @@ arg:Topic rdf:type owl:NamedIndividual ,
               owl:Thing ,
               arg:Argument ,
               arg:ArgumentationTheorySituation ,
-              <https://w3id.org/contro/persp#Perspectivisation> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
      dul:isSettingFor :AT_castelvetro ,
                       :KB_castelvetro ,
                       :anon ,
@@ -870,7 +922,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                       :s4 ,
                       :s5 ;
      dul:satisfies arg:Argument ,
-                   <https://w3id.org/contro/persp#Perspectivisation> ;
+                   persp:Perspectivisation ;
      arg:ArgumentationTheory :AT_castelvetro ;
      arg:Conclusion :s5 ;
      arg:InferenceRule :r2 ;
@@ -879,15 +931,254 @@ arg:Topic rdf:type owl:NamedIndividual ,
      arg:Topic :disputed-words ;
      arg:attackedBy :CR2 ,
                     :CR4 ,
-                    :CR5 ;
+                    :CR5 ,
+                    :CV6 ;
      arg:by :anon ;
      arg:hasSubArgument :CV1 ;
-     <https://w3id.org/contro/persp#Background> :KB_castelvetro ;
-     <https://w3id.org/contro/persp#Conceptualiser> :anon ;
-     <https://w3id.org/contro/persp#Cut> :s5 ;
-     <https://w3id.org/contro/persp#Eventuality> :disputed-words ;
-     <https://w3id.org/contro/persp#Lens> :s3 ,
-                                          :s4 .
+     persp:Background :KB_castelvetro ;
+     persp:Conceptualiser :anon ;
+     persp:Cut :s5 ;
+     persp:Eventuality :disputed-words ;
+     persp:Lens :s3 ,
+                :s4 .
+
+
+###  https://w3id.org/contro/data#CV3
+:CV3 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Argument ,
+              arg:ArgumentationTheorySituation ,
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
+     dul:isSettingFor <http://viaf.org/viaf/22166452> ,
+                      :AT_castelvetro ,
+                      :KB_castelvetro ,
+                      :castelvetro ,
+                      :disputed-words ,
+                      :r11 ,
+                      :s27 ,
+                      :s28 ,
+                      :s29 ,
+                      :s30 ,
+                      :s31 ;
+     dul:satisfies arg:Argument ,
+                   persp:Perspectivisation ;
+     arg:ArgumentationTheory :AT_castelvetro ;
+     arg:Conclusion :s31 ;
+     arg:InferenceRule :r11 ;
+     arg:Premise :s27 ,
+                 :s28 ,
+                 :s29 ,
+                 :s30 ;
+     arg:Topic :disputed-words ;
+     arg:by <http://viaf.org/viaf/22166452> ,
+            :castelvetro ;
+     persp:Background :KB_castelvetro ;
+     persp:Conceptualiser <http://viaf.org/viaf/22166452> ,
+                          :castelvetro ;
+     persp:Cut :s31 ;
+     persp:Eventuality :disputed-words ;
+     persp:Lens :s27 ,
+                :s28 ,
+                :s29 ,
+                :s30 .
+
+
+###  https://w3id.org/contro/data#CV4
+:CV4 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Argument ,
+              arg:ArgumentationTheorySituation ,
+              arg:Conflict ,
+              arg:Undermining ,
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
+     dul:isSettingFor <http://viaf.org/viaf/22166452> ,
+                      :AT_castelvetro ,
+                      :KB_castelvetro ,
+                      :castelvetro ,
+                      :latinisms ,
+                      :r12 ,
+                      :s32 ,
+                      :s33 ,
+                      :s34 ,
+                      :s35 ;
+     dul:satisfies arg:Argument ,
+                   persp:Perspectivisation ;
+     arg:ArgumentationTheory :AT_castelvetro ;
+     arg:Conclusion :s35 ;
+     arg:InferenceRule :r12 ;
+     arg:Premise :s32 ,
+                 :s33 ,
+                 :s34 ;
+     arg:Topic :latinisms ;
+     arg:attacks :CR3 ;
+     arg:by <http://viaf.org/viaf/22166452> ,
+            :castelvetro ;
+     persp:Background :KB_castelvetro ;
+     persp:Conceptualiser <http://viaf.org/viaf/22166452> ,
+                          :castelvetro ;
+     persp:Cut :s35 ;
+     persp:Eventuality :latinisms ;
+     persp:Lens :s32 ,
+                :s33 ,
+                :s34 .
+
+
+###  https://w3id.org/contro/data#CV5
+:CV5 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Argument ,
+              arg:ArgumentationTheorySituation ,
+              arg:Conflict ,
+              arg:Rebuttal ,
+              arg:Undermining ,
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
+     dul:isSettingFor <http://viaf.org/viaf/22166452> ,
+                      :AT_castelvetro ,
+                      :KB_castelvetro ,
+                      :castelvetro ,
+                      :latinisms ,
+                      :r13 ,
+                      :s36 ,
+                      :s37 ,
+                      :s38 ,
+                      :s39 ;
+     dul:satisfies arg:Argument ,
+                   persp:Perspectivisation ;
+     arg:ArgumentationTheory :AT_castelvetro ;
+     arg:Conclusion :s39 ;
+     arg:InferenceRule :r13 ;
+     arg:Premise :s36 ,
+                 :s37 ,
+                 :s38 ;
+     arg:Topic :latinisms ;
+     arg:attacks :CR3 ,
+                 :CR4 ,
+                 :CV6 ;
+     arg:by <http://viaf.org/viaf/22166452> ,
+            :castelvetro ;
+     arg:defends :CR4 ,
+                 :CV2 ,
+                 :CV6 ;
+     persp:Background :KB_castelvetro ;
+     persp:Conceptualiser <http://viaf.org/viaf/22166452> ,
+                          :castelvetro ;
+     persp:Cut :s39 ;
+     persp:Eventuality :latinisms ;
+     persp:Lens :s36 ,
+                :s37 ,
+                :s38 .
+
+
+###  https://w3id.org/contro/data#CV6
+:CV6 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Argument ,
+              arg:ArgumentationTheorySituation ,
+              arg:Conflict ,
+              arg:Rebuttal ,
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
+     dul:isSettingFor <http://viaf.org/viaf/22166452> ,
+                      :AT_caro ,
+                      :AT_castelvetro ,
+                      :KB_caro ,
+                      :KB_castelvetro ,
+                      :castelvetro ,
+                      :disputed-words ,
+                      :latinisms ,
+                      :predella ,
+                      :r14 ,
+                      :r6 ,
+                      :s10 ,
+                      :s12 ,
+                      :s14 ,
+                      :s15 ,
+                      :s31 ,
+                      :s39 ,
+                      :s5 ;
+     dul:satisfies arg:Argument ,
+                   persp:Perspectivisation ;
+     arg:ArgumentationTheory :AT_caro ,
+                             :AT_castelvetro ;
+     arg:Conclusion :s10 ,
+                    :s5 ;
+     arg:InferenceRule :r14 ,
+                       :r6 ;
+     arg:Premise :s12 ,
+                 :s14 ,
+                 :s15 ,
+                 :s31 ,
+                 :s39 ;
+     arg:Topic :disputed-words ,
+               :latinisms ;
+     arg:attackedBy :CR2 ,
+                    :CR4 ,
+                    :CV5 ,
+                    :CV6 ;
+     arg:attacks :CR4 ,
+                 :CV2 ,
+                 :CV6 ;
+     arg:by <http://viaf.org/viaf/22166452> ,
+            :castelvetro ,
+            :predella ;
+     arg:defends :CR4 ,
+                 :CV2 ,
+                 :CV6 ;
+     arg:hasSubArgument :CR3 ,
+                        :CV3 ,
+                        :CV5 ;
+     persp:Background :KB_caro ,
+                      :KB_castelvetro ;
+     persp:Conceptualiser <http://viaf.org/viaf/22166452> ,
+                          :castelvetro ,
+                          :predella ;
+     persp:Cut :s10 ,
+               :s5 ;
+     persp:Eventuality :disputed-words ,
+                       :latinisms ;
+     persp:Lens :s12 ,
+                :s14 ,
+                :s15 ,
+                :s31 ,
+                :s39 .
+
+
+###  https://w3id.org/contro/data#CV7
+:CV7 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Argument ,
+              arg:ArgumentationTheorySituation ,
+              persp:Perspectivisation ,
+              persp:PerspectivisationTheorySituation ;
+     dul:isSettingFor <http://viaf.org/viaf/22166452> ,
+                      :AT_castelvetro ,
+                      :KB_castelvetro ,
+                      :castelvetro ,
+                      :imitation ,
+                      :s40 ,
+                      :s41 ;
+     dul:satisfies arg:Argument ,
+                   persp:Perspectivisation ;
+     arg:ArgumentationTheory :AT_castelvetro ;
+     arg:Premise :s40 ,
+                 :s41 ;
+     arg:Topic :imitation ;
+     arg:by <http://viaf.org/viaf/22166452> ,
+            :castelvetro ;
+     persp:Background :KB_castelvetro ;
+     persp:Conceptualiser <http://viaf.org/viaf/22166452> ,
+                          :castelvetro ;
+     persp:Eventuality :imitation ;
+     persp:Lens :s40 ,
+                :s41 .
 
 
 ###  https://w3id.org/contro/data#KB_caro
@@ -896,11 +1187,12 @@ arg:Topic rdf:type owl:NamedIndividual ,
                   owl:Thing ,
                   arg:ArgumentationTheorySituation ,
                   arg:KnowledgeBase ,
-                  <https://w3id.org/contro/persp#Background> ,
-                  <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+                  persp:Background ,
+                  persp:PerspectivisationTheorySituation ;
          dul:satisfies arg:KnowledgeBase ,
-                       <https://w3id.org/contro/persp#Background> ;
+                       persp:Background ;
          arg:hasMember :r10 ,
+                       :r14 ,
                        :r3 ,
                        :r4 ,
                        :r5 ,
@@ -926,7 +1218,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
                        :s23 ,
                        :s24 ,
                        :s25 ,
+                       :s26 ,
+                       :s31 ,
+                       :s39 ,
                        :s4 ,
+                       :s5 ,
                        :s6 ,
                        :s7 ,
                        :s8 ,
@@ -939,16 +1235,40 @@ arg:Topic rdf:type owl:NamedIndividual ,
                          owl:Thing ,
                          arg:ArgumentationTheorySituation ,
                          arg:KnowledgeBase ,
-                         <https://w3id.org/contro/persp#Background> ,
-                         <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+                         persp:Background ,
+                         persp:PerspectivisationTheorySituation ;
                 dul:satisfies arg:KnowledgeBase ,
-                              <https://w3id.org/contro/persp#Background> ;
+                              persp:Background ;
                 arg:hasMember :r1 ,
+                              :r11 ,
+                              :r12 ,
+                              :r13 ,
+                              :r14 ,
                               :r2 ,
+                              :r6 ,
                               :s1 ,
+                              :s10 ,
+                              :s12 ,
+                              :s14 ,
+                              :s15 ,
                               :s2 ,
+                              :s27 ,
+                              :s28 ,
+                              :s29 ,
                               :s3 ,
+                              :s30 ,
+                              :s31 ,
+                              :s32 ,
+                              :s33 ,
+                              :s34 ,
+                              :s35 ,
+                              :s36 ,
+                              :s37 ,
+                              :s38 ,
+                              :s39 ,
                               :s4 ,
+                              :s40 ,
+                              :s41 ,
                               :s5 .
 
 
@@ -957,7 +1277,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                dul:Agent ,
                owl:Thing ;
       dul:hasRole arg:DialogicalAgent ,
-                  <https://w3id.org/contro/persp#Conceptualiser> ;
+                  persp:Conceptualiser ;
       arg:isAliasOf <http://viaf.org/viaf/22166452> ,
                     :castelvetro ;
       rdfs:comment "The text is presented as if written by an anonymous figure."@en ;
@@ -976,48 +1296,51 @@ arg:Topic rdf:type owl:NamedIndividual ,
 :castelvetro rdf:type owl:NamedIndividual ,
                       dul:Agent ,
                       owl:Thing ;
-             dul:hasRole arg:DialogicalAgent ;
+             dul:hasRole arg:DialogicalAgent ,
+                         persp:Conceptualiser ;
              rdfs:label "Lodovico Castelvetro" .
 
 
 ###  https://w3id.org/contro/data#disputed-words
 :disputed-words rdf:type owl:NamedIndividual ,
-                         <http://www.ontologydesignpatterns.org/ont/d0.owl#Eventuality> ,
+                         d0:Eventuality ,
                          dul:Collection ,
                          dul:Situation ,
                          owl:Thing ;
                 dul:hasRole arg:Topic ,
-                            <https://w3id.org/contro/persp#Eventuality> ;
-                <https://w3id.org/contro/persp#extractedFrom> :KB_caro ,
-                                                              :KB_castelvetro ;
-                <https://w3id.org/contro/persp#perspectivisedAs> :s10 ,
-                                                                 :s14 ,
-                                                                 :s18 ,
-                                                                 :s21 ,
-                                                                 :s25 ,
-                                                                 :s3 ,
-                                                                 :s5 ,
-                                                                 :s8 ;
-                <https://w3id.org/contro/persp#perspectivisedThrough> :s1 ,
-                                                                      :s11 ,
-                                                                      :s12 ,
-                                                                      :s13 ,
-                                                                      :s14 ,
-                                                                      :s15 ,
-                                                                      :s16 ,
-                                                                      :s17 ,
-                                                                      :s18 ,
-                                                                      :s19 ,
-                                                                      :s2 ,
-                                                                      :s20 ,
-                                                                      :s22 ,
-                                                                      :s23 ,
-                                                                      :s24 ,
-                                                                      :s3 ,
-                                                                      :s4 ,
-                                                                      :s6 ,
-                                                                      :s7 ,
-                                                                      :s9 ;
+                            persp:Eventuality ;
+                persp:extractedFrom :KB_caro ,
+                                    :KB_castelvetro ;
+                persp:perspectivisedAs :s10 ,
+                                       :s21 ,
+                                       :s26 ,
+                                       :s3 ,
+                                       :s31 ,
+                                       :s5 ,
+                                       :s8 ;
+                persp:perspectivisedThrough :s1 ,
+                                            :s12 ,
+                                            :s14 ,
+                                            :s15 ,
+                                            :s18 ,
+                                            :s19 ,
+                                            :s2 ,
+                                            :s20 ,
+                                            :s22 ,
+                                            :s23 ,
+                                            :s24 ,
+                                            :s25 ,
+                                            :s27 ,
+                                            :s28 ,
+                                            :s29 ,
+                                            :s3 ,
+                                            :s30 ,
+                                            :s31 ,
+                                            :s39 ,
+                                            :s4 ,
+                                            :s6 ,
+                                            :s7 ,
+                                            :s9 ;
                 dul:hasMember :w1 ,
                               :w10 ,
                               :w11 ,
@@ -1030,14 +1353,56 @@ arg:Topic rdf:type owl:NamedIndividual ,
                               :w7 ,
                               :w8 ,
                               :w9 ;
-                rdfs:comment "Locution featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro."@en ;
-                rdfs:label "Disputed word"@en .
+                rdfs:comment "Locutions featured in Annibal Caro’s canzone whose permissibility in the context of Petrarchist poetry is questioned by Lodovico Castelvetro."@en ;
+                rdfs:label "Disputed words"@en .
+
+
+###  https://w3id.org/contro/data#imitation
+:imitation rdf:type owl:NamedIndividual ,
+                    d0:Eventuality ,
+                    dul:Situation ,
+                    owl:Thing ;
+           dul:hasRole arg:Topic ,
+                       persp:Eventuality ;
+           persp:extractedFrom :KB_caro ,
+                               :KB_castelvetro ;
+           persp:perspectivisedAs :s18 ;
+           persp:perspectivisedThrough :s16 ,
+                                       :s17 ,
+                                       :s40 ,
+                                       :s41 ;
+           rdfs:comment "The practice of poets and prose-writers reworking the words, stylistic features, and themes of the authors who preceded them as a way of expressing awareness of their literary heritage. In the Renaissance period, it was not regarded as plagiarism but as essential to the creation of an original literary work."@en ;
+           rdfs:label "Imitation"@en .
 
 
 ###  https://w3id.org/contro/data#latinisms
 :latinisms rdf:type owl:NamedIndividual ,
+                    d0:Eventuality ,
+                    dul:Situation ,
                     owl:Thing ;
-           rdfs:comment "Lexical Latinisms are loanwords from written Latin that are artificially introduced into Italian through phonetic and morphological adaptation, as opposed to hereditary words, which result naturally from uninterrupted phonetic evolution. Latinisms are often employed in poetic texts to elevate the stylistic register."@en ;
+           dul:hasRole arg:Topic ,
+                       persp:Eventuality ;
+           persp:extractedFrom :KB_caro ,
+                               :KB_castelvetro ;
+           persp:perspectivisedAs :s10 ,
+                                  :s14 ,
+                                  :s35 ,
+                                  :s39 ,
+                                  :s5 ;
+           persp:perspectivisedThrough :s11 ,
+                                       :s12 ,
+                                       :s13 ,
+                                       :s14 ,
+                                       :s15 ,
+                                       :s31 ,
+                                       :s32 ,
+                                       :s33 ,
+                                       :s34 ,
+                                       :s36 ,
+                                       :s37 ,
+                                       :s38 ,
+                                       :s39 ;
+           rdfs:comment "Loanwords from written Latin that are artificially introduced into Italian through phonetic and morphological adaptation, as opposed to hereditary words, which result naturally from uninterrupted phonetic evolution. Latinisms are often employed in poetic texts to elevate the stylistic register."@en ;
            rdfs:label "Latinisms"@en .
 
 
@@ -1046,7 +1411,7 @@ arg:Topic rdf:type owl:NamedIndividual ,
                    dul:Agent ,
                    owl:Thing ;
           dul:hasRole arg:DialogicalAgent ,
-                      <https://w3id.org/contro/persp#Conceptualiser> ;
+                      persp:Conceptualiser ;
           arg:isAliasOf <http://viaf.org/viaf/51714622> ,
                         :caro ;
           rdfs:comment "Fictional author: the text is presented as if written by the janitor of Accademia di Banchi di Roma."@en ;
@@ -1078,14 +1443,97 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:ArgumentationTheorySituation ,
               arg:InferenceRule ;
      dul:isSettingFor :s23 ,
-                      :s24 ,
-                      :s25 ;
+                      :s25 ,
+                      :s26 ;
      dul:satisfies arg:InferenceRule ;
      arg:Antecedent :s23 ,
-                    :s24 ;
-     arg:Consequent :s25 ;
+                    :s25 ;
+     arg:Consequent :s26 ;
      arg:extractedFrom :KB_caro ;
-     rdfs:comment "Unlike dead languages, a living language must draw from the variety of its speakers and cannot be normed by a single authority."@en .
+     rdfs:comment "Unlike dead languages, a living language such as Italian must draw from the variety of its speakers and cannot be normed by a single authority."@en .
+
+
+###  https://w3id.org/contro/data#r11
+:r11 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:ArgumentationTheorySituation ,
+              arg:InferenceRule ;
+     dul:isSettingFor :s27 ,
+                      :s28 ,
+                      :s29 ,
+                      :s30 ,
+                      :s31 ;
+     dul:satisfies arg:InferenceRule ;
+     arg:Antecedent :s27 ,
+                    :s28 ,
+                    :s29 ,
+                    :s30 ;
+     arg:Consequent :s31 ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "A poet who introduces foreign words without rhetorical, lexical, or customary justification fails in poetic judgment."@en .
+
+
+###  https://w3id.org/contro/data#r12
+:r12 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:ArgumentationTheorySituation ,
+              arg:InferenceRule ;
+     dul:isSettingFor :s32 ,
+                      :s33 ,
+                      :s34 ,
+                      :s35 ;
+     dul:satisfies arg:InferenceRule ;
+     arg:Antecedent :s32 ,
+                    :s33 ,
+                    :s34 ;
+     arg:Consequent :s35 ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "If the masters of rhetoric include some linguistic practices under poetic license and omit others, then only the discussed practices are to be considered endorsed."@en .
+
+
+###  https://w3id.org/contro/data#r13
+:r13 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:ArgumentationTheorySituation ,
+              arg:InferenceRule ;
+     dul:isSettingFor :s36 ,
+                      :s37 ,
+                      :s38 ,
+                      :s39 ;
+     dul:satisfies arg:InferenceRule ;
+     arg:Antecedent :s36 ,
+                    :s37 ,
+                    :s38 ;
+     arg:Consequent :s39 ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Horace distinguishes between words that evolve through usage and words created by authorial invention; Latinisms fall into the latter."@en .
+
+
+###  https://w3id.org/contro/data#r14
+:r14 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:ArgumentationTheorySituation ,
+              arg:InferenceRule ;
+     dul:isSettingFor :s10 ,
+                      :s12 ,
+                      :s14 ,
+                      :s15 ,
+                      :s31 ,
+                      :s39 ;
+     dul:satisfies arg:InferenceRule ;
+     arg:Antecedent :s12 ,
+                    :s14 ,
+                    :s15 ,
+                    :s31 ,
+                    :s39 ;
+     arg:Consequent :s10 ;
+     arg:extractedFrom :KB_caro ,
+                       :KB_castelvetro ;
+     rdfs:comment "Unjustified latinisms should not be used in Italian poetry."@en .
 
 
 ###  https://w3id.org/contro/data#r2
@@ -1095,9 +1543,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:ArgumentationTheorySituation ,
              arg:InferenceRule ;
     dul:isSettingFor :s3 ,
+                     :s4 ,
                      :s5 ;
     dul:satisfies arg:InferenceRule ;
-    arg:Antecedent :s3 ;
+    arg:Antecedent :s3 ,
+                   :s4 ;
     arg:Consequent :s5 ;
     arg:contradictedBy :s18 ;
     arg:extractedFrom :KB_castelvetro ;
@@ -1170,13 +1620,20 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:ArgumentationTheorySituation ,
              arg:InferenceRule ;
     dul:isSettingFor :s10 ,
+                     :s12 ,
                      :s14 ,
-                     :s15 ;
+                     :s15 ,
+                     :s31 ,
+                     :s39 ;
     dul:satisfies arg:InferenceRule ;
-    arg:Antecedent :s14 ,
-                   :s15 ;
+    arg:Antecedent :s12 ,
+                   :s14 ,
+                   :s15 ,
+                   :s31 ,
+                   :s39 ;
     arg:Consequent :s10 ;
-    arg:extractedFrom :KB_caro ;
+    arg:extractedFrom :KB_caro ,
+                      :KB_castelvetro ;
     rdfs:comment "If Italian authors are justified in using Latinisms, as those words are, then Italian authors are justified in using those words."@en .
 
 
@@ -1240,11 +1697,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:Antecedent ,
              arg:ArgumentationTheorySituation ,
              arg:Premise ,
-             <https://w3id.org/contro/persp#Lens> ,
-             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+             persp:Lens ,
+             persp:PerspectivisationTheorySituation ;
     dul:satisfies arg:Antecedent ,
                   arg:Premise ,
-                  <https://w3id.org/contro/persp#Lens> ;
+                  persp:Lens ;
     arg:extractedFrom :KB_caro ,
                       :KB_castelvetro ;
     rdfs:comment "Petrarch never used certain words."@en ;
@@ -1261,20 +1718,25 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:ArgumentationTheorySituation ,
               arg:Conclusion ,
               arg:Consequent ,
-              <https://w3id.org/contro/persp#Cut> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Cut ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Conclusion ,
                    arg:Consequent ,
-                   <https://w3id.org/contro/persp#Cut> ;
+                   persp:Cut ;
      arg:contradicts :s5 ;
-     arg:extractedFrom :KB_caro ;
-     <https://w3id.org/contro/persp#contrasts> :s5 ;
-     <https://w3id.org/contro/persp#shotThrough> :s1 ,
-                                                 :s14 ,
-                                                 :s15 ,
-                                                 :s2 ,
-                                                 :s4 ,
-                                                 :s9 ;
+     arg:extractedFrom :KB_caro ,
+                       :KB_castelvetro ;
+     persp:contrasts :s10 ,
+                     :s5 ;
+     persp:shotThrough :s1 ,
+                       :s12 ,
+                       :s14 ,
+                       :s15 ,
+                       :s2 ,
+                       :s31 ,
+                       :s39 ,
+                       :s4 ,
+                       :s9 ;
      rdfs:comment "Those words can be used."@en .
 
 
@@ -1285,11 +1747,12 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Antecedent ,
               arg:ArgumentationTheorySituation ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Lens> ;
+                   persp:Lens ;
+     arg:contradictedBy :s35 ;
      arg:extractedFrom :KB_caro ;
      rdfs:comment "Greek and Latin masters of rhetoric endorse the literary use of foreign words."@en ;
      prov:value "It is said by all the good authors of the Greek and Latin languages"@en ,
@@ -1303,13 +1766,18 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Antecedent ,
               arg:ArgumentationTheorySituation ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Lens> ;
-     arg:extractedFrom :KB_caro ;
-     rdfs:comment "Latin words are foreign, yet intelligible, in Italian."@en .
+                   persp:Lens ;
+     arg:extractedFrom :KB_caro ,
+                       :KB_castelvetro ;
+     rdfs:comment "Latin words are foreign to Italian speakers."@en ;
+     prov:value "Poiché le parole latine sono straniere a’ vulgari"@it ,
+                "Since Latin words are foreign to vernacular speakers"@en ,
+                "they are permitted not only to use those that are foreign and common in the country, as these are"@en ,
+                "è lor concesso d’usar quelle che son forestiere e pratiche del paese, come son queste"@it .
 
 
 ###  https://w3id.org/contro/data#s13
@@ -1319,11 +1787,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Antecedent ,
               arg:ArgumentationTheorySituation ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Lens> ;
+                   persp:Lens ;
      arg:extractedFrom :KB_caro ;
      rdfs:comment "Italian is a literary language whose norms can be guided by classical precedent."@en .
 
@@ -1337,20 +1805,25 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Conclusion ,
               arg:Consequent ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Cut> ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Cut ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Conclusion ,
                    arg:Consequent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Cut> ,
-                   <https://w3id.org/contro/persp#Lens> ;
-     arg:extractedFrom :KB_caro ;
-     <https://w3id.org/contro/persp#shotThrough> :s11 ,
-                                                 :s12 ,
-                                                 :s13 ;
-     rdfs:comment "Italian authors are justified in using Latinisms."@en .
+                   persp:Cut ,
+                   persp:Lens ;
+     arg:contradictedBy :s39 ;
+     arg:extractedFrom :KB_caro ,
+                       :KB_castelvetro ;
+     persp:contrasts :s39 ;
+     persp:shotThrough :s11 ,
+                       :s12 ,
+                       :s13 ;
+     rdfs:comment "Italian authors are justified in using Latinisms."@en ;
+     prov:value "they are permitted not only to use those that are foreign and common in the country, as these are"@en ,
+                "è lor concesso d’usar quelle che son forestiere e pratiche del paese, come son queste"@it .
 
 
 ###  https://w3id.org/contro/data#s15
@@ -1360,12 +1833,13 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Antecedent ,
               arg:ArgumentationTheorySituation ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Lens> ;
-     arg:extractedFrom :KB_caro ;
+                   persp:Lens ;
+     arg:extractedFrom :KB_caro ,
+                       :KB_castelvetro ;
      rdfs:comment "Those words are Latinisms."@en ;
      prov:value "Because they are Latin?"@en ,
                 "Perché sono latine?"@it .
@@ -1378,11 +1852,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Antecedent ,
               arg:ArgumentationTheorySituation ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Lens> ;
+                   persp:Lens ;
      arg:extractedFrom :KB_caro ;
      rdfs:comment "Learning involves emulating principles, not mimicking results."@en ;
      prov:value "Non sarebbe pazzo uno che, volendo imparare di caminare da un altro, gli andasse sempre dietro, mettendo i piedi appunto donde colui gli lieva?"@it ,
@@ -1396,11 +1870,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Antecedent ,
               arg:ArgumentationTheorySituation ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Lens> ;
+                   persp:Lens ;
      arg:extractedFrom :KB_caro ;
      rdfs:comment "Literary imitation is a kind of learning."@en ;
      prov:value "La medesima pazzia è quella che dite voi, a voler che si facciano i medesimi passi, e non il medesimo andare del Petrarca."@it ,
@@ -1416,22 +1890,22 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Conclusion ,
               arg:Consequent ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Cut> ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Cut ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Conclusion ,
                    arg:Consequent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Cut> ,
-                   <https://w3id.org/contro/persp#Lens> ;
+                   persp:Cut ,
+                   persp:Lens ;
      arg:contradicts :r2 ;
      arg:extractedFrom :KB_caro ;
-     <https://w3id.org/contro/persp#shotThrough> :s16 ,
-                                                 :s17 ;
+     persp:shotThrough :s16 ,
+                       :s17 ;
      rdfs:comment "Literary imitation should emulate the author’s judgment, not reproduce their words."@en ;
-     prov:value "Imitar lui vuol dire che si deve portar la persona e le gambe come egli fece; e non porre ’l piedi nelle sue stesse pedate. Egli si valse giudiziosamente, in tutte le lingue, di tutte le buone voci: col medesimo giudizio è lecito di valersene ancora ad ognuno."@it ,
-                "To imitate him means to carry oneself and move one’s legs as he did, not to place one’s feet in his very footprints. He made judicious use, in all languages, of all worthy words; with the same judgment, anyone may likewise make use of them."@en .
+     prov:value "Imitar lui vuol dire che si deve portar la persona e le gambe come egli fece; e non porre ’l piedi nelle sue stesse pedate"@it ,
+                "To imitate him means to carry oneself and move one’s legs as he did, not to place one’s feet in his very footprints"@en .
 
 
 ###  https://w3id.org/contro/data#s19
@@ -1441,11 +1915,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Antecedent ,
               arg:ArgumentationTheorySituation ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Lens> ;
+                   persp:Lens ;
      arg:extractedFrom :KB_caro ;
      rdfs:comment "To limit authors’ ability to interpret and develop the language by binding it to past usage is akin to denying the contemporary Church its role in interpreting and expanding upon sacred Scripture."@en ;
      prov:value "Questo è sentir nella lingua quel medesimo appunto che nella fede: cioè che nel Petrarca e nel Boccaccio si termini tutta la favella volgare, come negli Evangeli ed in san Paolo tutta la sacra Scrittura."@it ,
@@ -1459,16 +1933,18 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:Antecedent ,
              arg:ArgumentationTheorySituation ,
              arg:Premise ,
-             <https://w3id.org/contro/persp#Lens> ,
-             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+             persp:Lens ,
+             persp:PerspectivisationTheorySituation ;
     dul:satisfies arg:Antecedent ,
                   arg:Premise ,
-                  <https://w3id.org/contro/persp#Lens> ;
+                  persp:Lens ;
     arg:extractedFrom :KB_caro ,
                       :KB_castelvetro ;
     rdfs:comment "Other authors of his time used those words."@en ;
     prov:value "conciofossecosaché al suo tempo fossero state usate forse tutte, ma senza dubbio la maggior parte, dagli scrittori"@it ,
-               "since they had perhaps all, or at least most, been used by writers of his time"@en .
+               "non vi contentarete voi del giudizio, dell’autorità e dell’essempio di quelli che sono i maestri dell’arte dello scrivere, dai quali hanno imparato il Petrarca e tutti gli altri buoni scrittori"@it ,
+               "since they had perhaps all, or at least most, been used by writers of his time"@en ,
+               "would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing, the very ones from whom Petrarch and all other good writers have learned"@en .
 
 
 ###  https://w3id.org/contro/data#s20
@@ -1478,11 +1954,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Antecedent ,
               arg:ArgumentationTheorySituation ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Lens> ;
+                   persp:Lens ;
      arg:extractedFrom :KB_caro ;
      rdfs:comment "The Church holds the autority to interpret and expand upon sacred Scripture."@en .
 
@@ -1494,17 +1970,17 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:ArgumentationTheorySituation ,
               arg:Conclusion ,
               arg:Consequent ,
-              <https://w3id.org/contro/persp#Cut> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Cut ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Conclusion ,
                    arg:Consequent ,
-                   <https://w3id.org/contro/persp#Cut> ;
+                   persp:Cut ;
      arg:extractedFrom :KB_caro ;
-     <https://w3id.org/contro/persp#shotThrough> :s18 ,
-                                                 :s19 ,
-                                                 :s20 ,
-                                                 :s22 ,
-                                                 :s4 ;
+     persp:shotThrough :s18 ,
+                       :s19 ,
+                       :s20 ,
+                       :s22 ,
+                       :s4 ;
      rdfs:comment "Contemporary authors have the freedom to interpret and develop the language."@en ;
      prov:value "Non voglio esser privo della libertà c’hanno avuto essi e tutti gli scrittori in tutte le lingue."@it ,
                 "Nor do I wish to be deprived of the freedom they themselves enjoyed, as did all writers in every language."@en .
@@ -1517,11 +1993,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Antecedent ,
               arg:ArgumentationTheorySituation ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Lens> ;
+                   persp:Lens ;
      arg:extractedFrom :KB_caro ;
      rdfs:comment "Petrarch exercised authorial freedom in shaping the language."@en ;
      prov:value "Beyond this, that Petrarch has taken away from others what he himself did?"@en ,
@@ -1535,15 +2011,15 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Antecedent ,
               arg:ArgumentationTheorySituation ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Lens> ;
+                   persp:Lens ;
      arg:extractedFrom :KB_caro ;
      rdfs:comment "In dead languages like Latin and Greek, one must imitate the best authors."@en ;
-     prov:value "For here lies the error you have fallen into: believing that in this language one ought to act as in Greek and Latin—languages which, being dead as regards common speech, must necessarily be written by drawing from the writings of the few and by imitating the best, since we cannot ourselves grasp their native power or beauty."@en ,
-                "perché qui sta l’errore che avete preso, di credere che in questa lingua si debba fare come nella greca e nella latina; le quali essendo morte quanto all’uso del parlar commune, è necessario che si scrivano cavando dagli scritti de’ pochi ed imitando i migliori, non potendosi da noi conoscere la forza né la bellezza lor naturale."@it .
+     prov:value "being dead as regards common speech, must necessarily be written by drawing from the writings of the few and by imitating the best"@en ,
+                "le quali essendo morte quanto all’uso del parlar commune, è necessario che si scrivano cavando dagli scritti de’ pochi ed imitando i migliori"@it .
 
 
 ###  https://w3id.org/contro/data#s24
@@ -1553,35 +2029,106 @@ arg:Topic rdf:type owl:NamedIndividual ,
               arg:Antecedent ,
               arg:ArgumentationTheorySituation ,
               arg:Premise ,
-              <https://w3id.org/contro/persp#Lens> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Antecedent ,
                    arg:Premise ,
-                   <https://w3id.org/contro/persp#Lens> ;
+                   persp:Lens ;
      arg:extractedFrom :KB_caro ;
-     rdfs:comment "Italian is a living language."@en ;
-     prov:value "But in this language—which is naturally and commonly spoken and understood by all, and which presents itself to us alive and entirely uncovered in all its parts—"@en ,
-                "Ma in questa, che naturalmente o communemente si parla e s’intende da tutti e che viva e nuda interamente e in ogni sua parte ci si mostra,"@it .
+     rdfs:comment "Living languages are naturally modified by the variety of their speakers."@en ;
+     prov:value "la natura d’essa lingua, che non possa, come l’altre, crescere e scemare"@it ,
+                "the nature of the language itself, denying it the ability, like all others, to grow and decline"@en .
 
 
 ###  https://w3id.org/contro/data#s25
 :s25 rdf:type owl:NamedIndividual ,
               dul:Situation ,
               owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_caro ;
+     rdfs:comment "Italian is a living language."@en ;
+     prov:value "But in this language—which is naturally and commonly spoken and understood by all, and which presents itself to us alive and entirely uncovered in all its parts"@en ,
+                "Ma in questa, che naturalmente o communemente si parla e s’intende da tutti e che viva e nuda interamente e in ogni sua parte ci si mostra"@it .
+
+
+###  https://w3id.org/contro/data#s26
+:s26 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
               arg:ArgumentationTheorySituation ,
               arg:Conclusion ,
               arg:Consequent ,
-              <https://w3id.org/contro/persp#Cut> ,
-              <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+              persp:Cut ,
+              persp:PerspectivisationTheorySituation ;
      dul:satisfies arg:Conclusion ,
                    arg:Consequent ,
-                   <https://w3id.org/contro/persp#Cut> ;
+                   persp:Cut ;
      arg:extractedFrom :KB_caro ;
-     <https://w3id.org/contro/persp#shotThrough> :s23 ,
-                                                 :s24 ;
+     persp:shotThrough :s23 ,
+                       :s24 ,
+                       :s25 ;
      rdfs:comment "Italian should not be limited to the authority of a single author, such as Petrarch."@en ;
      prov:value "che giudizio è il vostro a pensare che necessariamente si debba cavar dagli scritti di un solo, e non anco da molti che la parlano e la scrivono;"@it ,
                 "what kind of judgment is it to think that one must necessarily draw from the writings of a single author, and not also from the many who speak and write it;"@en .
+
+
+###  https://w3id.org/contro/data#s27
+:s27 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Foreign words in poetry require rhetorical purpose, lexical necessity, or established usage to be justified."@en .
+
+
+###  https://w3id.org/contro/data#s28
+:s28 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Caro did not use those words ironically."@en ;
+     prov:value "le parole latine segnate da me non sono state messe dal Caro in questa canzone per beffarsi dell'aversario"@it ,
+                "the Latin words marked by me were not placed by Caro in this canzone to mock his adversary"@en .
+
+
+###  https://w3id.org/contro/data#s29
+:s29 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Caro was not forced to use those words by lack of Italian equivalents."@en ;
+     prov:value "nor because there were no vernacular words to put in their place"@en ,
+                "né perché mancassero le vulgari da riporre in suo luogo"@it .
 
 
 ###  https://w3id.org/contro/data#s3
@@ -1593,25 +2140,234 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:Conclusion ,
              arg:Consequent ,
              arg:Premise ,
-             <https://w3id.org/contro/persp#Cut> ,
-             <https://w3id.org/contro/persp#Lens> ,
-             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+             persp:Cut ,
+             persp:Lens ,
+             persp:PerspectivisationTheorySituation ;
     dul:satisfies arg:Antecedent ,
                   arg:Conclusion ,
                   arg:Consequent ,
                   arg:Premise ,
-                  <https://w3id.org/contro/persp#Cut> ,
-                  <https://w3id.org/contro/persp#Lens> ;
+                  persp:Cut ,
+                  persp:Lens ;
     arg:extractedFrom :KB_castelvetro ;
-    <https://w3id.org/contro/persp#shotThrough> :s1 ,
-                                                :s2 ;
+    persp:shotThrough :s1 ,
+                      :s2 ;
     rdfs:comment "Petrarch wouldn’t have used those words."@en ;
     prov:value "Il Petrarca non userebbe:"@it ,
                "Petrarch would not have used any of the elements he noted in Caro’s canzone"@en ,
                "Petrarch would not use:"@en ,
-               "che il Petrarca non userebbe cede ed altre voci che seguono"@it ,
+               "che il Petrarca non userebbe «cede» ed altre voci che seguono"@it ,
                "il Petrarca non avrebbe usata niuna delle cose notate da lui nella canzone del Caro"@it ,
-               "that Petrarch would not use cede and the other words that follow"@en .
+               "that Petrarch would not use «cede» and the other words that follow"@en .
+
+
+###  https://w3id.org/contro/data#s30
+:s30 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "The words Caro used were not legitimized by common usage."@en ;
+     prov:value "nor because those words have been received and made familiar among vernacular speakers"@en ,
+                "né perché quelle sieno state ricevute e dimesticate tra vulgari"@it .
+
+
+###  https://w3id.org/contro/data#s31
+:s31 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Conclusion ,
+              arg:Consequent ,
+              arg:Premise ,
+              persp:Cut ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Conclusion ,
+                   arg:Consequent ,
+                   arg:Premise ,
+                   persp:Cut ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_caro ,
+                       :KB_castelvetro ;
+     persp:shotThrough :s27 ,
+                       :s28 ,
+                       :s29 ,
+                       :s30 ;
+     rdfs:comment "Caro inserted those words gratuitously, revealing a failure of poetic judgment."@en .
+
+
+###  https://w3id.org/contro/data#s32
+:s32 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Quintilian supports the formation of Latin words after the model of Greek ones."@en ;
+     prov:value "he does not mean it universally of words from every kind of foreign language, but specifically of words newly coined by the orator following the manner of a foreign  tongue."@en ,
+                "he means his daring as fortunate only within the bounds of the Latin language, as far as vocabulary is concerned;"@en ,
+                "he refers to the formation of Latin words after the model of Greek ones, and not to the importing of foreign words  into another language,"@en ,
+                "intende dell’arditezza di lui aventurosa solamente dentro da termini della lingua latina quanto appartiene alle voci;"@it ,
+                "intende egli della formazione delle parole latine a similitudine delle greche, e non del portare le forestiere  in un’altra lingua,"@it ,
+                "non intende universalmente delle voci d’ogni maniera di lingua forestiera, ma particolarmente delle voci formate di nuovo dal favellatore secondo la maniera della lingua  straniera."@it .
+
+
+###  https://w3id.org/contro/data#s33
+:s33 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Varro allows poets greater freedom than orators in forming words by morphological analogy rather than by common usage."@en ;
+     prov:value "potendo il poeta «transilire lineas impune», cioè passare il segno, il che è interpretato da Varrone medesimo che il poeta può più liberamente seguire l’analogia nelle parole che non può il favellatore;"@it ,
+                "the poet is allowed to «transilire lineas impune», or pass the mark, which Varro himself interprets to mean that the poet may follow analogy in words more freely than the orator can;"@en .
+
+
+###  https://w3id.org/contro/data#s34
+:s34 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Quintilian and Varro represent the consensus of the masters of rhetoric on linguistic matters."@en .
+
+
+###  https://w3id.org/contro/data#s35
+:s35 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:ArgumentationTheorySituation ,
+              arg:Conclusion ,
+              arg:Consequent ,
+              persp:Cut ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Conclusion ,
+                   arg:Consequent ,
+                   persp:Cut ;
+     arg:contradicts :s11 ;
+     arg:extractedFrom :KB_castelvetro ;
+     persp:shotThrough :s32 ,
+                       :s33 ,
+                       :s34 ;
+     rdfs:comment "The masters of rhetoric endorse new word formation after the model of foreign words, not the usage of foreign words themselves."@en ;
+     prov:value "in vain does Caro bring forth the authority of the eminent masters of rhetoric and poetry in their support, some of whom do not speak of this kind of foreign words, and some do speak of them, but deny their use or do not allow it in this case"@en ,
+                "vanamente si producono dal Caro per sostegno loro l’autorità de’ valenti maestri di ritorica e di poesia, alcuni de’ quali non parlano di questa maniera di parole strane e alcuni ne parlano sì, ma niegano l’uso loro o non lo concedono in questo caso"@it .
+
+
+###  https://w3id.org/contro/data#s36
+:s36 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Horace teaches that usage is the arbiter of the survival and demise of words within a language."@en ;
+     prov:value "La podestà del quale uso è molto grande nel generar vocaboli e nel ravivare i già morti e nell’abbattere gli onorati, sì come dice Orazio"@it ,
+                "The power of usage is indeed great in generating new words, in reviving the dead, and in bringing down those that are honored, as Horace says"@en ,
+                "it does not follow in the case of Horace because he calls usage the begetter of words, or because he says that many words now dead will be reborn, and many that are esteemed will fall into this condition"@en ,
+                "non si concede ciò per Orazio perché egli chiami l’uso generator delle parole, o perché dica che molte parole già morte rinasceranno, e molte, che sono in pregio, cadranno con questa condizione"@it .
+
+
+###  https://w3id.org/contro/data#s37
+:s37 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Horace acknowledges the writer’s license to coin new words through individual ingenuity."@en ;
+     prov:value "as all this liberty in coining words depends entirely on the ingenious daring of the writer"@en ,
+                "pendendo del tutto questo lecito coniamento de’ vocaboli dall’ardire ingegnoso dello scrittore"@it .
+
+
+###  https://w3id.org/contro/data#s38
+:s38 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Latinisms are not products of usage but artificial formations introduced by the author."@en .
+
+
+###  https://w3id.org/contro/data#s39
+:s39 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Conclusion ,
+              arg:Consequent ,
+              arg:Premise ,
+              persp:Cut ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Conclusion ,
+                   arg:Consequent ,
+                   arg:Premise ,
+                   persp:Cut ,
+                   persp:Lens ;
+     arg:contradicts :s14 ;
+     arg:extractedFrom :KB_caro ,
+                       :KB_castelvetro ;
+     persp:contrasts :s14 ;
+     persp:shotThrough :s36 ,
+                       :s37 ,
+                       :s38 ;
+     rdfs:comment "The legitimacy of Latinisms in Italian poetry depends solely on the ingenuity of the author."@en ;
+     prov:value "La podestà del quale uso è molto grande nel generar vocaboli e nel ravivare i già morti e nell’abbattere gli onorati, sì come dice Orazio, ma è picciola o nulla nel producere voci artificiose per significazione o per formazione"@it ,
+                "The power of usage is indeed great in generating new words, in reviving the dead, and in bringing down those that are honored, as Horace says, but it is slight or null when it comes to producing artificial words either by signification or by formation"@en ,
+                "as all this liberty in coining words depends entirely on the ingenious daring of the writer, and not on the force of prevailing usage"@en ,
+                "pendendo del tutto questo lecito coniamento de’ vocaboli dall’ardire ingegnoso dello scrittore e non dalla forza del potente uso"@it .
 
 
 ###  https://w3id.org/contro/data#s4
@@ -1621,11 +2377,11 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:Antecedent ,
              arg:ArgumentationTheorySituation ,
              arg:Premise ,
-             <https://w3id.org/contro/persp#Lens> ,
-             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+             persp:Lens ,
+             persp:PerspectivisationTheorySituation ;
     dul:satisfies arg:Antecedent ,
                   arg:Premise ,
-                  <https://w3id.org/contro/persp#Lens> ;
+                  persp:Lens ;
     arg:extractedFrom :KB_caro ,
                       :KB_castelvetro ;
     rdfs:comment "Petrarch is an authority in Italian literature."@en ;
@@ -1635,6 +2391,48 @@ arg:Topic rdf:type owl:NamedIndividual ,
                "since he holds Petrarch as the prince of poets in our language, worthy of reverence and admiration above all others."@en .
 
 
+###  https://w3id.org/contro/data#s40
+:s40 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Pietro Bembo is a master of discernment in imitation for Italian literature."@en ;
+     prov:value "And in this respect, our language owes perpetual gratitude to Bembo, for he taught us how to proceed in this way, and restrained the boldness of those who transgressed too licentiously in this matter"@en ,
+                "E in questo ha spezialmente la nostra favella perpetuo obligo col Bembo, perché n’insegnò la via di così fare, e raffrenò l’audacia di coloro che troppo licenziosamente in ciò trascorrevano"@it ,
+                "one must select certain authoritative writers to trust regarding the choice of words; or rather, one should acknowledge those that Messer Pietro Bembo has already selected"@en ,
+                "sono da sciegliere certi scrittori d’autorità a quali si possa prestar fede nell’elezione delle parole; o più tosto sono da riconoscere i già scielti da messer Pietro Bembo"@it .
+
+
+###  https://w3id.org/contro/data#s41
+:s41 rdf:type owl:NamedIndividual ,
+              dul:Situation ,
+              owl:Thing ,
+              arg:Antecedent ,
+              arg:ArgumentationTheorySituation ,
+              arg:Premise ,
+              persp:Lens ,
+              persp:PerspectivisationTheorySituation ;
+     dul:satisfies arg:Antecedent ,
+                   arg:Premise ,
+                   persp:Lens ;
+     arg:extractedFrom :KB_castelvetro ;
+     rdfs:comment "Bembo argues that only the best authors of the 14th century, in their finished and approved works, are worthy of imitation."@en ;
+     prov:value "I refrain from placing much trust in this regard in Lorenzo de’ Medici, in Angelo Poliziano, or in any other more recent author, since I do so on the advice of Bembo himself"@en ,
+                "I volumi adunque riprovati da gli loro quantunque degni scrittori, o lasciatici imperfetti, o ripresi liberamente dal Bembo quanto è alla lingua, o trapassati per lui sotto taciturnità non ci possono rendere sicuri da biasimo se riempieremo i nostri scritti delle loro voci"@it ,
+                "Volumes, then, disavowed by their authors, however worthy, left to us incomplete, freely criticized by Bembo with regard to their language, or passed over by him in silence, cannot shield us from reproach if we fill our writings with their words"@en ,
+                "giudica essere il Boccaccio l’ottimo prosatore e ’l Petrarca l’ottimo rimatore, e amenduni gli ultimi in tempo da essere creduti"@it ,
+                "he judges Boccaccio to be the finest prose writer, Petrarch the finest poet, and both the most recent in time to be worthy of consideration"@en ,
+                "io mi ritrarrò da dar molta credenza in questa parte a Lorenzo de’ Medici, o ad Angelo Poliziano, o ad alcun altro più moderno, poi che lo farò consigliato da esso Bembo"@it .
+
+
 ###  https://w3id.org/contro/data#s5
 :s5 rdf:type owl:NamedIndividual ,
              dul:Situation ,
@@ -1642,17 +2440,26 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:ArgumentationTheorySituation ,
              arg:Conclusion ,
              arg:Consequent ,
-             <https://w3id.org/contro/persp#Cut> ,
-             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+             persp:Cut ,
+             persp:PerspectivisationTheorySituation ;
     dul:satisfies arg:Conclusion ,
                   arg:Consequent ,
-                  <https://w3id.org/contro/persp#Cut> ;
+                  persp:Cut ;
     arg:contradictedBy :s10 ;
-    arg:extractedFrom :KB_castelvetro ;
-    <https://w3id.org/contro/persp#contrasts> :s10 ;
-    <https://w3id.org/contro/persp#shotThrough> :s3 ,
-                                                :s4 ;
-    rdfs:comment "Those words should not be used."@en .
+    arg:extractedFrom :KB_caro ,
+                      :KB_castelvetro ;
+    persp:contrasts :s10 ,
+                    :s5 ;
+    persp:shotThrough :s12 ,
+                      :s14 ,
+                      :s15 ,
+                      :s3 ,
+                      :s31 ,
+                      :s39 ,
+                      :s4 ;
+    rdfs:comment "Those words should not be used."@en ;
+    prov:value "I have marked them as not suited to be employed in this canzone"@en ,
+               "sì come non acconcie ad essere adoperate in questa canzone sono state da me segnate"@it .
 
 
 ###  https://w3id.org/contro/data#s6
@@ -1662,13 +2469,15 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:Antecedent ,
              arg:ArgumentationTheorySituation ,
              arg:Premise ,
-             <https://w3id.org/contro/persp#Lens> ,
-             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+             persp:Lens ,
+             persp:PerspectivisationTheorySituation ;
     dul:satisfies arg:Antecedent ,
                   arg:Premise ,
-                  <https://w3id.org/contro/persp#Lens> ;
+                  persp:Lens ;
     arg:extractedFrom :KB_caro ;
-    rdfs:comment "There is no direct knowledge of Petrarch’s intention."@en .
+    rdfs:comment "There is no direct knowledge of Petrarch’s intention."@en ;
+    prov:value "But in saying outright that «he would not use them», one must consider whether you have reliable authority on the matter, and what exactly you know of it; whether, by chance, as you so freely dispense the name and wisdom of Petrarch, his very spirit has entered your body."@en ,
+               "Ma, dicendo affermativamente «non l’userebbe», bisogna intender se l’avete di buon loco, e quel che voi ne sapete; se per aventura spacciando, come fate, il nome e ’l senno del Petrarca, vi fosse entrato il suo spirito in corpo"@it .
 
 
 ###  https://w3id.org/contro/data#s7
@@ -1678,13 +2487,15 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:Antecedent ,
              arg:ArgumentationTheorySituation ,
              arg:Premise ,
-             <https://w3id.org/contro/persp#Lens> ,
-             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+             persp:Lens ,
+             persp:PerspectivisationTheorySituation ;
     dul:satisfies arg:Antecedent ,
                   arg:Premise ,
-                  <https://w3id.org/contro/persp#Lens> ;
+                  persp:Lens ;
     arg:extractedFrom :KB_caro ;
-    rdfs:comment "Castelvetro is not a reliable interpreter of Petrarch’s mind."@en .
+    rdfs:comment "Castelvetro is not a reliable interpreter of Petrarch’s mind."@en ;
+    prov:value "But in saying outright that «he would not use them», one must consider whether you have reliable authority on the matter, and what exactly you know of it; whether, by chance, as you so freely dispense the name and wisdom of Petrarch, his very spirit has entered your body."@en ,
+               "Ma, dicendo affermativamente «non l’userebbe», bisogna intender se l’avete di buon loco, e quel che voi ne sapete; se per aventura spacciando, come fate, il nome e ’l senno del Petrarca, vi fosse entrato il suo spirito in corpo"@it .
 
 
 ###  https://w3id.org/contro/data#s8
@@ -1694,16 +2505,16 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:ArgumentationTheorySituation ,
              arg:Conclusion ,
              arg:Consequent ,
-             <https://w3id.org/contro/persp#Cut> ,
-             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+             persp:Cut ,
+             persp:PerspectivisationTheorySituation ;
     dul:satisfies arg:Conclusion ,
                   arg:Consequent ,
-                  <https://w3id.org/contro/persp#Cut> ;
+                  persp:Cut ;
     arg:contradicts :r1 ;
     arg:extractedFrom :KB_caro ;
-    <https://w3id.org/contro/persp#shotThrough> :s1 ,
-                                                :s6 ,
-                                                :s7 ;
+    persp:shotThrough :s1 ,
+                      :s6 ,
+                      :s7 ;
     rdfs:comment "It is not possible to know whether Petrarch would have used those words."@en ;
     prov:value "But if it is merely something you say and imagine on your own, I am under no obligation to believe it, and your imagination carries no weight."@en ,
                "Ma, quando lo diciate e ve l’imaginiate da voi, al vostro detto non sono obligato di credere, e la vostra imaginazione non fa caso."@it .
@@ -1716,133 +2527,135 @@ arg:Topic rdf:type owl:NamedIndividual ,
              arg:Antecedent ,
              arg:ArgumentationTheorySituation ,
              arg:Premise ,
-             <https://w3id.org/contro/persp#Lens> ,
-             <https://w3id.org/contro/persp#PerspectivisationTheorySituation> ;
+             persp:Lens ,
+             persp:PerspectivisationTheorySituation ;
     dul:satisfies arg:Antecedent ,
                   arg:Premise ,
-                  <https://w3id.org/contro/persp#Lens> ;
+                  persp:Lens ;
     arg:extractedFrom :KB_caro ;
-    rdfs:comment "Other authors have authority as well."@en .
+    rdfs:comment "Other authors have authority as well."@en ;
+    prov:value "non vi contentarete voi del giudizio, dell’autorità e dell’essempio di quelli che sono i maestri dell’arte dello scrivere, dai quali hanno imparato il Petrarca e tutti gli altri buoni scrittori"@it ,
+               "would you not be satisfied with the judgment, authority, and example of those who are the masters of the art of writing, the very ones from whom Petrarch and all other good writers have learned"@en .
 
 
 ###  https://w3id.org/contro/data#w1
 :w1 rdf:type owl:NamedIndividual ,
              owl:Thing ;
-    prov:value "cede" .
+    prov:value "cede"@it .
 
 
 ###  https://w3id.org/contro/data#w10
 :w10 rdf:type owl:NamedIndividual ,
               owl:Thing ;
-     prov:value "gesti" .
+     prov:value "gesti"@it .
 
 
 ###  https://w3id.org/contro/data#w11
 :w11 rdf:type owl:NamedIndividual ,
               owl:Thing ;
-     prov:value "inserte" .
+     prov:value "inserte"@it .
 
 
 ###  https://w3id.org/contro/data#w12
 :w12 rdf:type owl:NamedIndividual ,
               owl:Thing ;
-     prov:value "amene" .
+     prov:value "amene"@it .
 
 
 ###  https://w3id.org/contro/data#w2
 :w2 rdf:type owl:NamedIndividual ,
              owl:Thing ;
-    prov:value "ambo" .
+    prov:value "ambo"@it .
 
 
 ###  https://w3id.org/contro/data#w3
 :w3 rdf:type owl:NamedIndividual ,
              owl:Thing ;
-    prov:value "simulacri" .
+    prov:value "simulacri"@it .
 
 
 ###  https://w3id.org/contro/data#w4
 :w4 rdf:type owl:NamedIndividual ,
              owl:Thing ;
-    prov:value "ancor essa" .
+    prov:value "ancor essa"@it .
 
 
 ###  https://w3id.org/contro/data#w5
 :w5 rdf:type owl:NamedIndividual ,
              owl:Thing ;
-    prov:value "Suo merto e tuo valor" .
+    prov:value "Suo merto e tuo valor"@it .
 
 
 ###  https://w3id.org/contro/data#w6
 :w6 rdf:type owl:NamedIndividual ,
              owl:Thing ;
-    prov:value "inviolata" .
+    prov:value "inviolata"@it .
 
 
 ###  https://w3id.org/contro/data#w7
 :w7 rdf:type owl:NamedIndividual ,
              owl:Thing ;
-    prov:value "tarpato" .
+    prov:value "tarpato"@it .
 
 
 ###  https://w3id.org/contro/data#w8
 :w8 rdf:type owl:NamedIndividual ,
              owl:Thing ;
-    prov:value "propizia" .
+    prov:value "propizia"@it .
 
 
 ###  https://w3id.org/contro/data#w9
 :w9 rdf:type owl:NamedIndividual ,
              owl:Thing ;
-    prov:value "illustri" .
+    prov:value "illustri"@it .
 
 
 ###  https://w3id.org/contro/persp#Attitude
-<https://w3id.org/contro/persp#Attitude> rdf:type owl:NamedIndividual ,
-                                                  dul:Description ,
-                                                  owl:Thing .
+persp:Attitude rdf:type owl:NamedIndividual ,
+                        dul:Description ,
+                        owl:Thing .
 
 
 ###  https://w3id.org/contro/persp#Background
-<https://w3id.org/contro/persp#Background> rdf:type owl:NamedIndividual ,
-                                                    dul:Description ,
-                                                    owl:Thing .
+persp:Background rdf:type owl:NamedIndividual ,
+                          dul:Description ,
+                          owl:Thing .
 
 
 ###  https://w3id.org/contro/persp#Conceptualiser
-<https://w3id.org/contro/persp#Conceptualiser> rdf:type owl:NamedIndividual ,
-                                                        dul:Role ,
-                                                        owl:Thing .
+persp:Conceptualiser rdf:type owl:NamedIndividual ,
+                              dul:Role ,
+                              owl:Thing .
 
 
 ###  https://w3id.org/contro/persp#Cut
-<https://w3id.org/contro/persp#Cut> rdf:type owl:NamedIndividual ,
-                                             dul:Description ,
-                                             owl:Thing .
+persp:Cut rdf:type owl:NamedIndividual ,
+                   dul:Description ,
+                   owl:Thing .
 
 
 ###  https://w3id.org/contro/persp#Eventuality
-<https://w3id.org/contro/persp#Eventuality> rdf:type owl:NamedIndividual ,
-                                                     dul:Role ,
-                                                     owl:Thing .
+persp:Eventuality rdf:type owl:NamedIndividual ,
+                           dul:Role ,
+                           owl:Thing .
 
 
 ###  https://w3id.org/contro/persp#Lens
-<https://w3id.org/contro/persp#Lens> rdf:type owl:NamedIndividual ,
-                                              dul:Description ,
-                                              owl:Thing .
+persp:Lens rdf:type owl:NamedIndividual ,
+                    dul:Description ,
+                    owl:Thing .
 
 
 ###  https://w3id.org/contro/persp#Perspectivisation
-<https://w3id.org/contro/persp#Perspectivisation> rdf:type owl:NamedIndividual ,
-                                                           dul:Description ,
-                                                           owl:Thing ;
-                                                  dul:definesRole <https://w3id.org/contro/persp#Conceptualiser> ,
-                                                                  <https://w3id.org/contro/persp#Eventuality> ;
-                                                  dul:hasComponent <https://w3id.org/contro/persp#Attitude> ,
-                                                                   <https://w3id.org/contro/persp#Background> ,
-                                                                   <https://w3id.org/contro/persp#Cut> ,
-                                                                   <https://w3id.org/contro/persp#Lens> .
+persp:Perspectivisation rdf:type owl:NamedIndividual ,
+                                 dul:Description ,
+                                 owl:Thing ;
+                        dul:definesRole persp:Conceptualiser ,
+                                        persp:Eventuality ;
+                        dul:hasComponent persp:Attitude ,
+                                         persp:Background ,
+                                         persp:Cut ,
+                                         persp:Lens .
 
 
 ###  Generated by the OWL API (version 5.5.1) https://github.com/owlcs/owlapi/

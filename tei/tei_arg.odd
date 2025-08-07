@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>TEI for Argumentation</title>
+        <author>Francesca Massarenti</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>TEI Consortium</publisher>
+        <availability status="free">
+          <p>TEI material can be licensed differently depending on the use you intend to make of it.
+            Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is
+            generally appropriate for usages which treat TEI content as data or documentation. The
+            BSD-2 licence is generally appropriate for usage of TEI content in a software
+            environment. For further information or clarification, please contact the TEI Consortium
+            (info@tei-c.org).</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Written from scratch.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <appInfo>
+        <application ident="RomaJS" version="1.1.2" when="2025-07-11T09:03:25.105Z">
+          <desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc>
+        </application>
+      </appInfo>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>This TEI customization defines elements and attributes for the annotation of argumentative structures within texts. It extends the <att>type</att> attribute on the <gi>list</gi> element and its child <gi>item</gi> elements to support the representation of <val>argument</val>s consisting of a set of <val>premise</val>s, an inference <val>rule</val>, and a <val>conclusion</val>. It introduces a new <att>about</att> attribute on the <name type="class">att.global.analytic</name> attribute class to specify what the text is about, as distinct from the <att>ana</att> attribute, which represents what is said about it. Additionally, it broadens the scope of the <att>prev</att> attribute to allow reference to multiple logical antecedents.</p>
+
+      <schemaSpec xmlns="http://www.tei-c.org/ns/1.0" ident="arg" start="TEI teiCorpus" prefix="tei_" targetLang="en" docLang="en">
+        <moduleRef n="01" key="tei"/>
+        <moduleRef n="02" key="header" include="teiHeader fileDesc titleStmt publicationStmt idno availability licence sourceDesc encodingDesc projectDesc samplingDecl editorialDecl correction"/>
+        <moduleRef n="03" key="core" include="p foreign quote q cit mentioned desc gap date ptr list item label head note monogr author editor respStmt resp title imprint publisher biblScope citedRange pubPlace bibl biblStruct l lg teiCorpus textLang"/>
+        <moduleRef n="04" key="textstructure" include="TEI text body div"/>
+        <moduleRef n="11" key="msdescription" include="msDesc locus msIdentifier institution msContents msItem"/>
+        <moduleRef n="12" key="transcr" include=""/>
+        <moduleRef n="14" key="namesdates" include="persName listPerson person persona"/>
+        <moduleRef n="17" key="linking" include="seg standOff"/>
+        <moduleRef n="18" key="analysis" include="interp interpGrp"/>
+
+        <elementSpec ident="list" mode="change">
+          <attList>
+            <attDef ident="type" mode="change">
+              <valList mode="change">
+                <valItem mode="add" ident="argument">
+                  <desc versionDate="2025-07-11" xml:lang="en">each list item is part of an argument consisting of one or more <val>premise</val>, an inference <val>rule</val>, and a <val>conclusion</val> derived from the application of the rule to the premises.</desc>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="item" mode="change">
+          <classes mode="change">
+            <memberOf key="att.typed"/>
+          </classes>
+          <attList>
+            <attDef ident="type" mode="change">
+              <valList type="semi" mode="change">
+                <valItem mode="add" ident="premise">
+                  <desc versionDate="2025-07-11" xml:lang="en">a proposition that supports the conclusion of an argument.</desc>
+                </valItem>
+                <valItem mode="add" ident="rule">
+                  <gloss versionDate="2025-07-11" xml:lang="en">inference rule</gloss>
+                  <desc versionDate="2025-07-11" xml:lang="en">a way of drawing a conclusion from a set of premises.</desc>
+                </valItem>
+                <valItem mode="add" ident="conclusion">
+                  <desc versionDate="2025-07-11" xml:lang="en">the claim of an argument, following from its premises and rule application.</desc>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+        <classSpec ident="att.global.analytic" type="atts" mode="change">
+          <attList>
+            <attDef ident="about" usage="opt" mode="add">
+              <desc versionDate="2025-07-11" xml:lang="en">points to one or more elements representing topics of the text.</desc>
+              <datatype maxOccurs="unbounded"><dataRef key="teidata.pointer"/></datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+
+        <classSpec ident="att.global.linking" type="atts" mode="change">
+          <attList>
+            <attDef ident="prev" mode="change">
+              <datatype maxOccurs="unbounded"><dataRef key="teidata.pointer"/></datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>

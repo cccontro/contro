@@ -17,7 +17,6 @@ body {
   orphans: 2;
 }
 
-
 /* Anchor links */
 .headerlink:after {
   content: "‽";
@@ -189,6 +188,11 @@ body {
 .md-typeset .md-button:hover, .md-typeset .md-button:active, .md-typeset .md-button:focus {
   background-color: var(--md-secondary-fg-color);
   border-color: var(--md-secondary-fg-color);
+}
+
+/* Lists */
+.md-typeset ul ul {
+  list-style-type: circle;
 }
 
 /* Cards */
@@ -486,6 +490,37 @@ figure.align-right {
 
 .md-typeset .admonition.info:focus-within, .md-typeset details.info:focus-within {
   box-shadow: 0 0 0 .2rem var(--md-accent-fg-color--transparent);
+}
+
+/* Admonition Question */
+.md-typeset .admonition.question, .md-typeset details.question {
+  border-color: var(--md-secondary-fg-color);
+}
+
+.md-typeset .question > .admonition-title:before, .md-typeset .question > summary:before {
+  background-color: var(--md-secondary-fg-color--light, var(--md-secondary-fg-color--hover));
+}
+
+.md-typeset .question > .admonition-title:after, .md-typeset .question > summary:after {
+  color: var(--md-secondary-fg-color);
+}
+
+.md-typeset .question > .admonition-title, .md-typeset .question > summary {
+  background-color: var(--md-secondary-fg-color--transparent);
+}
+
+.md-typeset .admonition.question:focus-within, .md-typeset details.question:focus-within {
+  box-shadow: 0 0 0 .2rem var(--md-secondary-fg-color--transparent);
+}
+
+.md-typeset .admonition p:not(:last-child),
+.md-typeset details p:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.md-typeset .admonition p:not([class]) + p,
+.md-typeset details p:not([class]) + p {
+  margin-top: 0;
 }
 
 /* Tables */

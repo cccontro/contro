@@ -9,6 +9,7 @@ BASE = 'https://w3id.org/contro/data'
 
 # RDF namespaces
 ARG = Namespace('https://w3id.org/contro/arg#')
+PERSP = Namespace('https://w3id.org/contro/persp#')
 DATA = Namespace(BASE + '#')
 DUL = Namespace('http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#')
 
@@ -30,7 +31,7 @@ class TEIConverter:
     '''
     self.root = None
     self.parent = {}
-    self.names = {}
+    self.names = {'premise': 'Premise', 'rule': 'InferenceRule', 'conclusion': 'Conclusion'}
     self.tei_lang = None
     self.text_lang = None
     self.ann_lang = None
@@ -38,6 +39,7 @@ class TEIConverter:
     self.g = Graph(bind_namespaces='rdflib')
     self.g.bind('', DATA)
     self.g.bind('arg', ARG)
+    self.g.bind('persp', PERSP)
     self.g.bind('dul', DUL)
 
     self.g.add((URIRef(BASE), RDF.type, OWL.Ontology))
@@ -58,11 +60,11 @@ class TEIConverter:
     # Pre-compute a parent lookup, mapping each element to its parent
     self.parent = {child: parent for parent in self.root.iter() for child in parent}
 
-    # Dictionary of analysis ids to property names: { 'premise': 'Premise' }
-    self.names = {
+    # Dictionary of analysis ids to property names: { 'latinisms': 'Latinisms' }
+    self.names.update({
       el.get(ID): el.text.strip() if el.text else ''
       for el in self.root.findall(".//tei:interp", NS)
-    }
+    })
 
     for topic in self.root.findall('.//tei:interpGrp[@xml:id="topic"]/tei:interp', NS):
       self.add_topic(topic)
@@ -83,7 +85,7 @@ class TEIConverter:
       if author is not None:
         self.add_person(author)
 
-      for arg in note.findall("./tei:list[@type='syllogism']", NS):
+      for arg in note.findall("./tei:list[@type='argument']", NS):
         self.add_argument(arg, author_id)
 
   def to_turtle(self, ttl_path):
@@ -188,35 +190,38 @@ class TEIConverter:
     self.g.add((arg_uri, RDF.type, OWL.NamedIndividual))
     self.g.add((arg_uri, RDF.type, ARG.Argument))
     self.g.add((arg_uri, ARG.by, DATA[author_id]))
-    self.g.add((arg_uri, ARG.Topic, DATA[arg.get('ana')[1:]]))
+    for topic in arg.get('about').split():
+      self.g.add((arg_uri, ARG.Topic, DATA[topic.lstrip('#')]))
 
     for stmt in arg.findall('./tei:item', NS):
       # If the statement has no id, it is a reference to another statement
       if not stmt.get(ID):
-        stmt_uri = DATA[stmt.find('./tei:ptr', NS).get('target')[1:]]
-        self.g.add((arg_uri, ARG[self.names[stmt.get('ana')[1:]]], stmt_uri))
+        stmt_uri = DATA[stmt.find('./tei:ptr', NS).get('target').lstrip('#')]
+        self.g.add((arg_uri, ARG[self.names[stmt.get('type')]], stmt_uri))
         continue
 
       stmt_id = stmt.get(ID)
       stmt_uri = DATA[stmt_id]
       self.g.add((stmt_uri, RDF.type, OWL.NamedIndividual))
-      self.g.add((arg_uri, ARG[self.names[stmt.get('ana')[1:]]], stmt_uri))
+      self.g.add((arg_uri, ARG[self.names[stmt.get('type')]], stmt_uri))
       self.g.add((stmt_uri, RDFS.comment, Literal(stmt.text, lang=self.ann_lang)))
 
       # Inference Rule components (if any)
-      antecedents = stmt.get('synch')
-      if antecedents:
+      if antecedents := stmt.get('prev'):
         for antecedent in antecedents.split():
-          self.g.add((stmt_uri, ARG.Antecedent, DATA[antecedent[1:]]))
-        self.g.add((stmt_uri, ARG.Consequent, DATA[stmt.get('next')[1:]]))
+          self.g.add((stmt_uri, ARG.Antecedent, DATA[antecedent.lstrip('#')]))
+
+      if consequent := stmt.get('next'):
+        self.g.add((stmt_uri, ARG.Consequent, DATA[consequent.lstrip('#')]))
 
       # Contrary
-      contrary = stmt.get('exclude')
-      if contrary:
-        self.g.add((stmt_uri, ARG.contradicts, DATA[contrary[1:]]))
+      if contrary := stmt.get('exclude'):
+        self.g.add((stmt_uri, ARG.contradicts, DATA[contrary.lstrip('#')]))
       
       # Text content
-      for text in self.root.findall(f".//*[@ana='#{stmt_id}']", NS):
+      for text in self.root.findall(".//*[@ana]", NS):
+        if f'#{stmt_id}' not in text.get('ana').split():
+          continue
         self.preprocess_text(text)
         text_lang = self.get_lang(text)
         full_text = ''.join(text.itertext()).strip()
@@ -225,11 +230,18 @@ class TEIConverter:
 
   def preprocess_text(self, el):
     '''
-    Wrap <q> content in quotation marks and remove <bibl> before extracting text.
+    Replace <q> with its quoted content and remove <bibl> before extracting text.
     '''
+    # Replace <q> with quoted text
     for q in el.findall(".//tei:q", NS):
-      if q.text:
-        q.text = f'«{q.text}»'
+      parent = self.parent.get(q)
+      if parent is not None:
+        dummy = ET.Element('span')
+        dummy.text = f'«{q.text}»'
+        dummy.tail = q.tail
+        index = list(parent).index(q)
+        parent.remove(q)
+        parent.insert(index, dummy)
 
     # Remove <bibl>
     for bibl in el.findall(".//tei:bibl", NS):
