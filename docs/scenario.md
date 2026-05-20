@@ -15,7 +15,7 @@ In 1553, Annibal Caro composed a *Canzone dei Gigli d’oro* in Petrarchist styl
 
 Although Castelvetro had expressed a desire for his views to remain private—how sincerely is unclear—the note nonetheless circulated at the Roman court and in other Italian cities, threatening to discredit Caro: his position as secretary to the Farnese, secured by his literary reputation despite his modest origins, depended entirely on his patrons' favor.
 
-Caro promptly began to prepare a defensive strategy, mobilizing influential supporters to direct harsh criticism at Castelvetro. In 1554, the *Canzone* appeared in print as an appendix to a collection of letters by illustrious men edited by Lodovico Dolce, accompanied by a commentary attributed to Caro and almost certainly his own work, though he always refuted its authorship. Castevetro, caught off guard by the scale of the backlash, circulated a second text titled *Dichiarazione d’alcune cose dell’antiscritto Parere* in an attempt to clarify his position.
+Caro promptly began to prepare a defensive strategy, mobilizing influential supporters to direct harsh criticism at Castelvetro. In 1554, the *Canzone* appeared in print as an appendix to a collection of letters by illustrious men edited by Lodovico Dolce, accompanied by a commentary attributed to Caro and almost certainly his own work, though he always refuted its authorship. Castelvetro, caught off guard by the scale of the backlash, circulated a second text titled *Dichiarazione d’alcune cose dell’antiscritto Parere* in an attempt to clarify his position.
 
 ## The *Apologia*
 
